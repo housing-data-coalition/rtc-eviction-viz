@@ -21,6 +21,7 @@
   "scripts": {
     "parcel": "parcel",
     "tsc": "tsc",
+    "build-data": "tsc && node build-data.js",
     "watch": "concurrently --kill-others \"parcel index.html\" \"tsc --watch --preserveWatchOutput\"",
     "build": "tsc && parcel build index.html --public-url=./",
     "deploy": "yarn build && gh-pages -d dist"
