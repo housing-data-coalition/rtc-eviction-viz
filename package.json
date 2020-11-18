@@ -1,9 +1,13 @@
 {
   "name": "dac-viz",
   "dependencies": {
+    "@types/node": "^14.14.8",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.5.0",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.8.0",
     "typescript": "^4.0.2",
     "vega": "^5.15.0",
     "vega-embed": "^6.12.2",

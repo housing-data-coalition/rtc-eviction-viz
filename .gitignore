@@ -2,3 +2,5 @@ node_modules
 dist
 .cache
 tsc-dist
+.env
+static/*.json
