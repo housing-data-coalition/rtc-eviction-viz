@@ -5,13 +5,18 @@ async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
   return (await fetch("eviction-time-series.json")).json();
 }
 
-async function showViz() {
-  const values = await getEvictionTimeSeries();
-  const embedResult = embed("#viz", {
+async function showViz(
+  values: EvictionTimeSeriesRow[],
+  fieldName: keyof EvictionTimeSeriesRow,
+  title: string,
+) {
+  const div = document.createElement("div")
+  const embedResult = embed(div, {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: "A simple bar chart with embedded data.",
     width: 750,
     height: 200,
+    title,
     data: {
       values,
     },
@@ -25,18 +30,28 @@ async function showViz() {
         axis: {
           title: "",
           format: "%b ’%y",
-          labelAngle: 45
+          labelAngle: 45,
         },
       },
       y: {
-        field: "total_filings",
+        field: fieldName,
         type: "quantitative",
         axis: {
-          title: "Eviction Filings per Week",
+          title: "Eviction Filings per Week"
         },
       },
     },
   });
+  document.body.append(div);
 }
 
-showViz();
+async function main() {
+  const values = await getEvictionTimeSeries();
+  showViz(values, "total_filings","Total NY State Eviction Filings, 2019 - Present");
+  showViz(values, "nyc_holdover_filings","NYC Holdover Filings, 2019 - Present");
+  showViz(values, "nyc_nonpay_filings","NYC Non-Payment Filings, 2019 - Present");
+  showViz(values, "outside_nyc_holdover_filings","Upstate Holdover Filings 2019 - Present");
+  showViz(values, "outside_nyc_nonpay_filings","Upstate Non-Payment Filings, 2019 - Present");
+}
+
+main();
