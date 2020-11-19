@@ -15,6 +15,14 @@
       body {
         margin: 2.5rem;
       }
+
+      html body .vega-embed .chart-wrapper {
+        /**
+         * This overrides vega's default height of 100%, which
+         * results in way too much room between the charts.
+         */
+        height: auto;
+      }
     </style>
   </head>
   <body>
