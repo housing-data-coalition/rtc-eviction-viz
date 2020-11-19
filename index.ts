@@ -10,13 +10,21 @@ async function showViz(
   fieldName: keyof EvictionTimeSeriesRow,
   title: string,
 ) {
+  const casesSinceCovid = values.filter(
+    row => row.week >= "2020-03-23 00:00:00"
+  ).reduce(
+    (total, row: any) => total + row[fieldName], 0
+  )
   const div = document.createElement("div")
   const embedResult = embed(div, {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: "A simple bar chart with embedded data.",
     width: 750,
-    height: 200,
-    title,
+    height: 150,
+    title: {
+      text: title,
+      subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
+    },
     data: {
       values,
     },
