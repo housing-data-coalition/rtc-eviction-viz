@@ -10,3 +10,5 @@ export function convertEvictionTimeSeriesRow(row: any) {
 }
 
 export type EvictionTimeSeriesRow = ReturnType<typeof convertEvictionTimeSeriesRow>;
+
+export type EvictionTimeSeriesNumericFields = Omit<EvictionTimeSeriesRow, "week">;

@@ -1,5 +1,5 @@
 import embed from "vega-embed";
-import { EvictionTimeSeriesRow } from "./lib/eviction-time-series";
+import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow } from "./lib/eviction-time-series";
 
 async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
   return (await fetch("eviction-time-series.json")).json();
@@ -7,13 +7,13 @@ async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
 
 async function showViz(
   values: EvictionTimeSeriesRow[],
-  fieldName: keyof EvictionTimeSeriesRow,
+  fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
 ) {
   const casesSinceCovid = values.filter(
     row => row.week >= "2020-03-23 00:00:00"
   ).reduce(
-    (total, row: any) => total + row[fieldName], 0
+    (total, row) => total + row[fieldName], 0
   );
   const div = document.createElement("div");
   const embedResult = embed(div, {
