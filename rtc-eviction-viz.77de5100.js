@@ -98635,38 +98635,6 @@ exports.default = _default;
 },{"fast-json-patch":"node_modules/fast-json-patch/index.mjs","json-stringify-pretty-compact":"node_modules/json-stringify-pretty-compact/index.js","semver":"node_modules/vega-embed/node_modules/semver/index.js","vega":"node_modules/vega/build/vega.module.js","vega-lite":"node_modules/vega-lite/build/src/index.js","vega-schema-url-parser":"node_modules/vega-schema-url-parser/dist/parser.module.js","vega-themes":"node_modules/vega-themes/build/vega-themes.module.js","vega-tooltip":"node_modules/vega-tooltip/build/vega-tooltip.module.js"}],"index.ts":[function(require,module,exports) {
 "use strict";
 
-var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  Object.defineProperty(o, k2, {
-    enumerable: true,
-    get: function () {
-      return m[k];
-    }
-  });
-} : function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  o[k2] = m[k];
-});
-
-var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
-  Object.defineProperty(o, "default", {
-    enumerable: true,
-    value: v
-  });
-} : function (o, v) {
-  o["default"] = v;
-});
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-
-  __setModuleDefault(result, mod);
-
-  return result;
-};
-
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
@@ -98679,10 +98647,67 @@ Object.defineProperty(exports, "__esModule", {
 
 const vega_embed_1 = __importDefault(require("vega-embed"));
 
-const Vega = __importStar(require("vega"));
+async function getEvictionTimeSeries() {
+  return (await fetch("eviction-time-series.json")).json();
+}
 
-console.log("WOOO", vega_embed_1.default, Vega);
-},{"vega-embed":"node_modules/vega-embed/build/vega-embed.module.js","vega":"node_modules/vega/build/vega.module.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+async function showViz(values, fieldName, title) {
+  const casesSinceCovid = values.filter(row => row.week >= "2020-03-23 00:00:00").reduce((total, row) => total + row[fieldName], 0);
+  const div = document.createElement("div");
+  const embedResult = vega_embed_1.default(div, {
+    $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+    description: "A simple bar chart with embedded data.",
+    width: 750,
+    height: 150,
+    title: {
+      text: `${title}, 2019 - Present`,
+      subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
+    },
+    data: {
+      values
+    },
+    mark: {
+      type: "line"
+    },
+    encoding: {
+      x: {
+        field: "week",
+        type: "temporal",
+        axis: {
+          title: "",
+          format: "%b ’%y",
+          labelAngle: 45
+        }
+      },
+      y: {
+        field: fieldName,
+        type: "quantitative",
+        axis: {
+          title: "Eviction Filings per Week"
+        }
+      }
+    }
+  });
+  const root = document.getElementById("viz");
+
+  if (!root) {
+    throw new Error("Unable to find #viz");
+  }
+
+  root.append(div);
+}
+
+async function main() {
+  const values = await getEvictionTimeSeries();
+  showViz(values, "total_filings", "Total NY State Eviction Filings");
+  showViz(values, "nyc_holdover_filings", "NYC Holdover Filings");
+  showViz(values, "nyc_nonpay_filings", "NYC Non-Payment Filings");
+  showViz(values, "outside_nyc_holdover_filings", "Upstate Holdover Filings");
+  showViz(values, "outside_nyc_nonpay_filings", "Upstate Non-Payment Filings");
+}
+
+main();
+},{"vega-embed":"node_modules/vega-embed/build/vega-embed.module.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -98710,7 +98735,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57952" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50728" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
