@@ -55,11 +55,11 @@ async function showViz(
 
 async function main() {
   const values = await getEvictionTimeSeries();
-  showViz(values, "total_filings","Total NY State Eviction Filings");
-  showViz(values, "nyc_holdover_filings","NYC Holdover Filings");
-  showViz(values, "nyc_nonpay_filings","NYC Non-Payment Filings");
-  showViz(values, "outside_nyc_holdover_filings","Upstate Holdover Filings");
-  showViz(values, "outside_nyc_nonpay_filings","Upstate Non-Payment Filings");
+  showViz(values, "total_filings", "Total NY State Eviction Filings");
+  showViz(values, "nyc_holdover_filings", "NYC Holdover Filings");
+  showViz(values, "nyc_nonpay_filings", "NYC Non-Payment Filings");
+  showViz(values, "outside_nyc_holdover_filings", "Upstate Holdover Filings");
+  showViz(values, "outside_nyc_nonpay_filings", "Upstate Non-Payment Filings");
 }
 
 main();
