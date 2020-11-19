@@ -14,8 +14,8 @@ async function showViz(
     row => row.week >= "2020-03-23 00:00:00"
   ).reduce(
     (total, row: any) => total + row[fieldName], 0
-  )
-  const div = document.createElement("div")
+  );
+  const div = document.createElement("div");
   const embedResult = embed(div, {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: "A simple bar chart with embedded data.",
