@@ -50,7 +50,13 @@ async function showViz(
       },
     },
   });
-  document.body.append(div);
+
+  const root = document.getElementById("viz");
+  if (!root) {
+    throw new Error("Unable to find #viz");
+  }
+
+  root.append(div);
 }
 
 async function main() {
