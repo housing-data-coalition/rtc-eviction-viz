@@ -22,7 +22,7 @@ async function showViz(
     width: 750,
     height: 150,
     title: {
-      text: title,
+      text: `${title}, 2019 - Present`,
       subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
     },
     data: {
@@ -55,11 +55,11 @@ async function showViz(
 
 async function main() {
   const values = await getEvictionTimeSeries();
-  showViz(values, "total_filings","Total NY State Eviction Filings, 2019 - Present");
-  showViz(values, "nyc_holdover_filings","NYC Holdover Filings, 2019 - Present");
-  showViz(values, "nyc_nonpay_filings","NYC Non-Payment Filings, 2019 - Present");
-  showViz(values, "outside_nyc_holdover_filings","Upstate Holdover Filings 2019 - Present");
-  showViz(values, "outside_nyc_nonpay_filings","Upstate Non-Payment Filings, 2019 - Present");
+  showViz(values, "total_filings","Total NY State Eviction Filings");
+  showViz(values, "nyc_holdover_filings","NYC Holdover Filings");
+  showViz(values, "nyc_nonpay_filings","NYC Non-Payment Filings");
+  showViz(values, "outside_nyc_holdover_filings","Upstate Holdover Filings");
+  showViz(values, "outside_nyc_nonpay_filings","Upstate Non-Payment Filings");
 }
 
 main();
