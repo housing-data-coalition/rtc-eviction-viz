@@ -1,11 +1,16 @@
+with weeks as (
+	select *
+    from generate_series('01-07-2019', CURRENT_DATE - '1 WEEK'::INTERVAL, '1 WEEK'::INTERVAL) week
+)
 select 
 	week, 
 	count(*) filter (where classification = 'Holdover' and region = 'NYC') as nyc_holdover_filings,
 	count(*) filter (where classification = 'Non-Payment' and region = 'NYC') as nyc_nonpay_filings,
 	count(*) filter (where classification = 'Holdover' and region = 'Outside NYC') as outside_nyc_holdover_filings,
 	count(*) filter (where classification = 'Non-Payment' and region = 'Outside NYC') as outside_nyc_nonpay_filings,
-	count(*) as total_filings
-	from (
+	count(*) filter (where indexnumberid is not null) as total_filings
+	from weeks
+	left join (
 		select 
 			i.*, 
 			c.causeofactiontype, 
@@ -33,6 +38,6 @@ select
 		left join oca_events e on e.indexnumberid = i.indexnumberid 
 		where i.fileddate >= '01-01-2019' and i.classification = any('{Holdover,Non-Payment}') 
 		order by i.fileddate asc 
-	) eviction_cases
+	) eviction_cases using(week)
 group by week
-order by week
+order by week;
