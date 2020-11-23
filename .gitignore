@@ -4,3 +4,4 @@ dist
 tsc-dist
 .env
 static/*.json
+static/*.csv
