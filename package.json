@@ -1,6 +1,7 @@
 {
   "name": "dac-viz",
   "dependencies": {
+    "@justfixnyc/util": "^0.1.1-alpha.0",
     "@types/node": "^14.14.8",
     "concurrently": "^5.3.0",
     "csv-stringify": "^5.5.3",

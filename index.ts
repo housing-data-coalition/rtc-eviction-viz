@@ -1,8 +1,9 @@
+import { getHTMLElement } from "@justfixnyc/util";
 import embed from "vega-embed";
-import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow } from "./lib/eviction-time-series";
+import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES_CSV, EVICTION_TIME_SERIES_JSON } from "./lib/eviction-time-series";
 
 async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
-  return (await fetch("eviction-time-series.json")).json();
+  return (await fetch(EVICTION_TIME_SERIES_JSON)).json();
 }
 
 async function showViz(
@@ -51,15 +52,16 @@ async function showViz(
     },
   });
 
-  const root = document.getElementById("viz");
-  if (!root) {
-    throw new Error("Unable to find #viz");
-  }
-
+  const root = getHTMLElement('div', '#viz');
   root.append(div);
 }
 
 async function main() {
+  // Ideally we'd just hard-code these in the HTML, but we can't due to
+  // https://github.com/parcel-bundler/parcel/issues/1186.
+  getHTMLElement('a', '#csv').href = EVICTION_TIME_SERIES_CSV;
+  getHTMLElement('a', '#json').href = EVICTION_TIME_SERIES_JSON;
+
   const values = await getEvictionTimeSeries();
   showViz(values, "total_filings", "Total NY State Eviction Filings");
   showViz(values, "nyc_holdover_filings", "NYC Holdover Filings");
