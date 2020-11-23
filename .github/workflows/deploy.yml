@@ -1,7 +1,12 @@
 # Adapted from:
 # https://github.com/marketplace/actions/deploy-to-github-pages#getting-started-airplane
 name: Build and Deploy
-on: [push]
+on:
+  schedule:
+    # Use https://crontab.guru/ to figure out what this means.
+    #
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 4 * * *'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
