@@ -31,17 +31,10 @@ async function showViz(
     },
     mark: {
       type: "line",
-      interpolate: "monotone",
-    },
     encoding: {
       x: {
         field: "week",
         type: "temporal",
-        axis: {
-          title: "",
-          format: "%b ’%y",
-          labelAngle: 45,
-        },
       },
       tooltip: [
         {
@@ -55,16 +48,63 @@ async function showViz(
           title: "Filings",
         },
       ],
-      y: {
-        field: fieldName,
-        type: "quantitative",
-        axis: {
-          title: "Eviction Filings per Week"
+    },
+    layer: [
+      {
+        mark: {
+          type: "line",
+          interpolate: "monotone",
+        },
+        encoding: {
+          x: {
+            field: "week",
+            type: "temporal",
+            axis: {
+              title: "",
+              format: "%b ’%y",
+              labelAngle: 45,
+            },
+          },
+          y: {
+            field: fieldName,
+            type: "quantitative",
+            axis: {
+              title: "Eviction Filings per Week",
+            },
+          },
         },
       },
-      
-    },
-    
+      {
+        selection: {
+          index: {
+            type: "single",
+            on: "mousemove",
+            encodings: ["x"],
+            nearest: true,
+            empty: "none",
+            clear: "mouseout"
+          },
+        },
+        mark: { type: "point" },
+        encoding: {
+          x: {
+            field: "week",
+            type: "temporal",
+          },
+          y: {
+            field: fieldName,
+            type: "quantitative",
+          },
+          opacity: {
+            condition: {
+              selection: "index",
+              value: 1,
+            },
+            value: 0,
+          },
+        },
+      },
+    ],
   });
 
   const root = getHTMLElement('div', '#viz');
