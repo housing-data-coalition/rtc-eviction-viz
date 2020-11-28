@@ -29,8 +29,6 @@ async function showViz(
     data: {
       values,
     },
-    mark: {
-      type: "line",
     encoding: {
       x: {
         field: "week",
