@@ -31,6 +31,7 @@ async function showViz(
     },
     mark: {
       type: "line",
+      interpolate: "monotone",
     },
     encoding: {
       x: {
@@ -42,6 +43,18 @@ async function showViz(
           labelAngle: 45,
         },
       },
+      tooltip: [
+        {
+          field: "week",
+          title: "Week of",
+          type: "temporal",
+          format: "%b %d, %Y",
+        },
+        {
+          field: fieldName,
+          title: "Filings",
+        },
+      ],
       y: {
         field: fieldName,
         type: "quantitative",
@@ -49,7 +62,9 @@ async function showViz(
           title: "Eviction Filings per Week"
         },
       },
+      
     },
+    
   });
 
   const root = getHTMLElement('div', '#viz');
