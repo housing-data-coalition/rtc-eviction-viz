@@ -83,7 +83,7 @@ async function showViz(
             clear: "mouseout"
           },
         },
-        mark: { type: "point" },
+        mark: { type: "point", strokeWidth: 4},
         encoding: {
           x: {
             field: "week",
