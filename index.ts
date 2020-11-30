@@ -1,10 +1,28 @@
 import { getHTMLElement } from "@justfixnyc/util";
 import embed from "vega-embed";
+import * as Vega from "vega";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES_CSV, EVICTION_TIME_SERIES_JSON } from "./lib/eviction-time-series";
 
 async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
   return (await fetch(EVICTION_TIME_SERIES_JSON)).json();
 }
+
+/**
+ * Return the given number with comma separators for improved readability.
+ *
+ * The implementation was taken from https://stackoverflow.com/a/2901298.
+ *
+ * Note that `Intl.NumberFormat` can do the same thing, but it's not
+ * available in older browsers, and polyfilling all of `Intl` would
+ * potentially add a lot of weight to our JS bundle.
+ */
+function numberWithCommas(x: number): string {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+
+Vega.expressionFunction("numberWithCommas", numberWithCommas);
 
 async function showViz(
   values: EvictionTimeSeriesRow[],
@@ -29,27 +47,81 @@ async function showViz(
     data: {
       values,
     },
-    mark: {
-      type: "line",
-    },
     encoding: {
       x: {
         field: "week",
         type: "temporal",
-        axis: {
-          title: "",
-          format: "%b ’%y",
-          labelAngle: 45,
-        },
       },
-      y: {
-        field: fieldName,
-        type: "quantitative",
-        axis: {
-          title: "Eviction Filings per Week"
+      tooltip: [
+        {
+          field: "week",
+          title: "Week of",
+          type: "temporal",
+          format: "%b %d, %Y",
         },
-      },
+        {
+          field: fieldName,
+          title: "Filings",
+          formatType: "numberWithCommas"
+        },
+      ],
     },
+    layer: [
+      {
+        mark: {
+          type: "line",
+          interpolate: "monotone",
+        },
+        encoding: {
+          x: {
+            field: "week",
+            type: "temporal",
+            axis: {
+              title: "",
+              format: "%b ’%y",
+              labelAngle: 45,
+            },
+          },
+          y: {
+            field: fieldName,
+            type: "quantitative",
+            axis: {
+              title: "Eviction Filings per Week",
+            },
+          },
+        },
+      },
+      {
+        selection: {
+          index: {
+            type: "single",
+            on: "mousemove",
+            encodings: ["x"],
+            nearest: true,
+            empty: "none",
+            clear: "mouseout"
+          },
+        },
+        mark: { type: "point", strokeWidth: 4},
+        encoding: {
+          x: {
+            field: "week",
+            type: "temporal",
+          },
+          y: {
+            field: fieldName,
+            type: "quantitative",
+          },
+          opacity: {
+            condition: {
+              selection: "index",
+              value: 1,
+            },
+            value: 0,
+          },
+        },
+      },
+    ],
   });
 
   const root = getHTMLElement('div', '#viz');
