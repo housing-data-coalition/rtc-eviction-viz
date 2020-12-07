@@ -790,5 +790,13 @@
     "outside_nyc_holdover_filings": 60,
     "outside_nyc_nonpay_filings": 336,
     "total_filings": 858
+  },
+  {
+    "week": "2020-11-30T00:00:00.000Z",
+    "nyc_holdover_filings": 10,
+    "nyc_nonpay_filings": 39,
+    "outside_nyc_holdover_filings": 3,
+    "outside_nyc_nonpay_filings": 55,
+    "total_filings": 107
   }
 ]
