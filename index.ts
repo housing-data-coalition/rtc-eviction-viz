@@ -24,16 +24,39 @@ function numberWithCommas(x: number): string {
 
 Vega.expressionFunction("numberWithCommas", numberWithCommas);
 
+/**
+ * Take the array of data rows and get the date for the latest week we
+ * have data and subtract a given number of weeks. This is used to draw
+ * the rectangle on the graphs for the period where we have incomplete
+ * data, due to repoting lags. The result is a string in the same format
+ * as the "week" dates stored in the input data.
+ */
+function getEvictionDataLagDate(
+  data: EvictionTimeSeriesRow[],
+  lagWeeks: number
+): string {
+  const maxEvictionDateNum = Math.max.apply(
+    Math,
+    data.map(row => Date.parse(row.week))
+  );
+  let returnDate = new Date(maxEvictionDateNum);
+  returnDate.setDate(returnDate.getDate() - lagWeeks * 7);
+  returnDate.setHours(0, 0, 0, 0);
+  return returnDate.toISOString();
+}
+
 async function showViz(
   values: EvictionTimeSeriesRow[],
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
 ) {
   const casesSinceCovid = values.filter(
-    row => row.week >= "2020-03-23 00:00:00"
-  ).reduce(
-    (total, row) => total + row[fieldName], 0
-  );
+      row => row.week >= "2020-03-23 00:00:00"
+    ).reduce(
+      (total, row) => total + row[fieldName], 0
+    );
+  const EvictionDataLagStart = getEvictionDataLagDate(values, 4); // 4 weeks for lag
+  const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
   const div = document.createElement("div");
   const embedResult = embed(div, {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -44,82 +67,118 @@ async function showViz(
       text: `${title}, 2019 - Present`,
       subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
     },
-    data: {
-      values,
-    },
-    encoding: {
-      x: {
-        field: "week",
-        type: "temporal",
-      },
-      tooltip: [
-        {
-          field: "week",
-          title: "Week of",
-          type: "temporal",
-          format: "%b %d, %Y",
-        },
-        {
-          field: fieldName,
-          title: "Filings",
-          formatType: "numberWithCommas"
-        },
-      ],
-    },
     layer: [
       {
-        mark: {
-          type: "line",
-          interpolate: "monotone",
+        data: {
+          values: [
+            {
+              lagDateStart: EvictionDataLagStart,
+              lagDateEnd: EvictionDataLagEnd,
+            },
+          ],
         },
-        encoding: {
-          x: {
-            field: "week",
-            type: "temporal",
-            axis: {
-              title: "",
-              format: "%b ’%y",
-              labelAngle: 45,
+        layer: [
+          {
+            mark: { type: "rect", color: "grey", opacity: 0.3 },
+            encoding: {
+              x: { field: "lagDateStart", type: "temporal" },
+              x2: { field: "lagDateEnd", type: "temporal" },
             },
           },
-          y: {
-            field: fieldName,
-            type: "quantitative",
-            axis: {
-              title: "Eviction Filings per Week",
+          {
+            mark: {
+              type: "text",
+              align: "right",
+              baseline: "bottom",
+              dy: -76,
+              text:
+                "Due to reporting lags, data for most recent weeks is incomplete",
+            },
+            encoding: {
+              x: { field: "lagDateEnd", type: "temporal" },
             },
           },
-        },
+        ],
       },
       {
-        selection: {
-          index: {
-            type: "single",
-            on: "mousemove",
-            encodings: ["x"],
-            nearest: true,
-            empty: "none",
-            clear: "mouseout"
-          },
+        data: {
+          values,
         },
-        mark: { type: "point", strokeWidth: 4},
         encoding: {
           x: {
             field: "week",
             type: "temporal",
           },
-          y: {
-            field: fieldName,
-            type: "quantitative",
-          },
-          opacity: {
-            condition: {
-              selection: "index",
-              value: 1,
+          tooltip: [
+            {
+              field: "week",
+              title: "Week of",
+              type: "temporal",
+              format: "%b %d, %Y",
             },
-            value: 0,
-          },
+            {
+              field: fieldName,
+              title: "Filings",
+              formatType: "numberWithCommas"
+            },
+          ],
         },
+        layer: [
+          {
+            mark: {
+              type: "line",
+              interpolate: "monotone",
+            },
+            encoding: {
+              x: {
+                field: "week",
+                type: "temporal",
+                axis: {
+                  title: "",
+                  format: "%b ’%y",
+                  labelAngle: 45,
+                },
+              },
+              y: {
+                field: fieldName,
+                type: "quantitative",
+                axis: {
+                  title: "Eviction Filings per Week",
+                },
+              },
+            },
+          },
+          {
+            selection: {
+              index: {
+                type: "single",
+                on: "mousemove",
+                encodings: ["x"],
+                nearest: true,
+                empty: "none",
+                clear: "mouseout"
+              },
+            },
+            mark: { type: "point", strokeWidth: 4},
+            encoding: {
+              x: {
+                field: "week",
+                type: "temporal",
+              },
+              y: {
+                field: fieldName,
+                type: "quantitative",
+              },
+              opacity: {
+                condition: {
+                  selection: "index",
+                  value: 1,
+                },
+                value: 0,
+              },
+            },
+          },
+        ],
       },
     ],
   });
