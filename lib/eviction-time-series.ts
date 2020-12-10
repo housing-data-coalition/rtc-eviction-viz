@@ -32,7 +32,7 @@ export function getEvictionTimeSeriesCsvHeader(): string[] {
 
 export function toEvictionTimeSeriesCsvRow(row: EvictionTimeSeriesRow): string[] {
   return [
-    row.week,
+    row.week.substr(0, 10),
     row.nyc_holdover_filings.toString(),
     row.nyc_nonpay_filings.toString(),
     row.outside_nyc_holdover_filings.toString(),
