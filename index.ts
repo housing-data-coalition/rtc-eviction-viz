@@ -92,7 +92,7 @@ async function showViz(
               baseline: "bottom",
               dy: -76,
               text:
-                "Due to reporting lags, data for most recent weeks is incomplete",
+                "Due to reporting lags, data for most recent weeks (in gray) is incomplete",
             },
             encoding: {
               x: { field: "lagDateEnd", type: "temporal" },
