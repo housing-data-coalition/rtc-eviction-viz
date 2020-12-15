@@ -1,3 +1,4 @@
+import { toInt } from "./converters";
 import { Query, QueryFiles } from "./query";
 
 export const EVICTION_TIME_SERIES = new QueryFiles(`eviction-time-series`);
@@ -5,11 +6,11 @@ export const EVICTION_TIME_SERIES = new QueryFiles(`eviction-time-series`);
 export function convertEvictionTimeSeriesRow(row: any) {
   return {
     week: (row.week as Date).toISOString(),
-    nyc_holdover_filings: parseInt(row.nyc_holdover_filings),
-    nyc_nonpay_filings: parseInt(row.nyc_nonpay_filings),
-    outside_nyc_holdover_filings: parseInt(row.outside_nyc_holdover_filings),
-    outside_nyc_nonpay_filings: parseInt(row.outside_nyc_nonpay_filings),
-    total_filings: parseInt(row.total_filings),
+    nyc_holdover_filings: toInt(row.nyc_holdover_filings),
+    nyc_nonpay_filings: toInt(row.nyc_nonpay_filings),
+    outside_nyc_holdover_filings: toInt(row.outside_nyc_holdover_filings),
+    outside_nyc_nonpay_filings: toInt(row.outside_nyc_nonpay_filings),
+    total_filings: toInt(row.total_filings),
   };
 }
 
