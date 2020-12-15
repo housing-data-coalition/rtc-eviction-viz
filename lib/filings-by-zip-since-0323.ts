@@ -1,4 +1,4 @@
-import { ensureString, toInt } from "./converters";
+import { ensureString, toInt, toIntOrNull } from "./converters";
 import { Query, QueryFiles } from "./query";
 
 export const ZIPCODE_TIME_SERIES = new QueryFiles(`filings-by-zip-since-0323`);
@@ -7,10 +7,10 @@ export function convertZipcodeTimeSeriesRow(row: any) {
   return {
     zipcode: ensureString(row.zipcode),
     filings_since_032320: toInt(row.filings_since_032320),
-    unitsres_total: row.unitsres_total as string|null,
-    unitsres_2: row.unitsres_2 as string|null,
-    filingsrate_total: row.filingsrate_total as string|null,
-    filingsrate_2plus: row.filingsrate_2plus as string|null,
+    unitsres_total: toIntOrNull(row.unitsres_total),
+    unitsres_2: toIntOrNull(row.unitsres_2),
+    filingsrate_total: toIntOrNull(row.filingsrate_total),
+    filingsrate_2plus: toIntOrNull(row.filingsrate_2plus),
   };
 }
 
@@ -31,10 +31,10 @@ function toTimeSeriesCsvRow(row: ZipcodeTimeSeriesRow): string[] {
   return [
     row.zipcode,
     row.filings_since_032320.toString(),
-    row.unitsres_total || '',
-    row.unitsres_2 || '',
-    row.filingsrate_total || '',
-    row.filingsrate_2plus || '',
+    row.unitsres_total?.toString() ?? '',
+    row.unitsres_2?.toString() ?? '',
+    row.filingsrate_total?.toString() ?? '',
+    row.filingsrate_2plus?.toString() ?? '',
   ];
 }
 
