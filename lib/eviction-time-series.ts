@@ -1,17 +1,16 @@
-export const EVICTION_TIME_SERIES = `eviction-time-series`;
+import { toInt } from "./converters";
+import { Query, QueryFiles } from "./query";
 
-export const EVICTION_TIME_SERIES_JSON = `${EVICTION_TIME_SERIES}.json`;
-
-export const EVICTION_TIME_SERIES_CSV = `${EVICTION_TIME_SERIES}.csv`;
+export const EVICTION_TIME_SERIES = new QueryFiles(`eviction-time-series`);
 
 export function convertEvictionTimeSeriesRow(row: any) {
   return {
     week: (row.week as Date).toISOString(),
-    nyc_holdover_filings: parseInt(row.nyc_holdover_filings),
-    nyc_nonpay_filings: parseInt(row.nyc_nonpay_filings),
-    outside_nyc_holdover_filings: parseInt(row.outside_nyc_holdover_filings),
-    outside_nyc_nonpay_filings: parseInt(row.outside_nyc_nonpay_filings),
-    total_filings: parseInt(row.total_filings),
+    nyc_holdover_filings: toInt(row.nyc_holdover_filings),
+    nyc_nonpay_filings: toInt(row.nyc_nonpay_filings),
+    outside_nyc_holdover_filings: toInt(row.outside_nyc_holdover_filings),
+    outside_nyc_nonpay_filings: toInt(row.outside_nyc_nonpay_filings),
+    total_filings: toInt(row.total_filings),
   };
 }
 
@@ -19,7 +18,7 @@ export type EvictionTimeSeriesRow = ReturnType<typeof convertEvictionTimeSeriesR
 
 export type EvictionTimeSeriesNumericFields = Omit<EvictionTimeSeriesRow, "week">;
 
-export function getEvictionTimeSeriesCsvHeader(): string[] {
+function getEvictionTimeSeriesCsvHeader(): string[] {
   return [
     'week',
     'nyc_holdover_filings',
@@ -30,7 +29,7 @@ export function getEvictionTimeSeriesCsvHeader(): string[] {
   ];
 }
 
-export function toEvictionTimeSeriesCsvRow(row: EvictionTimeSeriesRow): string[] {
+function toEvictionTimeSeriesCsvRow(row: EvictionTimeSeriesRow): string[] {
   return [
     row.week.substr(0, 10),
     row.nyc_holdover_filings.toString(),
@@ -40,3 +39,10 @@ export function toEvictionTimeSeriesCsvRow(row: EvictionTimeSeriesRow): string[]
     row.total_filings.toString(),
   ];
 }
+
+export const EvictionTimeSeriesQuery: Query<EvictionTimeSeriesRow> = {
+  files: EVICTION_TIME_SERIES,
+  sqlToRow: convertEvictionTimeSeriesRow,
+  csvHeader: getEvictionTimeSeriesCsvHeader(),
+  toCsvRow: toEvictionTimeSeriesCsvRow,
+};

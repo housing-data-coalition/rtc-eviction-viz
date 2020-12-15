@@ -1,10 +1,10 @@
 import { getHTMLElement } from "@justfixnyc/util";
 import embed from "vega-embed";
 import * as Vega from "vega";
-import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES_CSV, EVICTION_TIME_SERIES_JSON } from "./lib/eviction-time-series";
+import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./lib/eviction-time-series";
 
 async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
-  return (await fetch(EVICTION_TIME_SERIES_JSON)).json();
+  return (await fetch(EVICTION_TIME_SERIES.json)).json();
 }
 
 /**
@@ -190,8 +190,8 @@ async function showViz(
 async function main() {
   // Ideally we'd just hard-code these in the HTML, but we can't due to
   // https://github.com/parcel-bundler/parcel/issues/1186.
-  getHTMLElement('a', '#csv').href = EVICTION_TIME_SERIES_CSV;
-  getHTMLElement('a', '#json').href = EVICTION_TIME_SERIES_JSON;
+  getHTMLElement('a', '#csv').href = EVICTION_TIME_SERIES.csv;
+  getHTMLElement('a', '#json').href = EVICTION_TIME_SERIES.json;
 
   const values = await getEvictionTimeSeries();
   showViz(values, "total_filings", "Total NY State Eviction Filings");
