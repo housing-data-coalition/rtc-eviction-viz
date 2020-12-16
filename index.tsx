@@ -231,11 +231,19 @@ function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
 
 const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
+  const filingsrate_2plus_title = [
+    "Filings normalized by total",
+    "residential units, excluding",
+    "single-unit properties"
+  ];
 
   return <VegaLite spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     width: 500,
     height: 300,
+    title: {
+      text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
+    },
     data: {
       values: geoJson.features,
     },
@@ -247,10 +255,24 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
       color: {
         field: "properties.filingsrate_2plus",
         type: "quantitative",
+        title: filingsrate_2plus_title,
       },
-      tooltip: {
-        field: "properties.filings_since_032320",
-      }
+      tooltip: [
+        {
+          field: "properties.zipcode",
+          title: "Zip code",
+        },
+        {
+          field: "properties.filingsrate_2plus",
+          title: filingsrate_2plus_title,
+          formatType: "numberWithCommas"
+        },
+        {
+          field: "properties.filings_since_032320",
+          title: "Total filings",
+          formatType: "numberWithCommas"
+        },
+      ]
     }
   }} />;
 };
