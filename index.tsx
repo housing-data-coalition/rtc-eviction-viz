@@ -1,5 +1,8 @@
+import React, { useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
+
 import { getHTMLElement } from "@justfixnyc/util";
-import embed from "vega-embed";
+import embedVega, { VisualizationSpec } from "vega-embed";
 import * as Vega from "vega";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./lib/eviction-time-series";
 
@@ -45,22 +48,39 @@ function getEvictionDataLagDate(
   return returnDate.toISOString();
 }
 
-async function showViz(
+const VegaLite: React.FC<{spec: VisualizationSpec}> = ({spec}) => {
+  const ref: React.MutableRefObject<HTMLDivElement|null> = useRef(null);
+
+  useEffect(() => {
+    const { current } = ref;
+    if (!current) {
+      throw new Error("Expected ref for Vega container to exist!");
+    }
+    const embedResult = embedVega(current, spec);
+
+    return () => {
+      embedResult.then(result => result.finalize())
+    };
+  }, [spec]);
+
+  return <div ref={ref}></div>;
+};
+
+const EvictionViz: React.FC<{
   values: EvictionTimeSeriesRow[],
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
-) {
+}> = ({values, fieldName, title}) => {
   const casesSinceCovid = values.filter(
-      row => row.week >= "2020-03-23 00:00:00"
-    ).reduce(
-      (total, row) => total + row[fieldName], 0
-    );
+    row => row.week >= "2020-03-23 00:00:00"
+  ).reduce(
+    (total, row) => total + row[fieldName], 0
+  );
   const EvictionDataLagStart = getEvictionDataLagDate(values, 4); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
-  const div = document.createElement("div");
-  const embedResult = embed(div, {
+  const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-    description: "A simple bar chart with embedded data.",
+    description: title,
     width: 750,
     height: 150,
     title: {
@@ -181,24 +201,25 @@ async function showViz(
         ],
       },
     ],
-  });
+  };
 
-  const root = getHTMLElement('div', '#viz');
-  root.append(div);
-}
+  return <VegaLite spec={spec} />;
+};
 
 async function main() {
-  // Ideally we'd just hard-code these in the HTML, but we can't due to
-  // https://github.com/parcel-bundler/parcel/issues/1186.
-  getHTMLElement('a', '#csv').href = EVICTION_TIME_SERIES.csv;
-  getHTMLElement('a', '#json').href = EVICTION_TIME_SERIES.json;
-
   const values = await getEvictionTimeSeries();
-  showViz(values, "total_filings", "Total NY State Eviction Filings");
-  showViz(values, "nyc_holdover_filings", "NYC Holdover Filings");
-  showViz(values, "nyc_nonpay_filings", "NYC Non-Payment Filings");
-  showViz(values, "outside_nyc_holdover_filings", "Upstate Holdover Filings");
-  showViz(values, "outside_nyc_nonpay_filings", "Upstate Non-Payment Filings");
+  ReactDOM.render(
+    <div>
+      <EvictionViz values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
+      <EvictionViz values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
+      <EvictionViz values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
+      <EvictionViz values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
+      <EvictionViz values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
+      <p><a href={EVICTION_TIME_SERIES.csv}>Download CSV</a></p>
+      <p><a href={EVICTION_TIME_SERIES.json}>Download JSON</a></p>
+    </div>,
+    getHTMLElement('div', '#app')
+  );
 }
 
 main();
