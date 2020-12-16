@@ -152,6 +152,7 @@ const EvictionViz: React.FC<{
           {
             mark: {
               type: "line",
+              color: "#AF2525",
               interpolate: "monotone",
             },
             encoding: {
