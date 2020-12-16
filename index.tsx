@@ -263,13 +263,13 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
           title: "Zip code",
         },
         {
-          field: "properties.filingsrate_2plus",
-          title: "Filings per unit",
+          field: "properties.filings_since_032320",
+          title: "Total filings",
           formatType: "numberWithCommas"
         },
         {
-          field: "properties.filings_since_032320",
-          title: "Total filings",
+          field: "properties.filingsrate_2plus",
+          title: "Filings per unit",
           formatType: "numberWithCommas"
         },
       ]
