@@ -47,9 +47,3 @@ filings_since_032320 * 1000 / nullif(unitsres_2, 0)::numeric as filingsrate_2plu
 --filings normalized by total res units in the zip code except for single unit properties. 
 from grouped_zips a
 left join grouped_unitsres b on b.zipcode = a.zipcode 
-
-/*For map of filings by zip code, make choropleth using filingsrate_2plus
-include filings_since_032320 in tool tip*/
-
-
-
