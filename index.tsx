@@ -247,6 +247,9 @@ const ZipCodeViz: React.FC<{values: ZipcodeTimeSeriesRow[]}> = ({values}) => {
       color: {
         field: "properties.filingsrate_2plus",
         type: "quantitative",
+      },
+      tooltip: {
+        field: "properties.filings_since_032320",
       }
     }
   }} />;
