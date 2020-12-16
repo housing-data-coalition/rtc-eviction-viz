@@ -95,9 +95,16 @@ const EvictionViz: React.FC<{
     description: title,
     width: 750,
     height: 150,
+    padding: {
+      bottom: 50
+    },
     title: {
       text: `${title}, 2019 - Present`,
-      subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
+      subtitle: [
+        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
+        // This effectively adds extra padding below the subtitle.
+        ""
+      ]
     },
     layer: [
       {
