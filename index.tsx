@@ -100,7 +100,7 @@ const EvictionViz: React.FC<{
       bottom: 50
     },
     title: {
-      text: `${title}, 2019 - Present`,
+      text: `${title}, 2020 - Present`,
       subtitle: [
         `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
         // This effectively adds extra padding below the subtitle.
