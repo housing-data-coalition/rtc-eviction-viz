@@ -240,8 +240,8 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
 
   return <VegaLite spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-    width: 500,
-    height: 300,
+    width: 640,
+    height: 640,
     title: {
       text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
     },
