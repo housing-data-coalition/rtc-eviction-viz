@@ -9,6 +9,7 @@ import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_S
 // https://data.beta.nyc/dataset/nyc-zip-code-tabulation-areas
 import ZipCodeGeoJSON from "./lib/nyc-zip-code-tabulation-areas.json";
 import { FILINGS_BY_ZIP_EMPTY_ROW, FilingsByZipRow, FILINGS_BY_ZIP } from "./lib/filings-by-zip-since-0323";
+import { QueryFiles } from "./lib/query";
 
 async function fetchJSON<T>(path: string): Promise<T> {
   return (await fetch(path)).json();
@@ -264,7 +265,7 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
         },
         {
           field: "properties.filingsrate_2plus",
-          title: filingsrate_2plus_title,
+          title: filingsrate_2plus_title.join(' '),
           formatType: "numberWithCommas"
         },
         {
@@ -287,16 +288,25 @@ const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({va
   </>
 );
 
+const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
+  <>
+    <p><a href={files.csv}>Download {title} CSV</a></p>
+    <p><a href={files.json}>Download {title} JSON</a></p>
+  </>
+);
+
 async function main() {
   const evictionValues = await fetchJSON<EvictionTimeSeriesRow[]>(EVICTION_TIME_SERIES.json);
   const zipcodeValues = await fetchJSON<FilingsByZipRow[]>(FILINGS_BY_ZIP.json);
 
   ReactDOM.render(
     <div>
+      <h2>Filings by zip code</h2>
       <ZipCodeViz values={zipcodeValues} />
+      <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
+      <h2>Filings over time</h2>
       <EvictionVisualizations values={evictionValues} />
-      <p><a href={EVICTION_TIME_SERIES.csv}>Download CSV</a></p>
-      <p><a href={EVICTION_TIME_SERIES.json}>Download JSON</a></p>
+      <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     </div>,
     getHTMLElement('div', '#app')
   );
