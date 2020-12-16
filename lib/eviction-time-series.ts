@@ -5,7 +5,7 @@ export const EVICTION_TIME_SERIES = new QueryFiles(`eviction-time-series`);
 
 export function convertEvictionTimeSeriesRow(row: any) {
   return {
-    week: (row.week as Date).toISOString(),
+    day: (row.day as Date).toISOString(),
     nyc_holdover_filings: toInt(row.nyc_holdover_filings),
     nyc_nonpay_filings: toInt(row.nyc_nonpay_filings),
     outside_nyc_holdover_filings: toInt(row.outside_nyc_holdover_filings),
@@ -16,11 +16,11 @@ export function convertEvictionTimeSeriesRow(row: any) {
 
 export type EvictionTimeSeriesRow = ReturnType<typeof convertEvictionTimeSeriesRow>;
 
-export type EvictionTimeSeriesNumericFields = Omit<EvictionTimeSeriesRow, "week">;
+export type EvictionTimeSeriesNumericFields = Omit<EvictionTimeSeriesRow, "day">;
 
 function getEvictionTimeSeriesCsvHeader(): string[] {
   return [
-    'week',
+    'day',
     'nyc_holdover_filings',
     'nyc_nonpay_filings',
     'outside_nyc_holdover_filings',
@@ -31,7 +31,7 @@ function getEvictionTimeSeriesCsvHeader(): string[] {
 
 function toEvictionTimeSeriesCsvRow(row: EvictionTimeSeriesRow): string[] {
   return [
-    row.week.substr(0, 10),
+    row.day.substr(0, 10),
     row.nyc_holdover_filings.toString(),
     row.nyc_nonpay_filings.toString(),
     row.outside_nyc_holdover_filings.toString(),

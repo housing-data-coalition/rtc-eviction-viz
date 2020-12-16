@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
 import { getHTMLElement } from "@justfixnyc/util";
@@ -41,14 +41,14 @@ Vega.expressionFunction("numberWithCommas", numberWithCommas);
  */
 function getEvictionDataLagDate(
   data: EvictionTimeSeriesRow[],
-  lagWeeks: number
+  lagDays: number
 ): string {
   const maxEvictionDateNum = Math.max.apply(
     Math,
-    data.map(row => Date.parse(row.week))
+    data.map(row => Date.parse(row.day))
   );
   let returnDate = new Date(maxEvictionDateNum);
-  returnDate.setDate(returnDate.getDate() - lagWeeks * 7);
+  returnDate.setDate(returnDate.getDate() - lagDays);
   returnDate.setHours(0, 0, 0, 0);
   return returnDate.toISOString();
 }
@@ -71,26 +71,41 @@ const VegaLite: React.FC<{spec: VisualizationSpec}> = ({spec}) => {
   return <div ref={ref}></div>;
 };
 
+type EvictionTimeUnit = "yearweek"|"yearmonth";
+
 const EvictionViz: React.FC<{
   values: EvictionTimeSeriesRow[],
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
-}> = ({values, fieldName, title}) => {
+  timeUnit: EvictionTimeUnit
+}> = ({values, fieldName, title, timeUnit}) => {
+  values = values.filter(
+    row => row.day >= "2020-01-01 00:00:00"
+  );
   const casesSinceCovid = values.filter(
-    row => row.week >= "2020-03-23 00:00:00"
+    row => row.day >= "2020-03-23 00:00:00"
   ).reduce(
     (total, row) => total + row[fieldName], 0
   );
-  const EvictionDataLagStart = getEvictionDataLagDate(values, 4); // 4 weeks for lag
+  const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
+  const timeUnitLabel = timeUnit === "yearweek" ? "Week" : "Month";
+  const lineColor = "#AF2525";
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
     width: 750,
     height: 150,
+    padding: {
+      bottom: 50
+    },
     title: {
-      text: `${title}, 2019 - Present`,
-      subtitle: `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`
+      text: `${title}, 2020 - Present`,
+      subtitle: [
+        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
+        // This effectively adds extra padding below the subtitle.
+        ""
+      ]
     },
     layer: [
       {
@@ -131,18 +146,20 @@ const EvictionViz: React.FC<{
         },
         encoding: {
           x: {
-            field: "week",
-            type: "temporal",
+            timeUnit,
+            field: "day",
           },
           tooltip: [
             {
-              field: "week",
-              title: "Week of",
+              field: "day",
+              timeUnit,
+              title: `${timeUnitLabel} of`,
               type: "temporal",
               format: "%b %d, %Y",
             },
             {
               field: fieldName,
+              aggregate: "sum",
               title: "Filings",
               formatType: "numberWithCommas"
             },
@@ -152,13 +169,13 @@ const EvictionViz: React.FC<{
           {
             mark: {
               type: "line",
-              color: "#AF2525",
+              color: lineColor,
               interpolate: "monotone",
             },
             encoding: {
               x: {
-                field: "week",
-                type: "temporal",
+                timeUnit,
+                field: "day",
                 axis: {
                   title: "",
                   format: "%b ’%y",
@@ -167,9 +184,9 @@ const EvictionViz: React.FC<{
               },
               y: {
                 field: fieldName,
-                type: "quantitative",
+                aggregate: "sum",
                 axis: {
-                  title: "Eviction Filings per Week",
+                  title: `Eviction Filings per ${timeUnitLabel}`,
                 },
               },
             },
@@ -185,14 +202,15 @@ const EvictionViz: React.FC<{
                 clear: "mouseout"
               },
             },
-            mark: { type: "point", strokeWidth: 4},
+            mark: { type: "point", strokeWidth: 4, color: lineColor },
             encoding: {
               x: {
-                field: "week",
-                type: "temporal",
+                timeUnit,
+                field: "day",
               },
               y: {
                 field: fieldName,
+                aggregate: "sum",
                 type: "quantitative",
               },
               opacity: {
@@ -277,15 +295,30 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
   }} />;
 };
 
-const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({values}) => (
-  <>
-    <EvictionViz values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
-    <EvictionViz values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
-    <EvictionViz values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
-    <EvictionViz values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
-    <EvictionViz values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
-  </>
-);
+const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({values}) => {
+  const [timeUnit, setTimeUnit] = useState<EvictionTimeUnit>("yearweek");
+
+  return (
+    <>
+      <p>
+        View by:&nbsp;&nbsp;
+        <label>
+          <input type="radio" name="timeUnit" value="yearweek" checked={timeUnit === "yearweek"} onClick={(e) => setTimeUnit("yearweek")} />
+          Week
+        </label>&nbsp;&nbsp;
+        <label>
+          <input type="radio" name="timeUnit" value="yearmonth" checked={timeUnit === "yearmonth"} onClick={(e) => setTimeUnit("yearmonth")} />
+          Month
+        </label>
+      </p>
+      <EvictionViz timeUnit={timeUnit} values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
+      <EvictionViz timeUnit={timeUnit} values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
+      <EvictionViz timeUnit={timeUnit} values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
+      <EvictionViz timeUnit={timeUnit} values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
+      <EvictionViz timeUnit={timeUnit} values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
+    </>
+  );
+};
 
 const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
   <>
@@ -303,6 +336,7 @@ async function main() {
       <h2>Filings by zip code</h2>
       <ZipCodeViz values={zipcodeValues} />
       <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
+      <br/>
       <h2>Filings over time</h2>
       <EvictionVisualizations values={evictionValues} />
       <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
