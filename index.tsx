@@ -86,6 +86,8 @@ const EvictionViz: React.FC<{
   );
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
+  const timeUnit = "yearweek";
+  const timeUnitLabel = "Week";
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -134,14 +136,14 @@ const EvictionViz: React.FC<{
         },
         encoding: {
           x: {
-            timeUnit: "yearweek",
+            timeUnit,
             field: "day",
           },
           tooltip: [
             {
               field: "day",
-              timeUnit: "yearweek",
-              title: "Week of",
+              timeUnit,
+              title: `${timeUnitLabel} of`,
               type: "temporal",
               format: "%b %d, %Y",
             },
@@ -162,7 +164,7 @@ const EvictionViz: React.FC<{
             },
             encoding: {
               x: {
-                timeUnit: "yearweek",
+                timeUnit,
                 field: "day",
                 axis: {
                   title: "",
@@ -174,7 +176,7 @@ const EvictionViz: React.FC<{
                 field: fieldName,
                 aggregate: "sum",
                 axis: {
-                  title: "Eviction Filings per Week",
+                  title: `Eviction Filings per ${timeUnitLabel}`,
                 },
               },
             },
@@ -193,7 +195,7 @@ const EvictionViz: React.FC<{
             mark: { type: "point", strokeWidth: 4},
             encoding: {
               x: {
-                timeUnit: "yearweek",
+                timeUnit,
                 field: "day",
               },
               y: {
