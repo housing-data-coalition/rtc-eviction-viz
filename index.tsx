@@ -328,6 +328,7 @@ async function main() {
       <h2>Filings by zip code</h2>
       <ZipCodeViz values={zipcodeValues} />
       <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
+      <br/>
       <h2>Filings over time</h2>
       <EvictionVisualizations values={evictionValues} />
       <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
