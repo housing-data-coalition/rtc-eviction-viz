@@ -6,8 +6,13 @@ import embedVega, { VisualizationSpec } from "vega-embed";
 import * as Vega from "vega";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./lib/eviction-time-series";
 
-async function getEvictionTimeSeries(): Promise<EvictionTimeSeriesRow[]> {
-  return (await fetch(EVICTION_TIME_SERIES.json)).json();
+// https://data.beta.nyc/dataset/nyc-zip-code-tabulation-areas
+import ZipCodeGeoJSON from "./lib/nyc-zip-code-tabulation-areas.json";
+import { FILINGS_BY_ZIP_EMPTY_ROW, FilingsByZipRow, FILINGS_BY_ZIP } from "./lib/filings-by-zip-since-0323";
+import { QueryFiles } from "./lib/query";
+
+async function fetchJSON<T>(path: string): Promise<T> {
+  return (await fetch(path)).json();
 }
 
 /**
@@ -206,17 +211,100 @@ const EvictionViz: React.FC<{
   return <VegaLite spec={spec} />;
 };
 
+function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
+  const map = new Map<string, FilingsByZipRow>();
+
+  for (let value of values) {
+    map.set(value.zipcode, value);
+  }
+
+  return {
+    ...ZipCodeGeoJSON,
+    features: ZipCodeGeoJSON.features.map(feature => ({
+      ...feature,
+      properties: {
+        ...feature.properties,
+        ...(map.get(feature.properties.postalCode) || FILINGS_BY_ZIP_EMPTY_ROW),
+      }
+    }))
+  };
+}
+
+const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
+  const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
+
+  return <VegaLite spec={{
+    $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+    width: 640,
+    height: 640,
+    title: {
+      text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
+    },
+    data: {
+      values: geoJson.features,
+    },
+    projection: {
+      type: "albersUsa",
+    },
+    mark: "geoshape",
+    encoding: {
+      color: {
+        field: "properties.filingsrate_2plus",
+        type: "quantitative",
+        title: [
+          "Filings per unit of multi-family",
+          "buildings"
+        ],
+      },
+      tooltip: [
+        {
+          field: "properties.zipcode",
+          title: "Zip code",
+        },
+        {
+          field: "properties.filingsrate_2plus",
+          title: "Filings per unit",
+          formatType: "numberWithCommas"
+        },
+        {
+          field: "properties.filings_since_032320",
+          title: "Total filings",
+          formatType: "numberWithCommas"
+        },
+      ]
+    }
+  }} />;
+};
+
+const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({values}) => (
+  <>
+    <EvictionViz values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
+    <EvictionViz values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
+    <EvictionViz values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
+    <EvictionViz values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
+    <EvictionViz values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
+  </>
+);
+
+const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
+  <>
+    <p><a href={files.csv}>Download {title} CSV</a></p>
+    <p><a href={files.json}>Download {title} JSON</a></p>
+  </>
+);
+
 async function main() {
-  const values = await getEvictionTimeSeries();
+  const evictionValues = await fetchJSON<EvictionTimeSeriesRow[]>(EVICTION_TIME_SERIES.json);
+  const zipcodeValues = await fetchJSON<FilingsByZipRow[]>(FILINGS_BY_ZIP.json);
+
   ReactDOM.render(
     <div>
-      <EvictionViz values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
-      <EvictionViz values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
-      <EvictionViz values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
-      <EvictionViz values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
-      <EvictionViz values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
-      <p><a href={EVICTION_TIME_SERIES.csv}>Download CSV</a></p>
-      <p><a href={EVICTION_TIME_SERIES.json}>Download JSON</a></p>
+      <h2>Filings by zip code</h2>
+      <ZipCodeViz values={zipcodeValues} />
+      <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
+      <h2>Filings over time</h2>
+      <EvictionVisualizations values={evictionValues} />
+      <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     </div>,
     getHTMLElement('div', '#app')
   );

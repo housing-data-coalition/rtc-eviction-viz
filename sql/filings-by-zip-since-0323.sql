@@ -36,20 +36,15 @@ group by zipcode
 order by zipcode)
 
 select a.zipcode, 
+-- total filings since 03/23/2020
 filings_since_032320, 
+-- total residential units in the zip code as per PLUTO
 unitsres_total, 
---total residential units in the zip code as per PLUTO
+-- total residential units in the zip code except for single unit properties
 unitsres_2,
---total residential units in the zip code except for single unit properties
+-- filings normalized by total res units in the zip code
 filings_since_032320 * 1000 / nullif(unitsres_total, 0)::numeric as filingsrate_total, 
---filings normalized by total res units in the zip code
+-- filings normalized by total res units in the zip code except for single unit properties. 
 filings_since_032320 * 1000 / nullif(unitsres_2, 0)::numeric as filingsrate_2plus
---filings normalized by total res units in the zip code except for single unit properties. 
 from grouped_zips a
 left join grouped_unitsres b on b.zipcode = a.zipcode 
-
-/*For map of filings by zip code, make choropleth using filingsrate_2plus
-include filings_since_032320 in tool tip*/
-
-
-
