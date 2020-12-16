@@ -90,6 +90,7 @@ const EvictionViz: React.FC<{
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
   const timeUnitLabel = timeUnit === "yearweek" ? "Week" : "Month";
+  const lineColor = "#AF2525";
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -168,7 +169,7 @@ const EvictionViz: React.FC<{
           {
             mark: {
               type: "line",
-              color: "#AF2525",
+              color: lineColor,
               interpolate: "monotone",
             },
             encoding: {
@@ -201,7 +202,7 @@ const EvictionViz: React.FC<{
                 clear: "mouseout"
               },
             },
-            mark: { type: "point", strokeWidth: 4},
+            mark: { type: "point", strokeWidth: 4, color: lineColor },
             encoding: {
               x: {
                 timeUnit,
