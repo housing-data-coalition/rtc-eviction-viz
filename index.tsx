@@ -76,6 +76,9 @@ const EvictionViz: React.FC<{
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
 }> = ({values, fieldName, title}) => {
+  values = values.filter(
+    row => row.day >= "2020-01-01 00:00:00"
+  );
   const casesSinceCovid = values.filter(
     row => row.day >= "2020-03-23 00:00:00"
   ).reduce(
