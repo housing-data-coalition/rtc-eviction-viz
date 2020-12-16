@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 import { getHTMLElement } from "@justfixnyc/util";
 import embed from "vega-embed";
 import * as Vega from "vega";
@@ -199,6 +202,7 @@ async function main() {
   showViz(values, "nyc_nonpay_filings", "NYC Non-Payment Filings");
   showViz(values, "outside_nyc_holdover_filings", "Upstate Holdover Filings");
   showViz(values, "outside_nyc_nonpay_filings", "Upstate Non-Payment Filings");
+  ReactDOM.render(<p>hallo</p>, getHTMLElement('div', '#app'));
 }
 
 main();
