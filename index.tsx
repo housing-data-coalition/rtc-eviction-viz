@@ -232,11 +232,6 @@ function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
 
 const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
-  const filingsrate_2plus_title = [
-    "Filings normalized by total",
-    "residential units, excluding",
-    "single-unit properties"
-  ];
 
   return <VegaLite spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -256,7 +251,10 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
       color: {
         field: "properties.filingsrate_2plus",
         type: "quantitative",
-        title: filingsrate_2plus_title,
+        title: [
+          "Filings per unit of multi-family",
+          "buildings"
+        ],
       },
       tooltip: [
         {
@@ -265,7 +263,7 @@ const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
         },
         {
           field: "properties.filingsrate_2plus",
-          title: filingsrate_2plus_title.join(' '),
+          title: "Filings per unit",
           formatType: "numberWithCommas"
         },
         {
