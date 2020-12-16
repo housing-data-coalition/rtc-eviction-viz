@@ -3,6 +3,15 @@ import { Query, QueryFiles } from "./query";
 
 export const ZIPCODE_TIME_SERIES = new QueryFiles(`filings-by-zip-since-0323`);
 
+export const EMPTY_ZIPCODE_ROW: ZipcodeTimeSeriesRow = {
+  zipcode: '',
+  filings_since_032320: 0,
+  unitsres_total: null,
+  unitsres_2: null,
+  filingsrate_total: null,
+  filingsrate_2plus: null,
+};
+
 export function convertZipcodeTimeSeriesRow(row: any) {
   return {
     zipcode: ensureString(row.zipcode),
