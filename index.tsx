@@ -41,14 +41,14 @@ Vega.expressionFunction("numberWithCommas", numberWithCommas);
  */
 function getEvictionDataLagDate(
   data: EvictionTimeSeriesRow[],
-  lagWeeks: number
+  lagDays: number
 ): string {
   const maxEvictionDateNum = Math.max.apply(
     Math,
-    data.map(row => Date.parse(row.week))
+    data.map(row => Date.parse(row.day))
   );
   let returnDate = new Date(maxEvictionDateNum);
-  returnDate.setDate(returnDate.getDate() - lagWeeks * 7);
+  returnDate.setDate(returnDate.getDate() - lagDays);
   returnDate.setHours(0, 0, 0, 0);
   return returnDate.toISOString();
 }
@@ -77,11 +77,11 @@ const EvictionViz: React.FC<{
   title: string,
 }> = ({values, fieldName, title}) => {
   const casesSinceCovid = values.filter(
-    row => row.week >= "2020-03-23 00:00:00"
+    row => row.day >= "2020-03-23 00:00:00"
   ).reduce(
     (total, row) => total + row[fieldName], 0
   );
-  const EvictionDataLagStart = getEvictionDataLagDate(values, 4); // 4 weeks for lag
+  const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -131,18 +131,20 @@ const EvictionViz: React.FC<{
         },
         encoding: {
           x: {
-            field: "week",
-            type: "temporal",
+            timeUnit: "yearweek",
+            field: "day",
           },
           tooltip: [
             {
-              field: "week",
+              field: "day",
+              timeUnit: "yearweek",
               title: "Week of",
               type: "temporal",
               format: "%b %d, %Y",
             },
             {
               field: fieldName,
+              aggregate: "sum",
               title: "Filings",
               formatType: "numberWithCommas"
             },
@@ -157,8 +159,8 @@ const EvictionViz: React.FC<{
             },
             encoding: {
               x: {
-                field: "week",
-                type: "temporal",
+                timeUnit: "yearweek",
+                field: "day",
                 axis: {
                   title: "",
                   format: "%b ’%y",
@@ -167,7 +169,7 @@ const EvictionViz: React.FC<{
               },
               y: {
                 field: fieldName,
-                type: "quantitative",
+                aggregate: "sum",
                 axis: {
                   title: "Eviction Filings per Week",
                 },
@@ -188,11 +190,12 @@ const EvictionViz: React.FC<{
             mark: { type: "point", strokeWidth: 4},
             encoding: {
               x: {
-                field: "week",
-                type: "temporal",
+                timeUnit: "yearweek",
+                field: "day",
               },
               y: {
                 field: fieldName,
+                aggregate: "sum",
                 type: "quantitative",
               },
               opacity: {
