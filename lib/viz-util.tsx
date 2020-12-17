@@ -1,7 +1,9 @@
 import React from "react";
 
+/** A visualization that represents a geographic map (e.g. chloropeth). */
 export const VIZ_GEO_CLASS = "viz-geo";
 
+/** A visualization that represents a time series. */
 export const VIZ_TIME_SERIES_CLASS = "viz-time-series";
 
 // https://commons.wikimedia.org/wiki/File:Chromiumthrobber.svg
@@ -20,6 +22,11 @@ const ChromiumThrobber: React.FC<{}> = () => (
   </svg>
 );
 
+/**
+ * Fallback component for a visualization that is still loading, letting
+ * the user know that loading is occurring without causing layout
+ * instability.
+ */
 export const VizFallback: React.FC<{className: string}> = ({className}) => (
   <div className={`${className} loading`}><ChromiumThrobber /></div>
 );
