@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { getHTMLElement } from "@justfixnyc/util";
 import { EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./lib/eviction-time-series/data";
 
-import { FilingsByZipRow, FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
+import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
 import { EvictionVisualizations } from "./lib/eviction-time-series/viz";
 import { ZipCodeViz } from "./lib/filings-by-zip/viz";
@@ -22,12 +22,11 @@ const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, 
 
 async function main() {
   const evictionValues = await fetchJSON<EvictionTimeSeriesRow[]>(EVICTION_TIME_SERIES.json);
-  const zipcodeValues = await fetchJSON<FilingsByZipRow[]>(FILINGS_BY_ZIP.json);
 
   ReactDOM.render(
     <div>
       <h2>Filings by zip code</h2>
-      <ZipCodeViz values={zipcodeValues} height={600} />
+      <ZipCodeViz height={600} />
       <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
       <br/>
       <h2>Filings over time</h2>
