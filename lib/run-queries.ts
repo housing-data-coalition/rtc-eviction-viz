@@ -2,8 +2,8 @@ import csvStringify from "csv-stringify/lib/sync";
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { nycdbConnector } from "./db";
-import { EvictionTimeSeriesQuery } from "./eviction-time-series";
-import { FilingsByZipQuery } from "./filings-by-zip-since-0323";
+import { EvictionTimeSeriesQuery } from "./eviction-time-series/data";
+import { FilingsByZipQuery } from "./filings-by-zip/data";
 import { Query } from "./query";
 
 async function processQuery<Row>(query: Query<Row>) {

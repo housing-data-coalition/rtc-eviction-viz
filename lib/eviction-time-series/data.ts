@@ -1,5 +1,5 @@
-import { toInt } from "./converters";
-import { Query, QueryFiles } from "./query";
+import { toInt } from "../converters";
+import { Query, QueryFiles } from "../query";
 
 export const EVICTION_TIME_SERIES = new QueryFiles(`eviction-time-series`);
 
