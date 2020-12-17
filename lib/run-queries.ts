@@ -2,12 +2,19 @@ import csvStringify from "csv-stringify/lib/sync";
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { nycdbConnector } from "./db";
-import { convertEvictionTimeSeriesRow, EvictionTimeSeriesRow, EVICTION_TIME_SERIES_CSV, EVICTION_TIME_SERIES_JSON, getEvictionTimeSeriesCsvHeader, toEvictionTimeSeriesCsvRow } from "./eviction-time-series";
+import { EvictionTimeSeriesQuery } from "./eviction-time-series/data";
+import { FilingsByZipQuery } from "./filings-by-zip/data";
+import { Query } from "./query";
 
-function writeOutputFiles(data: EvictionTimeSeriesRow[]) {
+async function processQuery<Row>(query: Query<Row>) {
+  const data = await getQueryOutput(query);
+  writeQueryOutputFiles(query, data);
+}
+
+function writeQueryOutputFiles<Row>(query: Query<Row>, data: Row[]) {
   const staticDir = 'static';
-  const jsonOutfile = `${staticDir}/${EVICTION_TIME_SERIES_JSON}`;
-  const csvOutfile = `${staticDir}/${EVICTION_TIME_SERIES_CSV}`;
+  const jsonOutfile = `${staticDir}/${query.files.json}`;
+  const csvOutfile = `${staticDir}/${query.files.csv}`;
   if (!existsSync(staticDir)) {
     mkdirSync(staticDir);
   }
@@ -16,19 +23,28 @@ function writeOutputFiles(data: EvictionTimeSeriesRow[]) {
   writeFileSync(jsonOutfile, JSON.stringify(data, null, 2));
 
   console.log(`Writing ${csvOutfile}.`);
-  const lines = [getEvictionTimeSeriesCsvHeader()];
+  const lines = [query.csvHeader];
   for (let row of data) {
-    lines.push(toEvictionTimeSeriesCsvRow(row));
+    lines.push(query.toCsvRow(row));
   }
   writeFileSync(csvOutfile, csvStringify(lines));
 }
 
-export async function main() {
+async function getQueryOutput<Row>(query: Query<Row>): Promise<Row[]> {
   const nycdb = nycdbConnector.get();
-  const sqlfile = 'sql/eviction-time-series.sql';
+  const sqlfile = `sql/${query.files.sql}`;
   const sql = readFileSync(sqlfile, { encoding: "utf-8" });
   console.log(`Running SQL in ${sqlfile}.`);
-  const data = (await nycdb.any(sql)).map(convertEvictionTimeSeriesRow);
-  await nycdb.$pool.end();
-  writeOutputFiles(data);
+  return (await nycdb.any(sql)).map(query.sqlToRow);
+}
+
+export async function main() {
+  const nycdb = nycdbConnector.get();
+
+  try {
+    await processQuery(EvictionTimeSeriesQuery);
+    await processQuery(FilingsByZipQuery);
+  } finally {
+    await nycdb.$pool.end();
+  }
 }

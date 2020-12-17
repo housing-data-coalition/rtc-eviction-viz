@@ -35,7 +35,9 @@ group by zipcode
 order by zipcode)
 
 select a.zipcode, 
+-- total filings since 03/23/2020
 filings_since_032320, 
+-- total residential units in the zip code as per PLUTO
 unitsres_total, 
 --total residential units in the zip code as per PLUTO
 unitsrental,
