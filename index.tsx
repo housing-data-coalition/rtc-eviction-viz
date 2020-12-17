@@ -53,7 +53,10 @@ function getEvictionDataLagDate(
   return returnDate.toISOString();
 }
 
-const VegaLite: React.FC<{spec: VisualizationSpec}> = ({spec}) => {
+const VegaLite: React.FC<{
+  spec: VisualizationSpec,
+  className?: string,
+}> = ({spec, className}) => {
   const ref: React.MutableRefObject<HTMLDivElement|null> = useRef(null);
 
   useEffect(() => {
@@ -68,7 +71,7 @@ const VegaLite: React.FC<{spec: VisualizationSpec}> = ({spec}) => {
     };
   }, [spec]);
 
-  return <div ref={ref}></div>;
+  return <div ref={ref} className={className}></div>;
 };
 
 type EvictionTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
@@ -96,11 +99,8 @@ const EvictionViz: React.FC<{
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
-    width: 750,
+    width: "container",
     height: 150,
-    padding: {
-      bottom: 50
-    },
     title: {
       text: `${title}, 2020 - Present`,
       subtitle: [
@@ -229,7 +229,7 @@ const EvictionViz: React.FC<{
     ],
   };
 
-  return <VegaLite spec={spec} />;
+  return <VegaLite spec={spec} className="viz-time-series" />;
 };
 
 function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
@@ -254,10 +254,10 @@ function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
 const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
 
-  return <VegaLite spec={{
+  return <VegaLite className="viz-geo" spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-    width: 640,
-    height: 640,
+    width: "container",
+    height: 600,
     title: {
       text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
     },
@@ -305,15 +305,15 @@ const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({va
       <p>
         View by:&nbsp;&nbsp;
         <label>
-          <input type="radio" name="timeUnit" value="yearmonthdate" checked={timeUnit === "yearmonthdate"} onClick={(e) => setTimeUnit("yearmonthdate")} />
+          <input type="radio" name="timeUnit" value="yearmonthdate" checked={timeUnit === "yearmonthdate"} onChange={(e) => setTimeUnit("yearmonthdate")} />
           Day
         </label>&nbsp;&nbsp;
         <label>
-          <input type="radio" name="timeUnit" value="yearweek" checked={timeUnit === "yearweek"} onClick={(e) => setTimeUnit("yearweek")} />
+          <input type="radio" name="timeUnit" value="yearweek" checked={timeUnit === "yearweek"} onChange={(e) => setTimeUnit("yearweek")} />
           Week
         </label>&nbsp;&nbsp;
         <label>
-          <input type="radio" name="timeUnit" value="yearmonth" checked={timeUnit === "yearmonth"} onClick={(e) => setTimeUnit("yearmonth")} />
+          <input type="radio" name="timeUnit" value="yearmonth" checked={timeUnit === "yearmonth"} onChange={(e) => setTimeUnit("yearmonth")} />
           Month
         </label>
       </p>
