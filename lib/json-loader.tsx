@@ -1,5 +1,21 @@
 import { useEffect, useState } from "react";
 
+const requests = new Map<string, Promise<any>>();
+
+function getRequest(url: string): Promise<any> {
+  let request = requests.get(url);
+  if (!request) {
+    request = fetch(url).then(res => {
+      if (!res.ok) {
+        throw new Error(`Got HTTP ${res.status} when fetching ${url}`);
+      }
+      return res.json();
+    });
+    requests.set(url, request);
+  }
+  return request;
+}
+
 export function JsonLoader<T>(props: {
   url: string,
   fallback: JSX.Element,
@@ -9,12 +25,8 @@ export function JsonLoader<T>(props: {
   const [data, setData] = useState<T|null>(null);
 
   useEffect(() => {
-    fetch(url).then(res => {
-      if (res.ok) {
-        res.json().then(resData => {
-          setData(resData);
-        });
-      }
+    getRequest(url).then(data => {
+      setData(data);
     });
   }, [url]);
 

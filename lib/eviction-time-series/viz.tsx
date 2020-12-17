@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { VisualizationSpec } from "vega-embed";
+import { JsonLoader } from "../json-loader";
 import { VegaLite } from "../vega";
-import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow } from "./data";
+import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./data";
+
+const VIZ_TIME_SERIES_CLASS = "viz-time-series";
 
 /**
  * Take the array of data rows and get the date for the latest week we
@@ -28,14 +31,23 @@ function getEvictionDataLagDate(
 type EvictionTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
 type EvictionVizProps = {
-  values: EvictionTimeSeriesRow[],
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
   timeUnit: EvictionTimeUnit,
   height: number,
 };
 
-const EvictionViz: React.FC<EvictionVizProps> = ({values, fieldName, title, timeUnit, height}) => {
+const EvictionViz: React.FC<EvictionVizProps> = (props) => {
+  return (
+    <JsonLoader<EvictionTimeSeriesRow[]> url={EVICTION_TIME_SERIES.json} fallback={<div className={VIZ_TIME_SERIES_CLASS} />}>
+      {(values) => <EvictionVizWithValues values={values} {...props} />}
+    </JsonLoader>
+  );
+};
+
+const EvictionVizWithValues: React.FC<EvictionVizProps & {
+  values: EvictionTimeSeriesRow[],
+}> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
     // Otherwise, we can grab data from 1/1/2020 onwards
@@ -185,18 +197,16 @@ const EvictionViz: React.FC<EvictionVizProps> = ({values, fieldName, title, time
     ],
   };
 
-  return <VegaLite spec={spec} className="viz-time-series" />;
+  return <VegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
 export const EvictionVisualizations: React.FC<{
-  values: EvictionTimeSeriesRow[],
   height: number,
-}> = ({values, height}) => {
+}> = ({height}) => {
   const [timeUnit, setTimeUnit] = useState<EvictionTimeUnit>("yearweek");
-  const props: Pick<EvictionVizProps, 'timeUnit'|'height'|'values'> = {
+  const props: Pick<EvictionVizProps, 'timeUnit'|'height'> = {
     height,
     timeUnit,
-    values
   };
 
   return (
