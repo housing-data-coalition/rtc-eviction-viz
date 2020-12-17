@@ -71,7 +71,7 @@ const VegaLite: React.FC<{spec: VisualizationSpec}> = ({spec}) => {
   return <div ref={ref}></div>;
 };
 
-type EvictionTimeUnit = "yearweek"|"yearmonth";
+type EvictionTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
 const EvictionViz: React.FC<{
   values: EvictionTimeSeriesRow[],
@@ -89,7 +89,9 @@ const EvictionViz: React.FC<{
   );
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
-  const timeUnitLabel = timeUnit === "yearweek" ? "Week" : "Month";
+  const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
+    : timeUnit === "yearweek" ? "Week" 
+    : "Month";
   const lineColor = "#AF2525";
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -302,6 +304,10 @@ const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({va
     <>
       <p>
         View by:&nbsp;&nbsp;
+        <label>
+          <input type="radio" name="timeUnit" value="yearmonthdate" checked={timeUnit === "yearmonthdate"} onClick={(e) => setTimeUnit("yearmonthdate")} />
+          Day
+        </label>&nbsp;&nbsp;
         <label>
           <input type="radio" name="timeUnit" value="yearweek" checked={timeUnit === "yearweek"} onClick={(e) => setTimeUnit("yearweek")} />
           Week
