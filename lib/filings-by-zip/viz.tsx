@@ -52,6 +52,7 @@ export const ZipCodeViz: React.FC<{
           "Filings per unit of multi-family",
           "buildings"
         ],
+        scale: {"scheme": "reds"}
       },
       tooltip: [
         {
