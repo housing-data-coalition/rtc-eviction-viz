@@ -37,7 +37,9 @@ type EvictionVizProps = {
 
 const EvictionViz: React.FC<EvictionVizProps> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
-    row => row.day >= "2020-01-01 00:00:00"
+    // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
+    // Otherwise, we can grab data from 1/1/2020 onwards
+    row => row.day >= (timeUnit === "yearweek" ? "2020-01-05 00:00:00" : "2020-01-01 00:00:00")
   );
   const casesSinceCovid = values.filter(
     row => row.day >= "2020-03-23 00:00:00"
