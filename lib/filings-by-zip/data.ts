@@ -1,5 +1,5 @@
-import { ensureString, toInt, toIntOrNull } from "./converters";
-import { Query, QueryFiles } from "./query";
+import { ensureString, toInt, toIntOrNull } from "../converters";
+import { Query, QueryFiles } from "../query";
 
 export const FILINGS_BY_ZIP = new QueryFiles(`filings-by-zip-since-0323`);
 
