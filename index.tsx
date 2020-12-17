@@ -28,6 +28,7 @@ async function main() {
     <div>
       <h2>Filings by zip code</h2>
       <ZipCodeViz values={zipcodeValues} height={600} />
+      <small>Data sources: New York State Office of Court Administration eviction filings via github.com/nycdb/nycdb and PLUTO19v2. Total units per zip code excludes single-unit residential properties to approximate number of rental units.</small>
       <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
       <br/>
       <h2>Filings over time</h2>
