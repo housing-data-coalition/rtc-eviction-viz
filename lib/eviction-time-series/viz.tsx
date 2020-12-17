@@ -3,9 +3,8 @@ import { useState } from "react";
 import { VisualizationSpec } from "vega-embed";
 import { JsonLoader } from "../json-loader";
 import { VegaLite } from "../vega";
+import { VizFallback, VIZ_TIME_SERIES_CLASS } from "../viz-util";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./data";
-
-const VIZ_TIME_SERIES_CLASS = "viz-time-series";
 
 /**
  * Take the array of data rows and get the date for the latest week we
@@ -39,7 +38,7 @@ type EvictionVizProps = {
 
 const EvictionViz: React.FC<EvictionVizProps> = (props) => {
   return (
-    <JsonLoader<EvictionTimeSeriesRow[]> url={EVICTION_TIME_SERIES.json} fallback={<div className={VIZ_TIME_SERIES_CLASS} />}>
+    <JsonLoader<EvictionTimeSeriesRow[]> url={EVICTION_TIME_SERIES.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
       {(values) => <EvictionVizWithValues values={values} {...props} />}
     </JsonLoader>
   );

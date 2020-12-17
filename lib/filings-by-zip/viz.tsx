@@ -1,12 +1,11 @@
 import React from "react";
 import { JsonLoader } from "../json-loader";
 import { VegaLite } from "../vega";
+import { VizFallback, VIZ_GEO_CLASS } from "../viz-util";
 import { FilingsByZipRow, FILINGS_BY_ZIP, FILINGS_BY_ZIP_EMPTY_ROW } from "./data";
 
 // https://data.beta.nyc/dataset/nyc-zip-code-tabulation-areas
 import ZipCodeGeoJSON from "./nyc-zip-code-tabulation-areas.json";
-
-const VIZ_GEO_CLASS = "viz-geo";
 
 function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
   const map = new Map<string, FilingsByZipRow>();
@@ -27,15 +26,17 @@ function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
   };
 }
 
-export const ZipCodeViz: React.FC<{
+const ZipCodeViz: React.FC<{
   height: number,
 }> = (props) => {
   return (
-    <JsonLoader<FilingsByZipRow[]> url={FILINGS_BY_ZIP.json} fallback={<div className={VIZ_GEO_CLASS} />}>
+    <JsonLoader<FilingsByZipRow[]> url={FILINGS_BY_ZIP.json} fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
       {(values) => <ZipCodeVizWithValues values={values} {...props} />}
     </JsonLoader>
   );
 };
+
+export default ZipCodeViz;
 
 const ZipCodeVizWithValues: React.FC<{
   values: FilingsByZipRow[],
