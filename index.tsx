@@ -157,7 +157,7 @@ const EvictionViz: React.FC<{
               timeUnit,
               title: `${timeUnitLabel} of`,
               type: "temporal",
-              format: "%b %d, %Y",
+              format: timeUnit === "yearmonth" ? "%B" : "%b %d, %Y",
             },
             {
               field: fieldName,
