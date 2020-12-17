@@ -27,11 +27,11 @@ async function main() {
   ReactDOM.render(
     <div>
       <h2>Filings by zip code</h2>
-      <ZipCodeViz values={zipcodeValues} />
+      <ZipCodeViz values={zipcodeValues} height={600} />
       <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
       <br/>
       <h2>Filings over time</h2>
-      <EvictionVisualizations values={evictionValues} />
+      <EvictionVisualizations values={evictionValues} height={150} />
       <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     </div>,
     getHTMLElement('div', '#app')

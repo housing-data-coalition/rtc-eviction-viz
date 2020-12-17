@@ -27,12 +27,15 @@ function getEvictionDataLagDate(
 
 type EvictionTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
-const EvictionViz: React.FC<{
+type EvictionVizProps = {
   values: EvictionTimeSeriesRow[],
   fieldName: keyof EvictionTimeSeriesNumericFields,
   title: string,
-  timeUnit: EvictionTimeUnit
-}> = ({values, fieldName, title, timeUnit}) => {
+  timeUnit: EvictionTimeUnit,
+  height: number,
+};
+
+const EvictionViz: React.FC<EvictionVizProps> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
     row => row.day >= "2020-01-01 00:00:00"
   );
@@ -51,7 +54,7 @@ const EvictionViz: React.FC<{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
     width: "container",
-    height: 150,
+    height,
     title: {
       text: `${title}, 2020 - Present`,
       subtitle: [
@@ -183,8 +186,16 @@ const EvictionViz: React.FC<{
   return <VegaLite spec={spec} className="viz-time-series" />;
 };
 
-export const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}> = ({values}) => {
+export const EvictionVisualizations: React.FC<{
+  values: EvictionTimeSeriesRow[],
+  height: number,
+}> = ({values, height}) => {
   const [timeUnit, setTimeUnit] = useState<EvictionTimeUnit>("yearweek");
+  const props: Pick<EvictionVizProps, 'timeUnit'|'height'|'values'> = {
+    height,
+    timeUnit,
+    values
+  };
 
   return (
     <>
@@ -203,11 +214,11 @@ export const EvictionVisualizations: React.FC<{values: EvictionTimeSeriesRow[]}>
           Month
         </label>
       </p>
-      <EvictionViz timeUnit={timeUnit} values={values} fieldName="total_filings" title="Total NY State Eviction Filings" />
-      <EvictionViz timeUnit={timeUnit} values={values} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
-      <EvictionViz timeUnit={timeUnit} values={values} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
-      <EvictionViz timeUnit={timeUnit} values={values} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
-      <EvictionViz timeUnit={timeUnit} values={values} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
+      <EvictionViz {...props} fieldName="total_filings" title="Total NY State Eviction Filings" />
+      <EvictionViz {...props} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
+      <EvictionViz {...props} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
+      <EvictionViz {...props} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
+      <EvictionViz {...props} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
     </>
   );
 };

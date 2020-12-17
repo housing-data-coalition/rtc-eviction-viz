@@ -24,13 +24,16 @@ function mergeZipcodeFilingsIntoGeoJSON(values: FilingsByZipRow[]) {
   };
 }
 
-export const ZipCodeViz: React.FC<{values: FilingsByZipRow[]}> = ({values}) => {
+export const ZipCodeViz: React.FC<{
+  values: FilingsByZipRow[],
+  height: number,
+}> = ({values, height}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
 
   return <VegaLite className="viz-geo" spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     width: "container",
-    height: 600,
+    height,
     title: {
       text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
     },
