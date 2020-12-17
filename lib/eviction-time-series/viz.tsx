@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { VisualizationSpec } from "vega-embed";
+import type { VisualizationSpec } from "vega-embed";
 import { JsonLoader } from "../json-loader";
-import { VegaLite } from "../vega";
+import { LazyVegaLite } from "../vega-lazy";
 import { VizFallback, VIZ_TIME_SERIES_CLASS } from "../viz-util";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./data";
 
@@ -196,7 +196,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     ],
   };
 
-  return <VegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
+  return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
 export const EvictionVisualizations: React.FC<{

@@ -19,10 +19,12 @@ function numberWithCommas(x: number): string {
 
 Vega.expressionFunction("numberWithCommas", numberWithCommas);
 
-export const VegaLite: React.FC<{
+export type VegaLiteProps = {
   spec: VisualizationSpec,
   className?: string,
-}> = ({spec, className}) => {
+};
+
+const VegaLite: React.FC<VegaLiteProps> = ({spec, className}) => {
   const ref: React.MutableRefObject<HTMLDivElement|null> = useRef(null);
 
   useEffect(() => {
@@ -39,3 +41,5 @@ export const VegaLite: React.FC<{
 
   return <div ref={ref} className={className}></div>;
 };
+
+export default VegaLite;

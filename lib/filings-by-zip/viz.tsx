@@ -1,6 +1,6 @@
 import React from "react";
 import { JsonLoader } from "../json-loader";
-import { VegaLite } from "../vega";
+import { LazyVegaLite } from "../vega-lazy";
 import { VizFallback, VIZ_GEO_CLASS } from "../viz-util";
 import { FilingsByZipRow, FILINGS_BY_ZIP, FILINGS_BY_ZIP_EMPTY_ROW } from "./data";
 
@@ -44,7 +44,7 @@ const ZipCodeVizWithValues: React.FC<{
 }> = ({values, height}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
 
-  return <VegaLite className={VIZ_GEO_CLASS} spec={{
+  return <LazyVegaLite className={VIZ_GEO_CLASS} spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     width: "container",
     height,
