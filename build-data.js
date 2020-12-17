@@ -1,3 +1,5 @@
+require('source-map-support').install();
+
 const dotenv = require("dotenv");
 
 dotenv.config();
