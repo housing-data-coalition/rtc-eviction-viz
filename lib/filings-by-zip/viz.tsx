@@ -35,7 +35,7 @@ export const ZipCodeViz: React.FC<{
     width: "container",
     height,
     title: {
-      text: `NYC Eviction Filings By Zip Code, March 23, 2020 - Present`,
+      text: `NYC Residential Eviction Filings By Zip Code, March 23, 2020 - Present`,
     },
     data: {
       values: geoJson.features,
