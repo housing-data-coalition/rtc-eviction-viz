@@ -21,5 +21,5 @@ const ChromiumThrobber: React.FC<{}> = () => (
 );
 
 export const VizFallback: React.FC<{className: string}> = ({className}) => (
-  <div className={className}><ChromiumThrobber /></div>
+  <div className={`${className} loading`}><ChromiumThrobber /></div>
 );
