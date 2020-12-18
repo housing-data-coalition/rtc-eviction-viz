@@ -100,7 +100,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
               type: "text",
               align: "right",
               baseline: "bottom",
-              dy: -76,
+              dy: -(height / 2) - 1,
               text:
                 "Due to reporting lags, data for most recent weeks (in gray) is incomplete",
             },

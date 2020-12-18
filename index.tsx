@@ -18,6 +18,8 @@ const QS_VIEW = "view";
 
 const QS_FIELD_NAME = "fieldName";
 
+const QS_HEIGHT = "height";
+
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
 const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
@@ -45,8 +47,11 @@ const FullDocument: React.FC<{}> = () => (
   </div>
 );
 
-const Widget: React.FC<{fieldName: keyof EvictionTimeSeriesNumericFields}> = ({fieldName}) => {
-  return <EvictionVisualizations height={EVICTION_VIZ_DEFAULT_HEIGHT} fieldNames={[fieldName]} />;
+const Widget: React.FC<{
+  fieldName: keyof EvictionTimeSeriesNumericFields,
+  height: number,
+}> = ({fieldName, height}) => {
+  return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
 const ConfigureWidget: React.FC<{}> = () => {
@@ -70,6 +75,10 @@ const ConfigureWidget: React.FC<{}> = () => {
             </label>
           </div>
         ))}
+        <p>
+          <label htmlFor="height">Height of graph: </label>
+          <input type="number" min="1" id="height" name={QS_HEIGHT} />
+        </p>
         <p><button type="submit">Show widget</button></p>
       </form>
       <p><a href="./">Go back</a></p>
@@ -77,15 +86,26 @@ const ConfigureWidget: React.FC<{}> = () => {
   );
 };
 
-function validateFieldName(fieldName: string): keyof EvictionTimeSeriesNumericFields {
+function validateFieldName(fieldName: string|null): keyof EvictionTimeSeriesNumericFields {
+  fieldName = fieldName || '';
   return isEvictionTimeSeriesNumericField(fieldName) ? fieldName : "total_filings";
+}
+
+function validatePositiveInt(value: string|null, defaultValue: number): number {
+  const num = parseInt(value || '');
+  if (!isNaN(num) && num > 0) return num;
+  return defaultValue;
 }
 
 async function main() {
   const search = new URLSearchParams(window.location.search);
   const view = search.get(QS_VIEW);
   const app =
-    view === VIEW_WIDGET ? <Widget fieldName={validateFieldName(search.get(QS_FIELD_NAME) || '')} /> :
+    view === VIEW_WIDGET ?
+      <Widget
+        fieldName={validateFieldName(search.get(QS_FIELD_NAME))}
+        height={validatePositiveInt(search.get(QS_HEIGHT), EVICTION_VIZ_DEFAULT_HEIGHT)}
+      /> :
     view === VIEW_CONFIGURE_WIDGET ? <ConfigureWidget /> :
     <FullDocument />;
 
