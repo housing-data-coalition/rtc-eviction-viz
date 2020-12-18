@@ -200,6 +200,10 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
   return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
+export function isEvictionTimeSeriesNumericField(value: string): value is keyof EvictionTimeSeriesNumericFields {
+  return EVICTION_VISUALIZATIONS.has(value as any);
+}
+
 const EVICTION_VISUALIZATIONS: Map<keyof EvictionTimeSeriesNumericFields, string> = new Map([
   ["total_filings", "Total NY State Eviction Filings"],
   ["nyc_holdover_filings", "NYC Holdover Filings"],
