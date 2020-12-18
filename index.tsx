@@ -20,6 +20,7 @@ const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, 
 async function main() {
   ReactDOM.render(
     <div className="viz-container">
+      <h1>New York Eviction Filings Tracker</h1>
       <h2>Filings by zip code</h2>
       <Suspense fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
         <ZipCodeViz height={600} />
@@ -30,6 +31,7 @@ async function main() {
       <h2>Filings over time</h2>
       <EvictionVisualizations height={150} />
       <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
+      <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
     </div>,
     getHTMLElement('div', '#app')
   );
