@@ -1,3 +1,4 @@
+import { assertNotUndefined } from "@justfixnyc/util";
 import React from "react";
 import { useState } from "react";
 import type { VisualizationSpec } from "vega-embed";
@@ -199,14 +200,21 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
   return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
+const EVICTION_VISUALIZATIONS: Map<keyof EvictionTimeSeriesNumericFields, string> = new Map([
+  ["total_filings", "Total NY State Eviction Filings"],
+  ["nyc_holdover_filings", "NYC Holdover Filings"],
+  ["nyc_nonpay_filings", "NYC Non-Payment Filings"],
+  ["outside_nyc_holdover_filings", "Upstate Holdover Filings"],
+  ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"],
+]);
+
 export const EvictionVisualizations: React.FC<{
   height: number,
-}> = ({height}) => {
+  fieldNames?: (keyof EvictionTimeSeriesNumericFields)[]
+}> = ({height, fieldNames}) => {
   const [timeUnit, setTimeUnit] = useState<EvictionTimeUnit>("yearweek");
-  const props: Pick<EvictionVizProps, 'timeUnit'|'height'> = {
-    height,
-    timeUnit,
-  };
+
+  fieldNames = fieldNames || Array.from(EVICTION_VISUALIZATIONS.keys());
 
   return (
     <>
@@ -225,11 +233,15 @@ export const EvictionVisualizations: React.FC<{
           Month
         </label>
       </p>
-      <EvictionViz {...props} fieldName="total_filings" title="Total NY State Eviction Filings" />
-      <EvictionViz {...props} fieldName="nyc_holdover_filings" title="NYC Holdover Filings" />
-      <EvictionViz {...props} fieldName="nyc_nonpay_filings" title="NYC Non-Payment Filings" />
-      <EvictionViz {...props} fieldName="outside_nyc_holdover_filings" title="Upstate Holdover Filings" />
-      <EvictionViz {...props} fieldName="outside_nyc_nonpay_filings" title="Upstate Non-Payment Filings" />
+      {fieldNames.map(fieldName => (
+        <EvictionViz
+          key={fieldName}
+          height={height}
+          timeUnit={timeUnit}
+          fieldName={fieldName}
+          title={assertNotUndefined(EVICTION_VISUALIZATIONS.get(fieldName))}
+        />
+      ))}
     </>
   );
 };
