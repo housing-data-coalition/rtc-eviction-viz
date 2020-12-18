@@ -32,7 +32,9 @@ const VegaLite: React.FC<VegaLiteProps> = ({spec, className}) => {
     if (!current) {
       throw new Error("Expected ref for Vega container to exist!");
     }
-    const embedResult = embedVega(current, spec);
+    const embedResult = embedVega(current, spec, {
+      actions: false,
+    });
 
     return () => {
       embedResult.then(result => result.finalize())
