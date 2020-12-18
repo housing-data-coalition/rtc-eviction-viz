@@ -30,7 +30,7 @@ const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, 
 );
 
 const FullDocument: React.FC<{}> = () => (
-  <div className="viz-container">
+  <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
     <h2>Filings by zip code</h2>
     <Suspense fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
@@ -56,7 +56,7 @@ const Widget: React.FC<{
 
 const ConfigureWidget: React.FC<{}> = () => {
   return (
-    <>
+    <div className="container">
       <h1>New York Eviction Filings Widget Configurator</h1>
       <p>
         Use the following form to generate a widget. Once you submit it, grab the URL
@@ -82,7 +82,7 @@ const ConfigureWidget: React.FC<{}> = () => {
         <p><button type="submit">Show widget</button></p>
       </form>
       <p><a href="./">Go back</a></p>
-    </>
+    </div>
   );
 };
 
