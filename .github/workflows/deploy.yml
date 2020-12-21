@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set Timezone 
+      - name: Set Timezone 🕑
         uses: zcong1993/setup-timezone@master # Adapted from: https://github.com/marketplace/actions/setup-timezone
         with:
           timezone: America/New_York
