@@ -1,6 +1,6 @@
 This is a visualization of eviction filings week-by-week in New York.
 
-[View it on the web](https://housing-data-coalition.github.io/rtc-eviction-viz/index.html)
+**[View it on the web](https://housing-data-coalition.github.io/rtc-eviction-viz/index.html)**
 
 ## Quick start
 
