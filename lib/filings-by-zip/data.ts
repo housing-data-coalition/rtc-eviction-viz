@@ -7,8 +7,7 @@ export const FILINGS_BY_ZIP_EMPTY_ROW: FilingsByZipRow = {
   zipcode: '',
   filings_since_032320: 0,
   unitsres_total: null,
-  unitsres_2: null,
-  filingsrate_total: null,
+  unitsrental: null,
   filingsrate_2plus: null,
 };
 
@@ -17,8 +16,7 @@ export function convertFilingsByZipRow(row: any) {
     zipcode: ensureString(row.zipcode),
     filings_since_032320: toInt(row.filings_since_032320),
     unitsres_total: toIntOrNull(row.unitsres_total),
-    unitsres_2: toIntOrNull(row.unitsres_2),
-    filingsrate_total: toIntOrNull(row.filingsrate_total),
+    unitsrental: toIntOrNull(row.unitsrental),
     filingsrate_2plus: toIntOrNull(row.filingsrate_2plus),
   };
 }
@@ -30,8 +28,7 @@ function getCsvHeader(): string[] {
     'zipcode',
     'filings_since_032320',
     'unitsres_total',
-    'unitsres_2',
-    'filingsrate_total',
+    'unitsrental',
     'filingsrate_2plus',
   ];
 }
@@ -41,8 +38,7 @@ function toCsvRow(row: FilingsByZipRow): string[] {
     row.zipcode,
     row.filings_since_032320.toString(),
     row.unitsres_total?.toString() ?? '',
-    row.unitsres_2?.toString() ?? '',
-    row.filingsrate_total?.toString() ?? '',
+    row.unitsrental?.toString() ?? '',
     row.filingsrate_2plus?.toString() ?? '',
   ];
 }
