@@ -63,8 +63,8 @@ const ZipCodeVizWithValues: React.FC<{
         field: "properties.filingsrate_2plus",
         type: "quantitative",
         title: [
-          "Filings per unit of multi-family",
-          "buildings"
+          "Filings per unit of",
+          "multi-family buildings"
         ],
         scale: {"scheme": "reds"}
       },
