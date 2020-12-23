@@ -27,6 +27,7 @@ select
 			else 'Outside NYC' end as region
 		from oca_index i 
 		where i.fileddate >= '01-01-2019' and i.classification = any('{Holdover,Non-Payment}') 
+		and propertytype = 'Residential'
 		order by i.fileddate asc 
 	) eviction_cases using(day)
 group by day
