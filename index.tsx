@@ -36,7 +36,7 @@ const FullDocument: React.FC<{}> = () => (
     <Suspense fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
       <ZipCodeViz height={600} />
     </Suspense>
-    <small>Data sources: New York State Office of Court Administration eviction filings via github.com/nycdb/nycdb and PLUTO19v2. Total units per zip code excludes single-unit residential properties to approximate number of rental units.</small>
+    <small>Data sources: New York State Office of Court Administration eviction filings and PLUTO19v2 via <a href="https://github.com/nycdb/nycdb" target="_blank">NYCDB</a>. Numbers of total units per zip code exclude single-unit properties to approximate number of rental units.</small>
     <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
     <br/>
     <h2>Filings over time</h2>
