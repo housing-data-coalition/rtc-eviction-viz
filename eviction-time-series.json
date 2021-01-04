@@ -5814,5 +5814,13 @@
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
     "total_filings": 3
+  },
+  {
+    "day": "2020-12-28T05:00:00.000Z",
+    "nyc_holdover_filings": 6,
+    "nyc_nonpay_filings": 5,
+    "outside_nyc_holdover_filings": 0,
+    "outside_nyc_nonpay_filings": 2,
+    "total_filings": 13
   }
 ]
