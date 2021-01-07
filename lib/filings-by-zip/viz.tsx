@@ -50,20 +50,21 @@ const ZipCodeVizWithValues: React.FC<{
     height,
     title: {
       text: `NYC Residential Eviction Filings By Zip Code, March 23, 2020 - Present`,
+      fontSize: 20,
     },
     data: {
       values: geoJson.features,
     },
     projection: {
-      type: "albersUsa",
-    },
+      "type": "mercator",
+      },
     mark: "geoshape",
     encoding: {
       color: {
         field: "properties.filingsrate_2plus",
         type: "quantitative",
         title: [
-          "Filings per unit of",
+          "Filings per 1,000 units of",
           "multi-family buildings"
         ],
         scale: {"scheme": "reds"}
@@ -80,7 +81,7 @@ const ZipCodeVizWithValues: React.FC<{
         },
         {
           field: "properties.filingsrate_2plus",
-          title: "Filings per unit",
+          title: "Filings per 1,000 units",
           formatType: "numberWithCommas"
         },
       ]
