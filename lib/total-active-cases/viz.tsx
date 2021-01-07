@@ -69,7 +69,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
     width: "container",
-    height,
+    height: 240,
     title: {
       text: `${title}, 2020 - Present`,
     //   subtitle: [
@@ -79,38 +79,6 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     //   ]
     },
     layer: [
-      {
-        data: {
-          values: [
-            {
-              lagDateStart: ActiveCasesDataLagStart,
-              lagDateEnd: ActiveCasesDataLagEnd,
-            },
-          ],
-        },
-        layer: [
-          {
-            mark: { type: "rect", color: "grey", opacity: 0.3 },
-            encoding: {
-              x: { field: "lagDateStart", type: "temporal" },
-              x2: { field: "lagDateEnd", type: "temporal" },
-            },
-          },
-          {
-            mark: {
-              type: "text",
-              align: "right",
-              baseline: "bottom",
-              dy: -(height / 2) - 1,
-              text:
-                "Due to reporting lags, data for most recent weeks (in gray) is incomplete",
-            },
-            encoding: {
-              x: { field: "lagDateEnd", type: "temporal" },
-            },
-          },
-        ],
-      },
       {
         data: {
           values,
@@ -139,9 +107,10 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
         layer: [
           {
             mark: {
-              type: "line",
+              type: "area",
               color: lineColor,
               interpolate: "monotone",
+              opacity: 0.6,
             },
             encoding: {
               x: {
@@ -159,6 +128,32 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 axis: {
                   title: `Active Eviction Cases per ${timeUnitLabel}`,
                 },
+                scale: {"zero": false},
+              },
+            },
+          },
+          {
+            mark: {
+              type: "line",
+              color: lineColor,
+              interpolate: "monotone",
+              strokeWidth: 4,
+            },
+            encoding: {
+              x: {
+                timeUnit,
+                field: "day",
+                axis: {
+                  title: "",
+                  format: "%b ’%y",
+                },
+              },
+              y: {
+                field: fieldName,
+                aggregate: "sum",
+                axis: {
+                },
+                scale: {"zero": false},
               },
             },
           },
@@ -191,6 +186,38 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 },
                 value: 0,
               },
+            },
+          },
+        ],
+      },
+      {
+        data: {
+          values: [
+            {
+              lagDateStart: ActiveCasesDataLagStart,
+              lagDateEnd: ActiveCasesDataLagEnd,
+            },
+          ],
+        },
+        layer: [
+          {
+            mark: { type: "rect", color: "grey", opacity: 0.4 },
+            encoding: {
+              x: { field: "lagDateStart", type: "temporal" },
+              x2: { field: "lagDateEnd", type: "temporal" },
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              align: "right",
+              baseline: "bottom",
+              dy: -(height/1.25) - 1,
+              text:
+                "Due to reporting lags, data for most recent weeks (in gray) is incomplete",
+            },
+            encoding: {
+              x: { field: "lagDateEnd", type: "temporal" },
             },
           },
         ],
