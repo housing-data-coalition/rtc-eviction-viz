@@ -3,12 +3,16 @@ import ReactDOM from "react-dom";
 
 import { getHTMLElement } from "@justfixnyc/util";
 import { EvictionTimeSeriesNumericFields, EVICTION_TIME_SERIES } from "./lib/eviction-time-series/data";
+import { ActiveCasesNumericFields, ACTIVE_CASES } from "./lib/total-active-cases/data";
 import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
 import { EvictionVisualizations, EVICTION_VISUALIZATIONS, isEvictionTimeSeriesNumericField } from "./lib/eviction-time-series/viz";
+import { ActiveCasesVisualizations, ACTIVECASES_VISUALIZATIONS, isActiveCasesNumericField } from "./lib/total-active-cases/viz";
 import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
 
 const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
+
+const ACTIVE_CASES_VIZ_DEFAULT_HEIGHT = 150;
 
 const VIEW_WIDGET = "widget";
 
@@ -41,6 +45,8 @@ const FullDocument: React.FC<{}> = () => (
     <br/>
     <h2>Filings over time</h2>
     <EvictionVisualizations height={EVICTION_VIZ_DEFAULT_HEIGHT} />
+    <h2>Active Cases in 2020</h2>
+    <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>

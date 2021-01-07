@@ -5,7 +5,7 @@ import type { VisualizationSpec } from "vega-embed";
 import { JsonLoader } from "../json-loader";
 import { LazyVegaLite } from "../vega-lazy";
 import { VizFallback, VIZ_TIME_SERIES_CLASS } from "../viz-util";
-import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./data";
+import { ActiveCasesNumericFields, ActiveCasesRow, ACTIVE_CASES } from "./data";
 
 /**
  * Take the array of data rows and get the date for the latest week we
@@ -14,52 +14,53 @@ import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_S
  * data, due to repoting lags. The result is a string in the same format
  * as the "week" dates stored in the input data.
  */
-function getEvictionDataLagDate(
-  data: EvictionTimeSeriesRow[],
+function getActiveCasesLagDate(
+  data: ActiveCasesRow[],
   lagDays: number
 ): string {
-  const maxEvictionDateNum = Math.max.apply(
+  const maxActiveCasesDateNum = Math.max.apply(
     Math,
     data.map(row => Date.parse(row.day))
   );
-  let returnDate = new Date(maxEvictionDateNum);
+  let returnDate = new Date(maxActiveCasesDateNum);
   returnDate.setDate(returnDate.getDate() - lagDays);
   returnDate.setHours(0, 0, 0, 0);
   return returnDate.toISOString();
 }
 
-type EvictionTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
+type ActiveCasesTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
-type EvictionVizProps = {
-  fieldName: keyof EvictionTimeSeriesNumericFields,
+type ActiveCasesVizProps = {
+  fieldName: keyof ActiveCasesNumericFields,
   title: string,
-  timeUnit: EvictionTimeUnit,
+  timeUnit: ActiveCasesTimeUnit,
   height: number,
 };
 
-const EvictionViz: React.FC<EvictionVizProps> = (props) => {
+const ActiveCasesViz: React.FC<ActiveCasesVizProps> = (props) => {
   return (
-    <JsonLoader<EvictionTimeSeriesRow[]> url={EVICTION_TIME_SERIES.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
-      {(values) => <EvictionVizWithValues values={values} {...props} />}
+    <JsonLoader<ActiveCasesRow[]> url={ACTIVE_CASES.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
+      {(values) => <ActiveCasesVizWithValues values={values} {...props} />}
     </JsonLoader>
   );
 };
 
-const EvictionVizWithValues: React.FC<EvictionVizProps & {
-  values: EvictionTimeSeriesRow[],
+const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
+  values: ActiveCasesRow[],
 }> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
     // Otherwise, we can grab data from 1/1/2020 onwards
     row => row.day >= (timeUnit === "yearweek" ? "2020-01-05 00:00:00" : "2020-01-01 00:00:00")
   );
-  const casesSinceCovid = values.filter(
-    row => row.day >= "2020-03-23 00:00:00"
-  ).reduce(
-    (total, row) => total + row[fieldName], 0
-  );
-  const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
-  const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
+//   const casesSinceCovid = values.filter(
+//     row => row.day >= "2020-03-23 00:00:00"
+//   ).reduce(
+//     (total, row) => total + row[fieldName], 0
+//   );
+// commented this out because this counter should probably be different from total active cases
+  const ActiveCasesDataLagStart = getActiveCasesLagDate(values, 30); // 4 weeks for lag
+  const ActiveCasesDataLagEnd = getActiveCasesLagDate(values, 0); // latest date
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
@@ -71,19 +72,19 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     height,
     title: {
       text: `${title}, 2020 - Present`,
-      // subtitle: [
-      //   `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
-      //   // This effectively adds extra padding below the subtitle.
-      //   ""
-      // ]
+    //   subtitle: [
+    //     `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
+    //     // This effectively adds extra padding below the subtitle.
+    //     ""
+    //   ]
     },
     layer: [
       {
         data: {
           values: [
             {
-              lagDateStart: EvictionDataLagStart,
-              lagDateEnd: EvictionDataLagEnd,
+              lagDateStart: ActiveCasesDataLagStart,
+              lagDateEnd: ActiveCasesDataLagEnd,
             },
           ],
         },
@@ -156,7 +157,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
                 field: fieldName,
                 aggregate: "sum",
                 axis: {
-                  title: `Eviction Filings per ${timeUnitLabel}`,
+                  title: `Active Eviction Cases per ${timeUnitLabel}`,
                 },
               },
             },
@@ -200,29 +201,25 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
   return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
-export function isEvictionTimeSeriesNumericField(value: string): value is keyof EvictionTimeSeriesNumericFields {
-  return EVICTION_VISUALIZATIONS.has(value as any);
+export function isActiveCasesNumericField(value: string): value is keyof ActiveCasesNumericFields {
+  return ACTIVECASES_VISUALIZATIONS.has(value as any);
 }
 
-export const EVICTION_VISUALIZATIONS: Map<keyof EvictionTimeSeriesNumericFields, string> = new Map([
-  ["total_filings", "Total NY State Eviction Filings"],
-  ["nyc_holdover_filings", "NYC Holdover Filings"],
-  ["nyc_nonpay_filings", "NYC Non-Payment Filings"],
-  ["outside_nyc_holdover_filings", "Upstate Holdover Filings"],
-  ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"],
+export const ACTIVECASES_VISUALIZATIONS: Map<keyof ActiveCasesNumericFields, string> = new Map([
+  ["active_cases", "Total Active Cases"],
 ]);
 
-export const EvictionVisualizations: React.FC<{
+export const ActiveCasesVisualizations: React.FC<{
   height: number,
-  fieldNames?: (keyof EvictionTimeSeriesNumericFields)[]
+  fieldNames?: (keyof ActiveCasesNumericFields)[]
 }> = ({height, fieldNames}) => {
-  const [timeUnit, setTimeUnit] = useState<EvictionTimeUnit>("yearweek");
+  const [timeUnit, setTimeUnit] = useState<ActiveCasesTimeUnit>("yearweek");
 
-  fieldNames = fieldNames || Array.from(EVICTION_VISUALIZATIONS.keys());
+  fieldNames = fieldNames || Array.from(ACTIVECASES_VISUALIZATIONS.keys());
 
   return (
     <>
-      <p>
+      {/* <p>
         View by:&nbsp;&nbsp;
         <label>
           <input type="radio" name="timeUnit" value="yearmonthdate" checked={timeUnit === "yearmonthdate"} onChange={(e) => setTimeUnit("yearmonthdate")} />
@@ -236,14 +233,17 @@ export const EvictionVisualizations: React.FC<{
           <input type="radio" name="timeUnit" value="yearmonth" checked={timeUnit === "yearmonth"} onChange={(e) => setTimeUnit("yearmonth")} />
           Month
         </label>
-      </p>
+      </p> 
+      Commented out because not working properly and probably not necessary for total active cases.
+      */}
+      
       {fieldNames.map(fieldName => (
-        <EvictionViz
+        <ActiveCasesViz
           key={fieldName}
           height={height}
           timeUnit={timeUnit}
           fieldName={fieldName}
-          title={assertNotUndefined(EVICTION_VISUALIZATIONS.get(fieldName))}
+          title={assertNotUndefined(ACTIVECASES_VISUALIZATIONS.get(fieldName))}
         />
       ))}
     </>
