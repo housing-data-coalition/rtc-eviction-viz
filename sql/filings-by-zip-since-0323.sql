@@ -4,7 +4,6 @@ filings_zips as (
 		i.*, 
 		LEFT(postalcode,5) AS zipcode
 	from oca_index i 
-	left join oca_causes c on c.indexnumberid = i.indexnumberid
 	left join oca_addresses a on a.indexnumberid = i.indexnumberid
 	where i.fileddate >= '03-23-2020' and i.classification = any('{Holdover,Non-Payment}') 
 	and propertytype = 'Residential'
