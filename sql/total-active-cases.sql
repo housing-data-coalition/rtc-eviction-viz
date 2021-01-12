@@ -17,17 +17,7 @@ with covid_res_filings as (
 	select 
 		i.*,
 		date_trunc('week', i.fileddate)::date as week_filed,
-		date_trunc('week', disposeddate)::date as week_disposed,
-		case when (
-		court = 'New York County Civil Court' or 
-		court = 'Kings County Civil Court' or 
-		court = 'Queens County Civil Court' or 
-		court = 'Bronx County Civil Court' or 
-		court = 'Richmond County Civil Court' or 
-		court = 'Redhook Community Justice Center' or 
-		court = 'Harlem Community Justice Center')
-		 then 'NYC' 
-		else 'Outside NYC' end as region
+		date_trunc('week', disposeddate)::date as week_disposed
 	from oca_index i  
 	where i.fileddate >= '01-01-2020' and i.classification = any('{Holdover,Non-Payment}') 
 	order by i.fileddate asc),
