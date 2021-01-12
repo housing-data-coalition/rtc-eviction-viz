@@ -29969,7 +29969,9 @@ function convertEvictionTimeSeriesRow(row) {
   return {
     day: row.day.toISOString(),
     nyc_holdover_filings: (0, _converters.toInt)(row.nyc_holdover_filings),
+    nyc_holdover_res_filings: (0, _converters.toInt)(row.nyc_holdover_res_filings),
     nyc_nonpay_filings: (0, _converters.toInt)(row.nyc_nonpay_filings),
+    nyc_nonpay_res_filings: (0, _converters.toInt)(row.nyc_nonpay_res_filings),
     outside_nyc_holdover_filings: (0, _converters.toInt)(row.outside_nyc_holdover_filings),
     outside_nyc_nonpay_filings: (0, _converters.toInt)(row.outside_nyc_nonpay_filings),
     total_filings: (0, _converters.toInt)(row.total_filings)
@@ -29977,11 +29979,11 @@ function convertEvictionTimeSeriesRow(row) {
 }
 
 function getEvictionTimeSeriesCsvHeader() {
-  return ['day', 'nyc_holdover_filings', 'nyc_nonpay_filings', 'outside_nyc_holdover_filings', 'outside_nyc_nonpay_filings', 'total_filings'];
+  return ['day', 'nyc_holdover_filings', 'nyc_holdover_res_filings', 'nyc_nonpay_filings', 'nyc_nonpay_res_filings', 'outside_nyc_holdover_filings', 'outside_nyc_nonpay_filings', 'total_filings'];
 }
 
 function toEvictionTimeSeriesCsvRow(row) {
-  return [row.day.substr(0, 10), row.nyc_holdover_filings.toString(), row.nyc_nonpay_filings.toString(), row.outside_nyc_holdover_filings.toString(), row.outside_nyc_nonpay_filings.toString(), row.total_filings.toString()];
+  return [row.day.substr(0, 10), row.nyc_holdover_filings.toString(), row.nyc_holdover_res_filings.toString(), row.nyc_nonpay_filings.toString(), row.nyc_nonpay_res_filings.toString(), row.outside_nyc_holdover_filings.toString(), row.outside_nyc_nonpay_filings.toString(), row.total_filings.toString()];
 }
 
 const EvictionTimeSeriesQuery = {
@@ -30361,6 +30363,7 @@ const EvictionVizWithValues = ({
   // Otherwise, we can grab data from 1/1/2020 onwards
   row => row.day >= (timeUnit === "yearweek" ? "2020-01-05 00:00:00" : "2020-01-01 00:00:00"));
   const casesSinceCovid = values.filter(row => row.day >= "2020-03-23 00:00:00").reduce((total, row) => total + row[fieldName], 0);
+  const resCasesSinceCovid = values.filter(row => row.day >= "2020-03-23 00:00:00").reduce((total, row) => total + row[fieldName], 0);
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
 
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
@@ -30374,7 +30377,8 @@ const EvictionVizWithValues = ({
     height,
     title: {
       text: `${title}, 2020 - Present`,
-      subtitle: [`Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`, // This effectively adds extra padding below the subtitle.
+      subtitle: [`Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`, `Residential Cases since COVID-19: ${resCasesSinceCovid.toLocaleString()}` // This effectively adds extra padding below the subtitle.
+      , // This effectively adds extra padding below the subtitle.
       ""]
     },
     layer: [{
@@ -30508,7 +30512,7 @@ function isEvictionTimeSeriesNumericField(value) {
   return EVICTION_VISUALIZATIONS.has(value);
 }
 
-const EVICTION_VISUALIZATIONS = new Map([["total_filings", "Total NY State Eviction Filings"], ["nyc_holdover_filings", "NYC Holdover Filings"], ["nyc_nonpay_filings", "NYC Non-Payment Filings"], ["outside_nyc_holdover_filings", "Upstate Holdover Filings"], ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"]]);
+const EVICTION_VISUALIZATIONS = new Map([["total_filings", "Total NY State Eviction Filings"], ["nyc_holdover_filings", "NYC Holdover Filings"], ["nyc_holdover_res_filings", "NYC Holdover Residential Filings"], ["nyc_nonpay_filings", "NYC Non-Payment Filings"], ["nyc_nonpay_res_filings", "NYC Non-Payment Residential Filings"], ["outside_nyc_holdover_filings", "Upstate Holdover Filings"], ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"]]);
 exports.EVICTION_VISUALIZATIONS = EVICTION_VISUALIZATIONS;
 
 const EvictionVisualizations = ({
@@ -31053,7 +31057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64350" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50554" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
