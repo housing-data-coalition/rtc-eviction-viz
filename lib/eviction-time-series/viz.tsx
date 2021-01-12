@@ -58,6 +58,11 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
   ).reduce(
     (total, row) => total + row[fieldName], 0
   );
+  const resCasesSinceCovid = values.filter(
+    row => row.day >= "2020-03-23 00:00:00"
+  ).reduce(
+    (total, row) => total + row[fieldName], 0
+  );
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
@@ -72,9 +77,9 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     title: {
       text: `${title}, 2020 - Present`,
       subtitle: [
-        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
+        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`, 
         // This effectively adds extra padding below the subtitle.
-        ""
+        
       ]
     },
     layer: [
@@ -207,7 +212,9 @@ export function isEvictionTimeSeriesNumericField(value: string): value is keyof 
 export const EVICTION_VISUALIZATIONS: Map<keyof EvictionTimeSeriesNumericFields, string> = new Map([
   ["total_filings", "Total NY State Eviction Filings"],
   ["nyc_holdover_filings", "NYC Holdover Filings"],
+  ["nyc_holdover_res_filings", "NYC Holdover Residential Filings"],
   ["nyc_nonpay_filings", "NYC Non-Payment Filings"],
+  ["nyc_nonpay_res_filings", "NYC Non-Payment Residential Filings"],
   ["outside_nyc_holdover_filings", "Upstate Holdover Filings"],
   ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"],
 ]);
