@@ -45,11 +45,12 @@ const FullDocument: React.FC<{}> = () => (
     <br/>
     <h2>Filings over time</h2>
     <EvictionVisualizations height={EVICTION_VIZ_DEFAULT_HEIGHT} />
-    <h2>Active Cases in 2020</h2>
-    <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
+    <br/>
+    <h2>Active Cases in 2020</h2>
+    <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
   </div>
 );
 

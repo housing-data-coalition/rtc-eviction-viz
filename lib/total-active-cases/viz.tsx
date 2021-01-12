@@ -65,6 +65,9 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
   const lineColor = "#AF2525";
+  const MoratoriumStart = new Date("2020-03-23 00:00:00");
+  const MoratoriumEnd = new Date("2020-06-20 00:00:00");
+  const MoratoriumMid = new Date("2020-05-05");
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -201,7 +204,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
         },
         layer: [
           {
-            mark: { type: "rect", color: "grey", opacity: 0.4 },
+            mark: { type: "rect", color: "grey", opacity: 0.2 },
             encoding: {
               x: { field: "lagDateStart", type: "temporal" },
               x2: { field: "lagDateEnd", type: "temporal" },
@@ -214,10 +217,43 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               baseline: "bottom",
               dy: -(height/1.25) - 1,
               text:
-                "Due to reporting lags, data for most recent weeks (in gray) is incomplete",
+                "Due to reporting lags, recent weeks of data are incomplete",
             },
             encoding: {
               x: { field: "lagDateEnd", type: "temporal" },
+            },
+          },
+        ],
+      },
+      {
+        data: {
+          values: [
+            {
+              morDateStart: MoratoriumStart,
+              morDateEnd: MoratoriumEnd,
+              morDateMid: MoratoriumMid,
+            },
+          ],
+        },
+        layer: [
+          {
+            mark: { type: "rect", color: "grey", opacity: 0.2 },
+            encoding: {
+              x: { field: "morDateStart", type: "temporal" },
+              x2: { field: "morDateEnd", type: "temporal" },
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              align: "center",
+              baseline: "bottom",
+              dy: -(height/2) - 1,
+              text:
+                "Moratorium on New Eviction Cases due to COVID-19",
+            },
+            encoding: {
+              x: { field: "morDateMid", type: "temporal" },
             },
           },
         ],
