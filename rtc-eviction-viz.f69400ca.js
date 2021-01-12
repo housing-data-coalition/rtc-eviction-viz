@@ -30373,7 +30373,9 @@ const EvictionVizWithValues = ({
     width: "container",
     height,
     title: {
-      text: `${title}, 2020 - Present`
+      text: `${title}, 2020 - Present`,
+      subtitle: [`Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`, // This effectively adds extra padding below the subtitle.
+      ""]
     },
     layer: [{
       data: {
@@ -30654,6 +30656,9 @@ const ActiveCasesVizWithValues = ({
 
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day" : timeUnit === "yearweek" ? "Week" : "Month";
   const lineColor = "#AF2525";
+  const MoratoriumStart = new Date("2020-03-23 00:00:00");
+  const MoratoriumEnd = new Date("2020-06-20 00:00:00");
+  const MoratoriumMid = new Date("2020-05-05");
   const spec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -30783,7 +30788,7 @@ const ActiveCasesVizWithValues = ({
         mark: {
           type: "rect",
           color: "grey",
-          opacity: 0.4
+          opacity: 0.2
         },
         encoding: {
           x: {
@@ -30801,11 +30806,50 @@ const ActiveCasesVizWithValues = ({
           align: "right",
           baseline: "bottom",
           dy: -(height / 1.25) - 1,
-          text: "Due to reporting lags, data for most recent weeks (in gray) is incomplete"
+          text: "Due to reporting lags, recent weeks of data are incomplete"
         },
         encoding: {
           x: {
             field: "lagDateEnd",
+            type: "temporal"
+          }
+        }
+      }]
+    }, {
+      data: {
+        values: [{
+          morDateStart: MoratoriumStart,
+          morDateEnd: MoratoriumEnd,
+          morDateMid: MoratoriumMid
+        }]
+      },
+      layer: [{
+        mark: {
+          type: "rect",
+          color: "grey",
+          opacity: 0.2
+        },
+        encoding: {
+          x: {
+            field: "morDateStart",
+            type: "temporal"
+          },
+          x2: {
+            field: "morDateEnd",
+            type: "temporal"
+          }
+        }
+      }, {
+        mark: {
+          type: "text",
+          align: "center",
+          baseline: "bottom",
+          dy: -(height / 2) - 1,
+          text: "Moratorium on New Eviction Cases due to COVID-19"
+        },
+        encoding: {
+          x: {
+            field: "morDateMid",
             type: "temporal"
           }
         }
@@ -30910,8 +30954,6 @@ const FullDocument = () => _react.default.createElement("div", {
   title: "filings by zip code"
 }), _react.default.createElement("br", null), _react.default.createElement("h2", null, "Filings over time"), _react.default.createElement(_viz.EvictionVisualizations, {
   height: EVICTION_VIZ_DEFAULT_HEIGHT
-}), _react.default.createElement("h2", null, "Active Cases in 2020"), _react.default.createElement(_viz2.ActiveCasesVisualizations, {
-  height: ACTIVE_CASES_VIZ_DEFAULT_HEIGHT
 }), _react.default.createElement(DatasetDownloads, {
   files: _data.EVICTION_TIME_SERIES,
   title: "filings over time"
@@ -30919,7 +30961,9 @@ const FullDocument = () => _react.default.createElement("div", {
   href: `?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`
 }, "Configure this page as a widget")), _react.default.createElement("p", null, _react.default.createElement("a", {
   href: "https://github.com/housing-data-coalition/rtc-eviction-viz"
-}, "Learn more on GitHub")));
+}, "Learn more on GitHub")), _react.default.createElement("br", null), _react.default.createElement("h2", null, "Active Cases in 2020"), _react.default.createElement(_viz2.ActiveCasesVisualizations, {
+  height: ACTIVE_CASES_VIZ_DEFAULT_HEIGHT
+}));
 
 const Widget = ({
   fieldName,
@@ -31009,7 +31053,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64244" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64350" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
