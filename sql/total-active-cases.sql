@@ -9,7 +9,7 @@ with covid_filings as (
 	from oca_index 
 	where 
 	classification = any('{Holdover,Non-Payment}') 
-	--and propertytype = 'Residential'
+	--and propertytype = 'Residential' # commented out to show Statewide evictions, which includes commercial
 	order by fileddate asc
 	),
 	

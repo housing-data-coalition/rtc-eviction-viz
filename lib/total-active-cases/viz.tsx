@@ -28,6 +28,8 @@ function getActiveCasesLagDate(
   return returnDate.toISOString();
 }
 
+var recentData = "Due to reporting lags, \n recent weeks of data are incomplete";
+
 type ActiveCasesTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
 type ActiveCasesVizProps = {
@@ -65,14 +67,14 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
   const lineColor = "#AF2525";
-  const MoratoriumStart = new Date("2020-03-23 00:00:00");
-  const MoratoriumEnd = new Date("2020-06-20 00:00:00");
+  const MoratoriumStart = new Date("2020-03-17 00:00:00");
+  const MoratoriumEnd = new Date("2020-07-06 00:00:00");
   const MoratoriumMid = new Date("2020-05-05");
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
     width: "container",
-    height: 240,
+    height: 400,
     title: {
       text: `${title}, 2020 - Present`,
     //   subtitle: [
@@ -215,9 +217,8 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               type: "text",
               align: "right",
               baseline: "bottom",
-              dy: -(height/1.25) - 1,
-              text:
-                "Due to reporting lags, recent weeks of data are incomplete",
+              dy: -(height/.9) - 1,
+              text: "Due to reporting lags, \n recent weeks of data are incomplete",
             },
             encoding: {
               x: { field: "lagDateEnd", type: "temporal" },
@@ -248,7 +249,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               type: "text",
               align: "center",
               baseline: "bottom",
-              dy: -(height/2) - 1,
+              dy: (height*0.15),
               text:
                 "Moratorium on New Eviction Cases due to COVID-19",
             },
