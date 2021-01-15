@@ -46,7 +46,6 @@ const ActiveCasesViz: React.FC<ActiveCasesVizProps> = (props) => {
     </JsonLoader>
   );
 };
-
 const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   values: ActiveCasesRow[],
 }> = ({values, fieldName, title, timeUnit, height}) => {
@@ -54,8 +53,8 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
     // Otherwise, we can grab data from 1/1/2020 onwards
     row => row.day >= (timeUnit === "yearweek" ? "2020-01-05 00:00:00" : "2020-01-01 00:00:00")
-  );
-//   const casesSinceCovid = values.filter(
+    );
+    //   const casesSinceCovid = values.filter(
 //     row => row.day >= "2020-03-23 00:00:00"
 //   ).reduce(
 //     (total, row) => total + row[fieldName], 0
@@ -69,7 +68,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   const lineColor = "#AF2525";
   const MoratoriumStart = new Date("2020-03-17 00:00:00");
   const MoratoriumEnd = new Date("2020-07-06 00:00:00");
-  const MoratoriumMid = new Date("2020-05-05");
+  const MoratoriumMid = new Date("2020-05-");
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -136,6 +135,18 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 scale: {"zero": false},
               },
             },
+          },
+          {
+            mark: {
+              type: "text",
+              baseline: "middle",
+              dy: 2,
+            },
+            encoding: {
+              text: {
+                field: "active_cases"
+              }
+            }
           },
           {
             mark: {
@@ -215,15 +226,17 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
           {
             mark: {
               type: "text",
-              align: "right",
+              align: "left",
               baseline: "bottom",
-              dy: -(height/.9) - 1,
-              text: "Due to reporting lags, \n recent weeks of data are incomplete",
+              dy: -(height)-35,
+              dx: -70,
+              text: ["Due to reporting ", "lags, recent weeks of", "data are incomplete"]
             },
             encoding: {
-              x: { field: "lagDateEnd", type: "temporal" },
+              x: { field: "lagDateStart", type: "temporal" },
             },
           },
+
         ],
       },
       {
@@ -249,9 +262,9 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               type: "text",
               align: "center",
               baseline: "bottom",
-              dy: (height*0.15),
+              dy: (height*0.1),
               text:
-                "Moratorium on New Eviction Cases due to COVID-19",
+                ["Moratorium on new", "eviction cases due", "to COVID-19"],
             },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },
@@ -261,7 +274,6 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
       },
     ],
   };
-
   return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
 };
 
