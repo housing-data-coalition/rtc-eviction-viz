@@ -77,9 +77,9 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     title: {
       text: `${title}, 2020 - Present`,
       subtitle: [
-        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`, 
+        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
         // This effectively adds extra padding below the subtitle.
-        
+        ""
       ]
     },
     layer: [
