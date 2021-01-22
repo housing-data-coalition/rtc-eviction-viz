@@ -58,11 +58,6 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
   ).reduce(
     (total, row) => total + row[fieldName], 0
   );
-  const resCasesSinceCovid = values.filter(
-    row => row.day >= "2020-03-23 00:00:00"
-  ).reduce(
-    (total, row) => total + row[fieldName], 0
-  );
   const EvictionDataLagStart = getEvictionDataLagDate(values, 30); // 4 weeks for lag
   const EvictionDataLagEnd = getEvictionDataLagDate(values, 0); // latest date
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
