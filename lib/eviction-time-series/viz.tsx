@@ -207,7 +207,9 @@ export function isEvictionTimeSeriesNumericField(value: string): value is keyof 
 export const EVICTION_VISUALIZATIONS: Map<keyof EvictionTimeSeriesNumericFields, string> = new Map([
   ["total_filings", "Total NY State Eviction Filings"],
   ["nyc_holdover_filings", "NYC Holdover Filings"],
+  ["nyc_holdover_res_filings", "NYC Holdover Residential Filings"],
   ["nyc_nonpay_filings", "NYC Non-Payment Filings"],
+  ["nyc_nonpay_res_filings", "NYC Non-Payment Residential Filings"],
   ["outside_nyc_holdover_filings", "Upstate Holdover Filings"],
   ["outside_nyc_nonpay_filings", "Upstate Non-Payment Filings"],
 ]);

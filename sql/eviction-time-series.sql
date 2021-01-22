@@ -5,7 +5,9 @@ with days as (
 select 
 	day, 
 	count(*) filter (where classification = 'Holdover' and region = 'NYC') as nyc_holdover_filings,
+	count(*) filter (where classification = 'Holdover' and region = 'NYC' and propertytype = 'Residential') as nyc_holdover_res_filings,
 	count(*) filter (where classification = 'Non-Payment' and region = 'NYC') as nyc_nonpay_filings,
+	count(*) filter (where classification = 'Non-Payment' and region = 'NYC' and propertytype = 'Residential') as nyc_nonpay_res_filings,
 	count(*) filter (where classification = 'Holdover' and region = 'Outside NYC') as outside_nyc_holdover_filings,
 	count(*) filter (where classification = 'Non-Payment' and region = 'Outside NYC') as outside_nyc_nonpay_filings,
 	count(*) filter (where indexnumberid is not null) as total_filings
