@@ -111,23 +111,6 @@ const ConfigureWidget: React.FC<{}> = () => {
         </p>
         <p><button type="submit">Show widget</button></p>
       </form>
-      <form>
-        <input type="hidden" name={QS_VIEW} value={VIEW_WIDGET} />
-        <p>Active Cases visualization:</p>
-        {Array.from(ACTIVECASES_VISUALIZATIONS.entries()).map(([fieldName, title]) => (
-          <div key={fieldName}>
-            <label>
-              <input type="radio" name={QS_FIELD_NAME} value={fieldName} />
-              {title}
-            </label>
-          </div>
-        ))}
-        <p>
-          <label htmlFor="height">Height of graph: </label>
-          <input type="number" min="1" id="height" name={QS_HEIGHT} />
-        </p>
-        <p><button type="submit">Show widget</button></p>
-      </form>
       <p><a href="./">Go back</a></p>
     </div>
   );
