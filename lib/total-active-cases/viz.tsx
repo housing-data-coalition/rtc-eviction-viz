@@ -295,24 +295,6 @@ export const ActiveCasesVisualizations: React.FC<{
 
   return (
     <>
-      {/* <p>
-        View by:&nbsp;&nbsp;
-        <label>
-          <input type="radio" name="timeUnit" value="yearmonthdate" checked={timeUnit === "yearmonthdate"} onChange={(e) => setTimeUnit("yearmonthdate")} />
-          Day
-        </label>&nbsp;&nbsp;
-        <label>
-          <input type="radio" name="timeUnit" value="yearweek" checked={timeUnit === "yearweek"} onChange={(e) => setTimeUnit("yearweek")} />
-          Week
-        </label>&nbsp;&nbsp;
-        <label>
-          <input type="radio" name="timeUnit" value="yearmonth" checked={timeUnit === "yearmonth"} onChange={(e) => setTimeUnit("yearmonth")} />
-          Month
-        </label>
-      </p> 
-      Commented out because not working properly and probably not necessary for total active cases.
-      */}
-      
       {fieldNames.map(fieldName => (
         <ActiveCasesViz
           key={fieldName}
