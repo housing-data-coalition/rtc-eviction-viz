@@ -68,7 +68,12 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   const lineColor = "#AF2525";
   const MoratoriumStart = new Date("2020-03-17 00:00:00");
   const MoratoriumEnd = new Date("2020-07-06 00:00:00");
-  const MoratoriumMid = new Date("2020-05-");
+  const MoratoriumMid = new Date("2020-05-05");
+
+  const casesCovidStart = values.find(datapoint => datapoint.day === '2020-03-16T04:00:00.000Z')?.active_cases;
+
+
+
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     description: title,
@@ -266,6 +271,14 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               text:
                 ["Moratorium on new", "eviction cases due", "to COVID-19"],
             },
+            {
+              mark: {
+                type: "text",
+                align: "center",
+                baseline: "bottom",
+                dy: (height*0.1),
+                text: `Cases are ${casesCovidStart}`,
+              },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },
             },
