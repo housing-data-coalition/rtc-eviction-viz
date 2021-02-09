@@ -273,9 +273,10 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 ["Moratorium on new", "eviction cases due", "to COVID-19"],
             },
             encoding: {
-              x: { field: "morDateMid", type: "temporal" },
+              x: { field: "morDateMid", type: "temporal" },  
+            },
           },
-          {
+          { 
             mark: {
               type: "text",
               align: "center",
@@ -303,6 +304,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
           },
         ],
       },
+      
     ],
   };
   return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
