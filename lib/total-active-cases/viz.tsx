@@ -28,8 +28,6 @@ function getActiveCasesLagDate(
   return returnDate.toISOString();
 }
 
-var recentData = "Due to reporting lags, \n recent weeks of data are incomplete";
-
 type ActiveCasesTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 
 type ActiveCasesVizProps = {
@@ -46,6 +44,14 @@ const ActiveCasesViz: React.FC<ActiveCasesVizProps> = (props) => {
     </JsonLoader>
   );
 };
+
+function thousands_separators(num)
+  {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+  }
+
 const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   values: ActiveCasesRow[],
 }> = ({values, fieldName, title, timeUnit, height}) => {
@@ -69,10 +75,12 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   const MoratoriumStart = new Date("2020-03-17 00:00:00");
   const MoratoriumEnd = new Date("2020-07-06 00:00:00");
   const MoratoriumMid = new Date("2020-05-05");
+  const lineTop = 20;
+  const lineBottom = 20;
+  
 
   const casesCovidStart = values.find(datapoint => datapoint.day === '2020-03-16T04:00:00.000Z')?.active_cases;
-
-
+  const casesCovidStartThousands = thousands_separators(casesCovidStart);
 
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -81,11 +89,13 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     height: 400,
     title: {
       text: `${title}, 2020 - Present`,
-    //   subtitle: [
-    //     `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
-    //     // This effectively adds extra padding below the subtitle.
-    //     ""
-    //   ]
+      fontSize: 16,
+
+      subtitle: [
+        `(Residential and commercial cases in cities, data excludes towns and villages)`,
+        // This effectively adds extra padding below the subtitle.
+        ""
+      ]
     },
     layer: [
       {
@@ -135,23 +145,11 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 field: fieldName,
                 aggregate: "sum",
                 axis: {
-                  title: `Active Eviction Cases per ${timeUnitLabel}`,
+                  title: `Total Active Cases`,
                 },
                 scale: {"zero": false},
               },
             },
-          },
-          {
-            mark: {
-              type: "text",
-              baseline: "middle",
-              dy: 2,
-            },
-            encoding: {
-              text: {
-                field: "active_cases"
-              }
-            }
           },
           {
             mark: {
@@ -231,14 +229,15 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
           {
             mark: {
               type: "text",
-              align: "left",
+              align: "center",
               baseline: "bottom",
               dy: -(height)-35,
               dx: -70,
+              fontSize: 9,
               text: ["Due to reporting ", "lags, recent weeks of", "data are incomplete"]
             },
             encoding: {
-              x: { field: "lagDateStart", type: "temporal" },
+              x: { field: "lagDateEnd", type: "temporal" },
             },
           },
 
@@ -267,20 +266,39 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               type: "text",
               align: "center",
               baseline: "bottom",
-              dy: (height*0.1),
+              dy: -(height*0.05),
+              fontSize: 14,
+              opacity: 0.6,
               text:
                 ["Moratorium on new", "eviction cases due", "to COVID-19"],
             },
-            {
-              mark: {
-                type: "text",
-                align: "center",
-                baseline: "bottom",
-                dy: (height*0.1),
-                text: `Cases are ${casesCovidStart}`,
-              },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },
+          },
+          {
+            mark: {
+              type: "text",
+              align: "center",
+              baseline: "bottom",
+              fontWeight: 600,
+              dy: -(height*0.4),
+              text: [`At the beginning of COVID-19`, `there were ${casesCovidStartThousands} active`,` eviction cases`],
+            },
+            encoding: {
+              x: { field: "morDateStart", type: "temporal" },
+            },  
+          },
+          {
+            mark: { 
+              type: "rect", 
+              color: "black", 
+              opacity: 1,
+              width: 2, 
+              y: 170,
+              y2: 240,
+          },
+            encoding: {
+              x: { field: "morDateStart", type: "temporal" },
             },
           },
         ],
@@ -295,7 +313,7 @@ export function isActiveCasesNumericField(value: string): value is keyof ActiveC
 }
 
 export const ACTIVECASES_VISUALIZATIONS: Map<keyof ActiveCasesNumericFields, string> = new Map([
-  ["active_cases", "Total Active Cases"],
+  ["active_cases", "Active Eviction Cases in New York State Court"],
 ]);
 
 export const ActiveCasesVisualizations: React.FC<{
