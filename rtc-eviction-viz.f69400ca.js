@@ -29994,8 +29994,57 @@ const EvictionTimeSeriesQuery = {
 };
 exports.EvictionTimeSeriesQuery = EvictionTimeSeriesQuery;
 },{"../converters":"lib/converters.ts","../query":"lib/query.ts"}],"lib/filings-by-zip/data.ts":[function(require,module,exports) {
-module.exports="/161a8b51ff48d7ca5373c38bbb5239cb.ts";
-},{}],"lib/json-loader.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.convertFilingsByZipRow = convertFilingsByZipRow;
+exports.FilingsByZipQuery = exports.FILINGS_BY_ZIP_EMPTY_ROW = exports.FILINGS_BY_ZIP = void 0;
+
+var _converters = require("../converters");
+
+var _query = require("../query");
+
+const FILINGS_BY_ZIP = new _query.QueryFiles(`filings-by-zip-since-0323`);
+exports.FILINGS_BY_ZIP = FILINGS_BY_ZIP;
+const FILINGS_BY_ZIP_EMPTY_ROW = {
+  zipcode: '',
+  filings_since_032320: 0,
+  unitsres_total: null,
+  unitsrental: null,
+  filingsrate_2plus: null
+};
+exports.FILINGS_BY_ZIP_EMPTY_ROW = FILINGS_BY_ZIP_EMPTY_ROW;
+
+function convertFilingsByZipRow(row) {
+  return {
+    zipcode: (0, _converters.ensureString)(row.zipcode),
+    filings_since_032320: (0, _converters.toInt)(row.filings_since_032320),
+    unitsres_total: (0, _converters.toIntOrNull)(row.unitsres_total),
+    unitsrental: (0, _converters.toIntOrNull)(row.unitsrental),
+    filingsrate_2plus: (0, _converters.toIntOrNull)(row.filingsrate_2plus)
+  };
+}
+
+function getCsvHeader() {
+  return ['zipcode', 'filings_since_032320', 'unitsres_total', 'unitsrental', 'filingsrate_2plus'];
+}
+
+function toCsvRow(row) {
+  var _a, _b, _c, _d, _e, _f;
+
+  return [row.zipcode, row.filings_since_032320.toString(), (_b = (_a = row.unitsres_total) === null || _a === void 0 ? void 0 : _a.toString()) !== null && _b !== void 0 ? _b : '', (_d = (_c = row.unitsrental) === null || _c === void 0 ? void 0 : _c.toString()) !== null && _d !== void 0 ? _d : '', (_f = (_e = row.filingsrate_2plus) === null || _e === void 0 ? void 0 : _e.toString()) !== null && _f !== void 0 ? _f : ''];
+}
+
+const FilingsByZipQuery = {
+  files: FILINGS_BY_ZIP,
+  sqlToRow: convertFilingsByZipRow,
+  csvHeader: getCsvHeader(),
+  toCsvRow: toCsvRow
+};
+exports.FilingsByZipQuery = FilingsByZipQuery;
+},{"../converters":"lib/converters.ts","../query":"lib/query.ts"}],"lib/json-loader.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31081,7 +31130,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54509" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53458" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
