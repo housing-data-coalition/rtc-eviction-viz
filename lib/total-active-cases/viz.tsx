@@ -75,6 +75,9 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
   const MoratoriumStart = new Date("2020-03-17 00:00:00");
   const MoratoriumEnd = new Date("2020-07-06 00:00:00");
   const MoratoriumMid = new Date("2020-05-05");
+  const MorTwoStart = new Date("2020-12-28 00:00:00");
+  const MorTwoEnd = new Date("2021-02-26 00:00:00");
+  const MorTwoMid = new Date("2021-01-26 00:00:00");
   const lineTop = 20;
   const lineBottom = 20;
   
@@ -88,11 +91,10 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     width: "container",
     height: 400,
     title: {
-      text: `${title}, 2020 - Present`,
+      text: `${title}`,
       fontSize: 16,
-
       subtitle: [
-        `(Residential and commercial cases in cities, data excludes towns and villages)`,
+        `January 2020 - Present`,
         // This effectively adds extra padding below the subtitle.
         ""
       ]
@@ -139,6 +141,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                   title: "",
                   format: "%b ’%y",
                   labelAngle: 45,
+                  grid: false,
                 },
               },
               y: {
@@ -220,7 +223,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
         },
         layer: [
           {
-            mark: { type: "rect", color: "grey", opacity: 0.2 },
+            mark: { type: "rect", color: "grey", opacity: 0 }, // made rectangle opaque because it conflicted with second moratorium
             encoding: {
               x: { field: "lagDateStart", type: "temporal" },
               x2: { field: "lagDateEnd", type: "temporal" },
@@ -232,9 +235,9 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               align: "center",
               baseline: "bottom",
               dy: -(height)-35,
-              dx: -70,
-              fontSize: 9,
-              text: ["Due to reporting ", "lags, recent weeks of", "data are incomplete"]
+              dx: -50,
+              fontSize: 12,
+              text: ["Recent court data incomplete", "due to reporting lags"]
             },
             encoding: {
               x: { field: "lagDateEnd", type: "temporal" },
@@ -250,6 +253,9 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               morDateStart: MoratoriumStart,
               morDateEnd: MoratoriumEnd,
               morDateMid: MoratoriumMid,
+              morTwoStart: MorTwoStart,
+              morTwoEnd: MorTwoEnd,
+              morTwoMid: MorTwoMid,
             },
           ],
         },
@@ -270,20 +276,45 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               fontSize: 14,
               opacity: 0.6,
               text:
-                ["Moratorium on new", "eviction cases due", "to COVID-19"],
+                ["Universal", "eviction", "moratorium"],
             },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },  
             },
           },
+          {
+            mark: { type: "rect", color: "grey", opacity: 0.2 },
+            encoding: {
+              x: { field: "morTwoStart", type: "temporal" },
+              x2: { field: "morTwoEnd", type: "temporal" },
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              align: "center",
+              baseline: "bottom",
+              dy: -(height*0.05),
+              fontSize: 14,
+              opacity: 0.6,
+              text:
+                ["Most eviction", "cases paused"],
+            },
+            encoding: {
+              x: { field: "morTwoMid", type: "temporal" },  
+            },
+          },
+
+
+
           { 
             mark: {
               type: "text",
               align: "center",
               baseline: "bottom",
-              fontWeight: 600,
+              fontSize: 12,             
               dy: -(height*0.4),
-              text: [`At the beginning of COVID-19`, `there were ${casesCovidStartThousands} active`,` eviction cases`],
+              text: [`There were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
             },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
@@ -315,7 +346,7 @@ export function isActiveCasesNumericField(value: string): value is keyof ActiveC
 }
 
 export const ACTIVECASES_VISUALIZATIONS: Map<keyof ActiveCasesNumericFields, string> = new Map([
-  ["active_cases", "Active Eviction Cases in New York State Court"],
+  ["active_cases", "New York State Eviction Cases"],
 ]);
 
 export const ActiveCasesVisualizations: React.FC<{

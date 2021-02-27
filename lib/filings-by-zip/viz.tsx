@@ -40,17 +40,18 @@ export default ZipCodeViz;
 
 const ZipCodeVizWithValues: React.FC<{
   values: FilingsByZipRow[],
-  height: number,
+  height: 500,
 }> = ({values, height}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
 
   return <LazyVegaLite className={VIZ_GEO_CLASS} spec={{
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
     width: "container",
-    height,
+    height: "container",
     title: {
-      text: `NYC Residential Eviction Filings By Zip Code, March 23, 2020 - Present`,
-      fontSize: 20,
+      text: `New York City Residential Eviction Filings By Zip Code`,
+      fontSize: 16,
+      subtitle: [`March 2020 - Present` "" ]
     },
     data: {
       values: geoJson.features,
@@ -64,7 +65,7 @@ const ZipCodeVizWithValues: React.FC<{
         field: "properties.filingsrate_2plus",
         type: "quantitative",
         title: [
-          "Filings per 1,000 units*"
+          "Filings per", "1,000 units*"
         ],
         scale: {"scheme": "reds"}
       },
