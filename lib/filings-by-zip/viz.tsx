@@ -40,7 +40,7 @@ export default ZipCodeViz;
 
 const ZipCodeVizWithValues: React.FC<{
   values: FilingsByZipRow[],
-  height: 500,
+  height: number,
 }> = ({values, height}) => {
   const geoJson = mergeZipcodeFilingsIntoGeoJSON(values);
 
@@ -51,7 +51,7 @@ const ZipCodeVizWithValues: React.FC<{
     title: {
       text: `New York City Residential Eviction Filings By Zip Code`,
       fontSize: 16,
-      subtitle: [`March 2020 - Present` 
+      subtitle: [`March 2020 - Present`, 
       "" ]
     },
     data: {
