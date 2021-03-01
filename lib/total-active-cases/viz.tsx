@@ -229,20 +229,21 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               x2: { field: "lagDateEnd", type: "temporal" },
             },
           },
-          {
-            mark: {
-              type: "text",
-              align: "center",
-              baseline: "bottom",
-              dy: -(height)-35,
-              dx: -50,
-              fontSize: 12,
-              text: ["Recent court data incomplete", "due to reporting lags"]
-            },
-            encoding: {
-              x: { field: "lagDateEnd", type: "temporal" },
-            },
-          },
+          // Request to take this out and include as note below chart instead.
+          // {
+          //   mark: {
+          //     type: "text",
+          //     align: "center",
+          //     baseline: "bottom",
+          //     dy: -(height)-35,
+          //     dx: -50,
+          //     fontSize: 12,
+          //     text: ["Recent court data incomplete", "due to reporting lags"]
+          //   },
+          //   encoding: {
+          //     x: { field: "lagDateEnd", type: "temporal" },
+          //   },
+          // },
 
         ],
       },
@@ -276,7 +277,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               fontSize: 14,
               opacity: 0.6,
               text:
-                ["Universal", "eviction", "moratorium"],
+                ["Universal", "Eviction", "Moratorium"],
             },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },  
@@ -298,7 +299,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               fontSize: 14,
               opacity: 0.6,
               text:
-                ["Most eviction", "cases paused"],
+                ["Most Eviction", "Cases Paused"],
             },
             encoding: {
               x: { field: "morTwoMid", type: "temporal" },  
@@ -346,7 +347,7 @@ export function isActiveCasesNumericField(value: string): value is keyof ActiveC
 }
 
 export const ACTIVECASES_VISUALIZATIONS: Map<keyof ActiveCasesNumericFields, string> = new Map([
-  ["active_cases", "New York State Eviction Cases"],
+  ["active_cases", "Active Eviction Cases in New York State"],
 ]);
 
 export const ActiveCasesVisualizations: React.FC<{
