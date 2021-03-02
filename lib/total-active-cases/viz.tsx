@@ -262,7 +262,8 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
         },
         layer: [
           {
-            mark: { type: "rect", color: "grey", opacity: 0.2 },
+            // For some reason this gray rectangle and the other one aren't displaying on mobile
+            mark: { type: "rect", color: "gray", opacity: 0.2 },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
               x2: { field: "morDateEnd", type: "temporal" },
@@ -284,7 +285,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
             },
           },
           {
-            mark: { type: "rect", color: "grey", opacity: 0.2 },
+            mark: { type: "rect", color: "gray", opacity: 0.2 },
             encoding: {
               x: { field: "morTwoStart", type: "temporal" },
               x2: { field: "morTwoEnd", type: "temporal" },
@@ -302,12 +303,10 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 ["Most Eviction", "Cases Paused"],
             },
             encoding: {
-              x: { field: "morTwoMid", type: "temporal" },  
+              //testing making this the same placement as other label for mobile
+              x: { field: "morDateMid", type: "temporal" },  
             },
           },
-
-
-
           { 
             mark: {
               type: "text",
@@ -318,7 +317,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               text: [`There were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
             },
             encoding: {
-              x: { field: "morDateStart", type: "temporal" },
+              x: { field: "morDateMid", type: "temporal" },
             },  
           },
           {
@@ -331,7 +330,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               y2: 240,
           },
             encoding: {
-              x: { field: "morDateStart", type: "temporal" },
+              x: { field: "morDateMid", type: "temporal" },
             },
           },
         ],
