@@ -72,12 +72,12 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
   const lineColor = "#AF2525";
-  const MoratoriumStart = new Date("2020-03-17 00:00:00");
-  const MoratoriumEnd = new Date("2020-07-06 00:00:00");
+  const MoratoriumStart = new Date("2020-03-17");
+  const MoratoriumEnd = new Date("2020-07-06");
   const MoratoriumMid = new Date("2020-05-05");
-  const MorTwoStart = new Date("2020-12-28 00:00:00");
-  const MorTwoEnd = new Date("2021-02-26 00:00:00");
-  const MorTwoMid = new Date("2021-01-26 00:00:00");
+  const MorTwoStart = new Date("2020-12-28");
+  const MorTwoEnd = new Date("2021-02-26");
+  const MorTwoMid = new Date("2021-01-26");
   const lineTop = 20;
   const lineBottom = 20;
   
@@ -262,7 +262,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
         },
         layer: [
           {
-            // For some reason this gray rectangle and the other one aren't displaying on mobile
+            // For some reason this gray rectangle and the
             mark: { type: "rect", color: "gray", opacity: 0.2 },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
@@ -303,10 +303,12 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
                 ["Most Eviction", "Cases Paused"],
             },
             encoding: {
-              //testing making this the same placement as other label for mobile
-              x: { field: "morDateMid", type: "temporal" },  
+              x: { field: "morTwoMid", type: "temporal" },  
             },
           },
+
+
+
           { 
             mark: {
               type: "text",
@@ -317,7 +319,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               text: [`There were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
             },
             encoding: {
-              x: { field: "morDateMid", type: "temporal" },
+              x: { field: "morDateStart", type: "temporal" },
             },  
           },
           {
@@ -330,7 +332,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               y2: 240,
           },
             encoding: {
-              x: { field: "morDateMid", type: "temporal" },
+              x: { field: "morDateStart", type: "temporal" },
             },
           },
         ],
