@@ -278,7 +278,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               fontSize: 14,
               opacity: 0.6,
               text:
-                ["Universal", "Eviction", "Moratorium"],
+                ["Eviction", "Moratorium"],
             },
             encoding: {
               x: { field: "morDateMid", type: "temporal" },  
