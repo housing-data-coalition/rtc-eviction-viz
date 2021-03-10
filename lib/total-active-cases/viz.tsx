@@ -73,7 +73,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
     : "Month";
   const lineColor = "#AF2525";
   const MoratoriumStart = new Date("2020-03-17");
-  const MoratoriumEnd = new Date("2020-07-06");
+  const MoratoriumEnd = new Date("2020-06-20");
   const MoratoriumMid = new Date("2020-05-05");
   const MorTwoStart = new Date("2020-12-28");
   const MorTwoEnd = new Date("2021-02-26");
