@@ -120,7 +120,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
             {
               field: fieldName,
               aggregate: "sum",
-              title: "Filings",
+              title: "Active Cases",
               formatType: "numberWithCommas"
             },
           ],
