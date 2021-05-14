@@ -54,7 +54,7 @@ const FullDocument: React.FC<{}> = () => (
   <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
     <h2>Total Active Cases</h2>
-    <ActiveCasesTable height={ACTIVE_CASES_TABLE_DEFAULT_HEIGHT} />
+    <ActiveCasesTable />
     <br/>
     <h2>Filings by zip code</h2>
     <LazyZipCodeViz height={600} />

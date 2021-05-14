@@ -1,7 +1,8 @@
 with t as (
     select
         classification,
-        propertytype,
+        case when
+            propertytype is null then 'All' else propertytype end as propertytype,
         case when 
             (court = any('{
             Bronx County Civil Court,
@@ -22,6 +23,6 @@ with t as (
 )
 select 
     count(*) as count,
-    concat(classification,'-',propertytype,'-',region,'-',timebucket) as category
+    concat(region,'.',timebucket, '.', propertytype,'.', classification) as category
 from t
 group by classification, propertytype, region, timebucket

@@ -6,6 +6,10 @@ export const VIZ_GEO_CLASS = "viz-geo";
 /** A visualization that represents a time series. */
 export const VIZ_TIME_SERIES_CLASS = "viz-time-series";
 
+/** A visualization that represents a table. */
+export const VIZ_TABLE_CLASS = "viz-table";
+
+
 // https://commons.wikimedia.org/wiki/File:Chromiumthrobber.svg
 const ChromiumThrobber: React.FC<{}> = () => (
   <svg width="16" height="16" viewBox="0 0 300 300"
