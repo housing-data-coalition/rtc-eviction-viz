@@ -87,10 +87,10 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
                     <th scope="row">
                         Pandemic
                     </th>
-                    <td>{easyAccessMap['nyc-pandemic-residential']['Non-Payment'] 
-                        + easyAccessMap['nyc-pandemic-residential']['Holdover']}</td>
-                    <td>{easyAccessMap['nyc-pandemic-residential']['Non-Payment']}</td>
-                    <td>{easyAccessMap['nyc-pandemic-residential']['Holdover']}</td>
+                    <td>(residential: {easyAccessMap['nyc-pandemic-residential']['Non-Payment'] 
+                                     + easyAccessMap['nyc-pandemic-residential']['Holdover']})</td>
+                    <td>(residential: {easyAccessMap['nyc-pandemic-residential']['Non-Payment']})</td>
+                    <td>(residential: {easyAccessMap['nyc-pandemic-residential']['Holdover']})</td>
                 </tr>
                 <tr className="table-header">
                     <th scope="rowgroup">
@@ -105,8 +105,8 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
                     <th scope="row">
                         Pre-Pandemic
                     </th>
-                    <td>{easyAccessMap['outside-prepandemic-all']['Non-Payment'] + 
-                        easyAccessMap['outside-prepandemic-all']['Holdover']}</td>
+                    <td>{easyAccessMap['outside-prepandemic-all']['Non-Payment']
+                       + easyAccessMap['outside-prepandemic-all']['Holdover']}</td>
                     <td>{easyAccessMap['outside-prepandemic-all']['Non-Payment']}</td>
                     <td>{easyAccessMap['outside-prepandemic-all']['Holdover']}</td>
                 </tr>
