@@ -86,15 +86,17 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
                     <tr {...row.getRowProps()}>
                     {row.cells.map(cell => {
                         return (
-                            <td
+                            <td align='right'
                                 {...cell.getCellProps()}
-                                style={{background:
-                                    [0,3,6].includes(cell.row.index)
-                                    ? 'lightgray'
-                                    : 'white'
+                                style={{
+                                    background:
+                                        [0,3,6].includes(cell.row.index)
+                                        ? 'lightgray'
+                                        : 'white',
                                 }}
                             >
-                            {cell.render("Cell")}</td>);
+                                {cell.render("Cell")}
+                            </td>);
                     })}
                     </tr>
                 );
@@ -124,44 +126,47 @@ function constructDataTable(values: React.PropsWithChildren<{
 }
 
 function fillTable(table: number[][], easyAccessMap: {[key: string]: {'Non-Payment': number, 'Holdover': number}}) {
-    table[4][1] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment']
-    table[4][2] = easyAccessMap['nyc-prepandemic-residential']['Holdover']
-    table[5][1] = easyAccessMap['nyc-pandemic-residential']['Non-Payment']
-    table[5][2] = easyAccessMap['nyc-pandemic-residential']['Holdover']
-    table[7][1] = easyAccessMap['outside-prepandemic-all']['Non-Payment']
-    table[7][2] = easyAccessMap['outside-prepandemic-all']['Holdover']
-    table[8][1] = easyAccessMap['outside-pandemic-all']['Non-Payment']
-    table[8][2] = easyAccessMap['outside-pandemic-all']['Holdover']
+    const total = 0; // total column index
+    const np = 1; // nonpayment column
+    const ho = 2; // holdover column
+    table[4][np] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment'] + easyAccessMap['nyc-prepandemic-commercial']['Non-Payment']
+    table[4][ho] = easyAccessMap['nyc-prepandemic-residential']['Holdover'] + easyAccessMap['nyc-prepandemic-commercial']['Holdover']
+    table[5][np] = easyAccessMap['nyc-pandemic-residential']['Non-Payment'] + easyAccessMap['nyc-pandemic-commercial']['Non-Payment']
+    table[5][ho] = easyAccessMap['nyc-pandemic-residential']['Holdover'] +  + easyAccessMap['nyc-pandemic-commercial']['Holdover']
+    table[7][np] = easyAccessMap['outside-prepandemic-all']['Non-Payment']
+    table[7][ho] = easyAccessMap['outside-prepandemic-all']['Holdover']
+    table[8][np] = easyAccessMap['outside-pandemic-all']['Non-Payment']
+    table[8][ho] = easyAccessMap['outside-pandemic-all']['Holdover']
 
     // Sum outside NYC vertically
-    table[6][1] = table[7][1] + table[8][1]
-    table[6][2] = table[7][2] + table[8][2]
+    table[6][np] = table[7][np] + table[8][np]
+    table[6][ho] = table[7][ho] + table[8][ho]
     // Sum outside NYC horizontally
-    table[6][0] = table[6][1] + table[6][2]
-    table[7][0] = table[7][1] + table[7][2]
-    table[8][0] = table[8][1] + table[8][2]
+    table[6][total] = table[6][np] + table[6][ho]
+    table[7][total] = table[7][np] + table[7][ho]
+    table[8][total] = table[8][np] + table[8][ho]
 
     // Sum NYC vertically
-    table[3][1] = table[4][1] + table[5][1]
-    table[3][2] = table[4][2] + table[5][2]
+    table[3][np] = table[4][np] + table[5][np]
+    table[3][ho] = table[4][ho] + table[5][ho]
     // Sum NYC horizontally
-    table[3][0] = table[3][1] + table[3][2]
-    table[4][0] = table[4][1] + table[4][2]
-    table[5][0] = table[5][1] + table[5][2]
+    table[3][total] = table[3][np] + table[3][ho]
+    table[4][total] = table[4][np] + table[4][ho]
+    table[5][total] = table[5][np] + table[5][ho]
 
     // Sum Statewide vertically
-    table[1][1] = table[4][1] + table[7][1]
-    table[1][2] = table[4][2] + table[7][2]
-    table[2][1] = table[5][1] + table[8][1]
-    table[2][2] = table[5][2] + table[8][2]
+    table[1][np] = table[4][np] + table[7][np]
+    table[1][ho] = table[4][ho] + table[7][ho]
+    table[2][np] = table[5][np] + table[8][np]
+    table[2][ho] = table[5][ho] + table[8][ho]
     // Sum Statewide horizontally
-    table[1][0] = table[4][0] + table[7][0]
-    table[2][0] = table[5][0] + table[8][0]
+    table[1][total] = table[4][total] + table[7][total]
+    table[2][total] = table[5][total] + table[8][total]
     
     // Top line vertical
-    table[0][1] = table[1][1] + table[2][1]
-    table[0][2] = table[1][2] + table[2][2]
+    table[0][np] = table[1][np] + table[2][np]
+    table[0][ho] = table[1][ho] + table[2][ho]
     // Top line horizontal
-    table[0][0] = table[0][1] + table[0][2]
+    table[0][total] = table[0][np] + table[0][ho]
     return table;
 }
