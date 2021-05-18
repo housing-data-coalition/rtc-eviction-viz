@@ -4,6 +4,7 @@ import { JsonLoader } from "../json-loader";
 import { TotalActiveCasesRow, TOTAL_ACTIVE_CASES_TABLE } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
 import {unflatten} from "flat";
+import { createLiteral } from "typescript";
 
 export const ActiveCasesTable: React.FC<{}> = () => {
     return (
@@ -84,7 +85,16 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
                 return (
                     <tr {...row.getRowProps()}>
                     {row.cells.map(cell => {
-                        return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+                        return (
+                            <td
+                                {...cell.getCellProps()}
+                                style={{background:
+                                    [0,3,6].includes(cell.row.index)
+                                    ? 'lightgray'
+                                    : 'white'
+                                }}
+                            >
+                            {cell.render("Cell")}</td>);
                     })}
                     </tr>
                 );
