@@ -20,11 +20,17 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
     type ActiveCasesDisplayRow = {id: string, totalActiveCases: number, nonPayment: number, holdover: number}
     const rowLabels = [
         'Statewide Totals',
+        '  without NYC commercial #s',
         'Pre-Pandemic #',
+        '  without NYC commercial #s',
         'Pandemic #',
+        '  without NYC commercial #s',
         'NYC Totals',
+        '  residential only #s',
         'Pre-Pandemic #',
+        '  residential only #s',
         'Pandemic #',
+        '  residential only #s',
         'Outside NYC Totals',
         'Pre-Pandemic #',
         'Pandemic #'
@@ -90,9 +96,13 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
                                 {...cell.getCellProps()}
                                 style={{
                                     background:
-                                        [0,3,6].includes(cell.row.index)
-                                        ? 'lightgray'
+                                        [0,6,12].includes(cell.row.index)
+                                        ? 'yellow'
                                         : 'white',
+                                    fontWeight:
+                                        [0,2,4,6,8,10,12].includes(cell.row.index)
+                                        ? 'bold'
+                                        : 'normal'
                                 }}
                             >
                                 {cell.render("Cell")}
@@ -121,52 +131,74 @@ function constructDataTable(values: React.PropsWithChildren<{
         'nyc-prepandemic-residential': activeCasesDeepObject['NYC']['Issued Prepandemic']['Residential'],
         'nyc-prepandemic-commercial': activeCasesDeepObject['NYC']['Issued Prepandemic']['Commercial'] 
     }
-    var table = Array.from(Array(9), () => Array(3)); // 9 rows, 3 cols
+    var table = Array.from(Array(15), () => Array(3)); // 15 rows, 3 cols
     return fillTable(table, easyAccessMap);
 }
 
 function fillTable(table: number[][], easyAccessMap: {[key: string]: {'Non-Payment': number, 'Holdover': number}}) {
-    const total = 0; // total column index
-    const np = 1; // nonpayment column
-    const ho = 2; // holdover column
-    table[4][np] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment'] + easyAccessMap['nyc-prepandemic-commercial']['Non-Payment']
-    table[4][ho] = easyAccessMap['nyc-prepandemic-residential']['Holdover'] + easyAccessMap['nyc-prepandemic-commercial']['Holdover']
-    table[5][np] = easyAccessMap['nyc-pandemic-residential']['Non-Payment'] + easyAccessMap['nyc-pandemic-commercial']['Non-Payment']
-    table[5][ho] = easyAccessMap['nyc-pandemic-residential']['Holdover'] +  + easyAccessMap['nyc-pandemic-commercial']['Holdover']
-    table[7][np] = easyAccessMap['outside-prepandemic-all']['Non-Payment']
-    table[7][ho] = easyAccessMap['outside-prepandemic-all']['Holdover']
-    table[8][np] = easyAccessMap['outside-pandemic-all']['Non-Payment']
-    table[8][ho] = easyAccessMap['outside-pandemic-all']['Holdover']
+    const total_col = 0; // total column index
+    const np_col = 1; // nonpayment column
+    const ho_col = 2; // holdover column
+    const state_row = 0;
+    const nyc_row = 6;
+    const outside_row = 12;
+    table[nyc_row+2][np_col] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment'] + easyAccessMap['nyc-prepandemic-commercial']['Non-Payment']
+    table[nyc_row+2][ho_col] = easyAccessMap['nyc-prepandemic-residential']['Holdover'] + easyAccessMap['nyc-prepandemic-commercial']['Holdover']
+    table[nyc_row+3][np_col] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment']
+    table[nyc_row+3][ho_col] = easyAccessMap['nyc-prepandemic-residential']['Holdover']
+    table[nyc_row+4][np_col] = easyAccessMap['nyc-pandemic-residential']['Non-Payment'] + easyAccessMap['nyc-pandemic-commercial']['Non-Payment']
+    table[nyc_row+4][ho_col] = easyAccessMap['nyc-pandemic-residential']['Holdover'] + easyAccessMap['nyc-pandemic-commercial']['Holdover']
+    table[nyc_row+5][np_col] = easyAccessMap['nyc-pandemic-residential']['Non-Payment']
+    table[nyc_row+5][ho_col] = easyAccessMap['nyc-pandemic-residential']['Holdover']
+
+    table[outside_row+1][np_col] = easyAccessMap['outside-prepandemic-all']['Non-Payment']
+    table[outside_row+1][ho_col] = easyAccessMap['outside-prepandemic-all']['Holdover']
+    table[outside_row+2][np_col] = easyAccessMap['outside-pandemic-all']['Non-Payment']
+    table[outside_row+2][ho_col] = easyAccessMap['outside-pandemic-all']['Holdover']
 
     // Sum outside NYC vertically
-    table[6][np] = table[7][np] + table[8][np]
-    table[6][ho] = table[7][ho] + table[8][ho]
+    table[outside_row][np_col] = table[outside_row+1][np_col] + table[outside_row+2][np_col]
+    table[outside_row][ho_col] = table[outside_row+1][ho_col] + table[outside_row+2][ho_col]
     // Sum outside NYC horizontally
-    table[6][total] = table[6][np] + table[6][ho]
-    table[7][total] = table[7][np] + table[7][ho]
-    table[8][total] = table[8][np] + table[8][ho]
+    table[outside_row][total_col] = table[outside_row][np_col] + table[outside_row][ho_col]
+    table[outside_row+1][total_col] = table[outside_row+1][np_col] + table[outside_row+1][ho_col]
+    table[outside_row+2][total_col] = table[outside_row+2][np_col] + table[outside_row+2][ho_col]
 
     // Sum NYC vertically
-    table[3][np] = table[4][np] + table[5][np]
-    table[3][ho] = table[4][ho] + table[5][ho]
-    // Sum NYC horizontally
-    table[3][total] = table[3][np] + table[3][ho]
-    table[4][total] = table[4][np] + table[4][ho]
-    table[5][total] = table[5][np] + table[5][ho]
-
-    // Sum Statewide vertically
-    table[1][np] = table[4][np] + table[7][np]
-    table[1][ho] = table[4][ho] + table[7][ho]
-    table[2][np] = table[5][np] + table[8][np]
-    table[2][ho] = table[5][ho] + table[8][ho]
-    // Sum Statewide horizontally
-    table[1][total] = table[4][total] + table[7][total]
-    table[2][total] = table[5][total] + table[8][total]
+    table[nyc_row][np_col] = table[nyc_row+2][np_col] + table[nyc_row+4][np_col]
+    table[nyc_row][ho_col] = table[nyc_row+2][ho_col] + table[nyc_row+4][ho_col]
+    table[nyc_row+1][np_col] = table[nyc_row+3][np_col] + table[nyc_row+5][np_col]
+    table[nyc_row+1][ho_col] = table[nyc_row+3][ho_col] + table[nyc_row+5][ho_col]
     
-    // Top line vertical
-    table[0][np] = table[1][np] + table[2][np]
-    table[0][ho] = table[1][ho] + table[2][ho]
+    // Sum NYC horizontally
+    for(var i=nyc_row; i<outside_row; i++) {
+        table[i][total_col] = table[i][np_col] + table[i][ho_col];
+    }
+    
+    // Sum Statewide vertically
+    table[state_row+2][np_col] = table[nyc_row+2][np_col] + table[outside_row+1][np_col]
+    table[state_row+2][ho_col] = table[nyc_row+2][ho_col] + table[outside_row+1][ho_col]
+    table[state_row+3][np_col] = table[nyc_row+3][np_col] + table[outside_row+1][np_col]
+    table[state_row+3][ho_col] = table[nyc_row+3][ho_col] + table[outside_row+1][ho_col]
+    table[state_row+4][np_col] = table[nyc_row+4][np_col] + table[outside_row+2][np_col]
+    table[state_row+4][ho_col] = table[nyc_row+4][ho_col] + table[outside_row+2][ho_col]
+    table[state_row+5][np_col] = table[nyc_row+5][np_col] + table[outside_row+2][np_col]
+    table[state_row+5][ho_col] = table[nyc_row+5][ho_col] + table[outside_row+2][ho_col]
+    
+    // Sum Statewide horizontally
+    for(var i=state_row+2; i<nyc_row; i++) {
+        table[i][total_col] = table[i][np_col] + table[i][ho_col]
+    }
+    
+    // Top lines vertical
+    table[state_row][np_col] = table[state_row+2][np_col] + table[state_row+4][np_col]
+    table[state_row][ho_col] = table[state_row+2][ho_col] + table[state_row+4][ho_col]
+    table[state_row+1][np_col] = table[state_row+3][np_col] + table[state_row+5][np_col]
+    table[state_row+1][ho_col] = table[state_row+3][ho_col] + table[state_row+5][ho_col]
+
     // Top line horizontal
-    table[0][total] = table[0][np] + table[0][ho]
+    table[state_row][total_col] = table[state_row][np_col] + table[state_row][ho_col]
+    table[state_row+1][total_col] = table[state_row+1][np_col] + table[state_row+1][ho_col]
+
     return table;
 }
