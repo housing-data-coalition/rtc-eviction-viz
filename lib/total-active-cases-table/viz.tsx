@@ -142,6 +142,8 @@ function fillTable(table: number[][], easyAccessMap: {[key: string]: {'Non-Payme
     const state_row = 0;
     const nyc_row = 6;
     const outside_row = 12;
+
+    // Set most granular counts. All other cells will hold sums of these.
     table[nyc_row+2][np_col] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment'] + easyAccessMap['nyc-prepandemic-commercial']['Non-Payment']
     table[nyc_row+2][ho_col] = easyAccessMap['nyc-prepandemic-residential']['Holdover'] + easyAccessMap['nyc-prepandemic-commercial']['Holdover']
     table[nyc_row+3][np_col] = easyAccessMap['nyc-prepandemic-residential']['Non-Payment']
@@ -150,55 +152,39 @@ function fillTable(table: number[][], easyAccessMap: {[key: string]: {'Non-Payme
     table[nyc_row+4][ho_col] = easyAccessMap['nyc-pandemic-residential']['Holdover'] + easyAccessMap['nyc-pandemic-commercial']['Holdover']
     table[nyc_row+5][np_col] = easyAccessMap['nyc-pandemic-residential']['Non-Payment']
     table[nyc_row+5][ho_col] = easyAccessMap['nyc-pandemic-residential']['Holdover']
-
     table[outside_row+1][np_col] = easyAccessMap['outside-prepandemic-all']['Non-Payment']
     table[outside_row+1][ho_col] = easyAccessMap['outside-prepandemic-all']['Holdover']
     table[outside_row+2][np_col] = easyAccessMap['outside-pandemic-all']['Non-Payment']
     table[outside_row+2][ho_col] = easyAccessMap['outside-pandemic-all']['Holdover']
 
-    // Sum outside NYC vertically
-    table[outside_row][np_col] = table[outside_row+1][np_col] + table[outside_row+2][np_col]
-    table[outside_row][ho_col] = table[outside_row+1][ho_col] + table[outside_row+2][ho_col]
-    // Sum outside NYC horizontally
-    table[outside_row][total_col] = table[outside_row][np_col] + table[outside_row][ho_col]
-    table[outside_row+1][total_col] = table[outside_row+1][np_col] + table[outside_row+1][ho_col]
-    table[outside_row+2][total_col] = table[outside_row+2][np_col] + table[outside_row+2][ho_col]
-
-    // Sum NYC vertically
-    table[nyc_row][np_col] = table[nyc_row+2][np_col] + table[nyc_row+4][np_col]
-    table[nyc_row][ho_col] = table[nyc_row+2][ho_col] + table[nyc_row+4][ho_col]
-    table[nyc_row+1][np_col] = table[nyc_row+3][np_col] + table[nyc_row+5][np_col]
-    table[nyc_row+1][ho_col] = table[nyc_row+3][ho_col] + table[nyc_row+5][ho_col]
-    
-    // Sum NYC horizontally
-    for(var i=nyc_row; i<outside_row; i++) {
-        table[i][total_col] = table[i][np_col] + table[i][ho_col];
+    for(var col=np_col; col<=ho_col; col++) {
+        // Sum outside NYC vertically
+        table[outside_row][col] = table[outside_row+1][col] + table[outside_row+2][col]
+        // Sum NYC vertically
+        table[nyc_row][col] = table[nyc_row+2][col] + table[nyc_row+4][col]
+        table[nyc_row+1][col] = table[nyc_row+3][col] + table[nyc_row+5][col]
+        // Sum Statewide vertically
+        table[state_row+2][col] = table[nyc_row+2][col] + table[outside_row+1][col]
+        table[state_row+3][col] = table[nyc_row+3][col] + table[outside_row+1][col]
+        table[state_row+4][col] = table[nyc_row+4][col] + table[outside_row+2][col]
+        table[state_row+5][col] = table[nyc_row+5][col] + table[outside_row+2][col]
+        // Top lines vertical
+        table[state_row][col] = table[state_row+2][col] + table[state_row+4][col]
+        table[state_row+1][col] = table[state_row+3][col] + table[state_row+5][col]
     }
-    
-    // Sum Statewide vertically
-    table[state_row+2][np_col] = table[nyc_row+2][np_col] + table[outside_row+1][np_col]
-    table[state_row+2][ho_col] = table[nyc_row+2][ho_col] + table[outside_row+1][ho_col]
-    table[state_row+3][np_col] = table[nyc_row+3][np_col] + table[outside_row+1][np_col]
-    table[state_row+3][ho_col] = table[nyc_row+3][ho_col] + table[outside_row+1][ho_col]
-    table[state_row+4][np_col] = table[nyc_row+4][np_col] + table[outside_row+2][np_col]
-    table[state_row+4][ho_col] = table[nyc_row+4][ho_col] + table[outside_row+2][ho_col]
-    table[state_row+5][np_col] = table[nyc_row+5][np_col] + table[outside_row+2][np_col]
-    table[state_row+5][ho_col] = table[nyc_row+5][ho_col] + table[outside_row+2][ho_col]
-    
-    // Sum Statewide horizontally
-    for(var i=state_row+2; i<nyc_row; i++) {
+
+    // Sum outside NYC horizontally
+    for(var i=outside_row; i<table.length; i++) {
         table[i][total_col] = table[i][np_col] + table[i][ho_col]
     }
-    
-    // Top lines vertical
-    table[state_row][np_col] = table[state_row+2][np_col] + table[state_row+4][np_col]
-    table[state_row][ho_col] = table[state_row+2][ho_col] + table[state_row+4][ho_col]
-    table[state_row+1][np_col] = table[state_row+3][np_col] + table[state_row+5][np_col]
-    table[state_row+1][ho_col] = table[state_row+3][ho_col] + table[state_row+5][ho_col]
-
-    // Top line horizontal
-    table[state_row][total_col] = table[state_row][np_col] + table[state_row][ho_col]
-    table[state_row+1][total_col] = table[state_row+1][np_col] + table[state_row+1][ho_col]
+    // Sum NYC horizontally
+    for(var i = nyc_row; i < outside_row; i++) {
+        table[i][total_col] = table[i][np_col] + table[i][ho_col];
+    }
+    // Sum Statewide horizontally
+    for(var i = state_row; i < nyc_row; i++) {
+        table[i][total_col] = table[i][np_col] + table[i][ho_col]
+    }
 
     return table;
 }
