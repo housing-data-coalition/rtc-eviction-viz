@@ -1,10 +1,10 @@
 import React from "react";
-import { useTable, CellProps, Column, useRowState } from "react-table";
+import { useTable, Column } from "react-table";
 import { JsonLoader } from "../json-loader";
 import { TotalActiveCasesRow, TOTAL_ACTIVE_CASES_TABLE } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
 import {unflatten} from "flat";
-import { createLiteral } from "typescript";
+import {numberWithCommas} from "../vega"
 
 export const ActiveCasesTable: React.FC<{}> = () => {
     return (
@@ -17,7 +17,7 @@ export const ActiveCasesTable: React.FC<{}> = () => {
 const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (values) => {
     const dataTable = constructDataTable(values);
 
-    type ActiveCasesDisplayRow = {id: string, totalActiveCases: number, nonPayment: number, holdover: number}
+    type ActiveCasesDisplayRow = {id: string, totalActiveCases: string, nonPayment: string, holdover: string}
     const rowLabels = [
         'Statewide Totals',
         '  without NYC commercial #s',
@@ -39,9 +39,9 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
     for (var i = 0; i < rowLabels.length; i++) {
         data[i] = {
             id: rowLabels[i],
-            totalActiveCases: dataTable[i][0],
-            nonPayment: dataTable[i][1],
-            holdover: dataTable[i][2]
+            totalActiveCases: numberWithCommas(dataTable[i][0]),
+            nonPayment: numberWithCommas(dataTable[i][1]),
+            holdover: numberWithCommas(dataTable[i][2])
         };
     }
     

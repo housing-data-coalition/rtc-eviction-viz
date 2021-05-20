@@ -11,7 +11,7 @@ import * as Vega from "vega";
  * available in older browsers, and polyfilling all of `Intl` would
  * potentially add a lot of weight to our JS bundle.
  */
-function numberWithCommas(x: number): string {
+export function numberWithCommas(x: number): string {
   var parts = x.toString().split(".");
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return parts.join(".");
