@@ -12,8 +12,6 @@ export function convertTotalActiveCasesRow(row: any) {
 
 export type TotalActiveCasesRow = ReturnType<typeof convertTotalActiveCasesRow>;
 
-//export type ActiveCasesNumericFields = Omit<ActiveCasesRow, "day">;
-
 function getTotalActiveCasesCsvHeader(): string[] {
   return [
     'count',
