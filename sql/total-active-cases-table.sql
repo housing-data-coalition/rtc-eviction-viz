@@ -15,7 +15,7 @@ with t as (
         }')) then 'NYC' 
         else 'Outside NYC' end as region,
         case when
-            fileddate < '2020-03-21' then 'Issued Prepandemic'
+            fileddate < '2020-03-23' then 'Issued Prepandemic'
             else 'Issued Pandemic' end as timebucket
     from oca_index
     where status ~ 'Active' and
