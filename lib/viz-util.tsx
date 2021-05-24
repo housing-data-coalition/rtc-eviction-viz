@@ -5,6 +5,7 @@ export const VIZ_GEO_CLASS = "viz-geo";
 
 /** A visualization that represents a time series. */
 export const VIZ_TIME_SERIES_CLASS = "viz-time-series";
+export const VIZ_TIME_SERIES_SHORT_CLASS = "viz-time-series-short";
 
 /** A visualization that represents a table. */
 export const VIZ_TABLE_CLASS = "viz-table";
