@@ -6,6 +6,8 @@ import { EvictionTimeSeriesQuery } from "./eviction-time-series/data";
 import { ActiveCasesQuery } from "./total-active-cases/data";
 import { FilingsByZipQuery } from "./filings-by-zip/data";
 import { TotalActiveCasesTableQuery} from "./total-active-cases-table/data";
+import { FilingsByZipOutsideNYCQuery } from "./filings-by-zip-table-outside-nyc/data";
+
 import { Query } from "./query";
 
 async function processQuery<Row>(query: Query<Row>) {
@@ -48,6 +50,7 @@ export async function main() {
     await processQuery(ActiveCasesQuery);
     await processQuery(FilingsByZipQuery);
     await processQuery(TotalActiveCasesTableQuery);
+    await processQuery(FilingsByZipOutsideNYCQuery);
   } finally {
     await nycdb.$pool.end();
   }

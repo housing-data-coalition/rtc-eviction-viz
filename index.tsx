@@ -5,10 +5,11 @@ import { getHTMLElement } from "@justfixnyc/util";
 import { EvictionTimeSeriesNumericFields, EVICTION_TIME_SERIES } from "./lib/eviction-time-series/data";
 import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
-import { EvictionVisualizations, EVICTION_VISUALIZATIONS, isEvictionTimeSeriesNumericField } from "./lib/eviction-time-series/viz";
+import { EvictionVisualizations, EVICTION_VISUALIZATIONS } from "./lib/eviction-time-series/viz";
 import { ActiveCasesVisualizations } from "./lib/total-active-cases/viz";
 import { ActiveCasesTable } from "./lib/total-active-cases-table/viz";
 import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
+import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-nyc/viz";
 
 const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
 
@@ -57,8 +58,11 @@ const FullDocument: React.FC<{}> = () => (
     <h2>Active Cases in 2020</h2>
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <br/>
-    <h2>Filings by zip code</h2>
+    <h2>Filings by zip code (NYC)</h2>
     <LazyZipCodeViz height={600} />
+    <h2>Filings by zip code (Outside NYC)</h2>
+    <FilingsByZipOutsideNYCTable />
+    <br />
     <small><strong>Data sources:</strong> New York State Office of Court Administration eviction filings and PLUTO19v2 via <a href="https://github.com/nycdb/nycdb" target="_blank">NYCDB</a>. By the <a href="https://housingdatanyc.org" target="_blank">Housing Data Coalition</a>, <a href="https://justfix.nyc" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org" target="_blank">ANHD</a>. *Numbers of total units per zip code exclude single-unit properties to approximate the number of rental units.</small>
     <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code" />
     <br/>
