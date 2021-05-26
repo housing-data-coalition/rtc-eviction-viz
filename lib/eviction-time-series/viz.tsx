@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { VisualizationSpec } from "vega-embed";
 import { JsonLoader } from "../json-loader";
 import { LazyVegaLite } from "../vega-lazy";
-import { VizFallback, VIZ_TIME_SERIES_CLASS } from "../viz-util";
+import { VizFallback, VIZ_TIME_SERIES_CLASS, VIZ_TIME_SERIES_SHORT_CLASS } from "../viz-util";
 import { EvictionTimeSeriesNumericFields, EvictionTimeSeriesRow, EVICTION_TIME_SERIES } from "./data";
 
 /**
@@ -39,8 +39,10 @@ type EvictionVizProps = {
 
 const EvictionViz: React.FC<EvictionVizProps> = (props) => {
   return (
-    <JsonLoader<EvictionTimeSeriesRow[]> url={EVICTION_TIME_SERIES.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
-      {(values) => <EvictionVizWithValues values={values} {...props} />}
+    <JsonLoader<EvictionTimeSeriesRow[]>
+      url={EVICTION_TIME_SERIES.json}
+      fallback={<VizFallback className={`${VIZ_TIME_SERIES_CLASS} ${VIZ_TIME_SERIES_SHORT_CLASS}`} />}>
+        {(values) => <EvictionVizWithValues values={values} {...props} />}
     </JsonLoader>
   );
 };
@@ -72,7 +74,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     title: {
       text: `${title}, 2020 - Present`,
       subtitle: [
-        `Cases since COVID-19: ${casesSinceCovid.toLocaleString()}`,
+        `Cases since COVID-19 (all cases, active and disposed): ${casesSinceCovid.toLocaleString()}`,
         // This effectively adds extra padding below the subtitle.
         ""
       ]
@@ -197,7 +199,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
     ],
   };
 
-  return <LazyVegaLite spec={spec} className={VIZ_TIME_SERIES_CLASS} />;
+  return <LazyVegaLite spec={spec} className={`${VIZ_TIME_SERIES_SHORT_CLASS} ${VIZ_TIME_SERIES_CLASS}`}/>;
 };
 
 export function isEvictionTimeSeriesNumericField(value: string): value is keyof EvictionTimeSeriesNumericFields {

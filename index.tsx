@@ -12,9 +12,7 @@ import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
 
 const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
 
-const ACTIVE_CASES_VIZ_DEFAULT_HEIGHT = 150;
-
-const ACTIVE_CASES_TABLE_DEFAULT_HEIGHT = 150;
+const ACTIVE_CASES_VIZ_DEFAULT_HEIGHT = 500;
 
 const VIEW_WIDGET = "widget";
 
@@ -56,6 +54,9 @@ const FullDocument: React.FC<{}> = () => (
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
     <br/>
+    <h2>Active Cases in 2020</h2>
+    <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
+    <br/>
     <h2>Filings by zip code</h2>
     <LazyZipCodeViz height={600} />
     <small><strong>Data sources:</strong> New York State Office of Court Administration eviction filings and PLUTO19v2 via <a href="https://github.com/nycdb/nycdb" target="_blank">NYCDB</a>. By the <a href="https://housingdatanyc.org" target="_blank">Housing Data Coalition</a>, <a href="https://justfix.nyc" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org" target="_blank">ANHD</a>. *Numbers of total units per zip code exclude single-unit properties to approximate the number of rental units.</small>
@@ -67,8 +68,6 @@ const FullDocument: React.FC<{}> = () => (
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
     <br/>
-    <h2>Active Cases in 2020</h2>
-    <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
   </div>
 );
 
