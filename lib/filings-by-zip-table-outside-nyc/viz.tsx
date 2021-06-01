@@ -56,7 +56,7 @@ function Table({ columns: cols, data }) {
                     <tr {...row.getRowProps()}>
                     {row.cells.map(cell => {
                         return (
-                            <td align="right"
+                            <td align="left"
                                 {...cell.getCellProps()}
                             >
                                 {cell.isGrouped ? (
@@ -108,24 +108,7 @@ function makeColumns(): Column<FilingsByZipOutsideNYCDisplayRow>[] {
 }
 
 const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsideNYCRow[]}> = (values) => {
-    var data = [
-        {
-            'court_name': '1',
-            'zipcode': '2',
-            'filings': 10,
-        },
-        {
-            'court_name': '1',
-            'zipcode': '23',
-            'filings': 5
-        },
-        {
-            'court_name': '1',
-            'zipcode': '24',
-            'filings': 5
-        }
-    ]
-    //values.values;
+    var data = values.values;
     const columns: Column<FilingsByZipOutsideNYCDisplayRow>[] = makeColumns();
     return (<Table columns={columns} data={data} />);
 }

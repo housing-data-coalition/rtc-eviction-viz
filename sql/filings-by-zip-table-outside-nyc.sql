@@ -11,9 +11,9 @@ filings_zips as (
 	('New York County Civil Court', 
 	'Kings County Civil Court',
 	'Queens County Civil Court', 
-	'Bronx County Civil Court'
-	'Richmond County Civil Court'
-	'Redhook Community Justice Center'
+	'Bronx County Civil Court',
+	'Richmond County Civil Court',
+	'Redhook Community Justice Center',
 	'Harlem Community Justice Center')
 	order by i.fileddate asc)
 
