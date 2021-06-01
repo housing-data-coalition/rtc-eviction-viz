@@ -12,24 +12,10 @@ export const FilingsByZipOutsideNYCTable: React.FC<{}> = () => {
     );
 }
 
-const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsideNYCRow[]}> = (values) => {
-    var data = values.values;
-    type FilingsByZipOutsideNYCDisplayRow = {court_name: string, zipcode: string, filings: number};
-    const columns: Column<FilingsByZipOutsideNYCDisplayRow>[] = [
-        {
-            Header: "Court",
-            accessor: "court_name",
-        },
-        {
-            Header: "Zipcode",
-            accessor: "zipcode",
-        },
-        {
-            Header: "Total cases filed since March 23, 2020",
-            accessor: "filings",
-        },
-    ];
+type FilingsByZipOutsideNYCDisplayRow = {court_name: string, zipcode: string, filings: number};
 
+
+function Table({ columns: cols, data }) {
     const {
         getTableProps,
         getTableBodyProps,
@@ -38,8 +24,9 @@ const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsi
         prepareRow,
     } = useTable(
         {
-            columns,
+            columns: cols,
             data,
+            initialState: {groupBy: ['court']},
         },
         useGroupBy,
         useExpanded
@@ -51,6 +38,11 @@ const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsi
                     <tr {...headerGroup.getHeaderGroupProps()}>
                         {headerGroup.headers.map(column => (
                             <th {...column.getHeaderProps()}>
+                                {column.id == 'court' ? (
+                                    <span {...column.getGroupByToggleProps()}>
+                                    {column.isGrouped ? '➡️ ' : '⬇️ '}
+                                    </span>
+                                ) : null}
                                 {column.render("Header")}
                             </th>
                         ))}
@@ -67,7 +59,18 @@ const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsi
                             <td align="right"
                                 {...cell.getCellProps()}
                             >
-                                {cell.render("Cell")}
+                                {cell.isGrouped ? (
+                                    <>
+                                    <span {...row.getToggleRowExpandedProps()}>
+                                        {row.isExpanded ? '⬇️' : '➡️'}
+                                    </span>{' '}
+                                    {cell.render('Cell')} ({row.subRows.length})
+                                    </>
+                                ) : cell.isAggregated ? (
+                                    cell.render('Aggregated')
+                                ) : cell.isPlaceholder ? null : (
+                                    cell.render('Cell')
+                                )}
                             </td>);
                     })}
                     </tr>
@@ -76,4 +79,53 @@ const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsi
             </tbody>
         </table>
     )
-};
+}
+
+function makeColumns(): Column<FilingsByZipOutsideNYCDisplayRow>[] {
+    const cols: Column<FilingsByZipOutsideNYCDisplayRow>[] =
+    React.useMemo(
+        () =>
+    [
+        {
+            Header: "Court",
+            accessor: "court_name",
+            id: "court",
+        },
+        {
+            Header: "Zipcode",
+            accessor: "zipcode",
+            aggregate: "count",
+            Aggregated: ({ value }) => `${value} zip codes`,
+        },
+        {
+            Header: "Total cases filed since March 23, 2020",
+            accessor: "filings",
+            aggregate: "sum",
+            Aggregated: ({ value }) => `${value}`,
+        },
+    ], []);
+    return cols;
+}
+
+const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsideNYCRow[]}> = (values) => {
+    var data = [
+        {
+            'court_name': '1',
+            'zipcode': '2',
+            'filings': 10,
+        },
+        {
+            'court_name': '1',
+            'zipcode': '23',
+            'filings': 5
+        },
+        {
+            'court_name': '1',
+            'zipcode': '24',
+            'filings': 5
+        }
+    ]
+    //values.values;
+    const columns: Column<FilingsByZipOutsideNYCDisplayRow>[] = makeColumns();
+    return (<Table columns={columns} data={data} />);
+}
