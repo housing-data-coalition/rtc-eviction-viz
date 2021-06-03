@@ -1,5 +1,5 @@
 import React from "react";
-import { useTable, Column, useGroupBy, useExpanded } from "react-table";
+import { useTable, Column, useGroupBy, useExpanded, CellProps} from "react-table";
 import { FilingsByZipOutsideNYCRow, FILINGS_BY_ZIP_OUTSIDE_NYC_TABLE } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
 import { JsonLoader } from "../json-loader";
@@ -14,17 +14,21 @@ export const FilingsByZipOutsideNYCTable: React.FC<{}> = () => {
 
 type FilingsByZipOutsideNYCDisplayRow = {court_name: string, zipcode: string, filings: number};
 
+interface Props {
+    columns: Array<Column<FilingsByZipOutsideNYCDisplayRow>>;
+    data: Array<FilingsByZipOutsideNYCDisplayRow>;
+}
 
-function Table({ columns: cols, data }) {
+const Table: React.FC<Props> = ({ columns, data }) => {
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
         rows,
         prepareRow,
-    } = useTable(
+    } = useTable<FilingsByZipOutsideNYCDisplayRow>(
         {
-            columns: cols,
+            columns,
             data,
             initialState: {groupBy: ['court']},
         },
@@ -66,13 +70,14 @@ function Table({ columns: cols, data }) {
                                     </span>{' '}
                                     {cell.render('Cell')} ({row.subRows.length})
                                     </>
-                                ) : cell.isAggregated ? (
-                                    cell.render('Aggregated')
-                                ) : cell.isPlaceholder ? null : (
-                                    cell.render('Cell')
+                                    ) : cell.isAggregated ? (
+                                        cell.render('Aggregated')
+                                    ) : cell.isPlaceholder ? null : (
+                                        cell.render('Cell')
                                 )}
                             </td>);
-                    })}
+                        })
+                    }
                     </tr>
                 );
                 })}
@@ -83,32 +88,32 @@ function Table({ columns: cols, data }) {
 
 function makeColumns(): Column<FilingsByZipOutsideNYCDisplayRow>[] {
     const cols: Column<FilingsByZipOutsideNYCDisplayRow>[] =
-    React.useMemo(
-        () =>
-    [
-        {
-            Header: "Court",
-            accessor: "court_name",
-            id: "court",
-        },
-        {
-            Header: "Zipcode",
-            accessor: "zipcode",
-            aggregate: "count",
-            Aggregated: ({ value }) => `${value} zip codes`,
-        },
-        {
-            Header: "Total cases filed since March 23, 2020",
-            accessor: "filings",
-            aggregate: "sum",
-            Aggregated: ({ value }) => `${value}`,
-        },
-    ], []);
+        React.useMemo(
+            () =>
+        [
+            {
+                Header: "Court",
+                accessor: "court_name" as keyof FilingsByZipOutsideNYCDisplayRow,
+                id: "court",
+            },
+            {
+                Header: "Zipcode",
+                accessor: "zipcode" as keyof FilingsByZipOutsideNYCDisplayRow,
+                aggregate: "count",
+                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${value} zip codes`,
+            },
+            {
+                Header: "Total cases filed since March 23, 2020",
+                accessor: "filings" as keyof FilingsByZipOutsideNYCDisplayRow,
+                aggregate: "sum",
+                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${value}`,
+            },
+        ], []);
     return cols;
 }
 
 const FilingsByZipOutsideNYCTableWithValues: React.FC<{values: FilingsByZipOutsideNYCRow[]}> = (values) => {
     var data = values.values;
-    const columns: Column<FilingsByZipOutsideNYCDisplayRow>[] = makeColumns();
+    const columns = makeColumns();
     return (<Table columns={columns} data={data} />);
 }
