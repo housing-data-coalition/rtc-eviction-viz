@@ -6,7 +6,7 @@ filings_zips as (
 		court as court_name
 	from oca_index i 
 	left join oca_addresses a on a.indexnumberid = i.indexnumberid
-	where i.fileddate >= '03-23-2020' and i.classification = any('{Holdover,Non-Payment}') 
+	where i.fileddate >= '2020-03-23' and i.classification = any('{Holdover,Non-Payment}') 
 	and court not in
 	('New York County Civil Court', 
 	'Kings County Civil Court',

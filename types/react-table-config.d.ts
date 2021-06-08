@@ -1,3 +1,8 @@
+// This file is necessary in order to get react-table's types to be
+// recognized, since the original is not written in Typescript.
+// See https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-table#configuration-using-declaration-merging
+// and https://stackoverflow.com/questions/62758670/something-went-wrong-with-react-table-using-typescript.
+
 import {
     UseColumnOrderInstanceProps,
     UseColumnOrderState,
