@@ -3,13 +3,15 @@ import { useTable, Column, useGroupBy, useExpanded, CellProps} from "react-table
 import { FilingsByZipOutsideNYCRow, FILINGS_BY_ZIP_OUTSIDE_NYC_TABLE } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
 import { JsonLoader } from "../json-loader";
+import {numberWithCommas} from "../vega";
 
 export const FilingsByZipOutsideNYCTable: React.FC<{}> = () => {
-    return (
+    return <>
+        <span>Note: Zip codes may appear in multiple courts.</span>
         <JsonLoader<FilingsByZipOutsideNYCRow[]> url={FILINGS_BY_ZIP_OUTSIDE_NYC_TABLE.json} fallback={<VizFallback className={VIZ_TABLE_CLASS} />}>
             {(values) => <FilingsByZipOutsideNYCTableWithValues values={values} />}
         </JsonLoader>
-    );
+    </>;
 }
 
 type FilingsByZipOutsideNYCDisplayRow = {court_name: string, zipcode: string, filings: number};
@@ -106,7 +108,7 @@ function makeColumns(): Column<FilingsByZipOutsideNYCDisplayRow>[] {
                 Header: "Total cases filed since March 23, 2020",
                 accessor: "filings" as keyof FilingsByZipOutsideNYCDisplayRow,
                 aggregate: "sum",
-                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${value}`,
+                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${numberWithCommas(value)}`,
             },
         ], []);
     return cols;
