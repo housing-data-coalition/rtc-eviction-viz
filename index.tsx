@@ -52,6 +52,10 @@ const LazyZipCodeViz: React.FC<{height: number}> = ({height}) => (
 const FullDocument: React.FC<{}> = () => (
   <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
+    <p>
+      Managed by RTC Coalition's <a href="https://www.righttocounselnyc.org/hcmc" target="_blank">Housing Courts Must Change! Campaign</a><br />
+      <em>Powered by the <a href="https://www.housingdatanyc.org/" target="_blank">Housing Data Coalition</a>, <a href="https://www.justfix.nyc/" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org/" target="_blank">ANHD</a></em>
+    </p>
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
     <br/>
