@@ -36156,7 +36156,7 @@ const FullDocument = () => _react.default.createElement("div", {
 }, _react.default.createElement("h1", null, "New York Eviction Filings Tracker"), _react.default.createElement("p", null, "Managed by RTC Coalition's ", _react.default.createElement("a", {
   href: "https://www.righttocounselnyc.org/hcmc",
   target: "_blank"
-}, "Housing Courts Must Change! Campaign"), _react.default.createElement("br", null)), _react.default.createElement("p", null, _react.default.createElement("em", null, "Powered by the ", _react.default.createElement("a", {
+}, "Housing Courts Must Change! Campaign"), _react.default.createElement("br", null), _react.default.createElement("em", null, "Powered by the ", _react.default.createElement("a", {
   href: "https://www.housingdatanyc.org/",
   target: "_blank"
 }, "Housing Data Coalition"), ", ", _react.default.createElement("a", {
@@ -36301,7 +36301,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60067" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
