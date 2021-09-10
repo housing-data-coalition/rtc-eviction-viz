@@ -1,20 +1,21 @@
 
 import React from "react";
-import { useTable, Column, useGroupBy, useExpanded, CellProps} from "react-table";
-import { MonthlyFilingsRow, MONTHLY_FILINGS } from "./data";
+import { useTable, Column, CellProps} from "react-table";
+import { MonthlyFilingsByZipRow, MONTHLY_FILINGS_BY_ZIP } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
-import { JsonLoader } from "../json-loader"
+import { JsonLoader } from "../json-loader";
+import {numberWithCommas} from "../vega";
 
-export const MonthlyFilingsTable: React.FC<{}> = () => {
+export const MonthlyFilingsTableByZip: React.FC<{}> = () => {
     return <>
         <span>Note: Filings from past 5-6 weeks may be artificially low due to reporting lags.</span>
-        <JsonLoader<MonthlyFilingsRow[]> url={MONTHLY_FILINGS.json} fallback={<VizFallback className={VIZ_TABLE_CLASS} />}>
-            {(values) => <MonthlyFilingsWithValues values={values} />}
+        <JsonLoader<MonthlyFilingsByZipRow[]> url={MONTHLY_FILINGS_BY_ZIP.json} fallback={<VizFallback className={VIZ_TABLE_CLASS} />}>
+            {(values) => <MonthlyFilingsByZipWithValues values={values} />}
         </JsonLoader>
     </>;
 }
 
-type MonthlyFilingsDisplayRow = {
+type MonthlyFilingsByZipDisplayRow = {
     zipcode: string,
     region: string,
     borough: string,
@@ -25,8 +26,8 @@ type MonthlyFilingsDisplayRow = {
 };
 
 interface Props {
-    columns: Array<Column<MonthlyFilingsDisplayRow>>;
-    data: Array<MonthlyFilingsDisplayRow>;
+    columns: Array<Column<MonthlyFilingsByZipDisplayRow>>;
+    data: Array<MonthlyFilingsByZipDisplayRow>;
 }
 
 const Table: React.FC<Props> = ({ columns, data }) => {
@@ -36,7 +37,7 @@ const Table: React.FC<Props> = ({ columns, data }) => {
         headerGroups,
         rows,
         prepareRow,
-    } = useTable<MonthlyFilingsDisplayRow>(
+    } = useTable<MonthlyFilingsByZipDisplayRow>(
         {
             columns,
             data,
@@ -79,41 +80,42 @@ const Table: React.FC<Props> = ({ columns, data }) => {
     )
 }
 
-function makeColumns(): Column<MonthlyFilingsDisplayRow>[] {
-    const cols: Column<MonthlyFilingsDisplayRow>[] =
+function makeColumns(): Column<MonthlyFilingsByZipDisplayRow>[] {
+    const cols: Column<MonthlyFilingsByZipDisplayRow>[] =
         React.useMemo(
             () =>
         [
             {
                 Header: "Zipcode",
-                accessor: "zipcode" as keyof MonthlyFilingsDisplayRow,
+                accessor: "zipcode" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "Borough",
-                accessor: "borough" as keyof MonthlyFilingsDisplayRow,
+                accessor: "borough" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "2 months ago",
-                accessor: "two_months_ago" as keyof MonthlyFilingsDisplayRow,
+                accessor: "two_months_ago" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "3 months ago",
-                accessor: "three_months_ago" as keyof MonthlyFilingsDisplayRow,
+                accessor: "three_months_ago" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "# Increase",
-                accessor: "num_increase" as keyof MonthlyFilingsDisplayRow,
+                accessor: "num_increase" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "% Increase",
-                accessor: "percent_increase" as keyof MonthlyFilingsDisplayRow,
+                accessor: "percent_increase" as keyof MonthlyFilingsByZipDisplayRow,
+                Cell: ({value}: CellProps<MonthlyFilingsByZipDisplayRow>) => `${numberWithCommas(value)}%`
             },
         ], []);
     return cols;
 }
 
 
-const MonthlyFilingsWithValues: React.FC<{values: MonthlyFilingsRow[]}> = (values) => {
+const MonthlyFilingsByZipWithValues: React.FC<{values: MonthlyFilingsByZipRow[]}> = (values) => {
     var data = values.values;
     const columns = makeColumns();
     return (<Table columns={columns} data={data} />);
