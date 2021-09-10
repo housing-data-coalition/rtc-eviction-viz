@@ -157,13 +157,10 @@ function calculate_percentage_increase(leafValues: string[]) {
     var two_months_ago_sum = 0;
     var three_months_ago_sum = 0;
     for (let idx in leafValues){
-        console.log(leafValues[idx]);
         let spl = leafValues[idx].split('-');
         two_months_ago_sum += parseInt(spl[0]);
         three_months_ago_sum += parseInt(spl[1]);
     }
-    console.log('two-month-sum: ', two_months_ago_sum);
-    console.log('three-month-sum: ', three_months_ago_sum);
 
     return Math.round((two_months_ago_sum - three_months_ago_sum) / three_months_ago_sum * 100);
 }
