@@ -76,7 +76,7 @@ const FullDocument: React.FC<{}> = () => (
     <h2>Monthly filings</h2>
     <h3>By zip code</h3>
     <MonthlyFilingsTableByZip />
-    <h3>Citywide</h3>
+    <h3>Statewide</h3>
     <MonthlyFilingsTableCitywide />
     <br />
     <h2>Filings over time</h2>
