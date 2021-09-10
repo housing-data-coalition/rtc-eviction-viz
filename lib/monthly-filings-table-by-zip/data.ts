@@ -1,11 +1,9 @@
 
-import { toStringFieldDef } from "vega-lite/build/src/channeldef";
-import { toInt } from "../converters";
 import { Query, QueryFiles } from "../query";
 
-export const MONTHLY_FILINGS = new QueryFiles(`monthly-filings-table`);
+export const MONTHLY_FILINGS_BY_ZIP = new QueryFiles(`monthly-filings-table-by-zip`);
 
-export function convertMonthlyFilingsRow(row: any) {
+export function convertMonthlyFilingsByZipRow(row: any) {
     return {
         zipcode: row.zipcode,
         region: row.region,
@@ -17,9 +15,9 @@ export function convertMonthlyFilingsRow(row: any) {
     };
 }
 
-export type MonthlyFilingsRow = ReturnType<typeof convertMonthlyFilingsRow>;
+export type MonthlyFilingsByZipRow = ReturnType<typeof convertMonthlyFilingsByZipRow>;
 
-function getMonthlyFilingsCsvHeader(): string[] {
+function getMonthlyFilingsByZipCsvHeader(): string[] {
     return [
         'zipcode',
         'region',
@@ -31,7 +29,7 @@ function getMonthlyFilingsCsvHeader(): string[] {
     ];
 }
 
-function toMonthlyFilingsCsvRow(row: MonthlyFilingsRow): string[] {
+function toMonthlyFilingsByZipCsvRow(row: MonthlyFilingsByZipRow): string[] {
     return [
         row.zipcode,
         row.region,
@@ -43,9 +41,9 @@ function toMonthlyFilingsCsvRow(row: MonthlyFilingsRow): string[] {
     ];
 }
 
-export const MonthlyFilingsTableQuery: Query<MonthlyFilingsRow> = {
-    files: MONTHLY_FILINGS,
-    sqlToRow: convertMonthlyFilingsRow,
-    csvHeader: getMonthlyFilingsCsvHeader(),
-    toCsvRow: toMonthlyFilingsCsvRow,
+export const MonthlyFilingsByZipTableQuery: Query<MonthlyFilingsByZipRow> = {
+    files: MONTHLY_FILINGS_BY_ZIP,
+    sqlToRow: convertMonthlyFilingsByZipRow,
+    csvHeader: getMonthlyFilingsByZipCsvHeader(),
+    toCsvRow: toMonthlyFilingsByZipCsvRow,
 };

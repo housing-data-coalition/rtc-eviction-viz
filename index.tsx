@@ -10,7 +10,7 @@ import { ActiveCasesVisualizations } from "./lib/total-active-cases/viz";
 import { ActiveCasesTable } from "./lib/total-active-cases-table/viz";
 import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
 import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-nyc/viz";
-import { MonthlyFilingsTable } from "./lib/monthly-filings-table/viz";
+import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 
 const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
 
@@ -72,7 +72,8 @@ const FullDocument: React.FC<{}> = () => (
     <FilingsByZipOutsideNYCTable />
     <br />
     <h2>Monthly filings</h2>
-    <MonthlyFilingsTable />
+    <h3>By zip code</h3>
+    <MonthlyFilingsTableByZip />
     <br />
     <h2>Filings over time</h2>
     <EvictionVisualizations height={EVICTION_VIZ_DEFAULT_HEIGHT} />
