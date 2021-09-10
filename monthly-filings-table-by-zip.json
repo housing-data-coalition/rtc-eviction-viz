@@ -1,0 +1,92 @@
+[
+  {
+    "zipcode": "11101",
+    "region": "NYC",
+    "borough": "Queens",
+    "two_months_ago": "12",
+    "three_months_ago": "1",
+    "num_increase": "11",
+    "percent_increase": "1100"
+  },
+  {
+    "zipcode": "11418",
+    "region": "NYC",
+    "borough": "Queens",
+    "two_months_ago": "12",
+    "three_months_ago": "1",
+    "num_increase": "11",
+    "percent_increase": "1100"
+  },
+  {
+    "zipcode": "10075",
+    "region": "NYC",
+    "borough": "Manhattan",
+    "two_months_ago": "11",
+    "three_months_ago": "1",
+    "num_increase": "10",
+    "percent_increase": "1000"
+  },
+  {
+    "zipcode": "11365",
+    "region": "NYC",
+    "borough": "Queens",
+    "two_months_ago": "23",
+    "three_months_ago": "3",
+    "num_increase": "20",
+    "percent_increase": "667"
+  },
+  {
+    "zipcode": "11955",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "27",
+    "three_months_ago": "4",
+    "num_increase": "23",
+    "percent_increase": "575"
+  },
+  {
+    "zipcode": "11953",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "13",
+    "three_months_ago": "2",
+    "num_increase": "11",
+    "percent_increase": "550"
+  },
+  {
+    "zipcode": "11772",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "34",
+    "three_months_ago": "6",
+    "num_increase": "28",
+    "percent_increase": "467"
+  },
+  {
+    "zipcode": "11787",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "5",
+    "three_months_ago": "1",
+    "num_increase": "4",
+    "percent_increase": "400"
+  },
+  {
+    "zipcode": "11429",
+    "region": "NYC",
+    "borough": "Queens",
+    "two_months_ago": "9",
+    "three_months_ago": "2",
+    "num_increase": "7",
+    "percent_increase": "350"
+  },
+  {
+    "zipcode": "10463",
+    "region": "NYC",
+    "borough": "Bronx",
+    "two_months_ago": "34",
+    "three_months_ago": "8",
+    "num_increase": "26",
+    "percent_increase": "325"
+  }
+]
