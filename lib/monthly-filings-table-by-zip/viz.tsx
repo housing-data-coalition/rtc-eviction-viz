@@ -1,9 +1,10 @@
 
 import React from "react";
-import { useTable, Column, useGroupBy, useExpanded, CellProps} from "react-table";
+import { useTable, Column, CellProps} from "react-table";
 import { MonthlyFilingsByZipRow, MONTHLY_FILINGS_BY_ZIP } from "./data";
 import { VizFallback, VIZ_TABLE_CLASS } from "../viz-util";
-import { JsonLoader } from "../json-loader"
+import { JsonLoader } from "../json-loader";
+import {numberWithCommas} from "../vega";
 
 export const MonthlyFilingsTableByZip: React.FC<{}> = () => {
     return <>
@@ -107,6 +108,7 @@ function makeColumns(): Column<MonthlyFilingsByZipDisplayRow>[] {
             {
                 Header: "% Increase",
                 accessor: "percent_increase" as keyof MonthlyFilingsByZipDisplayRow,
+                Cell: ({value}: CellProps<MonthlyFilingsByZipDisplayRow>) => `${numberWithCommas(value)}%`
             },
         ], []);
     return cols;
