@@ -94,12 +94,12 @@ function makeColumns(): Column<MonthlyFilingsByZipDisplayRow>[] {
                 accessor: "borough" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
-                Header: "2 months ago",
-                accessor: "two_months_ago" as keyof MonthlyFilingsByZipDisplayRow,
-            },
-            {
                 Header: "3 months ago",
                 accessor: "three_months_ago" as keyof MonthlyFilingsByZipDisplayRow,
+            },
+            {
+                Header: "2 months ago",
+                accessor: "two_months_ago" as keyof MonthlyFilingsByZipDisplayRow,
             },
             {
                 Header: "# Increase",

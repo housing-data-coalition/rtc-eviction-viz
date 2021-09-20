@@ -114,16 +114,16 @@ function makeColumns(): Column<MonthlyFilingsCitywideDisplayRow>[] {
                 Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${value} boroughs`,
             },
             {
-                Header: "2 months ago",
-                accessor: "two_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
+                Header: "3 months ago",
+                accessor: "three_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
                 // "sum" doesn't handle negative values properly: https://github.com/tannerlinsley/react-table/issues/3273
                 aggregate: (leafValues) => leafValues.reduce((value, next) => parseInt(value) + parseInt(next)),
                 Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${numberWithCommas(value)}`,
                 Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => value
             },
             {
-                Header: "3 months ago",
-                accessor: "three_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
+                Header: "2 months ago",
+                accessor: "two_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
                 // "sum" doesn't handle negative values properly: https://github.com/tannerlinsley/react-table/issues/3273
                 aggregate: (leafValues) => leafValues.reduce((value, next) => parseInt(value) + parseInt(next)),
                 Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${numberWithCommas(value)}`,
