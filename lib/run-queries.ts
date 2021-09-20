@@ -7,6 +7,7 @@ import { ActiveCasesQuery } from "./total-active-cases/data";
 import { FilingsByZipQuery } from "./filings-by-zip/data";
 import { TotalActiveCasesTableQuery} from "./total-active-cases-table/data";
 import { FilingsByZipOutsideNYCQuery } from "./filings-by-zip-table-outside-nyc/data";
+import { BoroughPieChartActiveCasesQuery} from "./borough-pie-chart-active-cases/data";
 
 import { Query } from "./query";
 import { MonthlyFilingsByZipTableQuery } from "./monthly-filings-table-by-zip/data";
@@ -55,6 +56,7 @@ export async function main() {
     await processQuery(FilingsByZipOutsideNYCQuery);
     await processQuery(MonthlyFilingsByZipTableQuery);
     await processQuery(MonthlyFilingsCitywideTableQuery);
+    await processQuery(BoroughPieChartActiveCasesQuery);
   } finally {
     await nycdb.$pool.end();
   }
