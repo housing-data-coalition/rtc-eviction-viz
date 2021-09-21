@@ -12,7 +12,7 @@ select
         else 'Issued Pandemic' end as timebucket
 
     from oca_index
-    where status ~ 'Active' and classification = any('{Holdover,Nonpayment}')
+    where status ~ 'Active' and classification = any('{Holdover,Non-Payment}')
     and court = any('{
         Bronx County Civil Court,
         Kings County Civil Court,
