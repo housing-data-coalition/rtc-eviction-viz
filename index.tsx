@@ -12,6 +12,7 @@ import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
 import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-nyc/viz";
 import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 import { MonthlyFilingsTableCitywide } from "./lib/monthly-filings-table-citywide/viz";
+import { BoroughPieChartsActiveCases } from "./lib/borough-pie-chart-active-cases/viz";
 
 
 const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
@@ -61,6 +62,8 @@ const FullDocument: React.FC<{}> = () => (
     </p>
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
+    <br/>
+    <BoroughPieChartsActiveCases />
     <br/>
     <h2>Active Cases in 2020</h2>
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
