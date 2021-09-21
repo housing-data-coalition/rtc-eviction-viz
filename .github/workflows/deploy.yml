@@ -3,7 +3,7 @@
 name: Build and Deploy
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
     # Use https://crontab.guru/ to figure out what this means.
     #
