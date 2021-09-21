@@ -1,52 +1,52 @@
 [
   {
-    "count": 3207,
-    "borough": "Queens",
-    "timeBucket": "Issued Pandemic"
-  },
-  {
-    "count": 2284,
-    "borough": "Bronx",
-    "timeBucket": "Issued Prepandemic"
-  },
-  {
-    "count": 2206,
-    "borough": "Manhattan",
-    "timeBucket": "Issued Prepandemic"
-  },
-  {
-    "count": 3355,
-    "borough": "Brooklyn",
-    "timeBucket": "Issued Pandemic"
-  },
-  {
-    "count": 206,
-    "borough": "Staten Island",
-    "timeBucket": "Issued Prepandemic"
-  },
-  {
-    "count": 2534,
-    "borough": "Queens",
-    "timeBucket": "Issued Prepandemic"
-  },
-  {
-    "count": 2667,
+    "count": 20996,
     "borough": "Bronx",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 2724,
+    "count": 53640,
+    "borough": "Bronx",
+    "timeBucket": "Issued Prepandemic"
+  },
+  {
+    "count": 16234,
+    "borough": "Brooklyn",
+    "timeBucket": "Issued Pandemic"
+  },
+  {
+    "count": 36505,
     "borough": "Brooklyn",
     "timeBucket": "Issued Prepandemic"
   },
   {
-    "count": 1986,
+    "count": 11530,
     "borough": "Manhattan",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 461,
+    "count": 34679,
+    "borough": "Manhattan",
+    "timeBucket": "Issued Prepandemic"
+  },
+  {
+    "count": 11256,
+    "borough": "Queens",
+    "timeBucket": "Issued Pandemic"
+  },
+  {
+    "count": 25500,
+    "borough": "Queens",
+    "timeBucket": "Issued Prepandemic"
+  },
+  {
+    "count": 1174,
     "borough": "Staten Island",
     "timeBucket": "Issued Pandemic"
+  },
+  {
+    "count": 2064,
+    "borough": "Staten Island",
+    "timeBucket": "Issued Prepandemic"
   }
 ]
