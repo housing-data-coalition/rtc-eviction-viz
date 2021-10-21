@@ -315,8 +315,8 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               align: "center",
               baseline: "bottom",
               fontSize: 12,             
-              dy: -(height*0.4),
-              text: [`There were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
+              dy: (height*.05),
+              text: [`There  were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
             },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
@@ -328,8 +328,8 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               color: "black", 
               opacity: 1,
               width: 2, 
-              y: 170,
-              y2: 240,
+              y: height-(height*.45),
+              y2: height-(height*.48),
           },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
