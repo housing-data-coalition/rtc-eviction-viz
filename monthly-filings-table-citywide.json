@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Staten Island",
-    "region": "NYC",
-    "two_months_ago": "112",
-    "three_months_ago": "78",
-    "num_increase": "34",
-    "percent_increase": "44"
-  },
-  {
-    "borough": "Queens",
-    "region": "NYC",
-    "two_months_ago": "949",
-    "three_months_ago": "759",
-    "num_increase": "190",
-    "percent_increase": "25"
+    "borough": "Outside NYC",
+    "region": "Outside NYC",
+    "two_months_ago": "1508",
+    "three_months_ago": "2038",
+    "num_increase": "-530",
+    "percent_increase": "-26"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "1168",
-    "three_months_ago": "951",
-    "num_increase": "217",
-    "percent_increase": "23"
+    "two_months_ago": "767",
+    "three_months_ago": "1168",
+    "num_increase": "-401",
+    "percent_increase": "-34"
   },
   {
-    "borough": "Outside NYC",
-    "region": "Outside NYC",
-    "two_months_ago": "2038",
-    "three_months_ago": "1736",
-    "num_increase": "302",
-    "percent_increase": "17"
-  },
-  {
-    "borough": "Manhattan",
+    "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "847",
-    "three_months_ago": "854",
-    "num_increase": "-7",
-    "percent_increase": "-1"
+    "two_months_ago": "536",
+    "three_months_ago": "949",
+    "num_increase": "-413",
+    "percent_increase": "-44"
   },
   {
     "borough": "Bronx",
     "region": "NYC",
-    "two_months_ago": "1505",
-    "three_months_ago": "1663",
-    "num_increase": "-158",
-    "percent_increase": "-10"
+    "two_months_ago": "766",
+    "three_months_ago": "1505",
+    "num_increase": "-739",
+    "percent_increase": "-49"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "432",
+    "three_months_ago": "847",
+    "num_increase": "-415",
+    "percent_increase": "-49"
+  },
+  {
+    "borough": "Staten Island",
+    "region": "NYC",
+    "two_months_ago": "56",
+    "three_months_ago": "112",
+    "num_increase": "-56",
+    "percent_increase": "-50"
   }
 ]
