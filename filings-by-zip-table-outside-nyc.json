@@ -1316,13 +1316,13 @@
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11934",
-    "filings": 1
+    "zipcode": "11751",
+    "filings": 27
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11751",
-    "filings": 27
+    "zipcode": "11934",
+    "filings": 1
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
@@ -1566,13 +1566,13 @@
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11715",
-    "filings": 7
+    "zipcode": "11777",
+    "filings": 29
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11777",
-    "filings": 29
+    "zipcode": "11715",
+    "filings": 7
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -1631,13 +1631,13 @@
   },
   {
     "court_name": "Syracuse City Court",
-    "zipcode": "13206",
-    "filings": 119
+    "zipcode": "13202",
+    "filings": 18
   },
   {
     "court_name": "Syracuse City Court",
-    "zipcode": "13202",
-    "filings": 18
+    "zipcode": "13206",
+    "filings": 119
   },
   {
     "court_name": "Tonawanda City Court",
@@ -1646,18 +1646,18 @@
   },
   {
     "court_name": "Tonawanda City Court",
-    "zipcode": "14207",
-    "filings": 1
-  },
-  {
-    "court_name": "Tonawanda City Court",
     "zipcode": "14150",
     "filings": 30
   },
   {
+    "court_name": "Tonawanda City Court",
+    "zipcode": "14207",
+    "filings": 1
+  },
+  {
     "court_name": "Troy City Court",
-    "zipcode": "12181",
-    "filings": 2
+    "zipcode": "12182",
+    "filings": 105
   },
   {
     "court_name": "Troy City Court",
@@ -1666,13 +1666,8 @@
   },
   {
     "court_name": "Troy City Court",
-    "zipcode": "12182",
-    "filings": 105
-  },
-  {
-    "court_name": "Utica City Court",
-    "zipcode": "13502",
-    "filings": 304
+    "zipcode": "12181",
+    "filings": 2
   },
   {
     "court_name": "Utica City Court",
@@ -1683,6 +1678,11 @@
     "court_name": "Utica City Court",
     "zipcode": "13501",
     "filings": 354
+  },
+  {
+    "court_name": "Utica City Court",
+    "zipcode": "13502",
+    "filings": 304
   },
   {
     "court_name": "Watertown City Court",
@@ -1696,18 +1696,8 @@
   },
   {
     "court_name": "White Plains City Court",
-    "zipcode": "10601",
-    "filings": 75
-  },
-  {
-    "court_name": "White Plains City Court",
     "zipcode": "10607",
     "filings": 1
-  },
-  {
-    "court_name": "White Plains City Court",
-    "zipcode": "10606",
-    "filings": 39
   },
   {
     "court_name": "White Plains City Court",
@@ -1716,13 +1706,23 @@
   },
   {
     "court_name": "White Plains City Court",
+    "zipcode": "10605",
+    "filings": 32
+  },
+  {
+    "court_name": "White Plains City Court",
+    "zipcode": "10601",
+    "filings": 75
+  },
+  {
+    "court_name": "White Plains City Court",
     "zipcode": "10603",
     "filings": 34
   },
   {
     "court_name": "White Plains City Court",
-    "zipcode": "10605",
-    "filings": 32
+    "zipcode": "10606",
+    "filings": 39
   },
   {
     "court_name": "Yonkers City Court",
@@ -1733,11 +1733,6 @@
     "court_name": "Yonkers City Court",
     "zipcode": "10704",
     "filings": 165
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10701",
-    "filings": 1323
   },
   {
     "court_name": "Yonkers City Court",
@@ -1758,5 +1753,10 @@
     "court_name": "Yonkers City Court",
     "zipcode": "10708",
     "filings": 24
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10701",
+    "filings": 1323
   }
 ]
