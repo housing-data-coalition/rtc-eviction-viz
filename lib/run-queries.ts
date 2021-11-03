@@ -4,6 +4,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { nycdbConnector } from "./db";
 import { EvictionTimeSeriesQuery } from "./eviction-time-series/data";
 import { ActiveCasesQuery } from "./total-active-cases/data";
+import { JudgmentsQuery } from "./total-judgments/data";
 import { FilingsByZipQuery } from "./filings-by-zip/data";
 import { TotalActiveCasesTableQuery} from "./total-active-cases-table/data";
 import { FilingsByZipOutsideNYCQuery } from "./filings-by-zip-table-outside-nyc/data";
@@ -51,6 +52,7 @@ export async function main() {
   try {
     await processQuery(EvictionTimeSeriesQuery);
     await processQuery(ActiveCasesQuery);
+    await processQuery(JudgmentsQuery);
     await processQuery(FilingsByZipQuery);
     await processQuery(TotalActiveCasesTableQuery);
     await processQuery(FilingsByZipOutsideNYCQuery);
