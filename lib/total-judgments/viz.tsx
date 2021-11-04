@@ -82,8 +82,8 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
   const lineBottom = 20;
   
 
-  const casesCovidStart = values.find(datapoint => datapoint.day === '2020-03-16T04:00:00.000Z')?.judgments;
-  const casesCovidStartThousands = thousands_separators(casesCovidStart);
+  // const casesCovidStart = values.find(datapoint => datapoint.day === '2020-03-16T04:00:00.000Z')?.judgments;
+  // const casesCovidStartThousands = thousands_separators(casesCovidStart);
 
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -309,19 +309,19 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
 
 
 
-          { 
-            mark: {
-              type: "text",
-              align: "center",
-              baseline: "bottom",
-              fontSize: 12,             
-              dy: (height*.05),
-              text: [`There  were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
-            },
-            encoding: {
-              x: { field: "morDateStart", type: "temporal" },
-            },  
-          },
+          // { 
+          //   mark: {
+          //     type: "text",
+          //     align: "center",
+          //     baseline: "bottom",
+          //     fontSize: 12,             
+          //     dy: (height*.05),
+          //     text: [`There  were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
+          //   },
+          //   encoding: {
+          //     x: { field: "morDateStart", type: "temporal" },
+          //   },  
+          // },
           {
             mark: { 
               type: "rect", 
