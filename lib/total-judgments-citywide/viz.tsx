@@ -5,7 +5,7 @@ import type { VisualizationSpec } from "vega-embed";
 import { JsonLoader } from "../json-loader";
 import { LazyVegaLite } from "../vega-lazy";
 import { VizFallback, VIZ_TIME_SERIES_CLASS } from "../viz-util";
-import { JudgmentsNumericFields, JudgmentsRow, JUDGMENTS } from "../total-judgments/data";
+import { JudgmentsNumericFields, JudgmentsRow, JUDGMENTS } from "./data";
 
 /**
  * Take the array of data rows and get the date for the latest week we
@@ -348,10 +348,10 @@ export function isJudgmentsNumericField(value: string): value is keyof Judgments
 }
 
 export const JUDGMENTS_VISUALIZATIONS: Map<keyof JudgmentsNumericFields, string> = new Map([
-  ["judgments", "Eviction Judgments in New York State"],
+  ["judgments", "Eviction Judgments in NYC"],
 ]);
 
-export const JudgmentsVisualizations: React.FC<{
+export const JudgmentsCitywideVisualizations: React.FC<{
   height: number,
   fieldNames?: (keyof JudgmentsNumericFields)[]
 }> = ({height, fieldNames}) => {

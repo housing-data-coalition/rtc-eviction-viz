@@ -1,7 +1,7 @@
 import { toInt } from "../converters";
 import { Query, QueryFiles } from "../query";
 
-export const JUDGMENTS = new QueryFiles(`total-judgments`);
+export const JUDGMENTS = new QueryFiles(`total-judgments-citywide`);
 
 export function convertJudgmentsRow(row: any) {
   return {
@@ -28,7 +28,7 @@ function toJudgmentsCsvRow(row: JudgmentsRow): string[] {
   ];
 }
 
-export const JudgmentsQuery: Query<JudgmentsRow> = {
+export const JudgmentsCitywideQuery: Query<JudgmentsRow> = {
   files: JUDGMENTS,
   sqlToRow: convertJudgmentsRow,
   csvHeader: getJudgmentsCsvHeader(),
