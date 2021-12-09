@@ -94,7 +94,7 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
       text: `${title}`,
       fontSize: 16,
       subtitle: [
-        `January 2020 - Present`,
+        `March 2020 - Present`,
         // This effectively adds extra padding below the subtitle.
         ""
       ]

@@ -71,7 +71,8 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
-  const lineColor = "#AF2525";
+  const barColor = "#B73A3A"
+  const selectedBarColor = "#AF2525";
   const MoratoriumStart = new Date("2020-03-17");
   const MoratoriumEnd = new Date("2020-06-20");
   const MoratoriumMid = new Date("2020-05-05");
@@ -94,7 +95,7 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
       text: `${title}`,
       fontSize: 16,
       subtitle: [
-        `January 2020 - Present`,
+        `March 2020 - Present`,
         // This effectively adds extra padding below the subtitle.
         ""
       ]
@@ -128,8 +129,8 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
         layer: [
           {
             mark: {
-              type: "area",
-              color: lineColor,
+              type: "bar",
+              color: barColor,
               interpolate: "monotone",
               opacity: 0.6,
             },
@@ -155,31 +156,6 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
             },
           },
           {
-            mark: {
-              type: "line",
-              color: lineColor,
-              interpolate: "monotone",
-              strokeWidth: 4,
-            },
-            encoding: {
-              x: {
-                timeUnit,
-                field: "day",
-                axis: {
-                  title: "",
-                  format: "%b ’%y",
-                },
-              },
-              y: {
-                field: fieldName,
-                aggregate: "sum",
-                axis: {
-                },
-                scale: {"zero": false},
-              },
-            },
-          },
-          {
             selection: {
               index: {
                 type: "single",
@@ -190,7 +166,7 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
                 clear: "mouseout"
               },
             },
-            mark: { type: "point", strokeWidth: 4, color: lineColor },
+            mark: { type: "bar", strokeWidth: 4, color: selectedBarColor },
             encoding: {
               x: {
                 timeUnit,
