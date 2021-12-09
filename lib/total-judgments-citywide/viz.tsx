@@ -33,15 +33,29 @@ type JudgmentsTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 type JudgmentsVizProps = {
   fieldName: keyof JudgmentsNumericFields,
   title: string,
-  timeUnit: JudgmentsTimeUnit,
   height: number,
 };
 
 const JudgmentsViz: React.FC<JudgmentsVizProps> = (props) => {
+  const [timeUnit, setTimeUnit] = useState<JudgmentsTimeUnit>("yearweek");
+
   return (
-    <JsonLoader<JudgmentsRow[]> url={JUDGMENTS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
-      {(values) => <JudgmentsVizWithValues values={values} {...props} />}
-    </JsonLoader>
+    <div>
+      <form>
+        <input type="radio" name="citywide-timeunit" id="citywide-yearweek" 
+        checked={timeUnit==="yearweek"}
+        onChange={e => setTimeUnit("yearweek")}/>
+        <label htmlFor="citywide-yearweek">Week</label>
+
+        <input type="radio" name="citywide-timeunit" id="citywide-yearmonth" 
+        checked={timeUnit==="yearmonth"}
+        onChange={e => setTimeUnit("yearmonth")}/>
+        <label htmlFor="citywide-yearmonth">Month</label>
+      </form>
+      <JsonLoader<JudgmentsRow[]> url={JUDGMENTS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
+        {(values) => <JudgmentsVizWithValues values={values} timeUnit={timeUnit} {...props} />}
+      </JsonLoader>
+    </div>
   );
 };
 
@@ -54,6 +68,7 @@ function thousands_separators(num: any)
 
 const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
   values: JudgmentsRow[],
+  timeUnit: JudgmentsTimeUnit
 }> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
@@ -331,7 +346,6 @@ export const JudgmentsCitywideVisualizations: React.FC<{
   height: number,
   fieldNames?: (keyof JudgmentsNumericFields)[]
 }> = ({height, fieldNames}) => {
-  const [timeUnit, setTimeUnit] = useState<JudgmentsTimeUnit>("yearweek");
 
   fieldNames = fieldNames || Array.from(JUDGMENTS_VISUALIZATIONS.keys());
 
@@ -341,7 +355,6 @@ export const JudgmentsCitywideVisualizations: React.FC<{
         <JudgmentsViz
           key={fieldName}
           height={height}
-          timeUnit={timeUnit}
           fieldName={fieldName}
           title={assertNotUndefined(JUDGMENTS_VISUALIZATIONS.get(fieldName))}
         />

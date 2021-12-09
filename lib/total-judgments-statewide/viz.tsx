@@ -33,15 +33,29 @@ type JudgmentsTimeUnit = "yearweek"|"yearmonth"|"yearmonthdate";
 type JudgmentsVizProps = {
   fieldName: keyof JudgmentsNumericFields,
   title: string,
-  timeUnit: JudgmentsTimeUnit,
   height: number,
 };
 
 const JudgmentsViz: React.FC<JudgmentsVizProps> = (props) => {
+  const [timeUnit, setTimeUnit] = useState<JudgmentsTimeUnit>("yearweek");
+
   return (
-    <JsonLoader<JudgmentsRow[]> url={JUDGMENTS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
-      {(values) => <JudgmentsVizWithValues values={values} {...props} />}
-    </JsonLoader>
+    <div>
+      <form>
+        <input type="radio" name="statewide-timeunit" id="statewide-yearweek" 
+        checked={timeUnit==="yearweek"}
+        onChange={e => setTimeUnit("yearweek")}/>
+        <label htmlFor="statewide-yearweek">Week</label>
+
+        <input type="radio" name="statewide-timeunit" id="statewide-yearmonth" 
+        checked={timeUnit==="yearmonth"}
+        onChange={e => setTimeUnit("yearmonth")}/>
+        <label htmlFor="statewide-yearmonth">Month</label>
+      </form>
+      <JsonLoader<JudgmentsRow[]> url={JUDGMENTS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
+        {(values) => <JudgmentsVizWithValues values={values} timeUnit={timeUnit} {...props} />}
+      </JsonLoader>
+    </div>
   );
 };
 
@@ -54,6 +68,7 @@ function thousands_separators(num: any)
 
 const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
   values: JudgmentsRow[],
+  timeUnit: JudgmentsTimeUnit
 }> = ({values, fieldName, title, timeUnit, height}) => {
   values = values.filter(
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
@@ -71,7 +86,8 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
-  const lineColor = "#AF2525";
+  const barColor = "#B73A3A"
+  const selectedBarColor = "#AF2525";
   const MoratoriumStart = new Date("2020-03-17");
   const MoratoriumEnd = new Date("2020-06-20");
   const MoratoriumMid = new Date("2020-05-05");
@@ -128,8 +144,8 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
         layer: [
           {
             mark: {
-              type: "area",
-              color: lineColor,
+              type: "bar",
+              color: barColor,
               interpolate: "monotone",
               opacity: 0.6,
             },
@@ -154,31 +170,31 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
               },
             },
           },
-          {
-            mark: {
-              type: "line",
-              color: lineColor,
-              interpolate: "monotone",
-              strokeWidth: 4,
-            },
-            encoding: {
-              x: {
-                timeUnit,
-                field: "day",
-                axis: {
-                  title: "",
-                  format: "%b ’%y",
-                },
-              },
-              y: {
-                field: fieldName,
-                aggregate: "sum",
-                axis: {
-                },
-                scale: {"zero": false},
-              },
-            },
-          },
+          // {
+          //   mark: {
+          //     type: "line",
+          //     color: lineColor,
+          //     interpolate: "monotone",
+          //     strokeWidth: 4,
+          //   },
+          //   encoding: {
+          //     x: {
+          //       timeUnit,
+          //       field: "day",
+          //       axis: {
+          //         title: "",
+          //         format: "%b ’%y",
+          //       },
+          //     },
+          //     y: {
+          //       field: fieldName,
+          //       aggregate: "sum",
+          //       axis: {
+          //       },
+          //       scale: {"zero": false},
+          //     },
+          //   },
+          // },
           {
             selection: {
               index: {
@@ -190,7 +206,7 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
                 clear: "mouseout"
               },
             },
-            mark: { type: "point", strokeWidth: 4, color: lineColor },
+            mark: { type: "bar", strokeWidth: 4, color: selectedBarColor },
             encoding: {
               x: {
                 timeUnit,
@@ -355,7 +371,6 @@ export const JudgmentsStatewideVisualizations: React.FC<{
   height: number,
   fieldNames?: (keyof JudgmentsNumericFields)[]
 }> = ({height, fieldNames}) => {
-  const [timeUnit, setTimeUnit] = useState<JudgmentsTimeUnit>("yearweek");
 
   fieldNames = fieldNames || Array.from(JUDGMENTS_VISUALIZATIONS.keys());
 
@@ -365,7 +380,6 @@ export const JudgmentsStatewideVisualizations: React.FC<{
         <JudgmentsViz
           key={fieldName}
           height={height}
-          timeUnit={timeUnit}
           fieldName={fieldName}
           title={assertNotUndefined(JUDGMENTS_VISUALIZATIONS.get(fieldName))}
         />
