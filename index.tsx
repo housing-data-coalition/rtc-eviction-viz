@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom";
 
 import { getHTMLElement } from "@justfixnyc/util";
@@ -7,7 +7,8 @@ import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
 import { EvictionVisualizations, EVICTION_VISUALIZATIONS } from "./lib/eviction-time-series/viz";
 import { ActiveCasesVisualizations } from "./lib/total-active-cases/viz";
-import { JudgmentsVisualizations } from "./lib/total-judgments/viz";
+import { JudgmentsStatewideVisualizations } from "./lib/total-judgments-statewide/viz";
+import { JudgmentsCitywideVisualizations } from "./lib/total-judgments-citywide/viz";
 import { ActiveCasesTable } from "./lib/total-active-cases-table/viz";
 import { VizFallback, VIZ_GEO_CLASS } from "./lib/viz-util";
 import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-nyc/viz";
@@ -73,7 +74,8 @@ const FullDocument: React.FC<{}> = () => (
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <br/>
     <h2>Eviction Judgments since 3/23/2020</h2>
-    <JudgmentsVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
+    <JudgmentsStatewideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
+    <JudgmentsCitywideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <br/>
     <h2>Filings by zip code (NYC)</h2>
     <LazyZipCodeViz height={600} />
@@ -104,7 +106,7 @@ const Widget: React.FC<{
 }> = ({fieldName, height}) => {
   if (fieldName === "filings_by_zip") return <LazyZipCodeViz height={height} />;
   if (fieldName === "total_active_cases") return <ActiveCasesVisualizations height={height} />;
-  if (fieldName === "total_judgments") return <JudgmentsVisualizations height={height} />;
+  if (fieldName === "total_judgments") return <JudgmentsStatewideVisualizations height={height} />;
   return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
