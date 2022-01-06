@@ -96,6 +96,7 @@ const FullDocument: React.FC<{}> = () => (
     <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
+    <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz/actions/workflows/deploy.yml">See when this site was last deployed</a></p>
     <br/>
   </div>
 );
