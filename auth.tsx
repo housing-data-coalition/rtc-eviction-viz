@@ -10,7 +10,7 @@ interface AuthContextType {
 export const AuthContext = React.createContext<AuthContextType>(null!);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  let [isAuthenticated, setAuthentication] = useCookie("auth", "null");
+  let [isAuthenticated, setAuthentication] = useCookie("auth", "");
 
   let signin = (password: string, callback: VoidFunction) => {
     setAuthentication(password);

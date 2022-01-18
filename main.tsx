@@ -25,7 +25,7 @@ import {
   QS_FIELD_NAME,
   QS_HEIGHT,
   REACT_APP_PASSWORD
-} from "./contants";
+} from "./constants";
 
 interface LocationState {
   from: {

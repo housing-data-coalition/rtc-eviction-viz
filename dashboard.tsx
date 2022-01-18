@@ -21,7 +21,7 @@ import {
   QS_HEIGHT,
   ACTIVE_CASES_VIZ_DEFAULT_HEIGHT,
   JUDGMENTS_VIZ_DEFAULT_HEIGHT
-} from "./contants";
+} from "./constants";
 
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
