@@ -72,21 +72,21 @@
     "percent_increase": "500"
   },
   {
-    "zipcode": "12203",
-    "region": "Outside NYC",
-    "borough": "Outside NYC",
-    "two_months_ago": "11",
-    "three_months_ago": "2",
-    "num_increase": "9",
-    "percent_increase": "450"
-  },
-  {
     "zipcode": "12206",
     "region": "Outside NYC",
     "borough": "Outside NYC",
     "two_months_ago": "33",
     "three_months_ago": "6",
     "num_increase": "27",
+    "percent_increase": "450"
+  },
+  {
+    "zipcode": "12203",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "11",
+    "three_months_ago": "2",
+    "num_increase": "9",
     "percent_increase": "450"
   }
 ]

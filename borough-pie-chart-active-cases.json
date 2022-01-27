@@ -1,51 +1,51 @@
 [
   {
-    "count": 23804,
+    "count": 24073,
     "borough": "Bronx",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 52153,
+    "count": 52052,
     "borough": "Bronx",
     "timeBucket": "Issued Prepandemic"
   },
   {
-    "count": 17396,
+    "count": 17525,
     "borough": "Brooklyn",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 35319,
+    "count": 35212,
     "borough": "Brooklyn",
     "timeBucket": "Issued Prepandemic"
   },
   {
-    "count": 13185,
+    "count": 13435,
     "borough": "Manhattan",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 33745,
+    "count": 33717,
     "borough": "Manhattan",
     "timeBucket": "Issued Prepandemic"
   },
   {
-    "count": 11775,
+    "count": 11963,
     "borough": "Queens",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 25252,
+    "count": 25234,
     "borough": "Queens",
     "timeBucket": "Issued Prepandemic"
   },
   {
-    "count": 1225,
+    "count": 1238,
     "borough": "Staten Island",
     "timeBucket": "Issued Pandemic"
   },
   {
-    "count": 2019,
+    "count": 2013,
     "borough": "Staten Island",
     "timeBucket": "Issued Prepandemic"
   }

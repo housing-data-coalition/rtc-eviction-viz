@@ -2,9 +2,9 @@
   {
     "borough": "Bronx",
     "region": "NYC",
-    "two_months_ago": "1444",
-    "three_months_ago": "1163",
-    "num_increase": "281",
+    "two_months_ago": "1446",
+    "three_months_ago": "1164",
+    "num_increase": "282",
     "percent_increase": "24"
   },
   {
@@ -18,9 +18,9 @@
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "1025",
+    "two_months_ago": "1026",
     "three_months_ago": "941",
-    "num_increase": "84",
+    "num_increase": "85",
     "percent_increase": "9"
   },
   {
@@ -34,10 +34,10 @@
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "717",
+    "two_months_ago": "803",
     "three_months_ago": "859",
-    "num_increase": "-142",
-    "percent_increase": "-17"
+    "num_increase": "-56",
+    "percent_increase": "-7"
   },
   {
     "borough": "Staten Island",
