@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Bronx",
+    "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "1446",
-    "three_months_ago": "1164",
-    "num_increase": "282",
-    "percent_increase": "24"
-  },
-  {
-    "borough": "Manhattan",
-    "region": "NYC",
-    "two_months_ago": "831",
-    "three_months_ago": "693",
-    "num_increase": "138",
-    "percent_increase": "20"
-  },
-  {
-    "borough": "Brooklyn",
-    "region": "NYC",
-    "two_months_ago": "1026",
-    "three_months_ago": "941",
-    "num_increase": "85",
-    "percent_increase": "9"
+    "two_months_ago": "101",
+    "three_months_ago": "45",
+    "num_increase": "56",
+    "percent_increase": "124"
   },
   {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "1858",
-    "three_months_ago": "1992",
-    "num_increase": "-134",
-    "percent_increase": "-7"
+    "two_months_ago": "2242",
+    "three_months_ago": "1858",
+    "num_increase": "384",
+    "percent_increase": "21"
+  },
+  {
+    "borough": "Brooklyn",
+    "region": "NYC",
+    "two_months_ago": "1156",
+    "three_months_ago": "1026",
+    "num_increase": "130",
+    "percent_increase": "13"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "753",
+    "three_months_ago": "831",
+    "num_increase": "-78",
+    "percent_increase": "-9"
+  },
+  {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "1294",
+    "three_months_ago": "1446",
+    "num_increase": "-152",
+    "percent_increase": "-11"
   },
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "803",
-    "three_months_ago": "859",
-    "num_increase": "-56",
-    "percent_increase": "-7"
-  },
-  {
-    "borough": "Staten Island",
-    "region": "NYC",
-    "two_months_ago": "45",
-    "three_months_ago": "67",
-    "num_increase": "-22",
-    "percent_increase": "-33"
+    "two_months_ago": "586",
+    "three_months_ago": "803",
+    "num_increase": "-217",
+    "percent_increase": "-27"
   }
 ]
