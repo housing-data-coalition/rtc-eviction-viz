@@ -1,4 +1,7 @@
 import React, { Suspense, useState } from "react";
+import ReactDOM from "react-dom";
+
+import { getHTMLElement } from "@justfixnyc/util";
 import { EvictionTimeSeriesNumericFields, EVICTION_TIME_SERIES } from "./lib/eviction-time-series/data";
 import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
@@ -12,16 +15,23 @@ import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-
 import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 import { MonthlyFilingsTableCitywide } from "./lib/monthly-filings-table-citywide/viz";
 import { BoroughPieChartsActiveCases } from "./lib/borough-pie-chart-active-cases/viz";
-import {
-  VIEW_CONFIGURE_WIDGET,
-  EVICTION_VIZ_DEFAULT_HEIGHT,
-  VIEW_WIDGET,
-  QS_VIEW,
-  QS_FIELD_NAME,
-  QS_HEIGHT,
-  ACTIVE_CASES_VIZ_DEFAULT_HEIGHT,
-  JUDGMENTS_VIZ_DEFAULT_HEIGHT
-} from "./constants";
+
+
+const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
+
+const ACTIVE_CASES_VIZ_DEFAULT_HEIGHT = 500;
+
+const JUDGMENTS_VIZ_DEFAULT_HEIGHT = 500;
+
+const VIEW_WIDGET = "widget";
+
+const VIEW_CONFIGURE_WIDGET = "config";
+
+const QS_VIEW = "view";
+
+const QS_FIELD_NAME = "fieldName";
+
+const QS_HEIGHT = "height";
 
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
@@ -48,7 +58,7 @@ const LazyZipCodeViz: React.FC<{height: number}> = ({height}) => (
   </Suspense>
 );
 
-export const FullDocument: React.FC<{}> = () => (
+const FullDocument: React.FC<{}> = () => (
   <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
     <p>
@@ -91,7 +101,7 @@ export const FullDocument: React.FC<{}> = () => (
   </div>
 );
 
-export const Widget: React.FC<{
+const Widget: React.FC<{
   fieldName: WidgetVisualization,
   height: number,
 }> = ({fieldName, height}) => {
@@ -101,7 +111,7 @@ export const Widget: React.FC<{
   return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
-export const ConfigureWidget: React.FC<{}> = () => {
+const ConfigureWidget: React.FC<{}> = () => {
   return (
     <div className="container">
       <h1>New York Eviction Filings Widget Configurator</h1>
@@ -150,14 +160,31 @@ function isWidgetVisualization(fieldName: string): fieldName is WidgetVisualizat
   return combinedMap.has(fieldName as any);
 }
 
-export function validateFieldName(fieldName: string|null): WidgetVisualization {
+function validateFieldName(fieldName: string|null): WidgetVisualization {
   fieldName = fieldName || '';
   if (isWidgetVisualization(fieldName)) return fieldName;
   return "total_filings";
 }
 
-export function validatePositiveInt(value: string|null, defaultValue: number): number {
+function validatePositiveInt(value: string|null, defaultValue: number): number {
   const num = parseInt(value || '');
   if (!isNaN(num) && num > 0) return num;
   return defaultValue;
 }
+
+async function main() {
+  const search = new URLSearchParams(window.location.search);
+  const view = search.get(QS_VIEW);
+  const app =
+    view === VIEW_WIDGET ?
+      <Widget
+        fieldName={validateFieldName(search.get(QS_FIELD_NAME))}
+        height={validatePositiveInt(search.get(QS_HEIGHT), EVICTION_VIZ_DEFAULT_HEIGHT)}
+      /> :
+    view === VIEW_CONFIGURE_WIDGET ? <ConfigureWidget /> :
+    <FullDocument />;
+
+  ReactDOM.render(app, getHTMLElement('div', '#app'));
+}
+
+main();
