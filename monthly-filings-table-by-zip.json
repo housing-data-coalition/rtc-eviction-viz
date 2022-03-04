@@ -1,78 +1,60 @@
 [
   {
+    "zipcode": "10001",
+    "region": "NYC",
+    "borough": "Manhattan",
+    "two_months_ago": "26",
+    "three_months_ago": "1",
+    "num_increase": "25",
+    "percent_increase": "2500"
+  },
+  {
     "zipcode": "10463",
     "region": "NYC",
     "borough": "Bronx",
-    "two_months_ago": "63",
-    "three_months_ago": "1",
-    "num_increase": "62",
-    "percent_increase": "6200"
+    "two_months_ago": "37",
+    "three_months_ago": "2",
+    "num_increase": "35",
+    "percent_increase": "1750"
   },
   {
-    "zipcode": "11694",
+    "zipcode": "10303",
     "region": "NYC",
-    "borough": "Queens",
-    "two_months_ago": "13",
-    "three_months_ago": "1",
-    "num_increase": "12",
-    "percent_increase": "1200"
+    "borough": "Staten Island",
+    "two_months_ago": "34",
+    "three_months_ago": "2",
+    "num_increase": "32",
+    "percent_increase": "1600"
   },
   {
-    "zipcode": "11239",
+    "zipcode": "10014",
     "region": "NYC",
-    "borough": "Brooklyn",
-    "two_months_ago": "13",
-    "three_months_ago": "1",
-    "num_increase": "12",
-    "percent_increase": "1200"
-  },
-  {
-    "zipcode": "12305",
-    "region": "Outside NYC",
-    "borough": "Outside NYC",
-    "two_months_ago": "13",
-    "three_months_ago": "1",
-    "num_increase": "12",
-    "percent_increase": "1200"
-  },
-  {
-    "zipcode": "12306",
-    "region": "Outside NYC",
-    "borough": "Outside NYC",
+    "borough": "Manhattan",
     "two_months_ago": "12",
     "three_months_ago": "1",
     "num_increase": "11",
     "percent_increase": "1100"
   },
   {
-    "zipcode": "11228",
-    "region": "NYC",
-    "borough": "Brooklyn",
-    "two_months_ago": "10",
-    "three_months_ago": "1",
-    "num_increase": "9",
-    "percent_increase": "900"
-  },
-  {
-    "zipcode": "10010",
-    "region": "NYC",
-    "borough": "Manhattan",
-    "two_months_ago": "17",
-    "three_months_ago": "2",
-    "num_increase": "15",
-    "percent_increase": "750"
-  },
-  {
-    "zipcode": "14223",
+    "zipcode": "11738",
     "region": "Outside NYC",
     "borough": "Outside NYC",
-    "two_months_ago": "17",
+    "two_months_ago": "23",
     "three_months_ago": "2",
-    "num_increase": "15",
-    "percent_increase": "750"
+    "num_increase": "21",
+    "percent_increase": "1050"
   },
   {
-    "zipcode": "11412",
+    "zipcode": "11782",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "18",
+    "three_months_ago": "2",
+    "num_increase": "16",
+    "percent_increase": "800"
+  },
+  {
+    "zipcode": "11356",
     "region": "NYC",
     "borough": "Queens",
     "two_months_ago": "8",
@@ -81,12 +63,30 @@
     "percent_increase": "700"
   },
   {
-    "zipcode": "11102",
+    "zipcode": "11705",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "16",
+    "three_months_ago": "2",
+    "num_increase": "14",
+    "percent_increase": "700"
+  },
+  {
+    "zipcode": "11368",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "21",
-    "three_months_ago": "3",
-    "num_increase": "18",
-    "percent_increase": "600"
+    "two_months_ago": "186",
+    "three_months_ago": "25",
+    "num_increase": "161",
+    "percent_increase": "644"
+  },
+  {
+    "zipcode": "11741",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "31",
+    "three_months_ago": "5",
+    "num_increase": "26",
+    "percent_increase": "520"
   }
 ]
