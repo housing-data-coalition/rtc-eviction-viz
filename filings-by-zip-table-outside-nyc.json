@@ -536,13 +536,13 @@
   },
   {
     "court_name": "Lockport City Court",
-    "zipcode": "14094",
-    "filings": 162
+    "zipcode": "14303",
+    "filings": 2
   },
   {
     "court_name": "Lockport City Court",
-    "zipcode": "14303",
-    "filings": 2
+    "zipcode": "14094",
+    "filings": 162
   },
   {
     "court_name": "Long Beach City Court",
@@ -556,18 +556,18 @@
   },
   {
     "court_name": "Middletown City Court",
-    "zipcode": "10941",
-    "filings": 1
-  },
-  {
-    "court_name": "Middletown City Court",
     "zipcode": "10940",
     "filings": 135
   },
   {
+    "court_name": "Middletown City Court",
+    "zipcode": "10941",
+    "filings": 1
+  },
+  {
     "court_name": "Mt. Vernon City Court",
-    "zipcode": "10552",
-    "filings": 141
+    "zipcode": "10801",
+    "filings": 1
   },
   {
     "court_name": "Mt. Vernon City Court",
@@ -581,13 +581,8 @@
   },
   {
     "court_name": "Mt. Vernon City Court",
-    "zipcode": "10801",
-    "filings": 1
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11570",
-    "filings": 104
+    "zipcode": "10552",
+    "filings": 141
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -691,8 +686,8 @@
   },
   {
     "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11757",
-    "filings": 1
+    "zipcode": "11568",
+    "filings": 2
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -756,11 +751,6 @@
   },
   {
     "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11568",
-    "filings": 2
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11579",
     "filings": 10
   },
@@ -783,6 +773,11 @@
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11797",
     "filings": 13
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11570",
+    "filings": 104
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -965,6 +960,11 @@
     "filings": 1
   },
   {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11757",
+    "filings": 1
+  },
+  {
     "court_name": "Nassau County District Court - 4th District",
     "zipcode": "11565",
     "filings": 1
@@ -981,11 +981,6 @@
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10804",
-    "filings": 9
-  },
-  {
-    "court_name": "New Rochelle City Court",
     "zipcode": "10583",
     "filings": 2
   },
@@ -993,6 +988,16 @@
     "court_name": "New Rochelle City Court",
     "zipcode": "10805",
     "filings": 95
+  },
+  {
+    "court_name": "New Rochelle City Court",
+    "zipcode": "10506",
+    "filings": 1
+  },
+  {
+    "court_name": "New Rochelle City Court",
+    "zipcode": "10804",
+    "filings": 9
   },
   {
     "court_name": "New Rochelle City Court",
@@ -1005,19 +1010,14 @@
     "filings": 1
   },
   {
-    "court_name": "New Rochelle City Court",
-    "zipcode": "10506",
-    "filings": 1
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14304",
-    "filings": 139
-  },
-  {
     "court_name": "Niagara Falls City Court",
     "zipcode": "14301",
     "filings": 378
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14303",
+    "filings": 119
   },
   {
     "court_name": "Niagara Falls City Court",
@@ -1026,18 +1026,18 @@
   },
   {
     "court_name": "Niagara Falls City Court",
-    "zipcode": "14303",
-    "filings": 119
-  },
-  {
-    "court_name": "North Tonawanda City Court",
-    "zipcode": "14120",
-    "filings": 110
+    "zipcode": "14304",
+    "filings": 139
   },
   {
     "court_name": "North Tonawanda City Court",
     "zipcode": "14301",
     "filings": 1
+  },
+  {
+    "court_name": "North Tonawanda City Court",
+    "zipcode": "14120",
+    "filings": 110
   },
   {
     "court_name": "Norwich City Court",
@@ -1091,68 +1091,18 @@
   },
   {
     "court_name": "Poughkeepsie City Court",
-    "zipcode": "12601",
-    "filings": 526
+    "zipcode": "12603",
+    "filings": 16
   },
   {
     "court_name": "Poughkeepsie City Court",
-    "zipcode": "12603",
-    "filings": 16
+    "zipcode": "12601",
+    "filings": 526
   },
   {
     "court_name": "Rensselaer City Court",
     "zipcode": "12144",
     "filings": 121
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14614",
-    "filings": 3
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14611",
-    "filings": 367
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14605",
-    "filings": 212
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14624",
-    "filings": 1
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14608",
-    "filings": 239
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14606",
-    "filings": 268
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14620",
-    "filings": 218
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14604",
-    "filings": 172
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14610",
-    "filings": 38
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14613",
-    "filings": 347
   },
   {
     "court_name": "Rochester City Court",
@@ -1163,21 +1113,6 @@
     "court_name": "Rochester City Court",
     "zipcode": "14612",
     "filings": 107
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14626",
-    "filings": 4
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14619",
-    "filings": 188
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14609",
-    "filings": 378
   },
   {
     "court_name": "Rochester City Court",
@@ -1196,8 +1131,73 @@
   },
   {
     "court_name": "Rochester City Court",
+    "zipcode": "14608",
+    "filings": 239
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14614",
+    "filings": 3
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14619",
+    "filings": 188
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14605",
+    "filings": 212
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14624",
+    "filings": 1
+  },
+  {
+    "court_name": "Rochester City Court",
     "zipcode": "14616",
     "filings": 8
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14606",
+    "filings": 268
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14604",
+    "filings": 172
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14610",
+    "filings": 38
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14613",
+    "filings": 347
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14611",
+    "filings": 367
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14620",
+    "filings": 218
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14609",
+    "filings": 378
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14626",
+    "filings": 4
   },
   {
     "court_name": "Rome City Court",
