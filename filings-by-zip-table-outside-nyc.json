@@ -1006,13 +1006,18 @@
   },
   {
     "court_name": "New Rochelle City Court",
+    "zipcode": "10550",
+    "filings": 1
+  },
+  {
+    "court_name": "New Rochelle City Court",
     "zipcode": "10801",
     "filings": 632
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10550",
-    "filings": 1
+    "zipcode": "10805",
+    "filings": 99
   },
   {
     "court_name": "New Rochelle City Court",
@@ -1030,14 +1035,9 @@
     "filings": 2
   },
   {
-    "court_name": "New Rochelle City Court",
-    "zipcode": "10805",
-    "filings": 99
-  },
-  {
     "court_name": "Niagara Falls City Court",
-    "zipcode": "14301",
-    "filings": 404
+    "zipcode": "14303",
+    "filings": 138
   },
   {
     "court_name": "Niagara Falls City Court",
@@ -1046,8 +1046,8 @@
   },
   {
     "court_name": "Niagara Falls City Court",
-    "zipcode": "14303",
-    "filings": 138
+    "zipcode": "14301",
+    "filings": 404
   },
   {
     "court_name": "Niagara Falls City Court",
@@ -1056,13 +1056,13 @@
   },
   {
     "court_name": "North Tonawanda City Court",
-    "zipcode": "14120",
-    "filings": 115
+    "zipcode": "14301",
+    "filings": 1
   },
   {
     "court_name": "North Tonawanda City Court",
-    "zipcode": "14301",
-    "filings": 1
+    "zipcode": "14120",
+    "filings": 115
   },
   {
     "court_name": "Norwich City Court",
@@ -1101,13 +1101,13 @@
   },
   {
     "court_name": "Plattsburgh City Court",
-    "zipcode": "12901",
-    "filings": 145
+    "zipcode": "12903",
+    "filings": 1
   },
   {
     "court_name": "Plattsburgh City Court",
-    "zipcode": "12903",
-    "filings": 1
+    "zipcode": "12901",
+    "filings": 145
   },
   {
     "court_name": "Port Jervis City Court",
@@ -1116,13 +1116,13 @@
   },
   {
     "court_name": "Poughkeepsie City Court",
-    "zipcode": "12603",
-    "filings": 17
+    "zipcode": "12601",
+    "filings": 539
   },
   {
     "court_name": "Poughkeepsie City Court",
-    "zipcode": "12601",
-    "filings": 539
+    "zipcode": "12603",
+    "filings": 17
   },
   {
     "court_name": "Rensselaer City Court",
@@ -1131,18 +1131,33 @@
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14615",
-    "filings": 168
+    "zipcode": "14612",
+    "filings": 109
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14622",
-    "filings": 1
+    "zipcode": "14613",
+    "filings": 364
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14611",
-    "filings": 383
+    "zipcode": "14616",
+    "filings": 8
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14604",
+    "filings": 178
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14610",
+    "filings": 40
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14620",
+    "filings": 225
   },
   {
     "court_name": "Rochester City Court",
@@ -1161,13 +1176,18 @@
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14612",
-    "filings": 109
+    "zipcode": "14615",
+    "filings": 168
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14620",
-    "filings": 225
+    "zipcode": "14622",
+    "filings": 1
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14611",
+    "filings": 383
   },
   {
     "court_name": "Rochester City Court",
@@ -1191,23 +1211,8 @@
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14610",
-    "filings": 40
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14604",
-    "filings": 178
-  },
-  {
-    "court_name": "Rochester City Court",
     "zipcode": "14614",
     "filings": 4
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14616",
-    "filings": 8
   },
   {
     "court_name": "Rochester City Court",
@@ -1223,11 +1228,6 @@
     "court_name": "Rochester City Court",
     "zipcode": "14624",
     "filings": 1
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14613",
-    "filings": 364
   },
   {
     "court_name": "Rome City Court",
@@ -1256,28 +1256,8 @@
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12056",
-    "filings": 1
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12205",
-    "filings": 1
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12303",
-    "filings": 262
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12305",
-    "filings": 134
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "07017",
-    "filings": 1
+    "zipcode": "12302",
+    "filings": 2
   },
   {
     "court_name": "Schenectady City Court",
@@ -1286,27 +1266,12 @@
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12309",
-    "filings": 21
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12304",
-    "filings": 193
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12210",
+    "zipcode": "12118",
     "filings": 1
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12302",
-    "filings": 2
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "11412",
+    "zipcode": "12056",
     "filings": 1
   },
   {
@@ -1316,18 +1281,53 @@
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12134",
-    "filings": 2
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12118",
+    "zipcode": "07017",
     "filings": 1
   },
   {
     "court_name": "Schenectady City Court",
     "zipcode": "12306",
     "filings": 83
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12309",
+    "filings": 21
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "11412",
+    "filings": 1
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12305",
+    "filings": 134
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12303",
+    "filings": 262
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12205",
+    "filings": 1
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12210",
+    "filings": 1
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12134",
+    "filings": 2
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12304",
+    "filings": 193
   },
   {
     "court_name": "Sherrill City Court",
