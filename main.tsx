@@ -9,7 +9,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { getHTMLElement } from "@justfixnyc/util";
-import {AuthContext, AuthProvider} from "./auth"
+import { AuthContext, AuthProvider } from "./auth"
 import {
   Widget,
   FullDocument,
@@ -112,7 +112,7 @@ const App: React.FC<{}> = () => {
 
 async function main() {
   ReactDOM.render(
-    <BrowserRouter>
+    <BrowserRouter basename="rtc-eviction-viz">
       <App />
     </BrowserRouter>,
     getHTMLElement("div", "#app")
