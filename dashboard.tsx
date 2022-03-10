@@ -55,6 +55,11 @@ export const FullDocument: React.FC<{}> = () => (
       Managed by RTC Coalition's <a href="https://www.righttocounselnyc.org/hcmc" target="_blank">Housing Courts Must Change! Campaign</a><br />
       <em>Powered by the <a href="https://www.housingdatanyc.org/" target="_blank">Housing Data Coalition</a>, <a href="https://www.justfix.nyc/" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org/" target="_blank">ANHD</a></em>
     </p>
+    <p>
+      This website is for internal use by the Right to Counsel Coalition. 
+      Accuracy is not guaranteed and it should not be referenced publicly. 
+      If you would like to use or reference this data, please contact <a href="mailto:malika@righttocounselnyc.org" target="_blank">malika@righttocounselnyc.org</a>.
+    </p>
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
     <br/>
