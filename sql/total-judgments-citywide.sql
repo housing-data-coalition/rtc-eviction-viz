@@ -15,7 +15,16 @@ and oj.indexnumberid
 		(select indexnumberid 
 		from oca_judgments
 		left join oca_index oi using(indexnumberid)
-		where propertytype = 'Residential'
+		where propertytype = 'Residential' and
+		 court = any('{
+					Bronx County Civil Court,
+					Kings County Civil Court,
+					New York County Civil Court,
+					Queens County Civil Court,
+					Richmond County Civil Court,
+					Redhook Community Justice Center,
+					Harlem Community Justice Center
+				}')
 		and (classification = 'Non-Payment' or classification = 'Holdover')
 		and withpossession is true 
 		and oi.fileddate > '03-23-20'
