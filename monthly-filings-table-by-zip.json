@@ -9,6 +9,15 @@
     "percent_increase": "2100"
   },
   {
+    "zipcode": "11705",
+    "region": "Outside NYC",
+    "borough": "Outside NYC",
+    "two_months_ago": "17",
+    "three_months_ago": "1",
+    "num_increase": "16",
+    "percent_increase": "1600"
+  },
+  {
     "zipcode": "11949",
     "region": "Outside NYC",
     "borough": "Outside NYC",
@@ -16,15 +25,6 @@
     "three_months_ago": "1",
     "num_increase": "15",
     "percent_increase": "1500"
-  },
-  {
-    "zipcode": "11705",
-    "region": "Outside NYC",
-    "borough": "Outside NYC",
-    "two_months_ago": "15",
-    "three_months_ago": "1",
-    "num_increase": "14",
-    "percent_increase": "1400"
   },
   {
     "zipcode": "11741",
