@@ -1051,8 +1051,8 @@
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10805",
-    "filings": 109
+    "zipcode": "10801",
+    "filings": 695
   },
   {
     "court_name": "New Rochelle City Court",
@@ -1061,8 +1061,8 @@
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10801",
-    "filings": 695
+    "zipcode": "10550",
+    "filings": 1
   },
   {
     "court_name": "New Rochelle City Court",
@@ -1071,13 +1071,8 @@
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10550",
-    "filings": 1
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14304",
-    "filings": 173
+    "zipcode": "10805",
+    "filings": 109
   },
   {
     "court_name": "Niagara Falls City Court",
@@ -1088,6 +1083,11 @@
     "court_name": "Niagara Falls City Court",
     "zipcode": "14305",
     "filings": 403
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14304",
+    "filings": 173
   },
   {
     "court_name": "Niagara Falls City Court",
