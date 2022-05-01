@@ -1,11 +1,11 @@
 zipcode,region,borough,two_months_ago,three_months_ago,num_increase,percent_increase
-11418,NYC,Queens,22,1,21,2100
-11705,Outside NYC,Outside NYC,17,1,16,1600
-11949,Outside NYC,Outside NYC,16,1,15,1500
-11741,Outside NYC,Outside NYC,38,3,35,1167
-11738,Outside NYC,Outside NYC,24,2,22,1100
-11752,Outside NYC,Outside NYC,11,1,10,1000
-14086,Outside NYC,Outside NYC,9,1,8,800
-10463,NYC,Bronx,43,5,38,760
-13206,Outside NYC,Outside NYC,33,4,29,725
-14605,Outside NYC,Outside NYC,31,4,27,675
+10035,NYC,Manhattan,66,1,65,6500
+10003,NYC,Manhattan,46,1,45,4500
+10710,Outside NYC,Outside NYC,40,1,39,3900
+14075,Outside NYC,Outside NYC,49,2,47,2350
+10463,NYC,Bronx,64,4,60,1500
+13202,Outside NYC,Outside NYC,44,3,41,1367
+11021,Outside NYC,Outside NYC,12,1,11,1100
+14204,Outside NYC,Outside NYC,40,5,35,700
+12304,Outside NYC,Outside NYC,42,6,36,600
+14150,Outside NYC,Outside NYC,49,8,41,512
