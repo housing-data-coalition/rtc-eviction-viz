@@ -1,7 +1,7 @@
 borough,region,two_months_ago,three_months_ago,num_increase,percent_increase
-Queens,NYC,2163,1103,1060,96
-Brooklyn,NYC,2705,1730,975,56
-Manhattan,NYC,1754,1293,461,36
-Outside NYC,Outside NYC,6041,4525,1516,34
-Bronx,NYC,2904,2602,302,12
-Staten Island,NYC,212,192,20,10
+Bronx,NYC,3502,2904,598,21
+Manhattan,NYC,1807,1754,53,3
+Brooklyn,NYC,2598,2705,-107,-4
+Staten Island,NYC,182,212,-30,-14
+Outside NYC,Outside NYC,5157,6041,-884,-15
+Queens,NYC,1606,2163,-557,-26

@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Queens",
+    "borough": "Bronx",
     "region": "NYC",
-    "two_months_ago": "2163",
-    "three_months_ago": "1103",
-    "num_increase": "1060",
-    "percent_increase": "96"
-  },
-  {
-    "borough": "Brooklyn",
-    "region": "NYC",
-    "two_months_ago": "2705",
-    "three_months_ago": "1730",
-    "num_increase": "975",
-    "percent_increase": "56"
+    "two_months_ago": "3502",
+    "three_months_ago": "2904",
+    "num_increase": "598",
+    "percent_increase": "21"
   },
   {
     "borough": "Manhattan",
     "region": "NYC",
-    "two_months_ago": "1754",
-    "three_months_ago": "1293",
-    "num_increase": "461",
-    "percent_increase": "36"
+    "two_months_ago": "1807",
+    "three_months_ago": "1754",
+    "num_increase": "53",
+    "percent_increase": "3"
   },
   {
-    "borough": "Outside NYC",
-    "region": "Outside NYC",
-    "two_months_ago": "6041",
-    "three_months_ago": "4525",
-    "num_increase": "1516",
-    "percent_increase": "34"
-  },
-  {
-    "borough": "Bronx",
+    "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "2904",
-    "three_months_ago": "2602",
-    "num_increase": "302",
-    "percent_increase": "12"
+    "two_months_ago": "2598",
+    "three_months_ago": "2705",
+    "num_increase": "-107",
+    "percent_increase": "-4"
   },
   {
     "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "212",
-    "three_months_ago": "192",
-    "num_increase": "20",
-    "percent_increase": "10"
+    "two_months_ago": "182",
+    "three_months_ago": "212",
+    "num_increase": "-30",
+    "percent_increase": "-14"
+  },
+  {
+    "borough": "Outside NYC",
+    "region": "Outside NYC",
+    "two_months_ago": "5157",
+    "three_months_ago": "6041",
+    "num_increase": "-884",
+    "percent_increase": "-15"
+  },
+  {
+    "borough": "Queens",
+    "region": "NYC",
+    "two_months_ago": "1606",
+    "three_months_ago": "2163",
+    "num_increase": "-557",
+    "percent_increase": "-26"
   }
 ]
