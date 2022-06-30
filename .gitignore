@@ -5,3 +5,5 @@ tsc-dist
 .env
 static/*.json
 static/*.csv
+.prettierrc
+settings.json

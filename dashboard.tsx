@@ -49,16 +49,6 @@ const LazyZipCodeViz: React.FC<{ height: number }> = ({ height }) => (
   </Suspense>
 );
 
-// async function getOcaDate() {
-//   const date = fetch("https://oca-data.s3.amazonaws.com/public/last-updated-date.txt")
-//     .then(res => res.text())
-//   return await date
-// };
-
-// let oca_date: string;
-// getOcaDate().then(data => oca_date = data)
-
-
 export const FullDocument: React.FC<{}> = () => (
   <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
