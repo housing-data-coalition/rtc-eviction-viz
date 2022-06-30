@@ -12,7 +12,7 @@ import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-
 import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 import { MonthlyFilingsTableCitywide } from "./lib/monthly-filings-table-citywide/viz";
 import { BoroughPieChartsActiveCases } from "./lib/borough-pie-chart-active-cases/viz";
-import {MaintenanceChecklist} from "./lib/checklist";
+import { MaintenanceChecklist } from "./lib/checklist";
 import {
   VIEW_CONFIGURE_WIDGET,
   EVICTION_VIZ_DEFAULT_HEIGHT,
@@ -103,7 +103,7 @@ export const FullDocument: React.FC<{}> = () => (
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz/actions/workflows/deploy.yml">See when this site was last deployed</a></p>
-    <MaintenanceChecklist/>
+    <MaintenanceChecklist />
   </div>
 );
 
