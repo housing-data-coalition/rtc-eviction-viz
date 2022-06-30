@@ -12,6 +12,7 @@ import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-
 import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 import { MonthlyFilingsTableCitywide } from "./lib/monthly-filings-table-citywide/viz";
 import { BoroughPieChartsActiveCases } from "./lib/borough-pie-chart-active-cases/viz";
+import {MaintenanceChecklist} from "./lib/checklist";
 import {
   VIEW_CONFIGURE_WIDGET,
   EVICTION_VIZ_DEFAULT_HEIGHT,
@@ -35,18 +36,28 @@ const OTHER_VISUALIZATIONS: Map<OtherVisualization, string> = new Map([
   ["total_judgments", "Total Eviction Judgments"],
 ]);
 
-const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
+const DatasetDownloads: React.FC<{ files: QueryFiles, title: string }> = ({ files, title }) => (
   <>
     <p><a href={files.csv}>Download {title} CSV</a></p>
     <p><a href={files.json}>Download {title} JSON</a></p>
   </>
 );
 
-const LazyZipCodeViz: React.FC<{height: number}> = ({height}) => (
+const LazyZipCodeViz: React.FC<{ height: number }> = ({ height }) => (
   <Suspense fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
     <ZipCodeViz height={height} />
   </Suspense>
 );
+
+// async function getOcaDate() {
+//   const date = fetch("https://oca-data.s3.amazonaws.com/public/last-updated-date.txt")
+//     .then(res => res.text())
+//   return await date
+// };
+
+// let oca_date: string;
+// getOcaDate().then(data => oca_date = data)
+
 
 export const FullDocument: React.FC<{}> = () => (
   <div className="container">
@@ -56,27 +67,27 @@ export const FullDocument: React.FC<{}> = () => (
       <em>Powered by the <a href="https://www.housingdatanyc.org/" target="_blank">Housing Data Coalition</a>, <a href="https://www.justfix.nyc/" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org/" target="_blank">ANHD</a></em>
     </p>
     <p>
-      This website is for internal use by the Right to Counsel Coalition. 
-      Accuracy is not guaranteed and it should not be referenced publicly. 
+      This website is for internal use by the Right to Counsel Coalition.
+      Accuracy is not guaranteed and it should not be referenced publicly.
       If you would like to use or reference this data, please contact <a href="mailto:malika@righttocounselnyc.org" target="_blank">malika@righttocounselnyc.org</a>.
     </p>
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
-    <br/>
+    <br />
     <BoroughPieChartsActiveCases />
-    <br/>
+    <br />
     <h2>Active Cases since 2020</h2>
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
-    <br/>
+    <br />
     <h2>Eviction Judgments since 3/23/2020</h2>
     <JudgmentsStatewideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <JudgmentsCitywideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
-    <br/>
+    <br />
     <h2>Filings by zip code (NYC)</h2>
     <LazyZipCodeViz height={600} />
     <small><strong>Data sources:</strong> New York State Office of Court Administration eviction filings and PLUTO19v2 via <a href="https://github.com/nycdb/nycdb" target="_blank">NYCDB</a>. By the <a href="https://housingdatanyc.org" target="_blank">Housing Data Coalition</a>, <a href="https://justfix.nyc" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org" target="_blank">ANHD</a>. *Numbers of total units per zip code exclude single-unit properties to approximate the number of rental units.</small>
     <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code (NYC)" />
-    <br/>
+    <br />
     <h2>Filings by zip code (Outside NYC)</h2>
     <FilingsByZipOutsideNYCTable />
     <br />
@@ -92,14 +103,14 @@ export const FullDocument: React.FC<{}> = () => (
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz/actions/workflows/deploy.yml">See when this site was last deployed</a></p>
-    <br/>
+    <MaintenanceChecklist/>
   </div>
 );
 
 export const Widget: React.FC<{
   fieldName: WidgetVisualization,
   height: number,
-}> = ({fieldName, height}) => {
+}> = ({ fieldName, height }) => {
   if (fieldName === "filings_by_zip") return <LazyZipCodeViz height={height} />;
   if (fieldName === "total_active_cases") return <ActiveCasesVisualizations height={height} />;
   if (fieldName === "total_judgments") return <JudgmentsStatewideVisualizations height={height} />;
@@ -155,13 +166,13 @@ function isWidgetVisualization(fieldName: string): fieldName is WidgetVisualizat
   return combinedMap.has(fieldName as any);
 }
 
-export function validateFieldName(fieldName: string|null): WidgetVisualization {
+export function validateFieldName(fieldName: string | null): WidgetVisualization {
   fieldName = fieldName || '';
   if (isWidgetVisualization(fieldName)) return fieldName;
   return "total_filings";
 }
 
-export function validatePositiveInt(value: string|null, defaultValue: number): number {
+export function validatePositiveInt(value: string | null, defaultValue: number): number {
   const num = parseInt(value || '');
   if (!isNaN(num) && num > 0) return num;
   return defaultValue;
