@@ -7,9 +7,10 @@ import { ActiveCasesQuery } from "./total-active-cases/data";
 import { JudgmentsStatewideQuery } from "./total-judgments-statewide/data";
 import { JudgmentsCitywideQuery } from "./total-judgments-citywide/data";
 import { FilingsByZipQuery } from "./filings-by-zip/data";
-import { TotalActiveCasesTableQuery} from "./total-active-cases-table/data";
+import { TotalActiveCasesTableQuery } from "./total-active-cases-table/data";
 import { FilingsByZipOutsideNYCQuery } from "./filings-by-zip-table-outside-nyc/data";
-import { BoroughPieChartActiveCasesQuery} from "./borough-pie-chart-active-cases/data";
+import { BoroughPieChartActiveCasesQuery } from "./borough-pie-chart-active-cases/data";
+import { LatestFilingDateQuery } from "./latest-filing-date/data";
 
 import { Query } from "./query";
 import { MonthlyFilingsByZipTableQuery } from "./monthly-filings-table-by-zip/data";
@@ -61,6 +62,7 @@ export async function main() {
     await processQuery(MonthlyFilingsByZipTableQuery);
     await processQuery(MonthlyFilingsCitywideTableQuery);
     await processQuery(BoroughPieChartActiveCasesQuery);
+    await processQuery(LatestFilingDateQuery);
   } finally {
     await nycdb.$pool.end();
   }
