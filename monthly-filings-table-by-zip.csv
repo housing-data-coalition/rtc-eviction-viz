@@ -1,11 +1,11 @@
 zipcode,region,borough,two_months_ago,three_months_ago,num_increase,percent_increase
-10451,NYC,Bronx,156,1,155,15500
-10463,NYC,Bronx,137,5,132,2640
-14616,Outside NYC,Outside NYC,12,1,11,1100
-13669,Outside NYC,Outside NYC,10,1,9,900
-11788,Outside NYC,Outside NYC,19,2,17,850
-14424,Outside NYC,Outside NYC,28,3,25,833
-14219,Outside NYC,Outside NYC,8,1,7,700
-11725,Outside NYC,Outside NYC,8,1,7,700
+10451,NYC,Bronx,188,2,186,9300
+10463,NYC,Bronx,159,6,153,2550
+13669,Outside NYC,Outside NYC,13,1,12,1200
+11788,Outside NYC,Outside NYC,24,2,22,1100
+14424,Outside NYC,Outside NYC,32,3,29,967
+11725,Outside NYC,Outside NYC,9,1,8,800
+14219,Outside NYC,Outside NYC,9,1,8,800
+14616,Outside NYC,Outside NYC,17,2,15,750
+11795,Outside NYC,Outside NYC,7,1,6,600
 11742,Outside NYC,Outside NYC,6,1,5,500
-11105,NYC,Queens,53,11,42,382
