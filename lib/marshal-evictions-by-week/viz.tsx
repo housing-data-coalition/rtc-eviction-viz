@@ -144,7 +144,7 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
               type: "bar",
               color: barColor,
               interpolate: "monotone",
-              opacity: 0.6,
+              opacity: 0.8,
             },
             encoding: {
               x: {

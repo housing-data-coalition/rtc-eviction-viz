@@ -36,7 +36,7 @@ const QS_HEIGHT = "height";
 
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
-type OtherVisualization = "filings_by_zip" | "total_active_cases" | "total_judgments";
+type OtherVisualization = "filings_by_zip" | "total_active_cases" | "total_judgments" | "marshal_evictions";
 
 type WidgetVisualization = keyof EvictionTimeSeriesNumericFields | OtherVisualization;
 
@@ -44,6 +44,7 @@ const OTHER_VISUALIZATIONS: Map<OtherVisualization, string> = new Map([
   ["filings_by_zip", "Filings By Zip Code"],
   ["total_active_cases", "Total Active Cases"],
   ["total_judgments", "Total Eviction Judgments"],
+  ["marshal_evictions", "Total Marshal Evictions"],
 ]);
 
 const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
@@ -111,13 +112,14 @@ const Widget: React.FC<{
   if (fieldName === "filings_by_zip") return <LazyZipCodeViz height={height} />;
   if (fieldName === "total_active_cases") return <ActiveCasesVisualizations height={height} />;
   if (fieldName === "total_judgments") return <JudgmentsStatewideVisualizations height={height} />;
+  if (fieldName === "marshal_evictions") return <MarshalEvicsVisualizations height={height} />;
   return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
 const ConfigureWidget: React.FC<{}> = () => {
   return (
     <div className="container">
-      <h1>New York Eviction Filings Widget Configurator</h1>
+      <h1>New York Evictions Widget Configurator</h1>
       <p>
         Use the following form to generate a widget. Once you submit it, grab the URL
         from the address bar and put it in an <code>&lt;iframe&gt;</code>. The widget will

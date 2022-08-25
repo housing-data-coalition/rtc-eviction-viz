@@ -257,6 +257,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               morTwoStart: MorTwoStart,
               morTwoEnd: MorTwoEnd,
               morTwoMid: MorTwoMid,
+              covidCasesStart: 150000,
             },
           ],
         },
@@ -306,35 +307,32 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               x: { field: "morTwoMid", type: "temporal" },  
             },
           },
-
-
-
           { 
             mark: {
               type: "text",
               align: "center",
               baseline: "bottom",
               fontSize: 12,             
-              dy: -(height*0.4),
+              dy: height/6,
               text: [`There were ${casesCovidStartThousands}`, `eviction cases at the`,`start of the pandemic`],
             },
             encoding: {
               x: { field: "morDateStart", type: "temporal" },
             },  
           },
-          {
-            mark: { 
-              type: "rect", 
-              color: "black", 
-              opacity: 1,
-              width: 2, 
-              y: 170,
-              y2: 240,
-          },
-            encoding: {
-              x: { field: "morDateStart", type: "temporal" },
-            },
-          },
+          // {
+          //   mark: { 
+          //     type: "rect", 
+          //     color: "black", 
+          //     opacity: 1,
+          //     width: 2, 
+          //     y: 170,
+          //     y2: 240,
+          // },
+          //   encoding: {
+          //     x: { field: "morDateStart", type: "temporal" },
+          //   },
+          // },
         ],
       },
       
