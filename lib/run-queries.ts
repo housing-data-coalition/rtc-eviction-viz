@@ -4,13 +4,13 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { nycdbConnector } from "./db";
 import { EvictionTimeSeriesQuery } from "./eviction-time-series/data";
 import { ActiveCasesQuery } from "./total-active-cases/data";
+import { MarshalEvicsQuery } from "./marshal-evictions-by-week/data";
 import { JudgmentsStatewideQuery } from "./total-judgments-statewide/data";
 import { JudgmentsCitywideQuery } from "./total-judgments-citywide/data";
 import { FilingsByZipQuery } from "./filings-by-zip/data";
 import { TotalActiveCasesTableQuery} from "./total-active-cases-table/data";
 import { FilingsByZipOutsideNYCQuery } from "./filings-by-zip-table-outside-nyc/data";
 import { BoroughPieChartActiveCasesQuery} from "./borough-pie-chart-active-cases/data";
-
 import { Query } from "./query";
 import { MonthlyFilingsByZipTableQuery } from "./monthly-filings-table-by-zip/data";
 import { MonthlyFilingsCitywideTableQuery } from "./monthly-filings-table-citywide/data";
@@ -53,6 +53,7 @@ export async function main() {
   try {
     await processQuery(EvictionTimeSeriesQuery);
     await processQuery(ActiveCasesQuery);
+    await processQuery(MarshalEvicsQuery);
     await processQuery(JudgmentsStatewideQuery);
     await processQuery(JudgmentsCitywideQuery);
     await processQuery(FilingsByZipQuery);

@@ -7,6 +7,7 @@ import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
 import { EvictionVisualizations, EVICTION_VISUALIZATIONS } from "./lib/eviction-time-series/viz";
 import { ActiveCasesVisualizations } from "./lib/total-active-cases/viz";
+import { MarshalEvicsVisualizations } from "./lib/marshal-evictions-by-week/viz";
 import { JudgmentsStatewideVisualizations } from "./lib/total-judgments-statewide/viz";
 import { JudgmentsCitywideVisualizations } from "./lib/total-judgments-citywide/viz";
 import { ActiveCasesTable } from "./lib/total-active-cases-table/viz";
@@ -73,6 +74,9 @@ const FullDocument: React.FC<{}> = () => (
     <h2>Active Cases since 2020</h2>
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <br/>
+    <h2>Marshal Evictions since Jan 15 2022</h2>
+    <MarshalEvicsVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
+    <br/>    
     <h2>Eviction Judgments since 3/23/2020</h2>
     <JudgmentsStatewideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <JudgmentsCitywideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
