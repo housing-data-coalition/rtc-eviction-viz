@@ -202,7 +202,7 @@ export function isMarshalEvicsNumericField(value: string): value is keyof Marsha
 }
 
 export const MARSHALEVICS_VISUALIZATIONS: Map<keyof MarshalEvicsNumericFields, string> = new Map([
-  ["marshalevictions", "Covid Evictions in New York City"],
+  ["marshalevictions", "Pandemic Evictions in New York City"],
 ]);
 
 export const MarshalEvicsVisualizations: React.FC<{
