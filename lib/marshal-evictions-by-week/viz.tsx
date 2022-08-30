@@ -81,7 +81,6 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
     (total, row) => total + row[fieldName], 0
   );
 
-lo
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
