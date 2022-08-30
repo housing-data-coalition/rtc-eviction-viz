@@ -81,19 +81,11 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
     (total, row) => total + row[fieldName], 0
   );
 
-  // const MarshalEvicsDataLagStart = getMarshalEvicsLagDate(values, 30); // 4 weeks for lag
-  // const MarshalEvicsDataLagEnd = getMarshalEvicsLagDate(values, 0); // latest date
   const timeUnitLabel = timeUnit === "yearmonthdate" ? "Day"
     : timeUnit === "yearweek" ? "Week" 
     : "Month";
   const barColor = "#B73A3A"
   const selectedBarColor = "#AF2525";
-  // const lineTop = 20;
-  // const lineBottom = 20;
-  
-
-  // const casesCovidStart = values.find(datapoint => datapoint.day === '2020-03-16T04:00:00.000Z')?.judgments;
-  // const casesCovidStartThousands = thousands_separators(casesCovidStart);
 
   const spec: VisualizationSpec = {
     $schema: "https://vega.github.io/schema/vega-lite/v4.json",
@@ -106,7 +98,7 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
       text: `${title}`,
       fontSize: 24,
       subtitle: [
-        `There have been ${thousands_separators(evictionsSinceJan)} evictions by court-ordered marshals since`,  `eviction protections expired on January 15, 2022.`,
+        `There have been ${thousands_separators(evictionsSinceJan)} residential evictions by court-ordered`, `marshals since eviction protections expired on January 15, 2022.`,
         // This effectively adds extra padding below the subtitle.
         ""
       ],
@@ -144,7 +136,7 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
               type: "bar",
               color: barColor,
               interpolate: "monotone",
-              opacity: 0.8,
+              opacity: 0.9,
             },
             encoding: {
               x: {
