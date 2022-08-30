@@ -1,7 +1,4 @@
 import React, { Suspense, useState } from "react";
-import ReactDOM from "react-dom";
-
-import { getHTMLElement } from "@justfixnyc/util";
 import { EvictionTimeSeriesNumericFields, EVICTION_TIME_SERIES } from "./lib/eviction-time-series/data";
 import { FILINGS_BY_ZIP } from "./lib/filings-by-zip/data";
 import { QueryFiles } from "./lib/query";
@@ -16,23 +13,17 @@ import { FilingsByZipOutsideNYCTable } from "./lib/filings-by-zip-table-outside-
 import { MonthlyFilingsTableByZip } from "./lib/monthly-filings-table-by-zip/viz";
 import { MonthlyFilingsTableCitywide } from "./lib/monthly-filings-table-citywide/viz";
 import { BoroughPieChartsActiveCases } from "./lib/borough-pie-chart-active-cases/viz";
-
-
-const EVICTION_VIZ_DEFAULT_HEIGHT = 150;
-
-const ACTIVE_CASES_VIZ_DEFAULT_HEIGHT = 500;
-
-const JUDGMENTS_VIZ_DEFAULT_HEIGHT = 500;
-
-const VIEW_WIDGET = "widget";
-
-const VIEW_CONFIGURE_WIDGET = "config";
-
-const QS_VIEW = "view";
-
-const QS_FIELD_NAME = "fieldName";
-
-const QS_HEIGHT = "height";
+import { MaintenanceChecklist } from "./lib/checklist";
+import {
+  VIEW_CONFIGURE_WIDGET,
+  EVICTION_VIZ_DEFAULT_HEIGHT,
+  VIEW_WIDGET,
+  QS_VIEW,
+  QS_FIELD_NAME,
+  QS_HEIGHT,
+  ACTIVE_CASES_VIZ_DEFAULT_HEIGHT,
+  JUDGMENTS_VIZ_DEFAULT_HEIGHT
+} from "./constants";
 
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
@@ -47,31 +38,36 @@ const OTHER_VISUALIZATIONS: Map<OtherVisualization, string> = new Map([
   ["marshal_evictions", "Total Marshal Evictions"],
 ]);
 
-const DatasetDownloads: React.FC<{files: QueryFiles, title: string}> = ({files, title}) => (
+const DatasetDownloads: React.FC<{ files: QueryFiles, title: string }> = ({ files, title }) => (
   <>
     <p><a href={files.csv}>Download {title} CSV</a></p>
     <p><a href={files.json}>Download {title} JSON</a></p>
   </>
 );
 
-const LazyZipCodeViz: React.FC<{height: number}> = ({height}) => (
+const LazyZipCodeViz: React.FC<{ height: number }> = ({ height }) => (
   <Suspense fallback={<VizFallback className={VIZ_GEO_CLASS} />}>
     <ZipCodeViz height={height} />
   </Suspense>
 );
 
-const FullDocument: React.FC<{}> = () => (
+export const FullDocument: React.FC<{}> = () => (
   <div className="container">
     <h1>New York Eviction Filings Tracker</h1>
     <p>
       Managed by RTC Coalition's <a href="https://www.righttocounselnyc.org/hcmc" target="_blank">Housing Courts Must Change! Campaign</a><br />
       <em>Powered by the <a href="https://www.housingdatanyc.org/" target="_blank">Housing Data Coalition</a>, <a href="https://www.justfix.nyc/" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org/" target="_blank">ANHD</a></em>
     </p>
+    <p>
+      This website is for internal use by the Right to Counsel Coalition.
+      Accuracy is not guaranteed and it should not be referenced publicly.
+      If you would like to use or reference this data, please contact <a href="mailto:malika@righttocounselnyc.org" target="_blank">malika@righttocounselnyc.org</a>.
+    </p>
     <h2>Total Active Cases</h2>
     <ActiveCasesTable />
-    <br/>
+    <br />
     <BoroughPieChartsActiveCases />
-    <br/>
+    <br />
     <h2>Active Cases since 2020</h2>
     <ActiveCasesVisualizations height={ACTIVE_CASES_VIZ_DEFAULT_HEIGHT} />
     <br/>
@@ -81,12 +77,12 @@ const FullDocument: React.FC<{}> = () => (
     <h2>Eviction Judgments since 3/23/2020</h2>
     <JudgmentsStatewideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <JudgmentsCitywideVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
-    <br/>
+    <br />
     <h2>Filings by zip code (NYC)</h2>
     <LazyZipCodeViz height={600} />
     <small><strong>Data sources:</strong> New York State Office of Court Administration eviction filings and PLUTO19v2 via <a href="https://github.com/nycdb/nycdb" target="_blank">NYCDB</a>. By the <a href="https://housingdatanyc.org" target="_blank">Housing Data Coalition</a>, <a href="https://justfix.nyc" target="_blank">JustFix.nyc</a>, and <a href="https://anhd.org" target="_blank">ANHD</a>. *Numbers of total units per zip code exclude single-unit properties to approximate the number of rental units.</small>
     <DatasetDownloads files={FILINGS_BY_ZIP} title="filings by zip code (NYC)" />
-    <br/>
+    <br />
     <h2>Filings by zip code (Outside NYC)</h2>
     <FilingsByZipOutsideNYCTable />
     <br />
@@ -101,14 +97,15 @@ const FullDocument: React.FC<{}> = () => (
     <DatasetDownloads files={EVICTION_TIME_SERIES} title="filings over time" />
     <p><a href={`?${QS_VIEW}=${VIEW_CONFIGURE_WIDGET}`}>Configure this page as a widget</a></p>
     <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz">Learn more on GitHub</a></p>
-    <br/>
+    <p><a href="https://github.com/housing-data-coalition/rtc-eviction-viz/actions/workflows/deploy.yml">See when this site was last deployed</a></p>
+    <MaintenanceChecklist />
   </div>
 );
 
-const Widget: React.FC<{
+export const Widget: React.FC<{
   fieldName: WidgetVisualization,
   height: number,
-}> = ({fieldName, height}) => {
+}> = ({ fieldName, height }) => {
   if (fieldName === "filings_by_zip") return <LazyZipCodeViz height={height} />;
   if (fieldName === "total_active_cases") return <ActiveCasesVisualizations height={height} />;
   if (fieldName === "total_judgments") return <JudgmentsStatewideVisualizations height={height} />;
@@ -116,7 +113,7 @@ const Widget: React.FC<{
   return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
-const ConfigureWidget: React.FC<{}> = () => {
+export const ConfigureWidget: React.FC<{}> = () => {
   return (
     <div className="container">
       <h1>New York Evictions Widget Configurator</h1>
@@ -165,31 +162,14 @@ function isWidgetVisualization(fieldName: string): fieldName is WidgetVisualizat
   return combinedMap.has(fieldName as any);
 }
 
-function validateFieldName(fieldName: string|null): WidgetVisualization {
+export function validateFieldName(fieldName: string | null): WidgetVisualization {
   fieldName = fieldName || '';
   if (isWidgetVisualization(fieldName)) return fieldName;
   return "total_filings";
 }
 
-function validatePositiveInt(value: string|null, defaultValue: number): number {
+export function validatePositiveInt(value: string | null, defaultValue: number): number {
   const num = parseInt(value || '');
   if (!isNaN(num) && num > 0) return num;
   return defaultValue;
 }
-
-async function main() {
-  const search = new URLSearchParams(window.location.search);
-  const view = search.get(QS_VIEW);
-  const app =
-    view === VIEW_WIDGET ?
-      <Widget
-        fieldName={validateFieldName(search.get(QS_FIELD_NAME))}
-        height={validatePositiveInt(search.get(QS_HEIGHT), EVICTION_VIZ_DEFAULT_HEIGHT)}
-      /> :
-    view === VIEW_CONFIGURE_WIDGET ? <ConfigureWidget /> :
-    <FullDocument />;
-
-  ReactDOM.render(app, getHTMLElement('div', '#app'));
-}
-
-main();
