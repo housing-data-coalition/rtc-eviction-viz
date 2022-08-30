@@ -106,7 +106,7 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
       text: `${title}`,
       fontSize: 24,
       subtitle: [
-        `There have been ${evictionsSinceJan} evictions by court-ordered marshals since`,  `eviction protections expired on January 15, 2022.`,
+        `There have been ${thousands_separators(evictionsSinceJan)} evictions by court-ordered marshals since`,  `eviction protections expired on January 15, 2022.`,
         // This effectively adds extra padding below the subtitle.
         ""
       ],
