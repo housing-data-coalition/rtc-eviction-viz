@@ -23,6 +23,3 @@ To update the data, re-run `yarn build-data`.
 ## Deployment
 
 To deploy the site, run `yarn deploy`.
-
-
-#
