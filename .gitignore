@@ -7,3 +7,4 @@ static/*.json
 static/*.csv
 .prettierrc
 settings.json
+.DS_Store
