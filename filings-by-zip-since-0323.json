@@ -1,7 +1,7 @@
 [
   {
     "zipcode": "00000",
-    "filings_since_032320": 98,
+    "filings_since_032320": 100,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
@@ -15,290 +15,290 @@
   },
   {
     "zipcode": "10001",
-    "filings_since_032320": 802,
+    "filings_since_032320": 858,
     "unitsres_total": 23099,
     "unitsrental": 23073,
-    "filingsrate_2plus": 34
+    "filingsrate_2plus": 37
   },
   {
     "zipcode": "10002",
-    "filings_since_032320": 1254,
+    "filings_since_032320": 1338,
     "unitsres_total": 36923,
     "unitsrental": 36916,
-    "filingsrate_2plus": 33
+    "filingsrate_2plus": 36
   },
   {
     "zipcode": "10003",
-    "filings_since_032320": 733,
+    "filings_since_032320": 794,
     "unitsres_total": 34095,
     "unitsrental": 34034,
-    "filingsrate_2plus": 21
+    "filingsrate_2plus": 23
   },
   {
     "zipcode": "10004",
-    "filings_since_032320": 80,
+    "filings_since_032320": 89,
     "unitsres_total": 4187,
     "unitsrental": 4187,
-    "filingsrate_2plus": 19
+    "filingsrate_2plus": 21
   },
   {
     "zipcode": "10005",
-    "filings_since_032320": 298,
+    "filings_since_032320": 315,
     "unitsres_total": 6135,
     "unitsrental": 6135,
-    "filingsrate_2plus": 48
+    "filingsrate_2plus": 51
   },
   {
     "zipcode": "10006",
-    "filings_since_032320": 85,
+    "filings_since_032320": 91,
     "unitsres_total": 3219,
     "unitsrental": 3219,
-    "filingsrate_2plus": 26
+    "filingsrate_2plus": 28
   },
   {
     "zipcode": "10007",
-    "filings_since_032320": 74,
+    "filings_since_032320": 76,
     "unitsres_total": 4594,
     "unitsrental": 4566,
     "filingsrate_2plus": 16
   },
   {
     "zipcode": "10009",
-    "filings_since_032320": 766,
+    "filings_since_032320": 825,
     "unitsres_total": 33863,
     "unitsrental": 33856,
-    "filingsrate_2plus": 22
-  },
-  {
-    "zipcode": "10010",
-    "filings_since_032320": 324,
-    "unitsres_total": 20031,
-    "unitsrental": 20026,
-    "filingsrate_2plus": 16
-  },
-  {
-    "zipcode": "10011",
-    "filings_since_032320": 915,
-    "unitsres_total": 34353,
-    "unitsrental": 34201,
-    "filingsrate_2plus": 26
-  },
-  {
-    "zipcode": "10012",
-    "filings_since_032320": 414,
-    "unitsres_total": 15228,
-    "unitsrental": 15209,
-    "filingsrate_2plus": 27
-  },
-  {
-    "zipcode": "10013",
-    "filings_since_032320": 376,
-    "unitsres_total": 19934,
-    "unitsrental": 19893,
-    "filingsrate_2plus": 18
-  },
-  {
-    "zipcode": "10014",
-    "filings_since_032320": 574,
-    "unitsres_total": 22878,
-    "unitsrental": 22611,
-    "filingsrate_2plus": 25
-  },
-  {
-    "zipcode": "10016",
-    "filings_since_032320": 948,
-    "unitsres_total": 46027,
-    "unitsrental": 45976,
-    "filingsrate_2plus": 20
-  },
-  {
-    "zipcode": "10017",
-    "filings_since_032320": 332,
-    "unitsres_total": 13729,
-    "unitsrental": 13706,
     "filingsrate_2plus": 24
   },
   {
-    "zipcode": "10018",
-    "filings_since_032320": 398,
-    "unitsres_total": 7536,
-    "unitsrental": 7536,
-    "filingsrate_2plus": 52
+    "zipcode": "10010",
+    "filings_since_032320": 345,
+    "unitsres_total": 20031,
+    "unitsrental": 20026,
+    "filingsrate_2plus": 17
   },
   {
-    "zipcode": "10019",
-    "filings_since_032320": 1551,
-    "unitsres_total": 39075,
-    "unitsrental": 39070,
-    "filingsrate_2plus": 39
+    "zipcode": "10011",
+    "filings_since_032320": 985,
+    "unitsres_total": 34353,
+    "unitsrental": 34201,
+    "filingsrate_2plus": 28
   },
   {
-    "zipcode": "10021",
-    "filings_since_032320": 603,
-    "unitsres_total": 30836,
-    "unitsrental": 30641,
+    "zipcode": "10012",
+    "filings_since_032320": 440,
+    "unitsres_total": 15228,
+    "unitsrental": 15209,
+    "filingsrate_2plus": 28
+  },
+  {
+    "zipcode": "10013",
+    "filings_since_032320": 397,
+    "unitsres_total": 19934,
+    "unitsrental": 19893,
     "filingsrate_2plus": 19
   },
   {
-    "zipcode": "10022",
-    "filings_since_032320": 589,
-    "unitsres_total": 27891,
-    "unitsrental": 27837,
-    "filingsrate_2plus": 21
-  },
-  {
-    "zipcode": "10023",
-    "filings_since_032320": 842,
-    "unitsres_total": 44070,
-    "unitsrental": 43992,
-    "filingsrate_2plus": 19
-  },
-  {
-    "zipcode": "10024",
-    "filings_since_032320": 762,
-    "unitsres_total": 37150,
-    "unitsrental": 37016,
-    "filingsrate_2plus": 20
-  },
-  {
-    "zipcode": "10025",
-    "filings_since_032320": 2027,
-    "unitsres_total": 48257,
-    "unitsrental": 48193,
-    "filingsrate_2plus": 42
-  },
-  {
-    "zipcode": "10026",
-    "filings_since_032320": 2080,
-    "unitsres_total": 15392,
-    "unitsrental": 15373,
-    "filingsrate_2plus": 135
-  },
-  {
-    "zipcode": "10027",
-    "filings_since_032320": 1919,
-    "unitsres_total": 28683,
-    "unitsrental": 28593,
-    "filingsrate_2plus": 67
-  },
-  {
-    "zipcode": "10028",
-    "filings_since_032320": 693,
-    "unitsres_total": 30517,
-    "unitsrental": 30376,
-    "filingsrate_2plus": 22
-  },
-  {
-    "zipcode": "10029",
-    "filings_since_032320": 1835,
-    "unitsres_total": 35142,
-    "unitsrental": 35120,
-    "filingsrate_2plus": 52
-  },
-  {
-    "zipcode": "10030",
-    "filings_since_032320": 2246,
-    "unitsres_total": 32236,
-    "unitsrental": 32101,
-    "filingsrate_2plus": 69
-  },
-  {
-    "zipcode": "10031",
-    "filings_since_032320": 3461,
-    "unitsres_total": 22149,
-    "unitsrental": 22030,
-    "filingsrate_2plus": 157
-  },
-  {
-    "zipcode": "10032",
-    "filings_since_032320": 3145,
-    "unitsres_total": 22489,
-    "unitsrental": 22455,
-    "filingsrate_2plus": 140
-  },
-  {
-    "zipcode": "10033",
-    "filings_since_032320": 2314,
-    "unitsres_total": 20323,
-    "unitsrental": 20314,
-    "filingsrate_2plus": 113
-  },
-  {
-    "zipcode": "10034",
-    "filings_since_032320": 1978,
-    "unitsres_total": 15812,
-    "unitsrental": 15803,
-    "filingsrate_2plus": 125
-  },
-  {
-    "zipcode": "10035",
-    "filings_since_032320": 1786,
-    "unitsres_total": 17744,
-    "unitsrental": 17721,
-    "filingsrate_2plus": 100
-  },
-  {
-    "zipcode": "10036",
-    "filings_since_032320": 1399,
-    "unitsres_total": 36921,
-    "unitsrental": 36915,
-    "filingsrate_2plus": 37
-  },
-  {
-    "zipcode": "10037",
-    "filings_since_032320": 1292,
-    "unitsres_total": 11084,
-    "unitsrental": 11077,
-    "filingsrate_2plus": 116
-  },
-  {
-    "zipcode": "10038",
-    "filings_since_032320": 357,
-    "unitsres_total": 14930,
-    "unitsrental": 14927,
-    "filingsrate_2plus": 23
-  },
-  {
-    "zipcode": "10039",
-    "filings_since_032320": 1842,
-    "unitsres_total": 11733,
-    "unitsrental": 11732,
-    "filingsrate_2plus": 157
-  },
-  {
-    "zipcode": "10040",
-    "filings_since_032320": 2057,
-    "unitsres_total": 16083,
-    "unitsrental": 16081,
-    "filingsrate_2plus": 127
-  },
-  {
-    "zipcode": "10044",
-    "filings_since_032320": 167,
-    "unitsres_total": 11951,
-    "unitsrental": 11951,
-    "filingsrate_2plus": 13
-  },
-  {
-    "zipcode": "10065",
-    "filings_since_032320": 619,
-    "unitsres_total": 22961,
-    "unitsrental": 22750,
+    "zipcode": "10014",
+    "filings_since_032320": 613,
+    "unitsres_total": 22878,
+    "unitsrental": 22611,
     "filingsrate_2plus": 27
   },
   {
+    "zipcode": "10016",
+    "filings_since_032320": 1000,
+    "unitsres_total": 46027,
+    "unitsrental": 45976,
+    "filingsrate_2plus": 21
+  },
+  {
+    "zipcode": "10017",
+    "filings_since_032320": 349,
+    "unitsres_total": 13729,
+    "unitsrental": 13706,
+    "filingsrate_2plus": 25
+  },
+  {
+    "zipcode": "10018",
+    "filings_since_032320": 424,
+    "unitsres_total": 7536,
+    "unitsrental": 7536,
+    "filingsrate_2plus": 56
+  },
+  {
+    "zipcode": "10019",
+    "filings_since_032320": 1635,
+    "unitsres_total": 39075,
+    "unitsrental": 39070,
+    "filingsrate_2plus": 41
+  },
+  {
+    "zipcode": "10021",
+    "filings_since_032320": 650,
+    "unitsres_total": 30836,
+    "unitsrental": 30641,
+    "filingsrate_2plus": 21
+  },
+  {
+    "zipcode": "10022",
+    "filings_since_032320": 631,
+    "unitsres_total": 27891,
+    "unitsrental": 27837,
+    "filingsrate_2plus": 22
+  },
+  {
+    "zipcode": "10023",
+    "filings_since_032320": 906,
+    "unitsres_total": 44070,
+    "unitsrental": 43992,
+    "filingsrate_2plus": 20
+  },
+  {
+    "zipcode": "10024",
+    "filings_since_032320": 834,
+    "unitsres_total": 37150,
+    "unitsrental": 37016,
+    "filingsrate_2plus": 22
+  },
+  {
+    "zipcode": "10025",
+    "filings_since_032320": 2179,
+    "unitsres_total": 48257,
+    "unitsrental": 48193,
+    "filingsrate_2plus": 45
+  },
+  {
+    "zipcode": "10026",
+    "filings_since_032320": 2222,
+    "unitsres_total": 15392,
+    "unitsrental": 15373,
+    "filingsrate_2plus": 144
+  },
+  {
+    "zipcode": "10027",
+    "filings_since_032320": 2067,
+    "unitsres_total": 28683,
+    "unitsrental": 28593,
+    "filingsrate_2plus": 72
+  },
+  {
+    "zipcode": "10028",
+    "filings_since_032320": 753,
+    "unitsres_total": 30517,
+    "unitsrental": 30376,
+    "filingsrate_2plus": 24
+  },
+  {
+    "zipcode": "10029",
+    "filings_since_032320": 2075,
+    "unitsres_total": 35142,
+    "unitsrental": 35120,
+    "filingsrate_2plus": 59
+  },
+  {
+    "zipcode": "10030",
+    "filings_since_032320": 2370,
+    "unitsres_total": 32236,
+    "unitsrental": 32101,
+    "filingsrate_2plus": 73
+  },
+  {
+    "zipcode": "10031",
+    "filings_since_032320": 3694,
+    "unitsres_total": 22149,
+    "unitsrental": 22030,
+    "filingsrate_2plus": 167
+  },
+  {
+    "zipcode": "10032",
+    "filings_since_032320": 3349,
+    "unitsres_total": 22489,
+    "unitsrental": 22455,
+    "filingsrate_2plus": 149
+  },
+  {
+    "zipcode": "10033",
+    "filings_since_032320": 2491,
+    "unitsres_total": 20323,
+    "unitsrental": 20314,
+    "filingsrate_2plus": 122
+  },
+  {
+    "zipcode": "10034",
+    "filings_since_032320": 2113,
+    "unitsres_total": 15812,
+    "unitsrental": 15803,
+    "filingsrate_2plus": 133
+  },
+  {
+    "zipcode": "10035",
+    "filings_since_032320": 1935,
+    "unitsres_total": 17744,
+    "unitsrental": 17721,
+    "filingsrate_2plus": 109
+  },
+  {
+    "zipcode": "10036",
+    "filings_since_032320": 1480,
+    "unitsres_total": 36921,
+    "unitsrental": 36915,
+    "filingsrate_2plus": 40
+  },
+  {
+    "zipcode": "10037",
+    "filings_since_032320": 1370,
+    "unitsres_total": 11084,
+    "unitsrental": 11077,
+    "filingsrate_2plus": 123
+  },
+  {
+    "zipcode": "10038",
+    "filings_since_032320": 370,
+    "unitsres_total": 14930,
+    "unitsrental": 14927,
+    "filingsrate_2plus": 24
+  },
+  {
+    "zipcode": "10039",
+    "filings_since_032320": 1971,
+    "unitsres_total": 11733,
+    "unitsrental": 11732,
+    "filingsrate_2plus": 168
+  },
+  {
+    "zipcode": "10040",
+    "filings_since_032320": 2175,
+    "unitsres_total": 16083,
+    "unitsrental": 16081,
+    "filingsrate_2plus": 135
+  },
+  {
+    "zipcode": "10044",
+    "filings_since_032320": 180,
+    "unitsres_total": 11951,
+    "unitsrental": 11951,
+    "filingsrate_2plus": 15
+  },
+  {
+    "zipcode": "10065",
+    "filings_since_032320": 669,
+    "unitsres_total": 22961,
+    "unitsrental": 22750,
+    "filingsrate_2plus": 29
+  },
+  {
     "zipcode": "10069",
-    "filings_since_032320": 63,
+    "filings_since_032320": 65,
     "unitsres_total": 4726,
     "unitsrental": 4726,
     "filingsrate_2plus": 13
   },
   {
     "zipcode": "10075",
-    "filings_since_032320": 327,
+    "filings_since_032320": 355,
     "unitsres_total": 18291,
     "unitsrental": 18196,
-    "filingsrate_2plus": 17
+    "filingsrate_2plus": 19
   },
   {
     "zipcode": "10126",
@@ -309,73 +309,73 @@
   },
   {
     "zipcode": "10128",
-    "filings_since_032320": 791,
+    "filings_since_032320": 846,
     "unitsres_total": 35856,
     "unitsrental": 35627,
-    "filingsrate_2plus": 22
+    "filingsrate_2plus": 23
   },
   {
     "zipcode": "10162",
-    "filings_since_032320": 5,
+    "filings_since_032320": 6,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
   },
   {
     "zipcode": "10280",
-    "filings_since_032320": 202,
+    "filings_since_032320": 212,
     "unitsres_total": 4873,
     "unitsrental": 4873,
-    "filingsrate_2plus": 41
+    "filingsrate_2plus": 43
   },
   {
     "zipcode": "10282",
-    "filings_since_032320": 64,
+    "filings_since_032320": 68,
     "unitsres_total": 3476,
     "unitsrental": 3476,
-    "filingsrate_2plus": 18
+    "filingsrate_2plus": 19
   },
   {
     "zipcode": "10301",
-    "filings_since_032320": 925,
+    "filings_since_032320": 992,
     "unitsres_total": 16430,
     "unitsrental": 12460,
-    "filingsrate_2plus": 74
+    "filingsrate_2plus": 79
   },
   {
     "zipcode": "10302",
-    "filings_since_032320": 255,
+    "filings_since_032320": 268,
     "unitsres_total": 6403,
     "unitsrental": 4073,
-    "filingsrate_2plus": 62
+    "filingsrate_2plus": 65
   },
   {
     "zipcode": "10303",
-    "filings_since_032320": 705,
+    "filings_since_032320": 735,
     "unitsres_total": 8456,
     "unitsrental": 5171,
-    "filingsrate_2plus": 136
+    "filingsrate_2plus": 142
   },
   {
     "zipcode": "10304",
-    "filings_since_032320": 970,
+    "filings_since_032320": 1017,
     "unitsres_total": 16063,
     "unitsrental": 9894,
-    "filingsrate_2plus": 98
+    "filingsrate_2plus": 102
   },
   {
     "zipcode": "10305",
-    "filings_since_032320": 318,
+    "filings_since_032320": 342,
     "unitsres_total": 15383,
     "unitsrental": 8819,
-    "filingsrate_2plus": 36
+    "filingsrate_2plus": 38
   },
   {
     "zipcode": "10306",
-    "filings_since_032320": 544,
+    "filings_since_032320": 570,
     "unitsres_total": 21631,
     "unitsrental": 9971,
-    "filingsrate_2plus": 54
+    "filingsrate_2plus": 57
   },
   {
     "zipcode": "10307",
@@ -386,38 +386,38 @@
   },
   {
     "zipcode": "10308",
-    "filings_since_032320": 97,
+    "filings_since_032320": 102,
     "unitsres_total": 10487,
     "unitsrental": 4681,
-    "filingsrate_2plus": 20
+    "filingsrate_2plus": 21
   },
   {
     "zipcode": "10309",
-    "filings_since_032320": 120,
+    "filings_since_032320": 126,
     "unitsres_total": 12576,
     "unitsrental": 7406,
-    "filingsrate_2plus": 16
+    "filingsrate_2plus": 17
   },
   {
     "zipcode": "10310",
-    "filings_since_032320": 378,
+    "filings_since_032320": 401,
     "unitsres_total": 8897,
     "unitsrental": 5138,
-    "filingsrate_2plus": 73
+    "filingsrate_2plus": 78
   },
   {
     "zipcode": "10312",
-    "filings_since_032320": 232,
+    "filings_since_032320": 246,
     "unitsres_total": 22584,
     "unitsrental": 9297,
-    "filingsrate_2plus": 24
+    "filingsrate_2plus": 26
   },
   {
     "zipcode": "10314",
-    "filings_since_032320": 448,
+    "filings_since_032320": 482,
     "unitsres_total": 32556,
     "unitsrental": 19792,
-    "filingsrate_2plus": 22
+    "filingsrate_2plus": 24
   },
   {
     "zipcode": "10402",
@@ -435,182 +435,182 @@
   },
   {
     "zipcode": "10451",
-    "filings_since_032320": 3175,
+    "filings_since_032320": 3391,
     "unitsres_total": 21375,
     "unitsrental": 21328,
-    "filingsrate_2plus": 148
+    "filingsrate_2plus": 158
   },
   {
     "zipcode": "10452",
-    "filings_since_032320": 5788,
+    "filings_since_032320": 6151,
     "unitsres_total": 28291,
     "unitsrental": 28221,
-    "filingsrate_2plus": 205
+    "filingsrate_2plus": 217
   },
   {
     "zipcode": "10453",
-    "filings_since_032320": 6392,
+    "filings_since_032320": 6787,
     "unitsres_total": 33545,
     "unitsrental": 33386,
-    "filingsrate_2plus": 191
+    "filingsrate_2plus": 203
   },
   {
     "zipcode": "10454",
-    "filings_since_032320": 1845,
+    "filings_since_032320": 1945,
     "unitsres_total": 15600,
     "unitsrental": 15395,
-    "filingsrate_2plus": 119
+    "filingsrate_2plus": 126
   },
   {
     "zipcode": "10455",
-    "filings_since_032320": 1989,
+    "filings_since_032320": 2113,
     "unitsres_total": 17360,
     "unitsrental": 17224,
-    "filingsrate_2plus": 115
+    "filingsrate_2plus": 122
   },
   {
     "zipcode": "10456",
-    "filings_since_032320": 5793,
+    "filings_since_032320": 6099,
     "unitsres_total": 33063,
     "unitsrental": 32778,
-    "filingsrate_2plus": 176
+    "filingsrate_2plus": 186
   },
   {
     "zipcode": "10457",
-    "filings_since_032320": 5620,
+    "filings_since_032320": 5995,
     "unitsres_total": 29899,
     "unitsrental": 29584,
-    "filingsrate_2plus": 189
+    "filingsrate_2plus": 202
   },
   {
     "zipcode": "10458",
-    "filings_since_032320": 5816,
+    "filings_since_032320": 6166,
     "unitsres_total": 29560,
     "unitsrental": 29338,
-    "filingsrate_2plus": 198
+    "filingsrate_2plus": 210
   },
   {
     "zipcode": "10459",
-    "filings_since_032320": 3073,
+    "filings_since_032320": 3249,
     "unitsres_total": 19164,
     "unitsrental": 18817,
-    "filingsrate_2plus": 163
+    "filingsrate_2plus": 172
   },
   {
     "zipcode": "10460",
-    "filings_since_032320": 3819,
+    "filings_since_032320": 4069,
     "unitsres_total": 23840,
     "unitsrental": 23607,
-    "filingsrate_2plus": 161
+    "filingsrate_2plus": 172
   },
   {
     "zipcode": "10461",
-    "filings_since_032320": 1070,
+    "filings_since_032320": 1135,
     "unitsres_total": 20297,
     "unitsrental": 18125,
-    "filingsrate_2plus": 59
+    "filingsrate_2plus": 62
   },
   {
     "zipcode": "10462",
-    "filings_since_032320": 4139,
+    "filings_since_032320": 4328,
     "unitsres_total": 32348,
     "unitsrental": 31662,
-    "filingsrate_2plus": 130
+    "filingsrate_2plus": 136
   },
   {
     "zipcode": "10463",
-    "filings_since_032320": 2335,
+    "filings_since_032320": 2490,
     "unitsres_total": 31371,
     "unitsrental": 30624,
-    "filingsrate_2plus": 76
+    "filingsrate_2plus": 81
   },
   {
     "zipcode": "10464",
-    "filings_since_032320": 63,
+    "filings_since_032320": 67,
     "unitsres_total": 2172,
     "unitsrental": 1319,
-    "filingsrate_2plus": 47
+    "filingsrate_2plus": 50
   },
   {
     "zipcode": "10465",
-    "filings_since_032320": 393,
+    "filings_since_032320": 420,
     "unitsres_total": 16083,
     "unitsrental": 12289,
-    "filingsrate_2plus": 31
+    "filingsrate_2plus": 34
   },
   {
     "zipcode": "10466",
-    "filings_since_032320": 2398,
+    "filings_since_032320": 2560,
     "unitsres_total": 23746,
     "unitsrental": 20972,
-    "filingsrate_2plus": 114
+    "filingsrate_2plus": 122
   },
   {
     "zipcode": "10467",
-    "filings_since_032320": 6411,
+    "filings_since_032320": 6776,
     "unitsres_total": 47999,
     "unitsrental": 47433,
-    "filingsrate_2plus": 135
+    "filingsrate_2plus": 142
   },
   {
     "zipcode": "10468",
-    "filings_since_032320": 5709,
+    "filings_since_032320": 6066,
     "unitsres_total": 26547,
     "unitsrental": 26335,
-    "filingsrate_2plus": 216
+    "filingsrate_2plus": 230
   },
   {
     "zipcode": "10469",
-    "filings_since_032320": 2015,
+    "filings_since_032320": 2143,
     "unitsres_total": 22403,
     "unitsrental": 18118,
-    "filingsrate_2plus": 111
+    "filingsrate_2plus": 118
   },
   {
     "zipcode": "10470",
-    "filings_since_032320": 600,
+    "filings_since_032320": 641,
     "unitsres_total": 6621,
     "unitsrental": 5936,
-    "filingsrate_2plus": 101
+    "filingsrate_2plus": 107
   },
   {
     "zipcode": "10471",
-    "filings_since_032320": 317,
+    "filings_since_032320": 336,
     "unitsres_total": 10220,
     "unitsrental": 8953,
-    "filingsrate_2plus": 35
+    "filingsrate_2plus": 37
   },
   {
     "zipcode": "10472",
-    "filings_since_032320": 2406,
+    "filings_since_032320": 2555,
     "unitsres_total": 22272,
     "unitsrental": 21915,
-    "filingsrate_2plus": 109
+    "filingsrate_2plus": 116
   },
   {
     "zipcode": "10473",
-    "filings_since_032320": 1628,
+    "filings_since_032320": 1701,
     "unitsres_total": 22742,
     "unitsrental": 21415,
-    "filingsrate_2plus": 76
+    "filingsrate_2plus": 79
   },
   {
     "zipcode": "10474",
-    "filings_since_032320": 709,
+    "filings_since_032320": 757,
     "unitsres_total": 4071,
     "unitsrental": 4066,
-    "filingsrate_2plus": 174
+    "filingsrate_2plus": 186
   },
   {
     "zipcode": "10475",
-    "filings_since_032320": 401,
+    "filings_since_032320": 468,
     "unitsres_total": 17516,
     "unitsrental": 17352,
-    "filingsrate_2plus": 23
+    "filingsrate_2plus": 26
   },
   {
     "zipcode": "10546",
-    "filings_since_032320": 1,
+    "filings_since_032320": 2,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
@@ -631,10 +631,10 @@
   },
   {
     "zipcode": "11001",
-    "filings_since_032320": 21,
+    "filings_since_032320": 22,
     "unitsres_total": 1443,
     "unitsrental": 456,
-    "filingsrate_2plus": 46
+    "filingsrate_2plus": 48
   },
   {
     "zipcode": "11003",
@@ -645,14 +645,14 @@
   },
   {
     "zipcode": "11004",
-    "filings_since_032320": 95,
+    "filings_since_032320": 104,
     "unitsres_total": 5006,
     "unitsrental": 2768,
-    "filingsrate_2plus": 34
+    "filingsrate_2plus": 37
   },
   {
     "zipcode": "11005",
-    "filings_since_032320": 4,
+    "filings_since_032320": 5,
     "unitsres_total": 1844,
     "unitsrental": 1844,
     "filingsrate_2plus": 2
@@ -673,7 +673,7 @@
   },
   {
     "zipcode": "11027",
-    "filings_since_032320": 4,
+    "filings_since_032320": 5,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
@@ -694,52 +694,52 @@
   },
   {
     "zipcode": "11101",
-    "filings_since_032320": 709,
+    "filings_since_032320": 754,
     "unitsres_total": 31449,
     "unitsrental": 30974,
-    "filingsrate_2plus": 22
+    "filingsrate_2plus": 24
   },
   {
     "zipcode": "11102",
-    "filings_since_032320": 430,
+    "filings_since_032320": 457,
     "unitsres_total": 17021,
     "unitsrental": 16852,
-    "filingsrate_2plus": 25
+    "filingsrate_2plus": 27
   },
   {
     "zipcode": "11103",
-    "filings_since_032320": 451,
+    "filings_since_032320": 484,
     "unitsres_total": 17287,
     "unitsrental": 16908,
-    "filingsrate_2plus": 26
+    "filingsrate_2plus": 28
   },
   {
     "zipcode": "11104",
-    "filings_since_032320": 681,
+    "filings_since_032320": 723,
     "unitsres_total": 13138,
     "unitsrental": 12728,
-    "filingsrate_2plus": 53
+    "filingsrate_2plus": 56
   },
   {
     "zipcode": "11105",
-    "filings_since_032320": 848,
+    "filings_since_032320": 899,
     "unitsres_total": 16710,
     "unitsrental": 15771,
-    "filingsrate_2plus": 53
+    "filingsrate_2plus": 57
   },
   {
     "zipcode": "11106",
-    "filings_since_032320": 578,
+    "filings_since_032320": 606,
     "unitsres_total": 19949,
     "unitsrental": 19762,
-    "filingsrate_2plus": 29
+    "filingsrate_2plus": 30
   },
   {
     "zipcode": "11109",
-    "filings_since_032320": 153,
+    "filings_since_032320": 163,
     "unitsres_total": 3352,
     "unitsrental": 3352,
-    "filingsrate_2plus": 45
+    "filingsrate_2plus": 48
   },
   {
     "zipcode": "11111",
@@ -750,10 +750,10 @@
   },
   {
     "zipcode": "11201",
-    "filings_since_032320": 665,
+    "filings_since_032320": 713,
     "unitsres_total": 41563,
     "unitsrental": 40872,
-    "filingsrate_2plus": 16
+    "filingsrate_2plus": 17
   },
   {
     "zipcode": "11202",
@@ -764,255 +764,255 @@
   },
   {
     "zipcode": "11203",
-    "filings_since_032320": 3034,
+    "filings_since_032320": 3211,
     "unitsres_total": 27575,
     "unitsrental": 23738,
-    "filingsrate_2plus": 127
+    "filingsrate_2plus": 135
   },
   {
     "zipcode": "11204",
-    "filings_since_032320": 638,
+    "filings_since_032320": 686,
     "unitsres_total": 29574,
     "unitsrental": 27516,
-    "filingsrate_2plus": 23
+    "filingsrate_2plus": 24
   },
   {
     "zipcode": "11205",
-    "filings_since_032320": 770,
+    "filings_since_032320": 822,
     "unitsres_total": 18613,
     "unitsrental": 18470,
-    "filingsrate_2plus": 41
+    "filingsrate_2plus": 44
   },
   {
     "zipcode": "11206",
-    "filings_since_032320": 1298,
+    "filings_since_032320": 1393,
     "unitsres_total": 35607,
     "unitsrental": 35499,
-    "filingsrate_2plus": 36
-  },
-  {
-    "zipcode": "11207",
-    "filings_since_032320": 3712,
-    "unitsres_total": 34090,
-    "unitsrental": 31966,
-    "filingsrate_2plus": 116
-  },
-  {
-    "zipcode": "11208",
-    "filings_since_032320": 3402,
-    "unitsres_total": 30304,
-    "unitsrental": 28525,
-    "filingsrate_2plus": 119
-  },
-  {
-    "zipcode": "11209",
-    "filings_since_032320": 1287,
-    "unitsres_total": 32769,
-    "unitsrental": 29807,
-    "filingsrate_2plus": 43
-  },
-  {
-    "zipcode": "11210",
-    "filings_since_032320": 2638,
-    "unitsres_total": 23331,
-    "unitsrental": 18202,
-    "filingsrate_2plus": 144
-  },
-  {
-    "zipcode": "11211",
-    "filings_since_032320": 849,
-    "unitsres_total": 30426,
-    "unitsrental": 30224,
-    "filingsrate_2plus": 28
-  },
-  {
-    "zipcode": "11212",
-    "filings_since_032320": 3736,
-    "unitsres_total": 33193,
-    "unitsrental": 31611,
-    "filingsrate_2plus": 118
-  },
-  {
-    "zipcode": "11213",
-    "filings_since_032320": 3182,
-    "unitsres_total": 26637,
-    "unitsrental": 25920,
-    "filingsrate_2plus": 122
-  },
-  {
-    "zipcode": "11214",
-    "filings_since_032320": 1593,
-    "unitsres_total": 33308,
-    "unitsrental": 32250,
-    "filingsrate_2plus": 49
-  },
-  {
-    "zipcode": "11215",
-    "filings_since_032320": 435,
-    "unitsres_total": 33236,
-    "unitsrental": 32317,
-    "filingsrate_2plus": 13
-  },
-  {
-    "zipcode": "11216",
-    "filings_since_032320": 1793,
-    "unitsres_total": 26950,
-    "unitsrental": 26550,
-    "filingsrate_2plus": 67
-  },
-  {
-    "zipcode": "11217",
-    "filings_since_032320": 588,
-    "unitsres_total": 21878,
-    "unitsrental": 21611,
-    "filingsrate_2plus": 27
-  },
-  {
-    "zipcode": "11218",
-    "filings_since_032320": 1026,
-    "unitsres_total": 27071,
-    "unitsrental": 25691,
     "filingsrate_2plus": 39
   },
   {
+    "zipcode": "11207",
+    "filings_since_032320": 3978,
+    "unitsres_total": 34090,
+    "unitsrental": 31966,
+    "filingsrate_2plus": 124
+  },
+  {
+    "zipcode": "11208",
+    "filings_since_032320": 3612,
+    "unitsres_total": 30304,
+    "unitsrental": 28525,
+    "filingsrate_2plus": 126
+  },
+  {
+    "zipcode": "11209",
+    "filings_since_032320": 1367,
+    "unitsres_total": 32769,
+    "unitsrental": 29807,
+    "filingsrate_2plus": 45
+  },
+  {
+    "zipcode": "11210",
+    "filings_since_032320": 2800,
+    "unitsres_total": 23331,
+    "unitsrental": 18202,
+    "filingsrate_2plus": 153
+  },
+  {
+    "zipcode": "11211",
+    "filings_since_032320": 899,
+    "unitsres_total": 30426,
+    "unitsrental": 30224,
+    "filingsrate_2plus": 29
+  },
+  {
+    "zipcode": "11212",
+    "filings_since_032320": 3980,
+    "unitsres_total": 33193,
+    "unitsrental": 31611,
+    "filingsrate_2plus": 125
+  },
+  {
+    "zipcode": "11213",
+    "filings_since_032320": 3404,
+    "unitsres_total": 26637,
+    "unitsrental": 25920,
+    "filingsrate_2plus": 131
+  },
+  {
+    "zipcode": "11214",
+    "filings_since_032320": 1676,
+    "unitsres_total": 33308,
+    "unitsrental": 32250,
+    "filingsrate_2plus": 51
+  },
+  {
+    "zipcode": "11215",
+    "filings_since_032320": 459,
+    "unitsres_total": 33236,
+    "unitsrental": 32317,
+    "filingsrate_2plus": 14
+  },
+  {
+    "zipcode": "11216",
+    "filings_since_032320": 1947,
+    "unitsres_total": 26950,
+    "unitsrental": 26550,
+    "filingsrate_2plus": 73
+  },
+  {
+    "zipcode": "11217",
+    "filings_since_032320": 624,
+    "unitsres_total": 21878,
+    "unitsrental": 21611,
+    "filingsrate_2plus": 28
+  },
+  {
+    "zipcode": "11218",
+    "filings_since_032320": 1081,
+    "unitsres_total": 27071,
+    "unitsrental": 25691,
+    "filingsrate_2plus": 42
+  },
+  {
     "zipcode": "11219",
-    "filings_since_032320": 743,
+    "filings_since_032320": 793,
     "unitsres_total": 29025,
     "unitsrental": 28595,
-    "filingsrate_2plus": 25
+    "filingsrate_2plus": 27
   },
   {
     "zipcode": "11220",
-    "filings_since_032320": 1085,
+    "filings_since_032320": 1145,
     "unitsres_total": 29506,
     "unitsrental": 28897,
-    "filingsrate_2plus": 37
+    "filingsrate_2plus": 39
   },
   {
     "zipcode": "11221",
-    "filings_since_032320": 2887,
+    "filings_since_032320": 3126,
     "unitsres_total": 35004,
     "unitsrental": 34626,
-    "filingsrate_2plus": 83
+    "filingsrate_2plus": 90
   },
   {
     "zipcode": "11222",
-    "filings_since_032320": 463,
+    "filings_since_032320": 498,
     "unitsres_total": 21911,
     "unitsrental": 21712,
-    "filingsrate_2plus": 21
+    "filingsrate_2plus": 22
   },
   {
     "zipcode": "11223",
-    "filings_since_032320": 1287,
+    "filings_since_032320": 1357,
     "unitsres_total": 29056,
     "unitsrental": 26525,
-    "filingsrate_2plus": 48
+    "filingsrate_2plus": 51
   },
   {
     "zipcode": "11224",
-    "filings_since_032320": 1123,
+    "filings_since_032320": 1200,
     "unitsres_total": 21290,
     "unitsrental": 20068,
-    "filingsrate_2plus": 55
+    "filingsrate_2plus": 59
   },
   {
     "zipcode": "11225",
-    "filings_since_032320": 3540,
+    "filings_since_032320": 3788,
     "unitsres_total": 25017,
     "unitsrental": 23741,
-    "filingsrate_2plus": 149
+    "filingsrate_2plus": 159
   },
   {
     "zipcode": "11226",
-    "filings_since_032320": 6128,
+    "filings_since_032320": 6469,
     "unitsres_total": 40532,
     "unitsrental": 39402,
-    "filingsrate_2plus": 155
+    "filingsrate_2plus": 164
   },
   {
     "zipcode": "11228",
-    "filings_since_032320": 255,
+    "filings_since_032320": 265,
     "unitsres_total": 15794,
     "unitsrental": 13381,
     "filingsrate_2plus": 19
   },
   {
     "zipcode": "11229",
-    "filings_since_032320": 1026,
+    "filings_since_032320": 1081,
     "unitsres_total": 31521,
     "unitsrental": 25316,
-    "filingsrate_2plus": 40
+    "filingsrate_2plus": 42
   },
   {
     "zipcode": "11230",
-    "filings_since_032320": 1983,
+    "filings_since_032320": 2089,
     "unitsres_total": 32306,
     "unitsrental": 29066,
-    "filingsrate_2plus": 68
+    "filingsrate_2plus": 71
   },
   {
     "zipcode": "11231",
-    "filings_since_032320": 263,
+    "filings_since_032320": 286,
     "unitsres_total": 18201,
     "unitsrental": 17872,
-    "filingsrate_2plus": 14
+    "filingsrate_2plus": 16
   },
   {
     "zipcode": "11232",
-    "filings_since_032320": 345,
+    "filings_since_032320": 363,
     "unitsres_total": 9332,
     "unitsrental": 9211,
-    "filingsrate_2plus": 37
+    "filingsrate_2plus": 39
   },
   {
     "zipcode": "11233",
-    "filings_since_032320": 3283,
+    "filings_since_032320": 3507,
     "unitsres_total": 29472,
     "unitsrental": 29274,
-    "filingsrate_2plus": 112
+    "filingsrate_2plus": 119
   },
   {
     "zipcode": "11234",
-    "filings_since_032320": 914,
+    "filings_since_032320": 990,
     "unitsres_total": 31072,
     "unitsrental": 20488,
-    "filingsrate_2plus": 44
+    "filingsrate_2plus": 48
   },
   {
     "zipcode": "11235",
-    "filings_since_032320": 2078,
+    "filings_since_032320": 2211,
     "unitsres_total": 36418,
     "unitsrental": 34337,
-    "filingsrate_2plus": 60
+    "filingsrate_2plus": 64
   },
   {
     "zipcode": "11236",
-    "filings_since_032320": 1895,
+    "filings_since_032320": 2021,
     "unitsres_total": 31007,
     "unitsrental": 28072,
-    "filingsrate_2plus": 67
+    "filingsrate_2plus": 71
   },
   {
     "zipcode": "11237",
-    "filings_since_032320": 954,
+    "filings_since_032320": 1032,
     "unitsres_total": 17449,
     "unitsrental": 17343,
-    "filingsrate_2plus": 55
+    "filingsrate_2plus": 59
   },
   {
     "zipcode": "11238",
-    "filings_since_032320": 1574,
+    "filings_since_032320": 1686,
     "unitsres_total": 30015,
     "unitsrental": 29698,
-    "filingsrate_2plus": 53
+    "filingsrate_2plus": 56
   },
   {
     "zipcode": "11239",
-    "filings_since_032320": 412,
+    "filings_since_032320": 464,
     "unitsres_total": 10059,
     "unitsrental": 9752,
-    "filingsrate_2plus": 42
+    "filingsrate_2plus": 47
   },
   {
     "zipcode": "11242",
@@ -1023,129 +1023,129 @@
   },
   {
     "zipcode": "11249",
-    "filings_since_032320": 649,
+    "filings_since_032320": 687,
     "unitsres_total": 17824,
     "unitsrental": 17781,
-    "filingsrate_2plus": 36
+    "filingsrate_2plus": 38
   },
   {
     "zipcode": "11332",
-    "filings_since_032320": 1,
+    "filings_since_032320": 2,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
   },
   {
     "zipcode": "11354",
-    "filings_since_032320": 905,
+    "filings_since_032320": 977,
     "unitsres_total": 60509,
     "unitsrental": 58471,
-    "filingsrate_2plus": 15
+    "filingsrate_2plus": 16
   },
   {
     "zipcode": "11355",
-    "filings_since_032320": 1444,
+    "filings_since_032320": 1541,
     "unitsres_total": 31886,
     "unitsrental": 29501,
-    "filingsrate_2plus": 48
+    "filingsrate_2plus": 52
   },
   {
     "zipcode": "11356",
-    "filings_since_032320": 184,
+    "filings_since_032320": 195,
     "unitsres_total": 8406,
     "unitsrental": 7012,
-    "filingsrate_2plus": 26
+    "filingsrate_2plus": 27
   },
   {
     "zipcode": "11357",
-    "filings_since_032320": 207,
+    "filings_since_032320": 223,
     "unitsres_total": 15989,
     "unitsrental": 9324,
-    "filingsrate_2plus": 22
-  },
-  {
-    "zipcode": "11358",
-    "filings_since_032320": 300,
-    "unitsres_total": 13941,
-    "unitsrental": 8585,
-    "filingsrate_2plus": 34
-  },
-  {
-    "zipcode": "11360",
-    "filings_since_032320": 181,
-    "unitsres_total": 9159,
-    "unitsrental": 7677,
     "filingsrate_2plus": 23
   },
   {
+    "zipcode": "11358",
+    "filings_since_032320": 322,
+    "unitsres_total": 13941,
+    "unitsrental": 8585,
+    "filingsrate_2plus": 37
+  },
+  {
+    "zipcode": "11360",
+    "filings_since_032320": 194,
+    "unitsres_total": 9159,
+    "unitsrental": 7677,
+    "filingsrate_2plus": 25
+  },
+  {
     "zipcode": "11361",
-    "filings_since_032320": 246,
+    "filings_since_032320": 265,
     "unitsres_total": 11158,
     "unitsrental": 7295,
-    "filingsrate_2plus": 33
+    "filingsrate_2plus": 36
   },
   {
     "zipcode": "11362",
-    "filings_since_032320": 58,
+    "filings_since_032320": 61,
     "unitsres_total": 7001,
     "unitsrental": 4300,
-    "filingsrate_2plus": 13
+    "filingsrate_2plus": 14
   },
   {
     "zipcode": "11363",
-    "filings_since_032320": 79,
+    "filings_since_032320": 88,
     "unitsres_total": 2768,
     "unitsrental": 1130,
-    "filingsrate_2plus": 69
+    "filingsrate_2plus": 77
   },
   {
     "zipcode": "11364",
-    "filings_since_032320": 304,
+    "filings_since_032320": 322,
     "unitsres_total": 13920,
     "unitsrental": 9428,
-    "filingsrate_2plus": 32
+    "filingsrate_2plus": 34
   },
   {
     "zipcode": "11365",
-    "filings_since_032320": 1066,
+    "filings_since_032320": 1132,
     "unitsres_total": 16834,
     "unitsrental": 12291,
-    "filingsrate_2plus": 86
+    "filingsrate_2plus": 92
   },
   {
     "zipcode": "11366",
-    "filings_since_032320": 108,
+    "filings_since_032320": 120,
     "unitsres_total": 8061,
     "unitsrental": 5353,
-    "filingsrate_2plus": 20
+    "filingsrate_2plus": 22
   },
   {
     "zipcode": "11367",
-    "filings_since_032320": 495,
+    "filings_since_032320": 516,
     "unitsres_total": 14651,
     "unitsrental": 11230,
-    "filingsrate_2plus": 44
+    "filingsrate_2plus": 45
   },
   {
     "zipcode": "11368",
-    "filings_since_032320": 4164,
+    "filings_since_032320": 4441,
     "unitsres_total": 30498,
     "unitsrental": 29927,
-    "filingsrate_2plus": 139
+    "filingsrate_2plus": 148
   },
   {
     "zipcode": "11369",
-    "filings_since_032320": 305,
+    "filings_since_032320": 324,
     "unitsres_total": 10700,
     "unitsrental": 8682,
-    "filingsrate_2plus": 35
+    "filingsrate_2plus": 37
   },
   {
     "zipcode": "11370",
-    "filings_since_032320": 221,
+    "filings_since_032320": 239,
     "unitsres_total": 9435,
     "unitsrental": 8264,
-    "filingsrate_2plus": 26
+    "filingsrate_2plus": 28
   },
   {
     "zipcode": "11371",
@@ -1156,52 +1156,52 @@
   },
   {
     "zipcode": "11372",
-    "filings_since_032320": 1360,
+    "filings_since_032320": 1435,
     "unitsres_total": 24863,
     "unitsrental": 24302,
-    "filingsrate_2plus": 55
+    "filingsrate_2plus": 59
   },
   {
     "zipcode": "11373",
-    "filings_since_032320": 1912,
+    "filings_since_032320": 2018,
     "unitsres_total": 34441,
     "unitsrental": 32996,
-    "filingsrate_2plus": 57
-  },
-  {
-    "zipcode": "11374",
-    "filings_since_032320": 1163,
-    "unitsres_total": 20592,
-    "unitsrental": 18793,
     "filingsrate_2plus": 61
   },
   {
+    "zipcode": "11374",
+    "filings_since_032320": 1255,
+    "unitsres_total": 20592,
+    "unitsrental": 18793,
+    "filingsrate_2plus": 66
+  },
+  {
     "zipcode": "11375",
-    "filings_since_032320": 1189,
+    "filings_since_032320": 1255,
     "unitsres_total": 34453,
     "unitsrental": 29781,
-    "filingsrate_2plus": 39
+    "filingsrate_2plus": 42
   },
   {
     "zipcode": "11377",
-    "filings_since_032320": 1167,
+    "filings_since_032320": 1238,
     "unitsres_total": 38680,
     "unitsrental": 36967,
-    "filingsrate_2plus": 31
+    "filingsrate_2plus": 33
   },
   {
     "zipcode": "11378",
-    "filings_since_032320": 265,
+    "filings_since_032320": 287,
     "unitsres_total": 13630,
     "unitsrental": 11149,
-    "filingsrate_2plus": 23
+    "filingsrate_2plus": 25
   },
   {
     "zipcode": "11379",
-    "filings_since_032320": 266,
+    "filings_since_032320": 291,
     "unitsres_total": 15135,
     "unitsrental": 10796,
-    "filingsrate_2plus": 24
+    "filingsrate_2plus": 26
   },
   {
     "zipcode": "11383",
@@ -1219,10 +1219,10 @@
   },
   {
     "zipcode": "11385",
-    "filings_since_032320": 982,
+    "filings_since_032320": 1058,
     "unitsres_total": 37861,
     "unitsrental": 35291,
-    "filingsrate_2plus": 27
+    "filingsrate_2plus": 29
   },
   {
     "zipcode": "11386",
@@ -1233,94 +1233,94 @@
   },
   {
     "zipcode": "11411",
-    "filings_since_032320": 172,
+    "filings_since_032320": 187,
     "unitsres_total": 5995,
     "unitsrental": 1412,
-    "filingsrate_2plus": 121
+    "filingsrate_2plus": 132
   },
   {
     "zipcode": "11412",
-    "filings_since_032320": 470,
+    "filings_since_032320": 503,
     "unitsres_total": 11348,
     "unitsrental": 5400,
-    "filingsrate_2plus": 87
+    "filingsrate_2plus": 93
   },
   {
     "zipcode": "11413",
-    "filings_since_032320": 497,
+    "filings_since_032320": 533,
     "unitsres_total": 12402,
     "unitsrental": 5995,
-    "filingsrate_2plus": 82
+    "filingsrate_2plus": 88
   },
   {
     "zipcode": "11414",
-    "filings_since_032320": 157,
+    "filings_since_032320": 169,
     "unitsres_total": 10696,
     "unitsrental": 7190,
-    "filingsrate_2plus": 21
+    "filingsrate_2plus": 23
   },
   {
     "zipcode": "11415",
-    "filings_since_032320": 672,
+    "filings_since_032320": 708,
     "unitsres_total": 9195,
     "unitsrental": 8581,
-    "filingsrate_2plus": 78
+    "filingsrate_2plus": 82
   },
   {
     "zipcode": "11416",
-    "filings_since_032320": 226,
+    "filings_since_032320": 241,
     "unitsres_total": 7157,
     "unitsrental": 6393,
-    "filingsrate_2plus": 35
+    "filingsrate_2plus": 37
   },
   {
     "zipcode": "11417",
-    "filings_since_032320": 334,
+    "filings_since_032320": 357,
     "unitsres_total": 9536,
     "unitsrental": 7200,
-    "filingsrate_2plus": 46
+    "filingsrate_2plus": 49
   },
   {
     "zipcode": "11418",
-    "filings_since_032320": 576,
+    "filings_since_032320": 613,
     "unitsres_total": 11518,
     "unitsrental": 9866,
-    "filingsrate_2plus": 58
+    "filingsrate_2plus": 62
   },
   {
     "zipcode": "11419",
-    "filings_since_032320": 396,
+    "filings_since_032320": 431,
     "unitsres_total": 12164,
     "unitsrental": 8973,
-    "filingsrate_2plus": 44
+    "filingsrate_2plus": 48
   },
   {
     "zipcode": "11420",
-    "filings_since_032320": 406,
+    "filings_since_032320": 433,
     "unitsres_total": 13357,
     "unitsrental": 8461,
-    "filingsrate_2plus": 47
+    "filingsrate_2plus": 51
   },
   {
     "zipcode": "11421",
-    "filings_since_032320": 425,
+    "filings_since_032320": 448,
     "unitsres_total": 12198,
     "unitsrental": 9652,
-    "filingsrate_2plus": 44
+    "filingsrate_2plus": 46
   },
   {
     "zipcode": "11422",
-    "filings_since_032320": 351,
+    "filings_since_032320": 379,
     "unitsres_total": 9626,
     "unitsrental": 5871,
-    "filingsrate_2plus": 59
+    "filingsrate_2plus": 64
   },
   {
     "zipcode": "11423",
-    "filings_since_032320": 588,
+    "filings_since_032320": 623,
     "unitsres_total": 10091,
     "unitsrental": 6660,
-    "filingsrate_2plus": 88
+    "filingsrate_2plus": 93
   },
   {
     "zipcode": "11424",
@@ -1338,31 +1338,31 @@
   },
   {
     "zipcode": "11426",
-    "filings_since_032320": 99,
+    "filings_since_032320": 107,
     "unitsres_total": 6395,
     "unitsrental": 2909,
-    "filingsrate_2plus": 34
+    "filingsrate_2plus": 36
   },
   {
     "zipcode": "11427",
-    "filings_since_032320": 395,
+    "filings_since_032320": 418,
     "unitsres_total": 7734,
     "unitsrental": 4504,
-    "filingsrate_2plus": 87
+    "filingsrate_2plus": 92
   },
   {
     "zipcode": "11428",
-    "filings_since_032320": 184,
+    "filings_since_032320": 200,
     "unitsres_total": 5702,
     "unitsrental": 2489,
-    "filingsrate_2plus": 73
+    "filingsrate_2plus": 80
   },
   {
     "zipcode": "11429",
-    "filings_since_032320": 276,
+    "filings_since_032320": 298,
     "unitsres_total": 7155,
     "unitsrental": 3055,
-    "filingsrate_2plus": 90
+    "filingsrate_2plus": 97
   },
   {
     "zipcode": "11431",
@@ -1373,49 +1373,49 @@
   },
   {
     "zipcode": "11432",
-    "filings_since_032320": 1976,
+    "filings_since_032320": 2067,
     "unitsres_total": 20700,
     "unitsrental": 17071,
-    "filingsrate_2plus": 115
+    "filingsrate_2plus": 121
   },
   {
     "zipcode": "11433",
-    "filings_since_032320": 748,
+    "filings_since_032320": 811,
     "unitsres_total": 10800,
     "unitsrental": 7832,
-    "filingsrate_2plus": 95
+    "filingsrate_2plus": 103
   },
   {
     "zipcode": "11434",
-    "filings_since_032320": 2144,
+    "filings_since_032320": 2268,
     "unitsres_total": 21579,
     "unitsrental": 15628,
-    "filingsrate_2plus": 137
+    "filingsrate_2plus": 145
   },
   {
     "zipcode": "11435",
-    "filings_since_032320": 1161,
+    "filings_since_032320": 1274,
     "unitsres_total": 20528,
     "unitsrental": 18267,
-    "filingsrate_2plus": 63
+    "filingsrate_2plus": 69
   },
   {
     "zipcode": "11436",
-    "filings_since_032320": 305,
+    "filings_since_032320": 325,
     "unitsres_total": 6227,
     "unitsrental": 3434,
-    "filingsrate_2plus": 88
+    "filingsrate_2plus": 94
   },
   {
     "zipcode": "11442",
-    "filings_since_032320": 7,
+    "filings_since_032320": 9,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
   },
   {
     "zipcode": "11461",
-    "filings_since_032320": 1,
+    "filings_since_032320": 2,
     "unitsres_total": null,
     "unitsrental": null,
     "filingsrate_2plus": null
@@ -1443,31 +1443,31 @@
   },
   {
     "zipcode": "11691",
-    "filings_since_032320": 2689,
+    "filings_since_032320": 2896,
     "unitsres_total": 21260,
     "unitsrental": 18956,
-    "filingsrate_2plus": 141
+    "filingsrate_2plus": 152
   },
   {
     "zipcode": "11692",
-    "filings_since_032320": 373,
+    "filings_since_032320": 398,
     "unitsres_total": 8124,
     "unitsrental": 7728,
-    "filingsrate_2plus": 48
+    "filingsrate_2plus": 51
   },
   {
     "zipcode": "11693",
-    "filings_since_032320": 167,
+    "filings_since_032320": 187,
     "unitsres_total": 4691,
     "unitsrental": 3710,
-    "filingsrate_2plus": 45
+    "filingsrate_2plus": 50
   },
   {
     "zipcode": "11694",
-    "filings_since_032320": 322,
+    "filings_since_032320": 347,
     "unitsres_total": 9426,
     "unitsrental": 7554,
-    "filingsrate_2plus": 42
+    "filingsrate_2plus": 45
   },
   {
     "zipcode": "11697",
