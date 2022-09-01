@@ -1,7 +1,7 @@
 [
   {
     "week_eviction": "2017-01-02T05:00:00.000Z",
-    "marshalevictions": 441
+    "marshalevictions": 438
   },
   {
     "week_eviction": "2017-01-09T05:00:00.000Z",
@@ -9,35 +9,35 @@
   },
   {
     "week_eviction": "2017-01-16T05:00:00.000Z",
-    "marshalevictions": 402
+    "marshalevictions": 403
   },
   {
     "week_eviction": "2017-01-23T05:00:00.000Z",
-    "marshalevictions": 381
+    "marshalevictions": 377
   },
   {
     "week_eviction": "2017-01-30T05:00:00.000Z",
-    "marshalevictions": 414
+    "marshalevictions": 412
   },
   {
     "week_eviction": "2017-02-06T05:00:00.000Z",
-    "marshalevictions": 200
+    "marshalevictions": 201
   },
   {
     "week_eviction": "2017-02-13T05:00:00.000Z",
-    "marshalevictions": 401
-  },
-  {
-    "week_eviction": "2017-02-20T05:00:00.000Z",
-    "marshalevictions": 353
-  },
-  {
-    "week_eviction": "2017-02-27T05:00:00.000Z",
     "marshalevictions": 406
   },
   {
+    "week_eviction": "2017-02-20T05:00:00.000Z",
+    "marshalevictions": 357
+  },
+  {
+    "week_eviction": "2017-02-27T05:00:00.000Z",
+    "marshalevictions": 403
+  },
+  {
     "week_eviction": "2017-03-06T05:00:00.000Z",
-    "marshalevictions": 422
+    "marshalevictions": 423
   },
   {
     "week_eviction": "2017-03-13T04:00:00.000Z",
@@ -45,39 +45,39 @@
   },
   {
     "week_eviction": "2017-03-20T04:00:00.000Z",
-    "marshalevictions": 426
+    "marshalevictions": 425
   },
   {
     "week_eviction": "2017-03-27T04:00:00.000Z",
-    "marshalevictions": 319
+    "marshalevictions": 318
   },
   {
     "week_eviction": "2017-04-03T04:00:00.000Z",
-    "marshalevictions": 417
+    "marshalevictions": 421
   },
   {
     "week_eviction": "2017-04-10T04:00:00.000Z",
-    "marshalevictions": 313
+    "marshalevictions": 315
   },
   {
     "week_eviction": "2017-04-17T04:00:00.000Z",
-    "marshalevictions": 396
+    "marshalevictions": 388
   },
   {
     "week_eviction": "2017-04-24T04:00:00.000Z",
-    "marshalevictions": 391
+    "marshalevictions": 389
   },
   {
     "week_eviction": "2017-05-01T04:00:00.000Z",
-    "marshalevictions": 427
+    "marshalevictions": 430
   },
   {
     "week_eviction": "2017-05-08T04:00:00.000Z",
-    "marshalevictions": 411
+    "marshalevictions": 405
   },
   {
     "week_eviction": "2017-05-15T04:00:00.000Z",
-    "marshalevictions": 384
+    "marshalevictions": 378
   },
   {
     "week_eviction": "2017-05-22T04:00:00.000Z",
@@ -85,23 +85,23 @@
   },
   {
     "week_eviction": "2017-05-29T04:00:00.000Z",
-    "marshalevictions": 248
+    "marshalevictions": 245
   },
   {
     "week_eviction": "2017-06-05T04:00:00.000Z",
-    "marshalevictions": 364
+    "marshalevictions": 366
   },
   {
     "week_eviction": "2017-06-12T04:00:00.000Z",
-    "marshalevictions": 399
+    "marshalevictions": 398
   },
   {
     "week_eviction": "2017-06-19T04:00:00.000Z",
-    "marshalevictions": 365
+    "marshalevictions": 368
   },
   {
     "week_eviction": "2017-06-26T04:00:00.000Z",
-    "marshalevictions": 357
+    "marshalevictions": 356
   },
   {
     "week_eviction": "2017-07-03T04:00:00.000Z",
@@ -109,23 +109,23 @@
   },
   {
     "week_eviction": "2017-07-10T04:00:00.000Z",
-    "marshalevictions": 322
+    "marshalevictions": 319
   },
   {
     "week_eviction": "2017-07-17T04:00:00.000Z",
-    "marshalevictions": 377
+    "marshalevictions": 378
   },
   {
     "week_eviction": "2017-07-24T04:00:00.000Z",
-    "marshalevictions": 332
+    "marshalevictions": 333
   },
   {
     "week_eviction": "2017-07-31T04:00:00.000Z",
-    "marshalevictions": 347
+    "marshalevictions": 351
   },
   {
     "week_eviction": "2017-08-07T04:00:00.000Z",
-    "marshalevictions": 349
+    "marshalevictions": 345
   },
   {
     "week_eviction": "2017-08-14T04:00:00.000Z",
@@ -133,27 +133,27 @@
   },
   {
     "week_eviction": "2017-08-21T04:00:00.000Z",
-    "marshalevictions": 370
+    "marshalevictions": 379
   },
   {
     "week_eviction": "2017-08-28T04:00:00.000Z",
-    "marshalevictions": 304
-  },
-  {
-    "week_eviction": "2017-09-04T04:00:00.000Z",
     "marshalevictions": 299
   },
   {
+    "week_eviction": "2017-09-04T04:00:00.000Z",
+    "marshalevictions": 296
+  },
+  {
     "week_eviction": "2017-09-11T04:00:00.000Z",
-    "marshalevictions": 397
+    "marshalevictions": 402
   },
   {
     "week_eviction": "2017-09-18T04:00:00.000Z",
-    "marshalevictions": 350
+    "marshalevictions": 351
   },
   {
     "week_eviction": "2017-09-25T04:00:00.000Z",
-    "marshalevictions": 372
+    "marshalevictions": 377
   },
   {
     "week_eviction": "2017-10-02T04:00:00.000Z",
@@ -165,19 +165,19 @@
   },
   {
     "week_eviction": "2017-10-16T04:00:00.000Z",
-    "marshalevictions": 405
+    "marshalevictions": 404
   },
   {
     "week_eviction": "2017-10-23T04:00:00.000Z",
-    "marshalevictions": 389
+    "marshalevictions": 387
   },
   {
     "week_eviction": "2017-10-30T04:00:00.000Z",
-    "marshalevictions": 367
+    "marshalevictions": 372
   },
   {
     "week_eviction": "2017-11-06T05:00:00.000Z",
-    "marshalevictions": 213
+    "marshalevictions": 212
   },
   {
     "week_eviction": "2017-11-13T05:00:00.000Z",
@@ -185,23 +185,23 @@
   },
   {
     "week_eviction": "2017-11-20T05:00:00.000Z",
-    "marshalevictions": 278
+    "marshalevictions": 280
   },
   {
     "week_eviction": "2017-11-27T05:00:00.000Z",
-    "marshalevictions": 417
+    "marshalevictions": 420
   },
   {
     "week_eviction": "2017-12-04T05:00:00.000Z",
-    "marshalevictions": 394
+    "marshalevictions": 388
   },
   {
     "week_eviction": "2017-12-11T05:00:00.000Z",
-    "marshalevictions": 416
+    "marshalevictions": 421
   },
   {
     "week_eviction": "2017-12-18T05:00:00.000Z",
-    "marshalevictions": 173
+    "marshalevictions": 176
   },
   {
     "week_eviction": "2018-01-01T05:00:00.000Z",
@@ -209,15 +209,15 @@
   },
   {
     "week_eviction": "2018-01-08T05:00:00.000Z",
-    "marshalevictions": 612
+    "marshalevictions": 618
   },
   {
     "week_eviction": "2018-01-15T05:00:00.000Z",
-    "marshalevictions": 360
+    "marshalevictions": 356
   },
   {
     "week_eviction": "2018-01-22T05:00:00.000Z",
-    "marshalevictions": 434
+    "marshalevictions": 444
   },
   {
     "week_eviction": "2018-01-29T05:00:00.000Z",
@@ -225,11 +225,11 @@
   },
   {
     "week_eviction": "2018-02-05T05:00:00.000Z",
-    "marshalevictions": 391
+    "marshalevictions": 389
   },
   {
     "week_eviction": "2018-02-12T05:00:00.000Z",
-    "marshalevictions": 310
+    "marshalevictions": 306
   },
   {
     "week_eviction": "2018-02-19T05:00:00.000Z",
@@ -237,31 +237,31 @@
   },
   {
     "week_eviction": "2018-02-26T05:00:00.000Z",
-    "marshalevictions": 351
+    "marshalevictions": 356
   },
   {
     "week_eviction": "2018-03-05T05:00:00.000Z",
-    "marshalevictions": 342
+    "marshalevictions": 338
   },
   {
     "week_eviction": "2018-03-12T04:00:00.000Z",
-    "marshalevictions": 407
+    "marshalevictions": 403
   },
   {
     "week_eviction": "2018-03-19T04:00:00.000Z",
-    "marshalevictions": 309
+    "marshalevictions": 310
   },
   {
     "week_eviction": "2018-03-26T04:00:00.000Z",
-    "marshalevictions": 358
+    "marshalevictions": 359
   },
   {
     "week_eviction": "2018-04-02T04:00:00.000Z",
-    "marshalevictions": 314
+    "marshalevictions": 312
   },
   {
     "week_eviction": "2018-04-09T04:00:00.000Z",
-    "marshalevictions": 381
+    "marshalevictions": 382
   },
   {
     "week_eviction": "2018-04-16T04:00:00.000Z",
@@ -273,7 +273,7 @@
   },
   {
     "week_eviction": "2018-04-30T04:00:00.000Z",
-    "marshalevictions": 399
+    "marshalevictions": 397
   },
   {
     "week_eviction": "2018-05-07T04:00:00.000Z",
@@ -281,43 +281,43 @@
   },
   {
     "week_eviction": "2018-05-14T04:00:00.000Z",
-    "marshalevictions": 400
+    "marshalevictions": 397
   },
   {
     "week_eviction": "2018-05-21T04:00:00.000Z",
-    "marshalevictions": 394
+    "marshalevictions": 381
   },
   {
     "week_eviction": "2018-05-28T04:00:00.000Z",
-    "marshalevictions": 312
+    "marshalevictions": 314
   },
   {
     "week_eviction": "2018-06-04T04:00:00.000Z",
-    "marshalevictions": 321
+    "marshalevictions": 326
   },
   {
     "week_eviction": "2018-06-11T04:00:00.000Z",
-    "marshalevictions": 372
+    "marshalevictions": 368
   },
   {
     "week_eviction": "2018-06-18T04:00:00.000Z",
-    "marshalevictions": 355
+    "marshalevictions": 351
   },
   {
     "week_eviction": "2018-06-25T04:00:00.000Z",
-    "marshalevictions": 349
+    "marshalevictions": 345
   },
   {
     "week_eviction": "2018-07-02T04:00:00.000Z",
-    "marshalevictions": 238
+    "marshalevictions": 237
   },
   {
     "week_eviction": "2018-07-09T04:00:00.000Z",
-    "marshalevictions": 323
+    "marshalevictions": 329
   },
   {
     "week_eviction": "2018-07-16T04:00:00.000Z",
-    "marshalevictions": 400
+    "marshalevictions": 403
   },
   {
     "week_eviction": "2018-07-23T04:00:00.000Z",
@@ -325,27 +325,27 @@
   },
   {
     "week_eviction": "2018-07-30T04:00:00.000Z",
-    "marshalevictions": 306
+    "marshalevictions": 314
   },
   {
     "week_eviction": "2018-08-06T04:00:00.000Z",
-    "marshalevictions": 346
+    "marshalevictions": 349
   },
   {
     "week_eviction": "2018-08-13T04:00:00.000Z",
-    "marshalevictions": 357
+    "marshalevictions": 360
   },
   {
     "week_eviction": "2018-08-20T04:00:00.000Z",
-    "marshalevictions": 348
+    "marshalevictions": 352
   },
   {
     "week_eviction": "2018-08-27T04:00:00.000Z",
-    "marshalevictions": 336
+    "marshalevictions": 337
   },
   {
     "week_eviction": "2018-09-03T04:00:00.000Z",
-    "marshalevictions": 284
+    "marshalevictions": 287
   },
   {
     "week_eviction": "2018-09-10T04:00:00.000Z",
@@ -353,11 +353,11 @@
   },
   {
     "week_eviction": "2018-09-17T04:00:00.000Z",
-    "marshalevictions": 353
+    "marshalevictions": 360
   },
   {
     "week_eviction": "2018-09-24T04:00:00.000Z",
-    "marshalevictions": 301
+    "marshalevictions": 302
   },
   {
     "week_eviction": "2018-10-01T04:00:00.000Z",
@@ -365,7 +365,7 @@
   },
   {
     "week_eviction": "2018-10-08T04:00:00.000Z",
-    "marshalevictions": 283
+    "marshalevictions": 282
   },
   {
     "week_eviction": "2018-10-15T04:00:00.000Z",
@@ -373,115 +373,115 @@
   },
   {
     "week_eviction": "2018-10-22T04:00:00.000Z",
-    "marshalevictions": 319
+    "marshalevictions": 321
   },
   {
     "week_eviction": "2018-10-29T04:00:00.000Z",
-    "marshalevictions": 321
+    "marshalevictions": 319
   },
   {
     "week_eviction": "2018-11-05T05:00:00.000Z",
-    "marshalevictions": 250
+    "marshalevictions": 247
   },
   {
     "week_eviction": "2018-11-12T05:00:00.000Z",
-    "marshalevictions": 243
+    "marshalevictions": 240
   },
   {
     "week_eviction": "2018-11-19T05:00:00.000Z",
-    "marshalevictions": 223
+    "marshalevictions": 225
   },
   {
     "week_eviction": "2018-11-26T05:00:00.000Z",
-    "marshalevictions": 335
+    "marshalevictions": 332
   },
   {
     "week_eviction": "2018-12-03T05:00:00.000Z",
-    "marshalevictions": 317
+    "marshalevictions": 319
   },
   {
     "week_eviction": "2018-12-10T05:00:00.000Z",
-    "marshalevictions": 364
-  },
-  {
-    "week_eviction": "2018-12-17T05:00:00.000Z",
-    "marshalevictions": 254
-  },
-  {
-    "week_eviction": "2018-12-31T05:00:00.000Z",
-    "marshalevictions": 252
-  },
-  {
-    "week_eviction": "2019-01-07T05:00:00.000Z",
-    "marshalevictions": 440
-  },
-  {
-    "week_eviction": "2019-01-14T05:00:00.000Z",
-    "marshalevictions": 376
-  },
-  {
-    "week_eviction": "2019-01-21T05:00:00.000Z",
-    "marshalevictions": 298
-  },
-  {
-    "week_eviction": "2019-01-28T05:00:00.000Z",
-    "marshalevictions": 335
-  },
-  {
-    "week_eviction": "2019-02-04T05:00:00.000Z",
     "marshalevictions": 362
   },
   {
+    "week_eviction": "2018-12-17T05:00:00.000Z",
+    "marshalevictions": 256
+  },
+  {
+    "week_eviction": "2018-12-31T05:00:00.000Z",
+    "marshalevictions": 249
+  },
+  {
+    "week_eviction": "2019-01-07T05:00:00.000Z",
+    "marshalevictions": 441
+  },
+  {
+    "week_eviction": "2019-01-14T05:00:00.000Z",
+    "marshalevictions": 380
+  },
+  {
+    "week_eviction": "2019-01-21T05:00:00.000Z",
+    "marshalevictions": 295
+  },
+  {
+    "week_eviction": "2019-01-28T05:00:00.000Z",
+    "marshalevictions": 339
+  },
+  {
+    "week_eviction": "2019-02-04T05:00:00.000Z",
+    "marshalevictions": 363
+  },
+  {
     "week_eviction": "2019-02-11T05:00:00.000Z",
-    "marshalevictions": 303
+    "marshalevictions": 302
   },
   {
     "week_eviction": "2019-02-18T05:00:00.000Z",
-    "marshalevictions": 290
+    "marshalevictions": 289
   },
   {
     "week_eviction": "2019-02-25T05:00:00.000Z",
-    "marshalevictions": 364
+    "marshalevictions": 356
   },
   {
     "week_eviction": "2019-03-04T05:00:00.000Z",
-    "marshalevictions": 306
+    "marshalevictions": 303
   },
   {
     "week_eviction": "2019-03-11T04:00:00.000Z",
-    "marshalevictions": 321
+    "marshalevictions": 325
   },
   {
     "week_eviction": "2019-03-18T04:00:00.000Z",
-    "marshalevictions": 360
+    "marshalevictions": 356
   },
   {
     "week_eviction": "2019-03-25T04:00:00.000Z",
-    "marshalevictions": 287
+    "marshalevictions": 288
   },
   {
     "week_eviction": "2019-04-01T04:00:00.000Z",
-    "marshalevictions": 304
+    "marshalevictions": 311
   },
   {
     "week_eviction": "2019-04-08T04:00:00.000Z",
-    "marshalevictions": 341
+    "marshalevictions": 335
   },
   {
     "week_eviction": "2019-04-15T04:00:00.000Z",
-    "marshalevictions": 318
+    "marshalevictions": 314
   },
   {
     "week_eviction": "2019-04-22T04:00:00.000Z",
-    "marshalevictions": 271
+    "marshalevictions": 277
   },
   {
     "week_eviction": "2019-04-29T04:00:00.000Z",
-    "marshalevictions": 330
+    "marshalevictions": 332
   },
   {
     "week_eviction": "2019-05-06T04:00:00.000Z",
-    "marshalevictions": 308
+    "marshalevictions": 307
   },
   {
     "week_eviction": "2019-05-13T04:00:00.000Z",
@@ -489,7 +489,7 @@
   },
   {
     "week_eviction": "2019-05-20T04:00:00.000Z",
-    "marshalevictions": 282
+    "marshalevictions": 284
   },
   {
     "week_eviction": "2019-05-27T04:00:00.000Z",
@@ -497,35 +497,35 @@
   },
   {
     "week_eviction": "2019-06-03T04:00:00.000Z",
-    "marshalevictions": 324
+    "marshalevictions": 320
   },
   {
     "week_eviction": "2019-06-10T04:00:00.000Z",
-    "marshalevictions": 350
+    "marshalevictions": 345
   },
   {
     "week_eviction": "2019-06-17T04:00:00.000Z",
-    "marshalevictions": 315
+    "marshalevictions": 312
   },
   {
     "week_eviction": "2019-06-24T04:00:00.000Z",
-    "marshalevictions": 284
+    "marshalevictions": 285
   },
   {
     "week_eviction": "2019-07-01T04:00:00.000Z",
-    "marshalevictions": 182
+    "marshalevictions": 184
   },
   {
     "week_eviction": "2019-07-08T04:00:00.000Z",
-    "marshalevictions": 358
+    "marshalevictions": 360
   },
   {
     "week_eviction": "2019-07-15T04:00:00.000Z",
-    "marshalevictions": 310
+    "marshalevictions": 307
   },
   {
     "week_eviction": "2019-07-22T04:00:00.000Z",
-    "marshalevictions": 322
+    "marshalevictions": 327
   },
   {
     "week_eviction": "2019-07-29T04:00:00.000Z",
@@ -533,7 +533,7 @@
   },
   {
     "week_eviction": "2019-08-05T04:00:00.000Z",
-    "marshalevictions": 267
+    "marshalevictions": 260
   },
   {
     "week_eviction": "2019-08-12T04:00:00.000Z",
@@ -541,27 +541,27 @@
   },
   {
     "week_eviction": "2019-08-19T04:00:00.000Z",
-    "marshalevictions": 303
+    "marshalevictions": 299
   },
   {
     "week_eviction": "2019-08-26T04:00:00.000Z",
-    "marshalevictions": 265
+    "marshalevictions": 259
   },
   {
     "week_eviction": "2019-09-02T04:00:00.000Z",
-    "marshalevictions": 248
+    "marshalevictions": 241
   },
   {
     "week_eviction": "2019-09-09T04:00:00.000Z",
-    "marshalevictions": 250
+    "marshalevictions": 249
   },
   {
     "week_eviction": "2019-09-16T04:00:00.000Z",
-    "marshalevictions": 294
+    "marshalevictions": 293
   },
   {
     "week_eviction": "2019-09-23T04:00:00.000Z",
-    "marshalevictions": 296
+    "marshalevictions": 295
   },
   {
     "week_eviction": "2019-09-30T04:00:00.000Z",
@@ -569,15 +569,15 @@
   },
   {
     "week_eviction": "2019-10-07T04:00:00.000Z",
-    "marshalevictions": 210
+    "marshalevictions": 217
   },
   {
     "week_eviction": "2019-10-14T04:00:00.000Z",
-    "marshalevictions": 202
+    "marshalevictions": 203
   },
   {
     "week_eviction": "2019-10-21T04:00:00.000Z",
-    "marshalevictions": 259
+    "marshalevictions": 266
   },
   {
     "week_eviction": "2019-10-28T04:00:00.000Z",
@@ -585,27 +585,27 @@
   },
   {
     "week_eviction": "2019-11-04T05:00:00.000Z",
-    "marshalevictions": 201
+    "marshalevictions": 202
   },
   {
     "week_eviction": "2019-11-11T05:00:00.000Z",
-    "marshalevictions": 181
+    "marshalevictions": 182
   },
   {
     "week_eviction": "2019-11-18T05:00:00.000Z",
-    "marshalevictions": 307
+    "marshalevictions": 301
   },
   {
     "week_eviction": "2019-11-25T05:00:00.000Z",
-    "marshalevictions": 165
+    "marshalevictions": 170
   },
   {
     "week_eviction": "2019-12-02T05:00:00.000Z",
-    "marshalevictions": 296
+    "marshalevictions": 294
   },
   {
     "week_eviction": "2019-12-09T05:00:00.000Z",
-    "marshalevictions": 239
+    "marshalevictions": 243
   },
   {
     "week_eviction": "2019-12-16T05:00:00.000Z",
@@ -617,15 +617,15 @@
   },
   {
     "week_eviction": "2020-01-06T05:00:00.000Z",
-    "marshalevictions": 365
+    "marshalevictions": 364
   },
   {
     "week_eviction": "2020-01-13T05:00:00.000Z",
-    "marshalevictions": 246
+    "marshalevictions": 243
   },
   {
     "week_eviction": "2020-01-20T05:00:00.000Z",
-    "marshalevictions": 261
+    "marshalevictions": 260
   },
   {
     "week_eviction": "2020-01-27T05:00:00.000Z",
@@ -637,23 +637,23 @@
   },
   {
     "week_eviction": "2020-02-10T05:00:00.000Z",
-    "marshalevictions": 248
+    "marshalevictions": 250
   },
   {
     "week_eviction": "2020-02-17T05:00:00.000Z",
-    "marshalevictions": 237
+    "marshalevictions": 239
   },
   {
     "week_eviction": "2020-02-24T05:00:00.000Z",
-    "marshalevictions": 243
+    "marshalevictions": 245
   },
   {
     "week_eviction": "2020-03-02T05:00:00.000Z",
-    "marshalevictions": 231
+    "marshalevictions": 234
   },
   {
     "week_eviction": "2020-03-09T04:00:00.000Z",
-    "marshalevictions": 233
+    "marshalevictions": 236
   },
   {
     "week_eviction": "2020-11-16T05:00:00.000Z",
@@ -717,7 +717,7 @@
   },
   {
     "week_eviction": "2021-07-12T04:00:00.000Z",
-    "marshalevictions": 8
+    "marshalevictions": 7
   },
   {
     "week_eviction": "2021-07-19T04:00:00.000Z",
@@ -733,11 +733,11 @@
   },
   {
     "week_eviction": "2021-08-09T04:00:00.000Z",
-    "marshalevictions": 7
+    "marshalevictions": 6
   },
   {
     "week_eviction": "2021-08-16T04:00:00.000Z",
-    "marshalevictions": 4
+    "marshalevictions": 5
   },
   {
     "week_eviction": "2021-08-23T04:00:00.000Z",
@@ -789,15 +789,15 @@
   },
   {
     "week_eviction": "2022-01-03T05:00:00.000Z",
-    "marshalevictions": 37
+    "marshalevictions": 36
   },
   {
     "week_eviction": "2022-01-10T05:00:00.000Z",
-    "marshalevictions": 26
+    "marshalevictions": 27
   },
   {
     "week_eviction": "2022-01-17T05:00:00.000Z",
-    "marshalevictions": 9
+    "marshalevictions": 10
   },
   {
     "week_eviction": "2022-01-24T05:00:00.000Z",
@@ -805,7 +805,7 @@
   },
   {
     "week_eviction": "2022-01-31T05:00:00.000Z",
-    "marshalevictions": 26
+    "marshalevictions": 24
   },
   {
     "week_eviction": "2022-02-07T05:00:00.000Z",
@@ -813,19 +813,19 @@
   },
   {
     "week_eviction": "2022-02-14T05:00:00.000Z",
-    "marshalevictions": 37
+    "marshalevictions": 36
   },
   {
     "week_eviction": "2022-02-21T05:00:00.000Z",
-    "marshalevictions": 23
+    "marshalevictions": 24
   },
   {
     "week_eviction": "2022-02-28T05:00:00.000Z",
-    "marshalevictions": 35
+    "marshalevictions": 36
   },
   {
     "week_eviction": "2022-03-07T05:00:00.000Z",
-    "marshalevictions": 38
+    "marshalevictions": 37
   },
   {
     "week_eviction": "2022-03-14T04:00:00.000Z",
@@ -833,11 +833,11 @@
   },
   {
     "week_eviction": "2022-03-21T04:00:00.000Z",
-    "marshalevictions": 61
+    "marshalevictions": 60
   },
   {
     "week_eviction": "2022-03-28T04:00:00.000Z",
-    "marshalevictions": 53
+    "marshalevictions": 52
   },
   {
     "week_eviction": "2022-04-04T04:00:00.000Z",
@@ -845,7 +845,7 @@
   },
   {
     "week_eviction": "2022-04-11T04:00:00.000Z",
-    "marshalevictions": 47
+    "marshalevictions": 48
   },
   {
     "week_eviction": "2022-04-18T04:00:00.000Z",
@@ -853,11 +853,11 @@
   },
   {
     "week_eviction": "2022-04-25T04:00:00.000Z",
-    "marshalevictions": 47
+    "marshalevictions": 48
   },
   {
     "week_eviction": "2022-05-02T04:00:00.000Z",
-    "marshalevictions": 60
+    "marshalevictions": 61
   },
   {
     "week_eviction": "2022-05-09T04:00:00.000Z",
@@ -865,7 +865,7 @@
   },
   {
     "week_eviction": "2022-05-16T04:00:00.000Z",
-    "marshalevictions": 71
+    "marshalevictions": 70
   },
   {
     "week_eviction": "2022-05-23T04:00:00.000Z",
@@ -873,7 +873,7 @@
   },
   {
     "week_eviction": "2022-05-30T04:00:00.000Z",
-    "marshalevictions": 73
+    "marshalevictions": 72
   },
   {
     "week_eviction": "2022-06-06T04:00:00.000Z",
@@ -881,7 +881,7 @@
   },
   {
     "week_eviction": "2022-06-13T04:00:00.000Z",
-    "marshalevictions": 54
+    "marshalevictions": 53
   },
   {
     "week_eviction": "2022-06-20T04:00:00.000Z",
@@ -889,11 +889,11 @@
   },
   {
     "week_eviction": "2022-06-27T04:00:00.000Z",
-    "marshalevictions": 57
+    "marshalevictions": 61
   },
   {
     "week_eviction": "2022-07-04T04:00:00.000Z",
-    "marshalevictions": 75
+    "marshalevictions": 74
   },
   {
     "week_eviction": "2022-07-11T04:00:00.000Z",
@@ -901,15 +901,15 @@
   },
   {
     "week_eviction": "2022-07-18T04:00:00.000Z",
-    "marshalevictions": 78
+    "marshalevictions": 76
   },
   {
     "week_eviction": "2022-07-25T04:00:00.000Z",
-    "marshalevictions": 75
+    "marshalevictions": 74
   },
   {
     "week_eviction": "2022-08-01T04:00:00.000Z",
-    "marshalevictions": 77
+    "marshalevictions": 76
   },
   {
     "week_eviction": "2022-08-08T04:00:00.000Z",
@@ -921,6 +921,10 @@
   },
   {
     "week_eviction": "2022-08-22T04:00:00.000Z",
-    "marshalevictions": 68
+    "marshalevictions": 71
+  },
+  {
+    "week_eviction": "2022-08-29T04:00:00.000Z",
+    "marshalevictions": 7
   }
 ]
