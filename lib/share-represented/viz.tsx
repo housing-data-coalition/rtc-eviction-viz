@@ -57,7 +57,7 @@ const PctReppedVizWithValues: React.FC<PctReppedVizProps & {
       text: `Share of Represented Tenants`,
       fontSize: 24,
       subtitle: [
-        `Percent of all tenants with eviction cases who are represented by an attorney`,
+        `Percent of all tenants with eviction cases who are represented`, `by an attorney by the week the case was filed`,
         // This effectively adds extra padding below the subtitle.
         ""
       ],
