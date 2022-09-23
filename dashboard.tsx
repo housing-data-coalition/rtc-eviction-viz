@@ -28,7 +28,7 @@ import {
 
 const ZipCodeViz = React.lazy(() => import("./lib/filings-by-zip/viz"));
 
-type OtherVisualization = "filings_by_zip" | "total_active_cases" | "total_judgments" | "marshal_evictions";
+type OtherVisualization = "filings_by_zip" | "total_active_cases" | "total_judgments" | "marshal_evictions" | "pct_repped";
 
 type WidgetVisualization = keyof EvictionTimeSeriesNumericFields | OtherVisualization;
 
@@ -37,6 +37,7 @@ const OTHER_VISUALIZATIONS: Map<OtherVisualization, string> = new Map([
   ["total_active_cases", "Total Active Cases"],
   ["total_judgments", "Total Eviction Judgments"],
   ["marshal_evictions", "Total Marshal Evictions"],
+  ["pct_repped", "Share of Represented Tenants"],
 ]);
 
 const DatasetDownloads: React.FC<{ files: QueryFiles, title: string }> = ({ files, title }) => (
@@ -114,6 +115,7 @@ export const Widget: React.FC<{
   if (fieldName === "total_active_cases") return <ActiveCasesVisualizations height={height} />;
   if (fieldName === "total_judgments") return <JudgmentsStatewideVisualizations height={height} />;
   if (fieldName === "marshal_evictions") return <MarshalEvicsVisualizations height={height} />;
+  if (fieldName === "pct_repped") return <PctReppedVisualizations height={height} />;
   return <EvictionVisualizations height={height} fieldNames={[fieldName]} />;
 };
 
