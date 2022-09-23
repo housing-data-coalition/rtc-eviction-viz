@@ -73,7 +73,7 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
   values = values.filter(
     // If we are viewing data by week, let's grab data since the first Sunday of Jan 2020
     // Otherwise, we can grab data from 1/1/2020 onwards
-    row => row.week_eviction >= (timeUnit === "yearweek" ? "2022-01-01 00:00:00" : "2021-12-31 00:00:00")
+    row => row.week_eviction >= (timeUnit === "yearweek" ? "2021-06-01 00:00:00" : "2021-06-01 00:00:00")
     );
       const evictionsSinceJan = values.filter(
     row => row.week_eviction >= "2022-01-14 00:00:00"
