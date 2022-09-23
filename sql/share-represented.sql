@@ -38,16 +38,18 @@ index_rep_count as
 all_cases as 
 	(select *,
 	case when counseltypes = 2 then 'Partial representation' else representationtype end as partialrep,
-	date_trunc('week', fileddate)::date as week_filed
+	date_trunc('week', fileddate)::date as day
 	from index_rep_count 
 	where (representationtype = 'SRL' and counseltypes = 2) is false
 	order by fileddate)
 -- group by week filed and calculated representation rate 
-select week_filed, 
+select day, 
 count(*) filter (where representationtype = 'SRL') as srl,
 count(*) filter (where representationtype = 'Counsel') as represented,
 count(*) as allcases,
 (count(*) filter (where representationtype = 'Counsel'))*100 / count(*) as rep_rate
-from all_cases 
-group by week_filed
-order by week_filed
+from all_cases
+-- grab everything until 4 weeks before current date to account for missing recent data 
+where day < current_date - interval '5 weeks'
+group by day
+order by day

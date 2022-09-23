@@ -75,7 +75,7 @@ export const FullDocument: React.FC<{}> = () => (
     <h2>Marshal Evictions since Jan 15 2022</h2>
     <MarshalEvicsVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <br/>    
-    <h2>Share of Represented tenants</h2>
+    <h2>Share of Represented Tenants</h2>
     <PctReppedVisualizations height={JUDGMENTS_VIZ_DEFAULT_HEIGHT} />
     <br/>   
     <h2>Eviction Judgments since 3/23/2020</h2>
