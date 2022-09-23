@@ -49,7 +49,7 @@ count(*) filter (where representationtype = 'Counsel') as represented,
 count(*) as allcases,
 (count(*) filter (where representationtype = 'Counsel'))*100 / count(*) as rep_rate
 from all_cases
--- grab everything until 4 weeks before current date to account for missing recent data 
+-- grab everything until 5 weeks before current date to account for missing recent data 
 where day < current_date - interval '5 weeks'
 group by day
 order by day
