@@ -2,7 +2,7 @@
   {
     "court_name": "Albany City Court",
     "zipcode": "12205",
-    "filings": 40
+    "filings": 43
   },
   {
     "court_name": "Albany City Court",
@@ -11,28 +11,23 @@
   },
   {
     "court_name": "Albany City Court",
-    "zipcode": "00000",
-    "filings": 12
-  },
-  {
-    "court_name": "Albany City Court",
-    "zipcode": "12206",
-    "filings": 1515
-  },
-  {
-    "court_name": "Albany City Court",
-    "zipcode": "12202",
-    "filings": 1609
+    "zipcode": "12220",
+    "filings": 6
   },
   {
     "court_name": "Albany City Court",
     "zipcode": "12204",
-    "filings": 157
+    "filings": 169
   },
   {
     "court_name": "Albany City Court",
-    "zipcode": "12110",
-    "filings": 1
+    "zipcode": "12202",
+    "filings": 1716
+  },
+  {
+    "court_name": "Albany City Court",
+    "zipcode": "12206",
+    "filings": 1583
   },
   {
     "court_name": "Albany City Court",
@@ -42,17 +37,17 @@
   {
     "court_name": "Albany City Court",
     "zipcode": "12207",
-    "filings": 413
-  },
-  {
-    "court_name": "Albany City Court",
-    "zipcode": "12210",
-    "filings": 1580
+    "filings": 439
   },
   {
     "court_name": "Albany City Court",
     "zipcode": "12209",
-    "filings": 374
+    "filings": 389
+  },
+  {
+    "court_name": "Albany City Court",
+    "zipcode": "12054",
+    "filings": 4
   },
   {
     "court_name": "Albany City Court",
@@ -62,22 +57,27 @@
   {
     "court_name": "Albany City Court",
     "zipcode": "12208",
-    "filings": 564
+    "filings": 590
+  },
+  {
+    "court_name": "Albany City Court",
+    "zipcode": "00000",
+    "filings": 12
   },
   {
     "court_name": "Albany City Court",
     "zipcode": "12305",
-    "filings": 6
+    "filings": 7
   },
   {
     "court_name": "Albany City Court",
-    "zipcode": "12220",
-    "filings": 6
+    "zipcode": "12110",
+    "filings": 1
   },
   {
     "court_name": "Albany City Court",
-    "zipcode": "12054",
-    "filings": 4
+    "zipcode": "12210",
+    "filings": 1659
   },
   {
     "court_name": "Albany City Court",
@@ -87,12 +87,12 @@
   {
     "court_name": "Albany City Court",
     "zipcode": "12203",
-    "filings": 514
+    "filings": 531
   },
   {
     "court_name": "Amsterdam City Court",
     "zipcode": "12010",
-    "filings": 651
+    "filings": 685
   },
   {
     "court_name": "Amsterdam City Court",
@@ -106,8 +106,8 @@
   },
   {
     "court_name": "Auburn City Court",
-    "zipcode": "13021",
-    "filings": 1186
+    "zipcode": "13201",
+    "filings": 1
   },
   {
     "court_name": "Auburn City Court",
@@ -116,18 +116,13 @@
   },
   {
     "court_name": "Auburn City Court",
-    "zipcode": "13201",
-    "filings": 1
+    "zipcode": "13021",
+    "filings": 1226
   },
   {
     "court_name": "Batavia City Court",
     "zipcode": "14020",
-    "filings": 475
-  },
-  {
-    "court_name": "Beacon City Court",
-    "zipcode": "12508",
-    "filings": 325
+    "filings": 496
   },
   {
     "court_name": "Beacon City Court",
@@ -135,9 +130,9 @@
     "filings": 8
   },
   {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13797",
-    "filings": 3
+    "court_name": "Beacon City Court",
+    "zipcode": "12508",
+    "filings": 336
   },
   {
     "court_name": "Binghamton City Court",
@@ -147,32 +142,7 @@
   {
     "court_name": "Binghamton City Court",
     "zipcode": "13901",
-    "filings": 591
-  },
-  {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13904",
-    "filings": 271
-  },
-  {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13902",
-    "filings": 2
-  },
-  {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13760",
-    "filings": 3
-  },
-  {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13903",
-    "filings": 648
-  },
-  {
-    "court_name": "Binghamton City Court",
-    "zipcode": "13905",
-    "filings": 1328
+    "filings": 616
   },
   {
     "court_name": "Binghamton City Court",
@@ -181,8 +151,38 @@
   },
   {
     "court_name": "Binghamton City Court",
+    "zipcode": "13902",
+    "filings": 2
+  },
+  {
+    "court_name": "Binghamton City Court",
+    "zipcode": "13903",
+    "filings": 686
+  },
+  {
+    "court_name": "Binghamton City Court",
+    "zipcode": "13905",
+    "filings": 1383
+  },
+  {
+    "court_name": "Binghamton City Court",
+    "zipcode": "13760",
+    "filings": 3
+  },
+  {
+    "court_name": "Binghamton City Court",
     "zipcode": "13790",
     "filings": 3
+  },
+  {
+    "court_name": "Binghamton City Court",
+    "zipcode": "13797",
+    "filings": 3
+  },
+  {
+    "court_name": "Binghamton City Court",
+    "zipcode": "13904",
+    "filings": 293
   },
   {
     "court_name": "Buffalo City Court",
@@ -191,8 +191,8 @@
   },
   {
     "court_name": "Buffalo City Court",
-    "zipcode": "14085",
-    "filings": 4
+    "zipcode": "14127",
+    "filings": 93
   },
   {
     "court_name": "Buffalo City Court",
@@ -202,12 +202,12 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14217",
-    "filings": 259
+    "filings": 274
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14006",
-    "filings": 115
+    "filings": 122
   },
   {
     "court_name": "Buffalo City Court",
@@ -217,37 +217,37 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14211",
-    "filings": 2056
+    "filings": 2145
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14004",
-    "filings": 28
-  },
-  {
-    "court_name": "Buffalo City Court",
-    "zipcode": "14031",
     "filings": 32
   },
   {
     "court_name": "Buffalo City Court",
-    "zipcode": "14127",
-    "filings": 86
+    "zipcode": "14031",
+    "filings": 34
+  },
+  {
+    "court_name": "Buffalo City Court",
+    "zipcode": "14131",
+    "filings": 1
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14201",
-    "filings": 673
+    "filings": 709
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14111",
-    "filings": 15
+    "filings": 16
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14203",
-    "filings": 130
+    "filings": 135
   },
   {
     "court_name": "Buffalo City Court",
@@ -257,12 +257,12 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14032",
-    "filings": 5
+    "filings": 7
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14075",
-    "filings": 408
+    "filings": 429
   },
   {
     "court_name": "Buffalo City Court",
@@ -277,47 +277,47 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14227",
-    "filings": 736
+    "filings": 772
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14052",
-    "filings": 44
+    "filings": 46
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14072",
-    "filings": 87
+    "filings": 91
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14207",
-    "filings": 1321
+    "filings": 1376
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14051",
-    "filings": 31
+    "filings": 34
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14141",
-    "filings": 32
+    "filings": 33
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14224",
-    "filings": 203
+    "filings": 219
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14208",
-    "filings": 948
+    "filings": 1006
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14228",
-    "filings": 340
+    "filings": 358
   },
   {
     "court_name": "Buffalo City Court",
@@ -327,12 +327,12 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14225",
-    "filings": 949
+    "filings": 998
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14047",
-    "filings": 57
+    "filings": 62
   },
   {
     "court_name": "Buffalo City Court",
@@ -347,12 +347,12 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14213",
-    "filings": 1014
+    "filings": 1053
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14210",
-    "filings": 617
+    "filings": 651
   },
   {
     "court_name": "Buffalo City Court",
@@ -367,17 +367,17 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14059",
-    "filings": 41
+    "filings": 44
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14086",
-    "filings": 114
+    "filings": 117
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14209",
-    "filings": 453
+    "filings": 474
   },
   {
     "court_name": "Buffalo City Court",
@@ -392,42 +392,42 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14222",
-    "filings": 542
+    "filings": 580
   },
   {
     "court_name": "Buffalo City Court",
-    "zipcode": "14131",
-    "filings": 1
+    "zipcode": "14085",
+    "filings": 4
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14202",
-    "filings": 170
+    "filings": 178
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14221",
-    "filings": 241
+    "filings": 248
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14226",
-    "filings": 324
+    "filings": 338
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14215",
-    "filings": 3372
+    "filings": 3536
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14223",
-    "filings": 327
+    "filings": 337
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14220",
-    "filings": 573
+    "filings": 592
   },
   {
     "court_name": "Buffalo City Court",
@@ -437,27 +437,22 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14214",
-    "filings": 938
-  },
-  {
-    "court_name": "Buffalo City Court",
-    "zipcode": "14080",
-    "filings": 64
+    "filings": 981
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14204",
-    "filings": 511
+    "filings": 524
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14070",
-    "filings": 19
+    "filings": 20
   },
   {
     "court_name": "Buffalo City Court",
-    "zipcode": "14081",
-    "filings": 12
+    "zipcode": "14080",
+    "filings": 66
   },
   {
     "court_name": "Buffalo City Court",
@@ -467,7 +462,12 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14219",
-    "filings": 83
+    "filings": 87
+  },
+  {
+    "court_name": "Buffalo City Court",
+    "zipcode": "14081",
+    "filings": 12
   },
   {
     "court_name": "Buffalo City Court",
@@ -477,22 +477,22 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14206",
-    "filings": 1170
+    "filings": 1223
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14043",
-    "filings": 232
+    "filings": 247
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14212",
-    "filings": 835
+    "filings": 869
   },
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14216",
-    "filings": 654
+    "filings": 685
   },
   {
     "court_name": "Buffalo City Court",
@@ -502,7 +502,7 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14218",
-    "filings": 13
+    "filings": 14
   },
   {
     "court_name": "Buffalo City Court",
@@ -512,7 +512,7 @@
   {
     "court_name": "Buffalo City Court",
     "zipcode": "14150",
-    "filings": 556
+    "filings": 577
   },
   {
     "court_name": "Buffalo City Court",
@@ -522,12 +522,17 @@
   {
     "court_name": "Canandaigua City Court",
     "zipcode": "14424",
-    "filings": 246
+    "filings": 255
   },
   {
     "court_name": "Cohoes City Court",
     "zipcode": "12047",
-    "filings": 1223
+    "filings": 1273
+  },
+  {
+    "court_name": "Corning City Court",
+    "zipcode": "14830",
+    "filings": 161
   },
   {
     "court_name": "Corning City Court",
@@ -535,14 +540,9 @@
     "filings": 1
   },
   {
-    "court_name": "Corning City Court",
-    "zipcode": "14830",
-    "filings": 151
-  },
-  {
     "court_name": "Cortland City Court",
     "zipcode": "13045",
-    "filings": 857
+    "filings": 917
   },
   {
     "court_name": "Dunkirk City Court",
@@ -552,37 +552,37 @@
   {
     "court_name": "Dunkirk City Court",
     "zipcode": "14048",
-    "filings": 241
+    "filings": 259
   },
   {
     "court_name": "Elmira City Court",
     "zipcode": "14905",
-    "filings": 324
-  },
-  {
-    "court_name": "Elmira City Court",
-    "zipcode": "14901",
-    "filings": 757
+    "filings": 354
   },
   {
     "court_name": "Elmira City Court",
     "zipcode": "14904",
-    "filings": 411
+    "filings": 438
+  },
+  {
+    "court_name": "Elmira City Court",
+    "zipcode": "14901",
+    "filings": 812
   },
   {
     "court_name": "Fulton City Court",
     "zipcode": "13069",
-    "filings": 388
+    "filings": 411
   },
   {
     "court_name": "Geneva City Court",
     "zipcode": "14456",
-    "filings": 298
+    "filings": 313
   },
   {
     "court_name": "Glen Cove City Court",
     "zipcode": "11542",
-    "filings": 569
+    "filings": 597
   },
   {
     "court_name": "Glen Cove City Court",
@@ -592,7 +592,7 @@
   {
     "court_name": "Glens Falls City Court",
     "zipcode": "12801",
-    "filings": 413
+    "filings": 421
   },
   {
     "court_name": "Glens Falls City Court",
@@ -602,27 +602,22 @@
   {
     "court_name": "Gloversville City Court",
     "zipcode": "12078",
-    "filings": 783
+    "filings": 803
   },
   {
     "court_name": "Hornell City Court",
     "zipcode": "14843",
-    "filings": 267
+    "filings": 271
   },
   {
     "court_name": "Hudson City Court",
     "zipcode": "12534",
-    "filings": 121
+    "filings": 128
   },
   {
     "court_name": "Ithaca City Court",
     "zipcode": "14850",
-    "filings": 230
-  },
-  {
-    "court_name": "Jamestown City Court",
-    "zipcode": "14701",
-    "filings": 937
+    "filings": 245
   },
   {
     "court_name": "Jamestown City Court",
@@ -630,14 +625,24 @@
     "filings": 6
   },
   {
+    "court_name": "Jamestown City Court",
+    "zipcode": "14701",
+    "filings": 997
+  },
+  {
     "court_name": "Johnstown City Court",
     "zipcode": "12095",
-    "filings": 230
+    "filings": 237
   },
   {
     "court_name": "Kingston City Court",
     "zipcode": "12401",
-    "filings": 842
+    "filings": 873
+  },
+  {
+    "court_name": "Lackawanna City Court",
+    "zipcode": "14218",
+    "filings": 785
   },
   {
     "court_name": "Lackawanna City Court",
@@ -647,12 +652,7 @@
   {
     "court_name": "Lackawanna City Court",
     "zipcode": "14219",
-    "filings": 10
-  },
-  {
-    "court_name": "Lackawanna City Court",
-    "zipcode": "14218",
-    "filings": 768
+    "filings": 11
   },
   {
     "court_name": "Little Falls City Court",
@@ -662,12 +662,12 @@
   {
     "court_name": "Little Falls City Court",
     "zipcode": "13365",
-    "filings": 81
+    "filings": 83
   },
   {
     "court_name": "Lockport City Court",
     "zipcode": "14094",
-    "filings": 641
+    "filings": 685
   },
   {
     "court_name": "Lockport City Court",
@@ -677,17 +677,17 @@
   {
     "court_name": "Long Beach City Court",
     "zipcode": "11561",
-    "filings": 481
+    "filings": 503
   },
   {
     "court_name": "Mechanicville City Court",
     "zipcode": "12118",
-    "filings": 247
+    "filings": 265
   },
   {
     "court_name": "Middletown City Court",
     "zipcode": "10940",
-    "filings": 878
+    "filings": 932
   },
   {
     "court_name": "Middletown City Court",
@@ -696,13 +696,8 @@
   },
   {
     "court_name": "Mt. Vernon City Court",
-    "zipcode": "10550",
-    "filings": 3892
-  },
-  {
-    "court_name": "Mt. Vernon City Court",
-    "zipcode": "10553",
-    "filings": 588
+    "zipcode": "10053",
+    "filings": 1
   },
   {
     "court_name": "Mt. Vernon City Court",
@@ -712,22 +707,32 @@
   {
     "court_name": "Mt. Vernon City Court",
     "zipcode": "10552",
-    "filings": 557
+    "filings": 595
+  },
+  {
+    "court_name": "Mt. Vernon City Court",
+    "zipcode": "10553",
+    "filings": 618
+  },
+  {
+    "court_name": "Mt. Vernon City Court",
+    "zipcode": "10550",
+    "filings": 4148
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11756",
-    "filings": 240
+    "filings": 248
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11024",
-    "filings": 75
+    "filings": 81
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11530",
-    "filings": 288
+    "filings": 305
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -737,27 +742,27 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11554",
-    "filings": 256
+    "filings": 275
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11563",
-    "filings": 250
+    "filings": 267
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11709",
-    "filings": 28
+    "filings": 30
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11572",
-    "filings": 151
+    "filings": 155
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11516",
-    "filings": 149
+    "filings": 160
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -767,22 +772,22 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11559",
-    "filings": 54
+    "filings": 56
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11040",
-    "filings": 160
+    "filings": 169
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11791",
-    "filings": 105
+    "filings": 111
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11579",
-    "filings": 43
+    "filings": 47
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -797,17 +802,17 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11732",
-    "filings": 26
+    "filings": 27
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11003",
-    "filings": 539
+    "filings": 570
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11566",
-    "filings": 109
+    "filings": 112
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -822,7 +827,7 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11735",
-    "filings": 313
+    "filings": 335
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -832,7 +837,7 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11801",
-    "filings": 467
+    "filings": 503
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -852,82 +857,82 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11560",
-    "filings": 50
+    "filings": 55
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11565",
-    "filings": 30
+    "filings": 32
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11771",
-    "filings": 74
+    "filings": 79
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11507",
-    "filings": 13
+    "filings": 15
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11804",
-    "filings": 11
+    "filings": 12
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11558",
-    "filings": 103
+    "filings": 107
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11021",
-    "filings": 307
+    "filings": 325
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11577",
-    "filings": 97
+    "filings": 102
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11023",
-    "filings": 116
+    "filings": 125
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11571",
-    "filings": 14
+    "filings": 15
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11096",
-    "filings": 302
+    "filings": 326
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11553",
-    "filings": 438
+    "filings": 474
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11570",
-    "filings": 390
+    "filings": 411
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11001",
-    "filings": 151
+    "filings": 160
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11542",
-    "filings": 70
+    "filings": 73
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11590",
-    "filings": 683
+    "filings": 713
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -937,57 +942,57 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11729",
-    "filings": 6
+    "filings": 7
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11710",
-    "filings": 175
+    "filings": 182
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11050",
-    "filings": 260
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11552",
-    "filings": 283
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11576",
-    "filings": 42
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11765",
-    "filings": 4
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11010",
-    "filings": 130
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11580",
-    "filings": 503
-  },
-  {
-    "court_name": "Nassau County District Court - 1st District",
-    "zipcode": "11561",
     "filings": 269
   },
   {
     "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11552",
+    "filings": 293
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11576",
+    "filings": 46
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11765",
+    "filings": 5
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11010",
+    "filings": 136
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11580",
+    "filings": 523
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
+    "zipcode": "11561",
+    "filings": 280
+  },
+  {
+    "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11797",
-    "filings": 31
+    "filings": 32
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11557",
-    "filings": 178
+    "filings": 188
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1007,17 +1012,17 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11758",
-    "filings": 326
+    "filings": 345
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11501",
-    "filings": 365
+    "filings": 391
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11596",
-    "filings": 45
+    "filings": 46
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1027,12 +1032,12 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11520",
-    "filings": 1022
+    "filings": 1069
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11714",
-    "filings": 75
+    "filings": 80
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1047,12 +1052,12 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11101",
-    "filings": 8
+    "filings": 9
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11518",
-    "filings": 128
+    "filings": 133
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1062,17 +1067,17 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11510",
-    "filings": 337
+    "filings": 357
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11753",
-    "filings": 71
+    "filings": 75
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11545",
-    "filings": 39
+    "filings": 41
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1082,32 +1087,32 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11803",
-    "filings": 111
+    "filings": 117
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11030",
-    "filings": 43
+    "filings": 47
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11793",
-    "filings": 70
+    "filings": 74
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11581",
-    "filings": 265
+    "filings": 283
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11598",
-    "filings": 88
+    "filings": 90
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11575",
-    "filings": 253
+    "filings": 267
   },
   {
     "court_name": "Nassau County District Court - 1st District",
@@ -1117,27 +1122,27 @@
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11514",
-    "filings": 60
+    "filings": 61
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11783",
-    "filings": 112
+    "filings": 117
   },
   {
     "court_name": "Nassau County District Court - 1st District",
     "zipcode": "11550",
-    "filings": 3185
-  },
-  {
-    "court_name": "Nassau County District Court - 4th District",
-    "zipcode": "11758",
-    "filings": 4
+    "filings": 3460
   },
   {
     "court_name": "Nassau County District Court - 4th District",
     "zipcode": "11565",
     "filings": 2
+  },
+  {
+    "court_name": "Nassau County District Court - 4th District",
+    "zipcode": "11758",
+    "filings": 4
   },
   {
     "court_name": "Newburgh City Court",
@@ -1146,23 +1151,23 @@
   },
   {
     "court_name": "Newburgh City Court",
-    "zipcode": "12550",
-    "filings": 2219
+    "zipcode": "12508",
+    "filings": 7
   },
   {
     "court_name": "Newburgh City Court",
-    "zipcode": "12508",
-    "filings": 5
+    "zipcode": "12550",
+    "filings": 2344
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10801",
-    "filings": 2348
+    "zipcode": "10804",
+    "filings": 42
   },
   {
     "court_name": "New Rochelle City Court",
     "zipcode": "10805",
-    "filings": 462
+    "filings": 489
   },
   {
     "court_name": "New Rochelle City Court",
@@ -1176,38 +1181,13 @@
   },
   {
     "court_name": "New Rochelle City Court",
-    "zipcode": "10804",
-    "filings": 41
-  },
-  {
-    "court_name": "New Rochelle City Court",
     "zipcode": "10583",
     "filings": 6
   },
   {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14304",
-    "filings": 448
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14302",
-    "filings": 2
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14305",
-    "filings": 1374
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14301",
-    "filings": 1784
-  },
-  {
-    "court_name": "Niagara Falls City Court",
-    "zipcode": "14223",
-    "filings": 7
+    "court_name": "New Rochelle City Court",
+    "zipcode": "10801",
+    "filings": 2487
   },
   {
     "court_name": "Niagara Falls City Court",
@@ -1216,8 +1196,33 @@
   },
   {
     "court_name": "Niagara Falls City Court",
+    "zipcode": "14223",
+    "filings": 8
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14302",
+    "filings": 2
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14301",
+    "filings": 1896
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14305",
+    "filings": 1465
+  },
+  {
+    "court_name": "Niagara Falls City Court",
+    "zipcode": "14304",
+    "filings": 464
+  },
+  {
+    "court_name": "Niagara Falls City Court",
     "zipcode": "14303",
-    "filings": 621
+    "filings": 662
   },
   {
     "court_name": "North Tonawanda City Court",
@@ -1226,13 +1231,13 @@
   },
   {
     "court_name": "North Tonawanda City Court",
-    "zipcode": "14120",
-    "filings": 507
+    "zipcode": "14301",
+    "filings": 2
   },
   {
     "court_name": "North Tonawanda City Court",
-    "zipcode": "14301",
-    "filings": 2
+    "zipcode": "14120",
+    "filings": 524
   },
   {
     "court_name": "Norwich City Court",
@@ -1242,162 +1247,77 @@
   {
     "court_name": "Norwich City Court",
     "zipcode": "13815",
-    "filings": 206
+    "filings": 218
   },
   {
     "court_name": "Ogdensburg City Court",
     "zipcode": "13669",
-    "filings": 292
+    "filings": 303
   },
   {
     "court_name": "Olean City Court",
     "zipcode": "14760",
-    "filings": 370
+    "filings": 382
   },
   {
     "court_name": "Oneida City Court",
     "zipcode": "13421",
-    "filings": 260
+    "filings": 263
   },
   {
     "court_name": "Oneonta City Court",
     "zipcode": "13820",
-    "filings": 115
+    "filings": 119
   },
   {
     "court_name": "Oswego City Court",
     "zipcode": "13126",
-    "filings": 438
-  },
-  {
-    "court_name": "Peekskill City Court",
-    "zipcode": "10566",
-    "filings": 665
+    "filings": 455
   },
   {
     "court_name": "Peekskill City Court",
     "zipcode": "10567",
-    "filings": 1
+    "filings": 2
   },
   {
-    "court_name": "Plattsburgh City Court",
-    "zipcode": "12901",
-    "filings": 559
+    "court_name": "Peekskill City Court",
+    "zipcode": "10566",
+    "filings": 710
   },
   {
     "court_name": "Plattsburgh City Court",
     "zipcode": "12903",
-    "filings": 5
+    "filings": 6
+  },
+  {
+    "court_name": "Plattsburgh City Court",
+    "zipcode": "12901",
+    "filings": 589
   },
   {
     "court_name": "Port Jervis City Court",
     "zipcode": "12771",
-    "filings": 364
-  },
-  {
-    "court_name": "Poughkeepsie City Court",
-    "zipcode": "12601",
-    "filings": 2826
+    "filings": 384
   },
   {
     "court_name": "Poughkeepsie City Court",
     "zipcode": "12603",
-    "filings": 90
+    "filings": 92
+  },
+  {
+    "court_name": "Poughkeepsie City Court",
+    "zipcode": "12601",
+    "filings": 2965
+  },
+  {
+    "court_name": "Rensselaer City Court",
+    "zipcode": "12144",
+    "filings": 400
   },
   {
     "court_name": "Rensselaer City Court",
     "zipcode": "12309",
     "filings": 2
-  },
-  {
-    "court_name": "Rensselaer City Court",
-    "zipcode": "12144",
-    "filings": 382
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14611",
-    "filings": 2027
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14610",
-    "filings": 170
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14617",
-    "filings": 8
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14609",
-    "filings": 2275
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14613",
-    "filings": 1947
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14606",
-    "filings": 1326
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14619",
-    "filings": 1035
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14618",
-    "filings": 1
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14621",
-    "filings": 3049
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14616",
-    "filings": 213
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14608",
-    "filings": 1387
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14626",
-    "filings": 10
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14620",
-    "filings": 1012
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14624",
-    "filings": 20
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14511",
-    "filings": 2
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14612",
-    "filings": 453
-  },
-  {
-    "court_name": "Rochester City Court",
-    "zipcode": "14607",
-    "filings": 866
   },
   {
     "court_name": "Rochester City Court",
@@ -1406,18 +1326,58 @@
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14605",
-    "filings": 1129
+    "zipcode": "14621",
+    "filings": 3191
   },
   {
     "court_name": "Rochester City Court",
-    "zipcode": "14615",
-    "filings": 806
+    "zipcode": "14607",
+    "filings": 922
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14611",
+    "filings": 2142
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14616",
+    "filings": 217
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14610",
+    "filings": 179
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14617",
+    "filings": 8
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14613",
+    "filings": 2052
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14626",
+    "filings": 10
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14608",
+    "filings": 1456
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14618",
+    "filings": 1
   },
   {
     "court_name": "Rochester City Court",
     "zipcode": "14614",
-    "filings": 88
+    "filings": 90
   },
   {
     "court_name": "Rochester City Court",
@@ -1426,18 +1386,53 @@
   },
   {
     "court_name": "Rochester City Court",
+    "zipcode": "14624",
+    "filings": 21
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14609",
+    "filings": 2419
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14620",
+    "filings": 1066
+  },
+  {
+    "court_name": "Rochester City Court",
     "zipcode": "14604",
-    "filings": 624
+    "filings": 642
   },
   {
-    "court_name": "Rome City Court",
-    "zipcode": "13441",
-    "filings": 5
+    "court_name": "Rochester City Court",
+    "zipcode": "14511",
+    "filings": 2
   },
   {
-    "court_name": "Rome City Court",
-    "zipcode": "13308",
-    "filings": 54
+    "court_name": "Rochester City Court",
+    "zipcode": "14605",
+    "filings": 1184
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14612",
+    "filings": 468
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14606",
+    "filings": 1393
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14615",
+    "filings": 849
+  },
+  {
+    "court_name": "Rochester City Court",
+    "zipcode": "14619",
+    "filings": 1093
   },
   {
     "court_name": "Rome City Court",
@@ -1446,23 +1441,33 @@
   },
   {
     "court_name": "Rome City Court",
+    "zipcode": "13441",
+    "filings": 5
+  },
+  {
+    "court_name": "Rome City Court",
     "zipcode": "13440",
-    "filings": 1332
+    "filings": 1389
+  },
+  {
+    "court_name": "Rome City Court",
+    "zipcode": "13308",
+    "filings": 57
   },
   {
     "court_name": "Rye City Court",
     "zipcode": "10580",
-    "filings": 89
+    "filings": 92
   },
   {
     "court_name": "Rye City Court",
     "zipcode": "10039",
-    "filings": 6
+    "filings": 7
   },
   {
     "court_name": "Salamanca City Court",
     "zipcode": "14779",
-    "filings": 127
+    "filings": 134
   },
   {
     "court_name": "Saratoga Springs City Court",
@@ -1472,17 +1477,22 @@
   {
     "court_name": "Saratoga Springs City Court",
     "zipcode": "12866",
-    "filings": 1172
+    "filings": 1224
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12308",
-    "filings": 867
+    "zipcode": "12205",
+    "filings": 7
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12306",
-    "filings": 342
+    "zipcode": "12134",
+    "filings": 6
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12307",
+    "filings": 908
   },
   {
     "court_name": "Schenectady City Court",
@@ -1491,17 +1501,27 @@
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "11412",
-    "filings": 1
+    "zipcode": "12304",
+    "filings": 945
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12307",
-    "filings": 879
+    "zipcode": "12056",
+    "filings": 2
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12118",
+    "zipcode": "12065",
+    "filings": 2
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "12303",
+    "filings": 1005
+  },
+  {
+    "court_name": "Schenectady City Court",
+    "zipcode": "07017",
     "filings": 1
   },
   {
@@ -1511,58 +1531,43 @@
   },
   {
     "court_name": "Schenectady City Court",
+    "zipcode": "12306",
+    "filings": 349
+  },
+  {
+    "court_name": "Schenectady City Court",
     "zipcode": "12203",
     "filings": 3
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "07017",
-    "filings": 1
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12134",
-    "filings": 6
-  },
-  {
-    "court_name": "Schenectady City Court",
     "zipcode": "12309",
-    "filings": 79
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12302",
-    "filings": 8
+    "filings": 81
   },
   {
     "court_name": "Schenectady City Court",
     "zipcode": "12305",
-    "filings": 637
+    "filings": 651
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12205",
-    "filings": 7
+    "zipcode": "12302",
+    "filings": 9
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12056",
-    "filings": 2
+    "zipcode": "12308",
+    "filings": 902
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12304",
-    "filings": 927
+    "zipcode": "11412",
+    "filings": 1
   },
   {
     "court_name": "Schenectady City Court",
-    "zipcode": "12303",
-    "filings": 982
-  },
-  {
-    "court_name": "Schenectady City Court",
-    "zipcode": "12065",
-    "filings": 2
+    "zipcode": "12118",
+    "filings": 1
   },
   {
     "court_name": "Sherrill City Court",
@@ -1571,33 +1576,18 @@
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11725",
-    "filings": 1
-  },
-  {
-    "court_name": "Suffolk County District Court - 2nd District",
     "zipcode": "11722",
     "filings": 4
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11702",
-    "filings": 172
-  },
-  {
-    "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11703",
-    "filings": 262
-  },
-  {
-    "court_name": "Suffolk County District Court - 2nd District",
     "zipcode": "11735",
-    "filings": 139
+    "filings": 144
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11704",
-    "filings": 811
+    "zipcode": "11702",
+    "filings": 177
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
@@ -1606,28 +1596,28 @@
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11701",
-    "filings": 735
+    "zipcode": "11729",
+    "filings": 490
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
     "zipcode": "11757",
-    "filings": 457
+    "filings": 485
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11746",
+    "zipcode": "11731",
+    "filings": 6
+  },
+  {
+    "court_name": "Suffolk County District Court - 2nd District",
+    "zipcode": "11704",
+    "filings": 848
+  },
+  {
+    "court_name": "Suffolk County District Court - 2nd District",
+    "zipcode": "11725",
     "filings": 1
-  },
-  {
-    "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11798",
-    "filings": 603
-  },
-  {
-    "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11726",
-    "filings": 276
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
@@ -1636,8 +1626,8 @@
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11731",
-    "filings": 5
+    "zipcode": "11798",
+    "filings": 635
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
@@ -1646,23 +1636,28 @@
   },
   {
     "court_name": "Suffolk County District Court - 2nd District",
-    "zipcode": "11729",
-    "filings": 466
+    "zipcode": "11726",
+    "filings": 291
+  },
+  {
+    "court_name": "Suffolk County District Court - 2nd District",
+    "zipcode": "11701",
+    "filings": 774
+  },
+  {
+    "court_name": "Suffolk County District Court - 2nd District",
+    "zipcode": "11746",
+    "filings": 1
+  },
+  {
+    "court_name": "Suffolk County District Court - 2nd District",
+    "zipcode": "11703",
+    "filings": 273
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11740",
-    "filings": 35
-  },
-  {
-    "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11747",
-    "filings": 321
-  },
-  {
-    "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11768",
-    "filings": 64
+    "zipcode": "11743",
+    "filings": 214
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
@@ -1671,8 +1666,28 @@
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11743",
-    "filings": 202
+    "zipcode": "11801",
+    "filings": 1
+  },
+  {
+    "court_name": "Suffolk County District Court - 3rd District",
+    "zipcode": "11731",
+    "filings": 124
+  },
+  {
+    "court_name": "Suffolk County District Court - 3rd District",
+    "zipcode": "11747",
+    "filings": 332
+  },
+  {
+    "court_name": "Suffolk County District Court - 3rd District",
+    "zipcode": "11725",
+    "filings": 66
+  },
+  {
+    "court_name": "Suffolk County District Court - 3rd District",
+    "zipcode": "11721",
+    "filings": 19
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
@@ -1681,43 +1696,23 @@
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
+    "zipcode": "11740",
+    "filings": 38
+  },
+  {
+    "court_name": "Suffolk County District Court - 3rd District",
     "zipcode": "11746",
-    "filings": 525
-  },
-  {
-    "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11721",
-    "filings": 18
-  },
-  {
-    "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11801",
-    "filings": 1
+    "filings": 548
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
     "zipcode": "11727",
-    "filings": 7
+    "filings": 8
   },
   {
     "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11725",
-    "filings": 65
-  },
-  {
-    "court_name": "Suffolk County District Court - 3rd District",
-    "zipcode": "11731",
-    "filings": 113
-  },
-  {
-    "court_name": "Suffolk County District Court - 4th District",
-    "zipcode": "11725",
-    "filings": 151
-  },
-  {
-    "court_name": "Suffolk County District Court - 4th District",
-    "zipcode": "11754",
-    "filings": 78
+    "zipcode": "11768",
+    "filings": 66
   },
   {
     "court_name": "Suffolk County District Court - 4th District",
@@ -1727,27 +1722,17 @@
   {
     "court_name": "Suffolk County District Court - 4th District",
     "zipcode": "11780",
-    "filings": 82
+    "filings": 85
   },
   {
     "court_name": "Suffolk County District Court - 4th District",
-    "zipcode": "11768",
-    "filings": 9
-  },
-  {
-    "court_name": "Suffolk County District Court - 4th District",
-    "zipcode": "11788",
-    "filings": 134
+    "zipcode": "11725",
+    "filings": 159
   },
   {
     "court_name": "Suffolk County District Court - 4th District",
     "zipcode": "11767",
-    "filings": 49
-  },
-  {
-    "court_name": "Suffolk County District Court - 4th District",
-    "zipcode": "11787",
-    "filings": 274
+    "filings": 52
   },
   {
     "court_name": "Suffolk County District Court - 4th District",
@@ -1755,89 +1740,39 @@
     "filings": 7
   },
   {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11934",
-    "filings": 2
+    "court_name": "Suffolk County District Court - 4th District",
+    "zipcode": "11787",
+    "filings": 284
   },
   {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11742",
-    "filings": 39
+    "court_name": "Suffolk County District Court - 4th District",
+    "zipcode": "11768",
+    "filings": 10
   },
   {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11798",
-    "filings": 2
+    "court_name": "Suffolk County District Court - 4th District",
+    "zipcode": "11788",
+    "filings": 138
   },
   {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11717",
-    "filings": 504
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11782",
-    "filings": 410
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11706",
-    "filings": 1302
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11705",
-    "filings": 445
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11716",
-    "filings": 585
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11769",
-    "filings": 63
+    "court_name": "Suffolk County District Court - 4th District",
+    "zipcode": "11754",
+    "filings": 80
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
     "zipcode": "11779",
-    "filings": 549
+    "filings": 572
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11749",
-    "filings": 52
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11752",
-    "filings": 132
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11795",
-    "filings": 115
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11796",
-    "filings": 77
+    "zipcode": "11706",
+    "filings": 1380
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
     "zipcode": "11741",
-    "filings": 688
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11751",
-    "filings": 134
-  },
-  {
-    "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11788",
-    "filings": 192
+    "filings": 724
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
@@ -1846,8 +1781,53 @@
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11722",
-    "filings": 687
+    "zipcode": "11782",
+    "filings": 431
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11749",
+    "filings": 56
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11717",
+    "filings": 536
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11769",
+    "filings": 67
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11730",
+    "filings": 263
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11716",
+    "filings": 612
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11752",
+    "filings": 141
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11704",
+    "filings": 5
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11796",
+    "filings": 80
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11934",
+    "filings": 2
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
@@ -1856,13 +1836,18 @@
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11730",
-    "filings": 254
+    "zipcode": "11705",
+    "filings": 459
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11953",
-    "filings": 1
+    "zipcode": "11798",
+    "filings": 2
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11788",
+    "filings": 193
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
@@ -1871,13 +1856,18 @@
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11739",
-    "filings": 4
+    "zipcode": "11722",
+    "filings": 732
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
-    "zipcode": "11704",
-    "filings": 4
+    "zipcode": "11751",
+    "filings": 143
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11795",
+    "filings": 123
   },
   {
     "court_name": "Suffolk County District Court - 5th District",
@@ -1885,34 +1875,49 @@
     "filings": 2
   },
   {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11778",
-    "filings": 104
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11950",
-    "filings": 217
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11727",
-    "filings": 1498
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11955",
-    "filings": 497
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
+    "court_name": "Suffolk County District Court - 5th District",
     "zipcode": "11742",
-    "filings": 43
+    "filings": 49
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11739",
+    "filings": 5
+  },
+  {
+    "court_name": "Suffolk County District Court - 5th District",
+    "zipcode": "11953",
+    "filings": 1
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11980",
-    "filings": 97
+    "zipcode": "11780",
+    "filings": 1
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11741",
+    "filings": 30
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11755",
+    "filings": 251
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11792",
+    "filings": 5
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11720",
+    "filings": 203
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11772",
+    "filings": 1179
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -1921,23 +1926,98 @@
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11784",
-    "filings": 385
+    "zipcode": "11742",
+    "filings": 47
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11950",
+    "filings": 232
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11933",
+    "filings": 9
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11949",
-    "filings": 193
+    "filings": 198
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11789",
-    "filings": 44
+    "filings": 48
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11778",
+    "filings": 106
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11715",
+    "filings": 19
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11776",
-    "filings": 361
+    "filings": 370
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11967",
+    "filings": 252
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11764",
+    "filings": 49
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11953",
+    "filings": 447
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11777",
+    "filings": 144
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11727",
+    "filings": 1523
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11955",
+    "filings": 503
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11713",
+    "filings": 554
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11934",
+    "filings": 56
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11980",
+    "filings": 102
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11784",
+    "filings": 394
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11725",
+    "filings": 3
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -1947,22 +2027,27 @@
   {
     "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11786",
-    "filings": 9
+    "filings": 10
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11953",
-    "filings": 417
+    "zipcode": "11951",
+    "filings": 279
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11713",
-    "filings": 542
+    "zipcode": "11779",
+    "filings": 312
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11725",
-    "filings": 3
+    "zipcode": "11719",
+    "filings": 29
+  },
+  {
+    "court_name": "Suffolk County District Court - 6th District",
+    "zipcode": "11961",
+    "filings": 159
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -1971,23 +2056,8 @@
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11951",
-    "filings": 267
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11741",
-    "filings": 29
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11967",
-    "filings": 241
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11738",
-    "filings": 626
+    "filings": 648
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -2001,13 +2071,13 @@
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11715",
-    "filings": 19
+    "zipcode": "11790",
+    "filings": 28
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11790",
-    "filings": 28
+    "zipcode": "11763",
+    "filings": 350
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
@@ -2016,88 +2086,28 @@
   },
   {
     "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11763",
-    "filings": 332
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11961",
-    "filings": 150
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11792",
-    "filings": 4
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11772",
-    "filings": 1151
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
     "zipcode": "11941",
-    "filings": 1
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11720",
-    "filings": 195
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11777",
-    "filings": 143
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11719",
-    "filings": 28
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11779",
-    "filings": 304
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11755",
-    "filings": 246
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11934",
-    "filings": 51
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11933",
-    "filings": 6
-  },
-  {
-    "court_name": "Suffolk County District Court - 6th District",
-    "zipcode": "11764",
-    "filings": 49
+    "filings": 2
   },
   {
     "court_name": "Syracuse City Court",
-    "zipcode": "13224",
-    "filings": 301
+    "zipcode": "13203",
+    "filings": 1142
   },
   {
     "court_name": "Syracuse City Court",
     "zipcode": "13206",
-    "filings": 916
+    "filings": 971
   },
   {
     "court_name": "Syracuse City Court",
-    "zipcode": "13207",
-    "filings": 817
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "75234",
+    "zipcode": "11576",
     "filings": 1
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13209",
+    "filings": 5
   },
   {
     "court_name": "Syracuse City Court",
@@ -2107,42 +2117,12 @@
   {
     "court_name": "Syracuse City Court",
     "zipcode": "13204",
-    "filings": 1550
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "13220",
-    "filings": 5
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "13219",
-    "filings": 4
+    "filings": 1636
   },
   {
     "court_name": "Syracuse City Court",
     "zipcode": "13205",
-    "filings": 1422
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "13210",
-    "filings": 653
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "13203",
-    "filings": 1075
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "11576",
-    "filings": 1
-  },
-  {
-    "court_name": "Syracuse City Court",
-    "zipcode": "13202",
-    "filings": 643
+    "filings": 1504
   },
   {
     "court_name": "Syracuse City Court",
@@ -2151,23 +2131,43 @@
   },
   {
     "court_name": "Syracuse City Court",
-    "zipcode": "13209",
+    "zipcode": "13224",
+    "filings": 318
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13207",
+    "filings": 857
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13210",
+    "filings": 680
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13219",
+    "filings": 4
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13202",
+    "filings": 687
+  },
+  {
+    "court_name": "Syracuse City Court",
+    "zipcode": "13220",
     "filings": 5
   },
   {
     "court_name": "Syracuse City Court",
+    "zipcode": "75234",
+    "filings": 1
+  },
+  {
+    "court_name": "Syracuse City Court",
     "zipcode": "13208",
-    "filings": 1624
-  },
-  {
-    "court_name": "Tonawanda City Court",
-    "zipcode": "14223",
-    "filings": 1
-  },
-  {
-    "court_name": "Tonawanda City Court",
-    "zipcode": "14217",
-    "filings": 1
+    "filings": 1702
   },
   {
     "court_name": "Tonawanda City Court",
@@ -2177,7 +2177,22 @@
   {
     "court_name": "Tonawanda City Court",
     "zipcode": "14150",
-    "filings": 199
+    "filings": 202
+  },
+  {
+    "court_name": "Tonawanda City Court",
+    "zipcode": "14217",
+    "filings": 1
+  },
+  {
+    "court_name": "Tonawanda City Court",
+    "zipcode": "14223",
+    "filings": 1
+  },
+  {
+    "court_name": "Troy City Court",
+    "zipcode": "12182",
+    "filings": 1019
   },
   {
     "court_name": "Troy City Court",
@@ -2191,18 +2206,13 @@
   },
   {
     "court_name": "Troy City Court",
-    "zipcode": "12182",
-    "filings": 972
-  },
-  {
-    "court_name": "Troy City Court",
     "zipcode": "12180",
-    "filings": 3482
+    "filings": 3676
   },
   {
     "court_name": "Utica City Court",
-    "zipcode": "13492",
-    "filings": 1
+    "zipcode": "13502",
+    "filings": 1655
   },
   {
     "court_name": "Utica City Court",
@@ -2212,17 +2222,22 @@
   {
     "court_name": "Utica City Court",
     "zipcode": "13501",
-    "filings": 1700
+    "filings": 1772
   },
   {
     "court_name": "Utica City Court",
-    "zipcode": "13502",
-    "filings": 1596
+    "zipcode": "13492",
+    "filings": 1
   },
   {
     "court_name": "Watertown City Court",
     "zipcode": "13601",
-    "filings": 955
+    "filings": 987
+  },
+  {
+    "court_name": "Watervliet City Court",
+    "zipcode": "12189",
+    "filings": 747
   },
   {
     "court_name": "Watervliet City Court",
@@ -2230,104 +2245,39 @@
     "filings": 1
   },
   {
-    "court_name": "Watervliet City Court",
-    "zipcode": "12189",
-    "filings": 730
-  },
-  {
     "court_name": "White Plains City Court",
-    "zipcode": "10607",
-    "filings": 5
-  },
-  {
-    "court_name": "White Plains City Court",
-    "zipcode": "10606",
-    "filings": 219
-  },
-  {
-    "court_name": "White Plains City Court",
-    "zipcode": "10603",
-    "filings": 143
+    "zipcode": "10601",
+    "filings": 385
   },
   {
     "court_name": "White Plains City Court",
     "zipcode": "10605",
-    "filings": 98
+    "filings": 104
+  },
+  {
+    "court_name": "White Plains City Court",
+    "zipcode": "10603",
+    "filings": 150
+  },
+  {
+    "court_name": "White Plains City Court",
+    "zipcode": "10606",
+    "filings": 231
   },
   {
     "court_name": "White Plains City Court",
     "zipcode": "10604",
-    "filings": 84
+    "filings": 87
   },
   {
     "court_name": "White Plains City Court",
-    "zipcode": "10601",
-    "filings": 361
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "11570",
+    "zipcode": "10607",
     "filings": 6
   },
   {
     "court_name": "Yonkers City Court",
-    "zipcode": "10001",
-    "filings": 3
-  },
-  {
-    "court_name": "Yonkers City Court",
     "zipcode": "10583",
-    "filings": 50
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10705",
-    "filings": 2842
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10982",
-    "filings": 2
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10710",
-    "filings": 760
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "11101",
-    "filings": 9
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10701",
-    "filings": 7478
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10601",
-    "filings": 9
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10901",
-    "filings": 1
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "11211",
-    "filings": 2
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10703",
-    "filings": 802
-  },
-  {
-    "court_name": "Yonkers City Court",
-    "zipcode": "10708",
-    "filings": 118
+    "filings": 54
   },
   {
     "court_name": "Yonkers City Court",
@@ -2336,7 +2286,67 @@
   },
   {
     "court_name": "Yonkers City Court",
+    "zipcode": "10982",
+    "filings": 2
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10703",
+    "filings": 849
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10708",
+    "filings": 121
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10001",
+    "filings": 3
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "11101",
+    "filings": 12
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10601",
+    "filings": 9
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10710",
+    "filings": 807
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10701",
+    "filings": 7847
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10901",
+    "filings": 1
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "10705",
+    "filings": 2994
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "11211",
+    "filings": 2
+  },
+  {
+    "court_name": "Yonkers City Court",
     "zipcode": "10704",
-    "filings": 877
+    "filings": 921
+  },
+  {
+    "court_name": "Yonkers City Court",
+    "zipcode": "11570",
+    "filings": 6
   }
 ]
