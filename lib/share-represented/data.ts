@@ -1,4 +1,3 @@
-import { toInt } from "../converters";
 import { Query, QueryFiles } from "../query";
 
 export const PCT_REPPED = new QueryFiles(`share-represented`);
@@ -6,7 +5,7 @@ export const PCT_REPPED = new QueryFiles(`share-represented`);
 export function convertPctReppedRow(row: any) {
   return {
     day: (row.day as Date).toISOString(),
-    rep_rate: toInt(row.rep_rate),
+    rep_rate: row.rep_rate,
   };
 }
 
