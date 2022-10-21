@@ -43,9 +43,9 @@ select
 	-- Count total eviction cases with appearances 
 	count(*) as allcases,
 	-- Calculate percent of cases that had representation
-	(count(*) filter (where representationtype != 'SRL'))*100 / count(*) as rep_rate
+	(count(*) filter (where representationtype != 'SRL'))::numeric*100 / count(*) as rep_rate
 from all_cases
--- grab everything until 5 weeks before current date to account for missing recent data 
-where day < current_date - interval '5 weeks'
+-- grab everything until 4 weeks before current date to account for missing recent data 
+where day < current_date - interval '4 weeks'
 group by day
-order by day;
+order by day; 
