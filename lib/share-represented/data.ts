@@ -6,8 +6,7 @@ export const PCT_REPPED = new QueryFiles(`share-represented`);
 export function convertPctReppedRow(row: any) {
   return {
     day: (row.day as Date).toISOString(),
-    // Round representation rate to one decimal point:
-    rep_rate: Math.round(row.rep_rate * 10) / 10,
+    rep_rate: toInt(row.rep_rate),
   };
 }
 
@@ -16,11 +15,17 @@ export type PctReppedRow = ReturnType<typeof convertPctReppedRow>;
 export type PctReppedNumericFields = Omit<PctReppedRow, "day">;
 
 function getPctReppedCsvHeader(): string[] {
-  return ["day", "rep_rate"];
+  return [
+    'day',
+    'rep_rate',
+  ];
 }
 
 function toPctReppedCsvRow(row: PctReppedRow): string[] {
-  return [row.day.substr(0, 10), row.rep_rate.toString()];
+  return [
+    row.day.substr(0, 10),
+    row.rep_rate.toString(),
+  ];
 }
 
 export const PctReppedQuery: Query<PctReppedRow> = {
