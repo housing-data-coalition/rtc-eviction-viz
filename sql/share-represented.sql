@@ -1,10 +1,9 @@
 -- select non-payment and holdover cases' respondents and representation types, filed after the eviction moratorium expired, that have had their first appearance within the last week
-with first_appearance as (
-    select 
-    	indexnumberid, 
-    	min(appearancedatetime) as appearancedatetime
-    from oca_appearances
-    group by indexnumberid
+with appears_twice as (
+	select indexnumberid, count(*) from oca_appearances
+	where appearancedatetime < current_date - interval '1 weeks'
+	group by indexnumberid 
+	having count(*) > 1 
 ),
 cases_plus_rep as (
 	select 
@@ -12,7 +11,7 @@ cases_plus_rep as (
 		representationtype 
 	from oca_index oi  
 	left join oca_parties op using(indexnumberid)
-	inner join first_appearance using(indexnumberid)
+	inner join appears_twice using(indexnumberid)
 	where oi.classification in ('Non-Payment','Holdover')
 		and role = 'Respondent' 
 		and propertytype = 'Residential'
@@ -28,8 +27,7 @@ cases_plus_rep as (
 					}')
 		-- grab everything after the eviction moratorium ended
 		and fileddate > '2022-01-15'
-		and appearancedatetime < current_date - interval '1 weeks'
-),
+		),
 -- select just relevant fields and eliminate duplicates
 all_cases as (
 	select 
