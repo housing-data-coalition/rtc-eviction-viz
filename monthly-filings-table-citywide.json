@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Bronx",
+    "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "9574",
-    "three_months_ago": "9079",
-    "num_increase": "495",
-    "percent_increase": "5"
-  },
-  {
-    "borough": "Manhattan",
-    "region": "NYC",
-    "two_months_ago": "5285",
-    "three_months_ago": "6117",
-    "num_increase": "-832",
-    "percent_increase": "-14"
-  },
-  {
-    "borough": "Staten Island",
-    "region": "NYC",
-    "two_months_ago": "906",
-    "three_months_ago": "1048",
-    "num_increase": "-142",
-    "percent_increase": "-14"
-  },
-  {
-    "borough": "Brooklyn",
-    "region": "NYC",
-    "two_months_ago": "6669",
-    "three_months_ago": "8757",
-    "num_increase": "-2088",
-    "percent_increase": "-24"
+    "two_months_ago": "2760",
+    "three_months_ago": "2932",
+    "num_increase": "-172",
+    "percent_increase": "-6"
   },
   {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "17920",
-    "three_months_ago": "25057",
-    "num_increase": "-7137",
-    "percent_increase": "-28"
+    "two_months_ago": "15103",
+    "three_months_ago": "18818",
+    "num_increase": "-3715",
+    "percent_increase": "-20"
   },
   {
-    "borough": "Queens",
+    "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "2769",
-    "three_months_ago": "3982",
-    "num_increase": "-1213",
-    "percent_increase": "-30"
+    "two_months_ago": "702",
+    "three_months_ago": "951",
+    "num_increase": "-249",
+    "percent_increase": "-26"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "4128",
+    "three_months_ago": "5669",
+    "num_increase": "-1541",
+    "percent_increase": "-27"
+  },
+  {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "7163",
+    "three_months_ago": "10037",
+    "num_increase": "-2874",
+    "percent_increase": "-29"
+  },
+  {
+    "borough": "Brooklyn",
+    "region": "NYC",
+    "two_months_ago": "4678",
+    "three_months_ago": "7086",
+    "num_increase": "-2408",
+    "percent_increase": "-34"
   }
 ]
