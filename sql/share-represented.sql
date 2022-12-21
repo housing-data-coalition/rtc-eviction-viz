@@ -1,10 +1,11 @@
--- select non-payment and holdover cases' respondents and representation types, filed after the eviction moratorium expired, that have had their first appearance within the last week
+-- select appearances where at least two have occurred at least one week ago, because tenants should have attorneys after two appearances. methodology updated 12/21/22
 with appears_twice as (
-	select indexnumberid, count(*) from oca_appearances
+	select indexnumberid, count(distinct(indexnumberid,appearancedatetime)) from oca_appearances
 	where appearancedatetime < current_date - interval '1 weeks'
 	group by indexnumberid 
-	having count(*) > 1 
+	having count(distinct(indexnumberid,appearancedatetime)) > 1 -- updated 12/22 to account for duplicate first appearancesd
 ),
+-- select non-payment and holdover cases' respondents and representation types, filed after the eviction moratorium expired, that have had their first appearance within the last week
 cases_plus_rep as (
 	select 
 		oi.*,
@@ -39,7 +40,7 @@ all_cases as (
 )
 -- group by week filed and calculated representation rate 
 select 
-	day, 
+   	day,
 	-- Count cases with "Self-Represented Litigants" only
 	count(*) filter (where representationtype = 'SRL') as srl,
 	-- Count cases with representation (or partial representation)
@@ -51,5 +52,6 @@ select
 from all_cases
 -- grab everything after the eviction moratorium ended
 where day < current_date - interval '4 weeks'
-group by day
-order by day;
+group by day 
+having count(*) > 100 -- only include weeks with over 100 total cases 
+order by day
