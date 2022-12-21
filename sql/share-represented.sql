@@ -1,4 +1,3 @@
-
 -- select appearances where at least two have occurred at least one week ago, because tenants should have attorneys after two appearances. methodology updated 12/21/22
 with appears_twice as (
 	select indexnumberid, count(distinct(indexnumberid,appearancedatetime)) from oca_appearances
