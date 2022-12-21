@@ -48,7 +48,7 @@ select
 	-- Count total eviction cases with appearances 
 	count(*) as allcases,
 	-- Calculate percent of cases that had representation
-	(count(*) filter (where representationtype != 'SRL'))::numeric*100 / count(*) as rep_rate
+	round((count(*) filter (where representationtype != 'SRL'))::numeric*100 / count(*), 1) as rep_rate
 from all_cases
 -- grab everything after the eviction moratorium ended
 where day < current_date - interval '4 weeks'
