@@ -1,50 +1,50 @@
 [
   {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "6880",
+    "three_months_ago": "8344",
+    "num_increase": "-1464",
+    "percent_increase": "-18"
+  },
+  {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "14362",
-    "three_months_ago": "18501",
-    "num_increase": "-4139",
-    "percent_increase": "-22"
+    "two_months_ago": "15507",
+    "three_months_ago": "19192",
+    "num_increase": "-3685",
+    "percent_increase": "-19"
   },
   {
     "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "592",
-    "three_months_ago": "899",
+    "two_months_ago": "644",
+    "three_months_ago": "951",
     "num_increase": "-307",
-    "percent_increase": "-34"
-  },
-  {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "4927",
-    "three_months_ago": "7781",
-    "num_increase": "-2854",
-    "percent_increase": "-37"
+    "percent_increase": "-32"
   },
   {
     "borough": "Manhattan",
     "region": "NYC",
-    "two_months_ago": "3795",
-    "three_months_ago": "5982",
-    "num_increase": "-2187",
-    "percent_increase": "-37"
+    "two_months_ago": "4087",
+    "three_months_ago": "6334",
+    "num_increase": "-2247",
+    "percent_increase": "-35"
   },
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "1848",
-    "three_months_ago": "3215",
-    "num_increase": "-1367",
-    "percent_increase": "-43"
+    "two_months_ago": "2213",
+    "three_months_ago": "3595",
+    "num_increase": "-1382",
+    "percent_increase": "-38"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "3041",
-    "three_months_ago": "5941",
-    "num_increase": "-2900",
-    "percent_increase": "-49"
+    "two_months_ago": "3804",
+    "three_months_ago": "6573",
+    "num_increase": "-2769",
+    "percent_increase": "-42"
   }
 ]
