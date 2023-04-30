@@ -15708,5 +15708,35 @@
     "outside_nyc_holdover_filings": 15,
     "outside_nyc_nonpay_filings": 119,
     "total_filings": 295
+  },
+  {
+    "day": "2023-04-21T04:00:00.000Z",
+    "nyc_holdover_filings": 32,
+    "nyc_holdover_res_filings": 30,
+    "nyc_nonpay_filings": 103,
+    "nyc_nonpay_res_filings": 99,
+    "outside_nyc_holdover_filings": 19,
+    "outside_nyc_nonpay_filings": 107,
+    "total_filings": 261
+  },
+  {
+    "day": "2023-04-22T04:00:00.000Z",
+    "nyc_holdover_filings": 3,
+    "nyc_holdover_res_filings": 3,
+    "nyc_nonpay_filings": 6,
+    "nyc_nonpay_res_filings": 6,
+    "outside_nyc_holdover_filings": 0,
+    "outside_nyc_nonpay_filings": 0,
+    "total_filings": 9
+  },
+  {
+    "day": "2023-04-23T04:00:00.000Z",
+    "nyc_holdover_filings": 4,
+    "nyc_holdover_res_filings": 3,
+    "nyc_nonpay_filings": 4,
+    "nyc_nonpay_res_filings": 4,
+    "outside_nyc_holdover_filings": 0,
+    "outside_nyc_nonpay_filings": 0,
+    "total_filings": 8
   }
 ]
