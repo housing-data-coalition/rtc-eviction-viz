@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Manhattan",
-    "region": "NYC",
-    "two_months_ago": "8728",
-    "three_months_ago": "7957",
-    "num_increase": "771",
-    "percent_increase": "10"
-  },
-  {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "10621",
-    "three_months_ago": "9920",
-    "num_increase": "701",
-    "percent_increase": "7"
-  },
-  {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "4358",
-    "three_months_ago": "4582",
-    "num_increase": "-224",
-    "percent_increase": "-5"
-  },
-  {
-    "borough": "Staten Island",
-    "region": "NYC",
-    "two_months_ago": "1033",
-    "three_months_ago": "1134",
-    "num_increase": "-101",
-    "percent_increase": "-9"
+    "two_months_ago": "3202",
+    "three_months_ago": "4706",
+    "num_increase": "-1504",
+    "percent_increase": "-32"
   },
   {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "18636",
-    "three_months_ago": "20657",
-    "num_increase": "-2021",
-    "percent_increase": "-10"
+    "two_months_ago": "12985",
+    "three_months_ago": "19502",
+    "num_increase": "-6517",
+    "percent_increase": "-33"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "5789",
+    "three_months_ago": "9045",
+    "num_increase": "-3256",
+    "percent_increase": "-36"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "5607",
-    "three_months_ago": "6274",
-    "num_increase": "-667",
-    "percent_increase": "-11"
+    "two_months_ago": "3743",
+    "three_months_ago": "6001",
+    "num_increase": "-2258",
+    "percent_increase": "-38"
+  },
+  {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "6779",
+    "three_months_ago": "11643",
+    "num_increase": "-4864",
+    "percent_increase": "-42"
+  },
+  {
+    "borough": "Staten Island",
+    "region": "NYC",
+    "two_months_ago": "576",
+    "three_months_ago": "1075",
+    "num_increase": "-499",
+    "percent_increase": "-46"
   }
 ]
