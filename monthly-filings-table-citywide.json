@@ -35,16 +35,16 @@
     "borough": "Queens",
     "region": "NYC",
     "two_months_ago": "1823",
-    "three_months_ago": "2052",
-    "num_increase": "-229",
+    "three_months_ago": "2051",
+    "num_increase": "-228",
     "percent_increase": "-11"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "2599",
+    "two_months_ago": "2683",
     "three_months_ago": "3607",
-    "num_increase": "-1008",
-    "percent_increase": "-28"
+    "num_increase": "-924",
+    "percent_increase": "-26"
   }
 ]
