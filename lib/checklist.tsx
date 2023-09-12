@@ -32,8 +32,8 @@ const getLatestFilingDate = (): JSX.Element => {
   return (
     <li>
       NYCDB is automatically updated with the latest OCA files overnight each
-      Tuesday. If successfully updated, the latest filing date in the data
-      should be the latest Monday. The latest filing date in NYCDB is{" "}
+      Sunday. If successfully updated, the latest filing date in the data
+      should be the latest Friday. The latest filing date in NYCDB is{" "}
       <b>{latestFilingDate}</b>.
     </li>
   );
@@ -43,7 +43,7 @@ const getOcaUpdateDate = (): JSX.Element => {
   const [ocaUpdateDate, setOcaUpdateDate] = useState<string | null>(null);
 
   const oca_url: string =
-    "https://oca-data.s3.amazonaws.com/public/last-updated-date.txt";
+    "https://oca-2-dev.s3.amazonaws.com/public/last-updated-date.txt";
 
   useEffect(() => {
     fetch(oca_url)
