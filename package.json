@@ -34,7 +34,7 @@
     "parcel": "parcel",
     "build-data": "tsc --build tsconfig-nodejs.json && node build-data.js",
     "watch": "concurrently --kill-others \"parcel index.html\" \"tsc --build tsconfig-nodejs.json --watch --preserveWatchOutput\"",
-    "build": "tsc --build tsconfig-nodejs.json && parcel build index.html --public-url=./",
+    "build": "tsc --build tsconfig-nodejs.json && parcel build index.html --public-url=./ --no-optimize",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "browserslist": [
