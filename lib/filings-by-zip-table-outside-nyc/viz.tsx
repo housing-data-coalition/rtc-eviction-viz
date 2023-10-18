@@ -102,13 +102,13 @@ function makeColumns(): Column<FilingsByZipOutsideNYCDisplayRow>[] {
                 Header: "Zipcode",
                 accessor: "zipcode" as keyof FilingsByZipOutsideNYCDisplayRow,
                 aggregate: "count",
-                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${value} zip codes`,
+                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => <>{`${value} zip codes`}</>,
             },
             {
                 Header: "Total cases filed since March 23, 2020",
                 accessor: "filings" as keyof FilingsByZipOutsideNYCDisplayRow,
                 aggregate: "sum",
-                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => `${numberWithCommas(value)}`,
+                Aggregated: ({value}: CellProps<FilingsByZipOutsideNYCDisplayRow>) => <>{`${numberWithCommas(value)}`}</>,
             },
         ], []);
     return cols;
