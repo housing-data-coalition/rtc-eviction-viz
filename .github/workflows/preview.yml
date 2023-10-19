@@ -38,3 +38,4 @@ jobs:
         with:
           source-dir: ./dist/
           preview-branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
