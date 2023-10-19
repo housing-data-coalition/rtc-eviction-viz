@@ -108,7 +108,7 @@ function makeColumns(): Column<MonthlyFilingsByZipDisplayRow>[] {
             {
                 Header: "% Increase",
                 accessor: "percent_increase" as keyof MonthlyFilingsByZipDisplayRow,
-                Cell: ({value}: CellProps<MonthlyFilingsByZipDisplayRow>) => `${numberWithCommas(value)}%`
+                Cell: ({value}: CellProps<MonthlyFilingsByZipDisplayRow>) => <>{`${numberWithCommas(value)}%`}</>
             },
         ], []);
     return cols;
