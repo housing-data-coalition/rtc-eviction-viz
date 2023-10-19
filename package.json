@@ -9,8 +9,8 @@
     "csv-stringify": "^5.5.3",
     "dotenv": "^12.0.3",
     "flat": "^5.0.2",
-    "parcel": "^2.10.0",
-    "parcel-reporter-static-files-copy": "^1.5.3",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.5.0",
     "pg": "^8.5.1",
     "pg-promise": "^10.8.0",
     "react": "^17.0.1",
@@ -21,9 +21,9 @@
     "react-use-cookie": "^1.3.0",
     "source-map-support": "^0.5.19",
     "typescript": "^4.5.4",
-    "vega": "^5.25.0",
-    "vega-embed": "^6.23.0",
-    "vega-lite": "^4.17.0"
+    "vega": "^5.15.0",
+    "vega-embed": "^6.12.2",
+    "vega-lite": "^4.15.0"
   },
   "license": "BSD-3-Clause",
   "staticFiles": {
@@ -34,7 +34,7 @@
     "parcel": "parcel",
     "build-data": "tsc --build tsconfig-nodejs.json && node build-data.js",
     "watch": "concurrently --kill-others \"parcel index.html\" \"tsc --build tsconfig-nodejs.json --watch --preserveWatchOutput\"",
-    "build": "tsc --build tsconfig-nodejs.json && parcel build index.html --public-url=./ --no-optimize",
+    "build": "tsc --build tsconfig-nodejs.json && parcel build index.html --public-url=./",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "browserslist": [
@@ -43,8 +43,6 @@
   "devDependencies": {
     "@types/flat": "^5.0.1",
     "@types/react-table": "^7.7.1",
-    "buffer": "^5.5.0||^6.0.0",
-    "gh-pages": "^3.1.0",
-    "process": "^0.11.10"
+    "gh-pages": "^3.1.0"
   }
 }
