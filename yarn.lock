@@ -2074,6 +2074,11 @@ packet-reader@1.0.0:
   resolved "https://registry.yarnpkg.com/packet-reader/-/packet-reader-1.0.0.tgz#9238e5480dedabacfe1fe3f2771063f164157d74"
   integrity sha512-HAKu/fG3HpHFO0AA8WE8q2g+gBJaZ9MG7fcKk+IJPLTGAD6Psw4443l+9DGRbOIh3/aXr7Phy0TjilYivJo5XQ==
 
+parcel-plugin-wrapper@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-wrapper/-/parcel-plugin-wrapper-0.2.3.tgz#07ef7c37934993fd586543f62dcf7d2d3e7874a4"
+  integrity sha512-4384e28hPdAUllpmp4Nos17ep4BBUoI/dRsT2Ta6vJ6D1oqanptGbiJYqWEK7EIjZGfKO+dV/kqxN79RGRV1Vw==
+
 parcel-reporter-static-files-copy@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.5.3.tgz#807493b7eadae9879eeb8c0d3792561cff9dea36"
