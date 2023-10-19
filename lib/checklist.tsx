@@ -46,7 +46,7 @@ const getOcaUpdateDate = (): JSX.Element => {
     "https://oca-2-dev.s3.amazonaws.com/public/last-updated-date.txt";
 
   useEffect(() => {
-    fetch(oca_url)
+    fetch(oca_url, {mode: "no-cors"})
       .then((res) => res.text())
       .then((data) => {
         const date = to_formatted_date(data);
