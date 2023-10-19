@@ -8,7 +8,7 @@ function $parcel$export(e, n, v, s) {
 var $parcel$modules = {};
 var $parcel$inits = {};
 
-var parcelRequire = $parcel$global["parcelRequire4bd4"];
+var parcelRequire = undefined;
 
 if (parcelRequire == null) {
   parcelRequire = function(id) {
