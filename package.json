@@ -34,13 +34,15 @@
     "parcel": "parcel",
     "build-data": "tsc --build tsconfig-nodejs.json && node build-data.js",
     "watch": "concurrently --kill-others \"parcel index.html\" \"tsc --build tsconfig-nodejs.json --watch --preserveWatchOutput\"",
-    "build": "tsc --build tsconfig-nodejs.json && parcel build index.html --public-url=./ --no-optimize",
+    "build": "parcel build index.html --public-url=./ --no-optimize",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "browserslist": [
     "last 1 Chrome version"
   ],
   "devDependencies": {
+    "@parcel/config-default": "^2.10.0",
+    "@parcel/transformer-typescript-tsc": "^2.10.0",
     "@types/flat": "^5.0.1",
     "@types/react-table": "^7.7.1",
     "buffer": "^5.5.0||^6.0.0",
