@@ -25,6 +25,9 @@
     "vega-embed": "^6.12.2",
     "vega-lite": "^4.15.0"
   },
+  "resolutions": {
+    "terser": "^5.6.1"
+  },
   "license": "BSD-3-Clause",
   "staticFiles": {
     "staticPath": "static",
