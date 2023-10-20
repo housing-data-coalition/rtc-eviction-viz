@@ -111,14 +111,14 @@ function makeColumns(): Column<MonthlyFilingsCitywideDisplayRow>[] {
                 Header: "Borough",
                 accessor: "borough" as keyof MonthlyFilingsCitywideDisplayRow,
                 aggregate: "count",
-                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${value} boroughs`,
+                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${value} boroughs`}</>,
             },
             {
                 Header: "3 months ago",
                 accessor: "three_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
                 // "sum" doesn't handle negative values properly: https://github.com/tannerlinsley/react-table/issues/3273
                 aggregate: (leafValues) => leafValues.reduce((value, next) => parseInt(value) + parseInt(next)),
-                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${numberWithCommas(value)}`,
+                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${numberWithCommas(value)}`}</>,
                 Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => value
             },
             {
@@ -126,7 +126,7 @@ function makeColumns(): Column<MonthlyFilingsCitywideDisplayRow>[] {
                 accessor: "two_months_ago" as keyof MonthlyFilingsCitywideDisplayRow,
                 // "sum" doesn't handle negative values properly: https://github.com/tannerlinsley/react-table/issues/3273
                 aggregate: (leafValues) => leafValues.reduce((value, next) => parseInt(value) + parseInt(next)),
-                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${numberWithCommas(value)}`,
+                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${numberWithCommas(value)}`}</>,
                 Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => value
             },
             {
@@ -134,16 +134,16 @@ function makeColumns(): Column<MonthlyFilingsCitywideDisplayRow>[] {
                 accessor: "num_increase" as keyof MonthlyFilingsCitywideDisplayRow,
                 // "sum" doesn't handle negative values properly: https://github.com/tannerlinsley/react-table/issues/3273
                 aggregate: (leafValues) => leafValues.reduce((value, next) => parseInt(value) + parseInt(next)),
-                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${numberWithCommas(value)}`,
+                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${numberWithCommas(value)}`}</>,
                 Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => value
             },
             {
                 Header: "% Increase",
                 accessor: "percent_increase" as keyof MonthlyFilingsCitywideDisplayRow,
                 aggregate: (leafValues: string[]) => calculate_percentage_increase(leafValues),
-                aggregateValue: (_value: CellProps<MonthlyFilingsCitywideDisplayRow>, { original }: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${original.two_months_ago}-${original.three_months_ago}`,
-                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => `${value}%`,
-                Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>): string => `${numberWithCommas(value)}%`
+                aggregateValue: (_value: CellProps<MonthlyFilingsCitywideDisplayRow>, { original }: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${original.two_months_ago}-${original.three_months_ago}`}</>,
+                Aggregated: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${value}%`}</>,
+                Cell: ({value}: CellProps<MonthlyFilingsCitywideDisplayRow>) => <>{`${numberWithCommas(value)}%`}</>
             },
         ], []);
     return cols;
