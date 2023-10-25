@@ -9,8 +9,6 @@
     "csv-stringify": "^5.5.3",
     "dotenv": "^12.0.3",
     "flat": "^5.0.2",
-    "parcel": "^2.10.0",
-    "parcel-reporter-static-files-copy": "^1.5.3",
     "pg": "^8.5.1",
     "pg-promise": "^10.8.0",
     "react": "^17.0.1",
@@ -41,6 +39,8 @@
     "last 1 Chrome version"
   ],
   "devDependencies": {
+    "parcel": "^2.10.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "@parcel/transformer-typescript-tsc": "^2.10.0",
     "@types/flat": "^5.0.1",
     "@types/react-table": "^7.7.1",
