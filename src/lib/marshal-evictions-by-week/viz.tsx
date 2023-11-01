@@ -49,7 +49,7 @@ const MarshalEvicsViz: React.FC<MarshalEvicsVizProps> = (props) => {
 
         <input type="radio" name="citywide-timeunit" id="citywide-yearmonth" 
         checked={timeUnit==="yearmonth"}
-        onChange={e => setTimeUnit("yearmonth")}/>
+        onChange={() => setTimeUnit("yearmonth")}/>
         <label htmlFor="citywide-yearmonth">Month</label>
       </form>
       <JsonLoader<MarshalEvicsRow[]> url={MARSHALEVICS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
@@ -183,7 +183,8 @@ const MarshalEvicsVizWithValues: React.FC<MarshalEvicsVizProps & {
               },
               opacity: {
                 condition: {
-                  selection: "index",
+                  // @ts-ignore
+                  selection: "index", 
                   value: 1,
                 },
                 value: 0,

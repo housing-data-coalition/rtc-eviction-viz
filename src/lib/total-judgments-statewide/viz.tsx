@@ -44,12 +44,12 @@ const JudgmentsViz: React.FC<JudgmentsVizProps> = (props) => {
       <form>
         <input type="radio" name="statewide-timeunit" id="statewide-yearweek" 
         checked={timeUnit==="yearweek"}
-        onChange={e => setTimeUnit("yearweek")}/>
+        onChange={() => setTimeUnit("yearweek")}/>
         <label htmlFor="statewide-yearweek">Week</label>
 
         <input type="radio" name="statewide-timeunit" id="statewide-yearmonth" 
         checked={timeUnit==="yearmonth"}
-        onChange={e => setTimeUnit("yearmonth")}/>
+        onChange={() => setTimeUnit("yearmonth")}/>
         <label htmlFor="statewide-yearmonth">Month</label>
       </form>
       <JsonLoader<JudgmentsRow[]> url={JUDGMENTS.json} fallback={<VizFallback className={VIZ_TIME_SERIES_CLASS} />}>
@@ -219,6 +219,7 @@ const JudgmentsVizWithValues: React.FC<JudgmentsVizProps & {
               },
               opacity: {
                 condition: {
+                  // @ts-ignore
                   selection: "index",
                   value: 1,
                 },

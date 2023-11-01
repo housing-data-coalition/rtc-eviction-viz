@@ -1,4 +1,4 @@
-import csvStringify from "csv-stringify/lib/sync";
+import { stringify as csvStringify } from 'csv-stringify/sync';
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { nycdbConnector } from "./db";
@@ -39,6 +39,7 @@ function writeQueryOutputFiles<Row>(query: Query<Row>, data: Row[]) {
   for (let row of data) {
     lines.push(query.toCsvRow(row));
   }
+  // @ts-ignore
   writeFileSync(csvOutfile, csvStringify(lines));
 }
 

@@ -57,11 +57,11 @@ const Table: React.FC<Props> = ({ columns, data }) => {
                 ))}
             </thead>
             <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
+                {rows.map((row:any, i:number) => {
                 prepareRow(row);
                 return (
                     <tr {...row.getRowProps()}>
-                    {row.cells.map(cell => {
+                    {row.cells.map((cell:any) => {
                         return (
                             <td align="left"
                                 {...cell.getCellProps()}
