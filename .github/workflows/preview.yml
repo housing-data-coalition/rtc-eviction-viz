@@ -30,9 +30,9 @@ jobs:
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
           VITE_BASE_URL: rtc-eviction-viz/pr-preview/pr-${{ github.event.number }}
         run: |
-          yarn install
-          yarn build-data
-          yarn build
+          npm run install
+          npm run build-data
+          npm run build
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1

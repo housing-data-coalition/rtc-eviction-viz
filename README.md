@@ -9,20 +9,20 @@ You will need to first copy `.env.sample` to `.env` and edit it accordingly.
 Then run:
 
 ```
-yarn --frozen-lockfile
-yarn build-data
-yarn watch
+npm run --frozen-lockfile
+npm run build-data
+npm run watch
 ```
 
 Then visit http://localhost:1234/rtc-eviction-viz.
 
 ## Updating data
 
-To update the data, re-run `yarn build-data`.
+To update the data, re-run `npm run build-data`.
 
 ## Deployment
 
-To deploy the site, run `yarn deploy`.
+To deploy the site, run `npm run deploy`.
 
 ---
 

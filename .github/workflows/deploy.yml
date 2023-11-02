@@ -30,9 +30,9 @@ jobs:
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
           VITE_BASE_URL: rtc-eviction-viz
         run: |
-          yarn install
-          yarn build-data
-          yarn build
+          npm run install
+          npm run build-data
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
