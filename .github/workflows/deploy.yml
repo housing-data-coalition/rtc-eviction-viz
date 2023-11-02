@@ -30,7 +30,7 @@ jobs:
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
           VITE_BASE_URL: rtc-eviction-viz
         run: |
-          npm run install
+          npm install
           npm run build-data
           npm run build
 
