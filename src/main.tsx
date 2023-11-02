@@ -111,7 +111,7 @@ const App: React.FC<{}> = () => {
 
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
-  <BrowserRouter basename="rtc-eviction-viz">
+  <BrowserRouter basename={import.meta.env.VITE_BASE_URL}>
     <App />
   </BrowserRouter>,
 )

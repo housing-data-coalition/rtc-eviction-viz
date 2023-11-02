@@ -28,7 +28,7 @@ jobs:
         env:
           NYCDB_URL: ${{ secrets.NYCDB_URL }}
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
-          BASE_URL: /rtc-eviction-viz/pr-preview/pr-${{ github.event.number }}
+          VITE_BASE_URL: rtc-eviction-viz/pr-preview/pr-${{ github.event.number }}
         run: |
           yarn install
           yarn build-data
