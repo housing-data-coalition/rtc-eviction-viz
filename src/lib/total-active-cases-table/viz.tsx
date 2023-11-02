@@ -77,20 +77,20 @@ const ActiveCasesTableWithValues: React.FC<{values: TotalActiveCasesRow[]}> = (v
     return (
         <table {...getTableProps()}>
             <thead>
-                {headerGroups.map(headerGroup => (
+                {headerGroups.map((headerGroup:any) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
+                        {headerGroup.headers.map((column:any) => (
                             <th {...column.getHeaderProps()}>{column.render("Header")}</th>
                         ))}
                     </tr>
                 ))}
             </thead>
             <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
+                {rows.map((row:any, i:number) => {
                 prepareRow(row);
                 return (
                     <tr {...row.getRowProps()}>
-                    {row.cells.map(cell => {
+                    {row.cells.map((cell:any) => {
                         return (
                             <td align='right'
                                 {...cell.getCellProps()}

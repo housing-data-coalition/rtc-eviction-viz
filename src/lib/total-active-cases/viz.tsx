@@ -203,6 +203,7 @@ const ActiveCasesVizWithValues: React.FC<ActiveCasesVizProps & {
               },
               opacity: {
                 condition: {
+                  // @ts-ignore
                   selection: "index",
                   value: 1,
                 },

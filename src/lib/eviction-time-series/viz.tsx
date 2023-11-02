@@ -187,6 +187,7 @@ const EvictionVizWithValues: React.FC<EvictionVizProps & {
               },
               opacity: {
                 condition: {
+                  // @ts-ignore
                   selection: "index",
                   value: 1,
                 },
