@@ -18018,5 +18018,15 @@
     "outside_nyc_holdover_filings": 15,
     "outside_nyc_nonpay_filings": 62,
     "total_filings": 240
+  },
+  {
+    "day": "2023-12-08T05:00:00.000Z",
+    "nyc_holdover_filings": 8,
+    "nyc_holdover_res_filings": 8,
+    "nyc_nonpay_filings": 7,
+    "nyc_nonpay_res_filings": 6,
+    "outside_nyc_holdover_filings": 13,
+    "outside_nyc_nonpay_filings": 58,
+    "total_filings": 86
   }
 ]
