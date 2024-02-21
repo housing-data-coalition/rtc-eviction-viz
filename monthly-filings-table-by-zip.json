@@ -12,10 +12,10 @@
     "zipcode": "11418",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "28",
+    "two_months_ago": "29",
     "three_months_ago": "1",
-    "num_increase": "27",
-    "percent_increase": "2700"
+    "num_increase": "28",
+    "percent_increase": "2800"
   },
   {
     "zipcode": "10001",
@@ -36,6 +36,15 @@
     "percent_increase": "700"
   },
   {
+    "zipcode": "11429",
+    "region": "NYC",
+    "borough": "Queens",
+    "two_months_ago": "8",
+    "three_months_ago": "1",
+    "num_increase": "7",
+    "percent_increase": "700"
+  },
+  {
     "zipcode": "11787",
     "region": "Outside NYC",
     "borough": "Outside NYC",
@@ -46,15 +55,6 @@
   },
   {
     "zipcode": "11004",
-    "region": "NYC",
-    "borough": "Queens",
-    "two_months_ago": "7",
-    "three_months_ago": "1",
-    "num_increase": "6",
-    "percent_increase": "600"
-  },
-  {
-    "zipcode": "11429",
     "region": "NYC",
     "borough": "Queens",
     "two_months_ago": "7",
