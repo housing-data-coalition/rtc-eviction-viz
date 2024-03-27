@@ -27,24 +27,24 @@
     "borough": "Bronx",
     "region": "NYC",
     "two_months_ago": "3881",
-    "three_months_ago": "4013",
-    "num_increase": "-132",
+    "three_months_ago": "4014",
+    "num_increase": "-133",
     "percent_increase": "-3"
   },
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "1273",
-    "three_months_ago": "1828",
-    "num_increase": "-555",
-    "percent_increase": "-30"
+    "two_months_ago": "1537",
+    "three_months_ago": "1834",
+    "num_increase": "-297",
+    "percent_increase": "-16"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "1079",
-    "three_months_ago": "1715",
-    "num_increase": "-636",
-    "percent_increase": "-37"
+    "two_months_ago": "1199",
+    "three_months_ago": "1978",
+    "num_increase": "-779",
+    "percent_increase": "-39"
   }
 ]
