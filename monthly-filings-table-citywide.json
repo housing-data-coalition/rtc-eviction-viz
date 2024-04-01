@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Staten Island",
+    "borough": "Bronx",
     "region": "NYC",
-    "two_months_ago": "241",
-    "three_months_ago": "188",
-    "num_increase": "53",
-    "percent_increase": "28"
+    "two_months_ago": "3793",
+    "three_months_ago": "3881",
+    "num_increase": "-88",
+    "percent_increase": "-2"
   },
   {
-    "borough": "Outside NYC",
-    "region": "Outside NYC",
-    "two_months_ago": "4970",
-    "three_months_ago": "3998",
-    "num_increase": "972",
-    "percent_increase": "24"
+    "borough": "Staten Island",
+    "region": "NYC",
+    "two_months_ago": "224",
+    "three_months_ago": "241",
+    "num_increase": "-17",
+    "percent_increase": "-7"
   },
   {
     "borough": "Manhattan",
     "region": "NYC",
-    "two_months_ago": "2093",
-    "three_months_ago": "2043",
-    "num_increase": "50",
-    "percent_increase": "2"
+    "two_months_ago": "1911",
+    "three_months_ago": "2093",
+    "num_increase": "-182",
+    "percent_increase": "-9"
   },
   {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "3881",
-    "three_months_ago": "4014",
-    "num_increase": "-133",
-    "percent_increase": "-3"
-  },
-  {
-    "borough": "Queens",
-    "region": "NYC",
-    "two_months_ago": "1537",
-    "three_months_ago": "1834",
-    "num_increase": "-297",
-    "percent_increase": "-16"
+    "borough": "Outside NYC",
+    "region": "Outside NYC",
+    "two_months_ago": "4464",
+    "three_months_ago": "4970",
+    "num_increase": "-506",
+    "percent_increase": "-10"
   },
   {
     "borough": "Brooklyn",
     "region": "NYC",
-    "two_months_ago": "1199",
-    "three_months_ago": "1978",
-    "num_increase": "-779",
-    "percent_increase": "-39"
+    "two_months_ago": "861",
+    "three_months_ago": "1199",
+    "num_increase": "-338",
+    "percent_increase": "-28"
+  },
+  {
+    "borough": "Queens",
+    "region": "NYC",
+    "two_months_ago": "651",
+    "three_months_ago": "1537",
+    "num_increase": "-886",
+    "percent_increase": "-58"
   }
 ]
