@@ -15,12 +15,14 @@ filings_zips as (
 	'Richmond County Civil Court',
 	'Redhook Community Justice Center',
 	'Harlem Community Justice Center')
-	order by i.fileddate asc)
+	order by i.fileddate asc
+)
 
 select
-zipcode,
-count(*) as filings,
-court_name
+	zipcode,
+	count(*) as filings,
+	court_name
 from filings_zips
+where zipcode is not null
 group by court_name, zipcode
 order by court_name
