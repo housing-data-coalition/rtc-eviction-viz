@@ -9,6 +9,15 @@
     "percent_increase": "27200"
   },
   {
+    "zipcode": "11201",
+    "region": "NYC",
+    "borough": "Brooklyn",
+    "two_months_ago": "92",
+    "three_months_ago": "1",
+    "num_increase": "91",
+    "percent_increase": "9100"
+  },
+  {
     "zipcode": "10030",
     "region": "NYC",
     "borough": "Manhattan",
@@ -18,58 +27,49 @@
     "percent_increase": "8000"
   },
   {
-    "zipcode": "11201",
-    "region": "NYC",
-    "borough": "Brooklyn",
-    "two_months_ago": "74",
-    "three_months_ago": "1",
-    "num_increase": "73",
-    "percent_increase": "7300"
-  },
-  {
     "zipcode": "11235",
     "region": "NYC",
     "borough": "Brooklyn",
-    "two_months_ago": "54",
+    "two_months_ago": "59",
     "three_months_ago": "1",
-    "num_increase": "53",
-    "percent_increase": "5300"
+    "num_increase": "58",
+    "percent_increase": "5800"
   },
   {
     "zipcode": "11355",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "46",
+    "two_months_ago": "47",
     "three_months_ago": "1",
-    "num_increase": "45",
-    "percent_increase": "4500"
+    "num_increase": "46",
+    "percent_increase": "4600"
   },
   {
     "zipcode": "11102",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "29",
+    "two_months_ago": "30",
     "three_months_ago": "1",
-    "num_increase": "28",
-    "percent_increase": "2800"
+    "num_increase": "29",
+    "percent_increase": "2900"
   },
   {
     "zipcode": "11418",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "20",
+    "two_months_ago": "21",
     "three_months_ago": "1",
-    "num_increase": "19",
-    "percent_increase": "1900"
+    "num_increase": "20",
+    "percent_increase": "2000"
   },
   {
     "zipcode": "11418",
     "region": "NYC",
     "borough": "Queens",
-    "two_months_ago": "20",
+    "two_months_ago": "21",
     "three_months_ago": "1",
-    "num_increase": "19",
-    "percent_increase": "1900"
+    "num_increase": "20",
+    "percent_increase": "2000"
   },
   {
     "zipcode": "13669",
