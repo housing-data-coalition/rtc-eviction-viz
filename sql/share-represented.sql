@@ -1,4 +1,6 @@
 
+set statement_timeout = '5min';
+
 create temp table x_all_cases as (
 
 	-- select appearances where at least two have occurred at least one week ago, because tenants should have attorneys after two appearances. methodology updated 12/21/22
