@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>NY Eviction Filings Tracker</title>
+    <style>
+      html,
+      body,
+      input,
+      select {
+        font-family: "Helvetica Neue", "Arial", sans-serif;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      html body .vega-embed .chart-wrapper {
+        /**
+         * This overrides vega's default height of 100%, which
+         * results in way too much room between the charts.
+         */
+        height: auto;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      small {
+        font-size: 0.65rem;
+        display: block;
+        max-width: 750px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 2.5rem;
+      }
+
+      .viz-geo {
+        width: 100%;
+        height: 640px;
+      }
+
+      .viz-time-series {
+        width: 100%;
+      }
+
+      .viz-time-series-short {
+        height: 300px;
+      }
+
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      .pie-chart-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .pie-chart {
+        margin: 20px;
+      }
+    </style>
+    <script>
+      var parcelRequire;
+    </script>  
+    <script type="module" crossorigin src="/rtc-eviction-viz/pr-preview/pr-88/assets/index-b6f7d8d6.js"></script>
+  </head>
+  <body>
+    <div id="app"><div class="container">Loading&hellip;</div></div>
+    
+  </body>
+</html>
