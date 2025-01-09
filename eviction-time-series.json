@@ -19521,9 +19521,9 @@
   },
   {
     "day": "2024-05-06T04:00:00.000Z",
-    "nyc_holdover_filings": 99,
+    "nyc_holdover_filings": 100,
     "nyc_holdover_res_filings": 96,
-    "nyc_nonpay_filings": 374,
+    "nyc_nonpay_filings": 373,
     "nyc_nonpay_res_filings": 351,
     "outside_nyc_holdover_filings": 68,
     "outside_nyc_nonpay_filings": 191,
@@ -19942,7 +19942,7 @@
   {
     "day": "2024-06-17T04:00:00.000Z",
     "nyc_holdover_filings": 82,
-    "nyc_holdover_res_filings": 75,
+    "nyc_holdover_res_filings": 74,
     "nyc_nonpay_filings": 236,
     "nyc_nonpay_res_filings": 223,
     "outside_nyc_holdover_filings": 27,
@@ -19961,10 +19961,10 @@
   },
   {
     "day": "2024-06-19T04:00:00.000Z",
-    "nyc_holdover_filings": 80,
-    "nyc_holdover_res_filings": 75,
-    "nyc_nonpay_filings": 186,
-    "nyc_nonpay_res_filings": 178,
+    "nyc_holdover_filings": 81,
+    "nyc_holdover_res_filings": 76,
+    "nyc_nonpay_filings": 185,
+    "nyc_nonpay_res_filings": 177,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
     "total_filings": 266
@@ -20441,10 +20441,10 @@
   },
   {
     "day": "2024-08-06T04:00:00.000Z",
-    "nyc_holdover_filings": 156,
-    "nyc_holdover_res_filings": 147,
-    "nyc_nonpay_filings": 439,
-    "nyc_nonpay_res_filings": 414,
+    "nyc_holdover_filings": 157,
+    "nyc_holdover_res_filings": 148,
+    "nyc_nonpay_filings": 438,
+    "nyc_nonpay_res_filings": 413,
     "outside_nyc_holdover_filings": 61,
     "outside_nyc_nonpay_filings": 192,
     "total_filings": 848
@@ -20781,13 +20781,13 @@
   },
   {
     "day": "2024-09-09T04:00:00.000Z",
-    "nyc_holdover_filings": 83,
-    "nyc_holdover_res_filings": 76,
+    "nyc_holdover_filings": 84,
+    "nyc_holdover_res_filings": 77,
     "nyc_nonpay_filings": 385,
     "nyc_nonpay_res_filings": 371,
     "outside_nyc_holdover_filings": 53,
     "outside_nyc_nonpay_filings": 128,
-    "total_filings": 649
+    "total_filings": 650
   },
   {
     "day": "2024-09-10T04:00:00.000Z",
@@ -20851,43 +20851,43 @@
   },
   {
     "day": "2024-09-16T04:00:00.000Z",
-    "nyc_holdover_filings": 90,
-    "nyc_holdover_res_filings": 85,
+    "nyc_holdover_filings": 91,
+    "nyc_holdover_res_filings": 86,
     "nyc_nonpay_filings": 360,
     "nyc_nonpay_res_filings": 341,
     "outside_nyc_holdover_filings": 44,
     "outside_nyc_nonpay_filings": 125,
-    "total_filings": 619
+    "total_filings": 620
   },
   {
     "day": "2024-09-17T04:00:00.000Z",
-    "nyc_holdover_filings": 105,
-    "nyc_holdover_res_filings": 94,
+    "nyc_holdover_filings": 109,
+    "nyc_holdover_res_filings": 97,
     "nyc_nonpay_filings": 340,
     "nyc_nonpay_res_filings": 322,
     "outside_nyc_holdover_filings": 61,
     "outside_nyc_nonpay_filings": 158,
-    "total_filings": 664
+    "total_filings": 668
   },
   {
     "day": "2024-09-18T04:00:00.000Z",
-    "nyc_holdover_filings": 101,
-    "nyc_holdover_res_filings": 94,
+    "nyc_holdover_filings": 138,
+    "nyc_holdover_res_filings": 126,
     "nyc_nonpay_filings": 330,
     "nyc_nonpay_res_filings": 313,
     "outside_nyc_holdover_filings": 40,
     "outside_nyc_nonpay_filings": 189,
-    "total_filings": 660
+    "total_filings": 697
   },
   {
     "day": "2024-09-19T04:00:00.000Z",
-    "nyc_holdover_filings": 74,
-    "nyc_holdover_res_filings": 71,
+    "nyc_holdover_filings": 88,
+    "nyc_holdover_res_filings": 84,
     "nyc_nonpay_filings": 447,
     "nyc_nonpay_res_filings": 432,
     "outside_nyc_holdover_filings": 49,
     "outside_nyc_nonpay_filings": 170,
-    "total_filings": 740
+    "total_filings": 754
   },
   {
     "day": "2024-09-20T04:00:00.000Z",
@@ -20923,11 +20923,11 @@
     "day": "2024-09-23T04:00:00.000Z",
     "nyc_holdover_filings": 43,
     "nyc_holdover_res_filings": 41,
-    "nyc_nonpay_filings": 458,
-    "nyc_nonpay_res_filings": 442,
+    "nyc_nonpay_filings": 459,
+    "nyc_nonpay_res_filings": 443,
     "outside_nyc_holdover_filings": 26,
     "outside_nyc_nonpay_filings": 161,
-    "total_filings": 688
+    "total_filings": 689
   },
   {
     "day": "2024-09-24T04:00:00.000Z",
@@ -21023,11 +21023,11 @@
     "day": "2024-10-03T04:00:00.000Z",
     "nyc_holdover_filings": 79,
     "nyc_holdover_res_filings": 74,
-    "nyc_nonpay_filings": 280,
-    "nyc_nonpay_res_filings": 272,
+    "nyc_nonpay_filings": 281,
+    "nyc_nonpay_res_filings": 273,
     "outside_nyc_holdover_filings": 68,
     "outside_nyc_nonpay_filings": 180,
-    "total_filings": 607
+    "total_filings": 608
   },
   {
     "day": "2024-10-04T04:00:00.000Z",
@@ -21223,21 +21223,21 @@
     "day": "2024-10-23T04:00:00.000Z",
     "nyc_holdover_filings": 49,
     "nyc_holdover_res_filings": 46,
-    "nyc_nonpay_filings": 394,
+    "nyc_nonpay_filings": 395,
     "nyc_nonpay_res_filings": 386,
     "outside_nyc_holdover_filings": 18,
     "outside_nyc_nonpay_filings": 148,
-    "total_filings": 609
+    "total_filings": 610
   },
   {
     "day": "2024-10-24T04:00:00.000Z",
     "nyc_holdover_filings": 50,
     "nyc_holdover_res_filings": 47,
-    "nyc_nonpay_filings": 393,
-    "nyc_nonpay_res_filings": 376,
+    "nyc_nonpay_filings": 422,
+    "nyc_nonpay_res_filings": 402,
     "outside_nyc_holdover_filings": 32,
     "outside_nyc_nonpay_filings": 140,
-    "total_filings": 615
+    "total_filings": 644
   },
   {
     "day": "2024-10-25T04:00:00.000Z",
@@ -21283,31 +21283,31 @@
     "day": "2024-10-29T04:00:00.000Z",
     "nyc_holdover_filings": 83,
     "nyc_holdover_res_filings": 79,
-    "nyc_nonpay_filings": 334,
-    "nyc_nonpay_res_filings": 321,
+    "nyc_nonpay_filings": 336,
+    "nyc_nonpay_res_filings": 323,
     "outside_nyc_holdover_filings": 58,
     "outside_nyc_nonpay_filings": 217,
-    "total_filings": 692
+    "total_filings": 694
   },
   {
     "day": "2024-10-30T04:00:00.000Z",
     "nyc_holdover_filings": 70,
     "nyc_holdover_res_filings": 68,
-    "nyc_nonpay_filings": 373,
-    "nyc_nonpay_res_filings": 364,
+    "nyc_nonpay_filings": 374,
+    "nyc_nonpay_res_filings": 365,
     "outside_nyc_holdover_filings": 33,
     "outside_nyc_nonpay_filings": 239,
-    "total_filings": 715
+    "total_filings": 716
   },
   {
     "day": "2024-10-31T04:00:00.000Z",
     "nyc_holdover_filings": 71,
     "nyc_holdover_res_filings": 69,
-    "nyc_nonpay_filings": 257,
-    "nyc_nonpay_res_filings": 247,
+    "nyc_nonpay_filings": 258,
+    "nyc_nonpay_res_filings": 248,
     "outside_nyc_holdover_filings": 35,
     "outside_nyc_nonpay_filings": 329,
-    "total_filings": 692
+    "total_filings": 693
   },
   {
     "day": "2024-11-01T04:00:00.000Z",
@@ -21363,11 +21363,11 @@
     "day": "2024-11-06T05:00:00.000Z",
     "nyc_holdover_filings": 82,
     "nyc_holdover_res_filings": 74,
-    "nyc_nonpay_filings": 500,
-    "nyc_nonpay_res_filings": 474,
+    "nyc_nonpay_filings": 501,
+    "nyc_nonpay_res_filings": 475,
     "outside_nyc_holdover_filings": 93,
     "outside_nyc_nonpay_filings": 196,
-    "total_filings": 871
+    "total_filings": 872
   },
   {
     "day": "2024-11-07T05:00:00.000Z",
@@ -21383,11 +21383,11 @@
     "day": "2024-11-08T05:00:00.000Z",
     "nyc_holdover_filings": 56,
     "nyc_holdover_res_filings": 54,
-    "nyc_nonpay_filings": 290,
-    "nyc_nonpay_res_filings": 278,
+    "nyc_nonpay_filings": 295,
+    "nyc_nonpay_res_filings": 283,
     "outside_nyc_holdover_filings": 59,
     "outside_nyc_nonpay_filings": 181,
-    "total_filings": 586
+    "total_filings": 591
   },
   {
     "day": "2024-11-09T05:00:00.000Z",
@@ -21423,11 +21423,11 @@
     "day": "2024-11-12T05:00:00.000Z",
     "nyc_holdover_filings": 82,
     "nyc_holdover_res_filings": 78,
-    "nyc_nonpay_filings": 257,
-    "nyc_nonpay_res_filings": 248,
+    "nyc_nonpay_filings": 259,
+    "nyc_nonpay_res_filings": 250,
     "outside_nyc_holdover_filings": 55,
     "outside_nyc_nonpay_filings": 150,
-    "total_filings": 544
+    "total_filings": 546
   },
   {
     "day": "2024-11-13T05:00:00.000Z",
@@ -21443,31 +21443,31 @@
     "day": "2024-11-14T05:00:00.000Z",
     "nyc_holdover_filings": 94,
     "nyc_holdover_res_filings": 87,
-    "nyc_nonpay_filings": 376,
-    "nyc_nonpay_res_filings": 359,
+    "nyc_nonpay_filings": 378,
+    "nyc_nonpay_res_filings": 361,
     "outside_nyc_holdover_filings": 60,
     "outside_nyc_nonpay_filings": 288,
-    "total_filings": 818
+    "total_filings": 820
   },
   {
     "day": "2024-11-15T05:00:00.000Z",
     "nyc_holdover_filings": 79,
     "nyc_holdover_res_filings": 79,
-    "nyc_nonpay_filings": 150,
-    "nyc_nonpay_res_filings": 136,
+    "nyc_nonpay_filings": 154,
+    "nyc_nonpay_res_filings": 139,
     "outside_nyc_holdover_filings": 43,
     "outside_nyc_nonpay_filings": 191,
-    "total_filings": 463
+    "total_filings": 467
   },
   {
     "day": "2024-11-16T05:00:00.000Z",
     "nyc_holdover_filings": 3,
     "nyc_holdover_res_filings": 3,
-    "nyc_nonpay_filings": 14,
-    "nyc_nonpay_res_filings": 10,
+    "nyc_nonpay_filings": 15,
+    "nyc_nonpay_res_filings": 11,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 17
+    "total_filings": 18
   },
   {
     "day": "2024-11-17T05:00:00.000Z",
@@ -21483,11 +21483,11 @@
     "day": "2024-11-18T05:00:00.000Z",
     "nyc_holdover_filings": 65,
     "nyc_holdover_res_filings": 64,
-    "nyc_nonpay_filings": 291,
-    "nyc_nonpay_res_filings": 281,
+    "nyc_nonpay_filings": 292,
+    "nyc_nonpay_res_filings": 282,
     "outside_nyc_holdover_filings": 47,
     "outside_nyc_nonpay_filings": 218,
-    "total_filings": 621
+    "total_filings": 622
   },
   {
     "day": "2024-11-19T05:00:00.000Z",
@@ -21503,41 +21503,41 @@
     "day": "2024-11-20T05:00:00.000Z",
     "nyc_holdover_filings": 64,
     "nyc_holdover_res_filings": 63,
-    "nyc_nonpay_filings": 431,
-    "nyc_nonpay_res_filings": 416,
+    "nyc_nonpay_filings": 436,
+    "nyc_nonpay_res_filings": 421,
     "outside_nyc_holdover_filings": 12,
     "outside_nyc_nonpay_filings": 102,
-    "total_filings": 609
+    "total_filings": 614
   },
   {
     "day": "2024-11-21T05:00:00.000Z",
     "nyc_holdover_filings": 57,
     "nyc_holdover_res_filings": 53,
-    "nyc_nonpay_filings": 458,
-    "nyc_nonpay_res_filings": 450,
+    "nyc_nonpay_filings": 471,
+    "nyc_nonpay_res_filings": 463,
     "outside_nyc_holdover_filings": 35,
     "outside_nyc_nonpay_filings": 211,
-    "total_filings": 761
+    "total_filings": 774
   },
   {
     "day": "2024-11-22T05:00:00.000Z",
     "nyc_holdover_filings": 67,
     "nyc_holdover_res_filings": 66,
-    "nyc_nonpay_filings": 303,
-    "nyc_nonpay_res_filings": 280,
+    "nyc_nonpay_filings": 307,
+    "nyc_nonpay_res_filings": 284,
     "outside_nyc_holdover_filings": 35,
     "outside_nyc_nonpay_filings": 181,
-    "total_filings": 586
+    "total_filings": 590
   },
   {
     "day": "2024-11-23T05:00:00.000Z",
     "nyc_holdover_filings": 1,
     "nyc_holdover_res_filings": 1,
-    "nyc_nonpay_filings": 28,
-    "nyc_nonpay_res_filings": 28,
+    "nyc_nonpay_filings": 29,
+    "nyc_nonpay_res_filings": 29,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 1,
-    "total_filings": 30
+    "total_filings": 31
   },
   {
     "day": "2024-11-24T05:00:00.000Z",
@@ -21551,33 +21551,33 @@
   },
   {
     "day": "2024-11-25T05:00:00.000Z",
-    "nyc_holdover_filings": 48,
-    "nyc_holdover_res_filings": 46,
-    "nyc_nonpay_filings": 242,
-    "nyc_nonpay_res_filings": 235,
+    "nyc_holdover_filings": 49,
+    "nyc_holdover_res_filings": 47,
+    "nyc_nonpay_filings": 243,
+    "nyc_nonpay_res_filings": 236,
     "outside_nyc_holdover_filings": 52,
     "outside_nyc_nonpay_filings": 133,
-    "total_filings": 475
+    "total_filings": 477
   },
   {
     "day": "2024-11-26T05:00:00.000Z",
     "nyc_holdover_filings": 51,
     "nyc_holdover_res_filings": 50,
-    "nyc_nonpay_filings": 327,
-    "nyc_nonpay_res_filings": 312,
+    "nyc_nonpay_filings": 334,
+    "nyc_nonpay_res_filings": 316,
     "outside_nyc_holdover_filings": 47,
     "outside_nyc_nonpay_filings": 227,
-    "total_filings": 652
+    "total_filings": 659
   },
   {
     "day": "2024-11-27T05:00:00.000Z",
     "nyc_holdover_filings": 45,
     "nyc_holdover_res_filings": 44,
-    "nyc_nonpay_filings": 377,
-    "nyc_nonpay_res_filings": 366,
+    "nyc_nonpay_filings": 386,
+    "nyc_nonpay_res_filings": 374,
     "outside_nyc_holdover_filings": 25,
     "outside_nyc_nonpay_filings": 195,
-    "total_filings": 642
+    "total_filings": 651
   },
   {
     "day": "2024-11-28T05:00:00.000Z",
@@ -21623,231 +21623,231 @@
     "day": "2024-12-02T05:00:00.000Z",
     "nyc_holdover_filings": 78,
     "nyc_holdover_res_filings": 71,
-    "nyc_nonpay_filings": 236,
-    "nyc_nonpay_res_filings": 226,
+    "nyc_nonpay_filings": 241,
+    "nyc_nonpay_res_filings": 231,
     "outside_nyc_holdover_filings": 40,
     "outside_nyc_nonpay_filings": 169,
-    "total_filings": 523
+    "total_filings": 528
   },
   {
     "day": "2024-12-03T05:00:00.000Z",
-    "nyc_holdover_filings": 78,
-    "nyc_holdover_res_filings": 71,
-    "nyc_nonpay_filings": 222,
-    "nyc_nonpay_res_filings": 202,
+    "nyc_holdover_filings": 83,
+    "nyc_holdover_res_filings": 76,
+    "nyc_nonpay_filings": 240,
+    "nyc_nonpay_res_filings": 209,
     "outside_nyc_holdover_filings": 67,
     "outside_nyc_nonpay_filings": 134,
-    "total_filings": 501
+    "total_filings": 524
   },
   {
     "day": "2024-12-04T05:00:00.000Z",
-    "nyc_holdover_filings": 76,
-    "nyc_holdover_res_filings": 73,
-    "nyc_nonpay_filings": 350,
-    "nyc_nonpay_res_filings": 335,
+    "nyc_holdover_filings": 78,
+    "nyc_holdover_res_filings": 75,
+    "nyc_nonpay_filings": 365,
+    "nyc_nonpay_res_filings": 350,
     "outside_nyc_holdover_filings": 44,
     "outside_nyc_nonpay_filings": 127,
-    "total_filings": 597
+    "total_filings": 614
   },
   {
     "day": "2024-12-05T05:00:00.000Z",
     "nyc_holdover_filings": 94,
     "nyc_holdover_res_filings": 89,
-    "nyc_nonpay_filings": 227,
-    "nyc_nonpay_res_filings": 213,
-    "outside_nyc_holdover_filings": 53,
+    "nyc_nonpay_filings": 320,
+    "nyc_nonpay_res_filings": 304,
+    "outside_nyc_holdover_filings": 54,
     "outside_nyc_nonpay_filings": 165,
-    "total_filings": 539
+    "total_filings": 633
   },
   {
     "day": "2024-12-06T05:00:00.000Z",
-    "nyc_holdover_filings": 68,
-    "nyc_holdover_res_filings": 64,
-    "nyc_nonpay_filings": 284,
-    "nyc_nonpay_res_filings": 268,
+    "nyc_holdover_filings": 69,
+    "nyc_holdover_res_filings": 65,
+    "nyc_nonpay_filings": 305,
+    "nyc_nonpay_res_filings": 289,
     "outside_nyc_holdover_filings": 57,
-    "outside_nyc_nonpay_filings": 265,
-    "total_filings": 674
+    "outside_nyc_nonpay_filings": 267,
+    "total_filings": 698
   },
   {
     "day": "2024-12-07T05:00:00.000Z",
     "nyc_holdover_filings": 9,
     "nyc_holdover_res_filings": 5,
-    "nyc_nonpay_filings": 25,
-    "nyc_nonpay_res_filings": 25,
+    "nyc_nonpay_filings": 26,
+    "nyc_nonpay_res_filings": 26,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 34
+    "total_filings": 35
   },
   {
     "day": "2024-12-08T05:00:00.000Z",
     "nyc_holdover_filings": 5,
     "nyc_holdover_res_filings": 5,
-    "nyc_nonpay_filings": 55,
-    "nyc_nonpay_res_filings": 14,
+    "nyc_nonpay_filings": 58,
+    "nyc_nonpay_res_filings": 17,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 60
+    "total_filings": 63
   },
   {
     "day": "2024-12-09T05:00:00.000Z",
-    "nyc_holdover_filings": 73,
-    "nyc_holdover_res_filings": 72,
-    "nyc_nonpay_filings": 252,
-    "nyc_nonpay_res_filings": 226,
-    "outside_nyc_holdover_filings": 23,
+    "nyc_holdover_filings": 79,
+    "nyc_holdover_res_filings": 73,
+    "nyc_nonpay_filings": 288,
+    "nyc_nonpay_res_filings": 244,
+    "outside_nyc_holdover_filings": 25,
     "outside_nyc_nonpay_filings": 212,
-    "total_filings": 560
+    "total_filings": 604
   },
   {
     "day": "2024-12-10T05:00:00.000Z",
-    "nyc_holdover_filings": 42,
-    "nyc_holdover_res_filings": 40,
-    "nyc_nonpay_filings": 231,
-    "nyc_nonpay_res_filings": 229,
+    "nyc_holdover_filings": 65,
+    "nyc_holdover_res_filings": 60,
+    "nyc_nonpay_filings": 341,
+    "nyc_nonpay_res_filings": 329,
     "outside_nyc_holdover_filings": 29,
     "outside_nyc_nonpay_filings": 113,
-    "total_filings": 415
+    "total_filings": 548
   },
   {
     "day": "2024-12-11T05:00:00.000Z",
-    "nyc_holdover_filings": 31,
-    "nyc_holdover_res_filings": 28,
-    "nyc_nonpay_filings": 166,
-    "nyc_nonpay_res_filings": 164,
+    "nyc_holdover_filings": 65,
+    "nyc_holdover_res_filings": 56,
+    "nyc_nonpay_filings": 369,
+    "nyc_nonpay_res_filings": 352,
     "outside_nyc_holdover_filings": 44,
-    "outside_nyc_nonpay_filings": 134,
-    "total_filings": 375
+    "outside_nyc_nonpay_filings": 135,
+    "total_filings": 613
   },
   {
     "day": "2024-12-12T05:00:00.000Z",
-    "nyc_holdover_filings": 29,
-    "nyc_holdover_res_filings": 26,
-    "nyc_nonpay_filings": 69,
-    "nyc_nonpay_res_filings": 66,
-    "outside_nyc_holdover_filings": 36,
-    "outside_nyc_nonpay_filings": 68,
-    "total_filings": 202
+    "nyc_holdover_filings": 51,
+    "nyc_holdover_res_filings": 44,
+    "nyc_nonpay_filings": 168,
+    "nyc_nonpay_res_filings": 162,
+    "outside_nyc_holdover_filings": 38,
+    "outside_nyc_nonpay_filings": 72,
+    "total_filings": 329
   },
   {
     "day": "2024-12-13T05:00:00.000Z",
-    "nyc_holdover_filings": 18,
-    "nyc_holdover_res_filings": 17,
-    "nyc_nonpay_filings": 59,
-    "nyc_nonpay_res_filings": 59,
-    "outside_nyc_holdover_filings": 35,
-    "outside_nyc_nonpay_filings": 137,
-    "total_filings": 249
+    "nyc_holdover_filings": 49,
+    "nyc_holdover_res_filings": 47,
+    "nyc_nonpay_filings": 92,
+    "nyc_nonpay_res_filings": 91,
+    "outside_nyc_holdover_filings": 36,
+    "outside_nyc_nonpay_filings": 142,
+    "total_filings": 319
   },
   {
     "day": "2024-12-14T05:00:00.000Z",
-    "nyc_holdover_filings": 1,
-    "nyc_holdover_res_filings": 1,
-    "nyc_nonpay_filings": 2,
-    "nyc_nonpay_res_filings": 2,
+    "nyc_holdover_filings": 6,
+    "nyc_holdover_res_filings": 5,
+    "nyc_nonpay_filings": 19,
+    "nyc_nonpay_res_filings": 19,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 3
+    "total_filings": 25
   },
   {
     "day": "2024-12-15T05:00:00.000Z",
-    "nyc_holdover_filings": 0,
-    "nyc_holdover_res_filings": 0,
-    "nyc_nonpay_filings": 1,
-    "nyc_nonpay_res_filings": 1,
+    "nyc_holdover_filings": 2,
+    "nyc_holdover_res_filings": 2,
+    "nyc_nonpay_filings": 5,
+    "nyc_nonpay_res_filings": 5,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 1
+    "total_filings": 7
   },
   {
     "day": "2024-12-16T05:00:00.000Z",
-    "nyc_holdover_filings": 24,
-    "nyc_holdover_res_filings": 18,
-    "nyc_nonpay_filings": 35,
-    "nyc_nonpay_res_filings": 34,
+    "nyc_holdover_filings": 47,
+    "nyc_holdover_res_filings": 40,
+    "nyc_nonpay_filings": 69,
+    "nyc_nonpay_res_filings": 68,
     "outside_nyc_holdover_filings": 29,
     "outside_nyc_nonpay_filings": 163,
-    "total_filings": 251
+    "total_filings": 308
   },
   {
     "day": "2024-12-17T05:00:00.000Z",
-    "nyc_holdover_filings": 19,
-    "nyc_holdover_res_filings": 17,
-    "nyc_nonpay_filings": 36,
-    "nyc_nonpay_res_filings": 34,
+    "nyc_holdover_filings": 29,
+    "nyc_holdover_res_filings": 25,
+    "nyc_nonpay_filings": 69,
+    "nyc_nonpay_res_filings": 66,
     "outside_nyc_holdover_filings": 27,
-    "outside_nyc_nonpay_filings": 121,
-    "total_filings": 203
+    "outside_nyc_nonpay_filings": 123,
+    "total_filings": 248
   },
   {
     "day": "2024-12-18T05:00:00.000Z",
     "nyc_holdover_filings": 22,
     "nyc_holdover_res_filings": 21,
-    "nyc_nonpay_filings": 10,
-    "nyc_nonpay_res_filings": 9,
-    "outside_nyc_holdover_filings": 37,
-    "outside_nyc_nonpay_filings": 193,
-    "total_filings": 262
+    "nyc_nonpay_filings": 52,
+    "nyc_nonpay_res_filings": 46,
+    "outside_nyc_holdover_filings": 39,
+    "outside_nyc_nonpay_filings": 198,
+    "total_filings": 311
   },
   {
     "day": "2024-12-19T05:00:00.000Z",
-    "nyc_holdover_filings": 20,
-    "nyc_holdover_res_filings": 19,
-    "nyc_nonpay_filings": 21,
-    "nyc_nonpay_res_filings": 17,
+    "nyc_holdover_filings": 23,
+    "nyc_holdover_res_filings": 22,
+    "nyc_nonpay_filings": 56,
+    "nyc_nonpay_res_filings": 52,
     "outside_nyc_holdover_filings": 43,
-    "outside_nyc_nonpay_filings": 99,
-    "total_filings": 183
+    "outside_nyc_nonpay_filings": 102,
+    "total_filings": 224
   },
   {
     "day": "2024-12-20T05:00:00.000Z",
-    "nyc_holdover_filings": 9,
-    "nyc_holdover_res_filings": 9,
-    "nyc_nonpay_filings": 7,
-    "nyc_nonpay_res_filings": 7,
+    "nyc_holdover_filings": 29,
+    "nyc_holdover_res_filings": 27,
+    "nyc_nonpay_filings": 23,
+    "nyc_nonpay_res_filings": 23,
     "outside_nyc_holdover_filings": 28,
-    "outside_nyc_nonpay_filings": 118,
-    "total_filings": 162
+    "outside_nyc_nonpay_filings": 127,
+    "total_filings": 207
   },
   {
     "day": "2024-12-21T05:00:00.000Z",
-    "nyc_holdover_filings": 0,
-    "nyc_holdover_res_filings": 0,
+    "nyc_holdover_filings": 5,
+    "nyc_holdover_res_filings": 5,
     "nyc_nonpay_filings": 1,
     "nyc_nonpay_res_filings": 1,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 1
+    "total_filings": 6
   },
   {
     "day": "2024-12-22T05:00:00.000Z",
-    "nyc_holdover_filings": 0,
-    "nyc_holdover_res_filings": 0,
-    "nyc_nonpay_filings": 0,
-    "nyc_nonpay_res_filings": 0,
+    "nyc_holdover_filings": 4,
+    "nyc_holdover_res_filings": 4,
+    "nyc_nonpay_filings": 10,
+    "nyc_nonpay_res_filings": 10,
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
-    "total_filings": 0
+    "total_filings": 14
   },
   {
     "day": "2024-12-23T05:00:00.000Z",
-    "nyc_holdover_filings": 9,
-    "nyc_holdover_res_filings": 8,
-    "nyc_nonpay_filings": 19,
-    "nyc_nonpay_res_filings": 19,
-    "outside_nyc_holdover_filings": 35,
-    "outside_nyc_nonpay_filings": 146,
-    "total_filings": 209
+    "nyc_holdover_filings": 24,
+    "nyc_holdover_res_filings": 23,
+    "nyc_nonpay_filings": 27,
+    "nyc_nonpay_res_filings": 27,
+    "outside_nyc_holdover_filings": 41,
+    "outside_nyc_nonpay_filings": 188,
+    "total_filings": 280
   },
   {
     "day": "2024-12-24T05:00:00.000Z",
-    "nyc_holdover_filings": 2,
-    "nyc_holdover_res_filings": 1,
-    "nyc_nonpay_filings": 1,
-    "nyc_nonpay_res_filings": 0,
-    "outside_nyc_holdover_filings": 8,
-    "outside_nyc_nonpay_filings": 56,
-    "total_filings": 67
+    "nyc_holdover_filings": 9,
+    "nyc_holdover_res_filings": 8,
+    "nyc_nonpay_filings": 7,
+    "nyc_nonpay_res_filings": 6,
+    "outside_nyc_holdover_filings": 13,
+    "outside_nyc_nonpay_filings": 86,
+    "total_filings": 115
   },
   {
     "day": "2024-12-25T05:00:00.000Z",
@@ -21861,23 +21861,23 @@
   },
   {
     "day": "2024-12-26T05:00:00.000Z",
-    "nyc_holdover_filings": 1,
-    "nyc_holdover_res_filings": 1,
-    "nyc_nonpay_filings": 4,
-    "nyc_nonpay_res_filings": 4,
-    "outside_nyc_holdover_filings": 5,
-    "outside_nyc_nonpay_filings": 30,
-    "total_filings": 40
+    "nyc_holdover_filings": 13,
+    "nyc_holdover_res_filings": 13,
+    "nyc_nonpay_filings": 6,
+    "nyc_nonpay_res_filings": 6,
+    "outside_nyc_holdover_filings": 8,
+    "outside_nyc_nonpay_filings": 50,
+    "total_filings": 77
   },
   {
     "day": "2024-12-27T05:00:00.000Z",
-    "nyc_holdover_filings": 4,
-    "nyc_holdover_res_filings": 4,
-    "nyc_nonpay_filings": 3,
-    "nyc_nonpay_res_filings": 3,
-    "outside_nyc_holdover_filings": 1,
-    "outside_nyc_nonpay_filings": 15,
-    "total_filings": 23
+    "nyc_holdover_filings": 9,
+    "nyc_holdover_res_filings": 9,
+    "nyc_nonpay_filings": 11,
+    "nyc_nonpay_res_filings": 11,
+    "outside_nyc_holdover_filings": 6,
+    "outside_nyc_nonpay_filings": 74,
+    "total_filings": 100
   },
   {
     "day": "2024-12-28T05:00:00.000Z",
@@ -21901,23 +21901,23 @@
   },
   {
     "day": "2024-12-30T05:00:00.000Z",
-    "nyc_holdover_filings": 0,
-    "nyc_holdover_res_filings": 0,
-    "nyc_nonpay_filings": 0,
-    "nyc_nonpay_res_filings": 0,
-    "outside_nyc_holdover_filings": 0,
-    "outside_nyc_nonpay_filings": 0,
-    "total_filings": 0
+    "nyc_holdover_filings": 17,
+    "nyc_holdover_res_filings": 17,
+    "nyc_nonpay_filings": 15,
+    "nyc_nonpay_res_filings": 13,
+    "outside_nyc_holdover_filings": 11,
+    "outside_nyc_nonpay_filings": 82,
+    "total_filings": 125
   },
   {
     "day": "2024-12-31T05:00:00.000Z",
-    "nyc_holdover_filings": 0,
-    "nyc_holdover_res_filings": 0,
-    "nyc_nonpay_filings": 0,
-    "nyc_nonpay_res_filings": 0,
-    "outside_nyc_holdover_filings": 0,
-    "outside_nyc_nonpay_filings": 0,
-    "total_filings": 0
+    "nyc_holdover_filings": 3,
+    "nyc_holdover_res_filings": 3,
+    "nyc_nonpay_filings": 11,
+    "nyc_nonpay_res_filings": 9,
+    "outside_nyc_holdover_filings": 15,
+    "outside_nyc_nonpay_filings": 88,
+    "total_filings": 117
   },
   {
     "day": "2025-01-01T05:00:00.000Z",
@@ -21928,5 +21928,15 @@
     "outside_nyc_holdover_filings": 0,
     "outside_nyc_nonpay_filings": 0,
     "total_filings": 0
+  },
+  {
+    "day": "2025-01-02T05:00:00.000Z",
+    "nyc_holdover_filings": 13,
+    "nyc_holdover_res_filings": 12,
+    "nyc_nonpay_filings": 5,
+    "nyc_nonpay_res_filings": 4,
+    "outside_nyc_holdover_filings": 28,
+    "outside_nyc_nonpay_filings": 82,
+    "total_filings": 128
   }
 ]
