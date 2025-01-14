@@ -1,39 +1,43 @@
 [
   {
+    "day": "2025-01-06T05:00:00.000Z",
+    "judgments": 1030
+  },
+  {
     "day": "2024-12-30T05:00:00.000Z",
-    "judgments": 359
+    "judgments": 364
   },
   {
     "day": "2024-12-23T05:00:00.000Z",
-    "judgments": 392
+    "judgments": 397
   },
   {
     "day": "2024-12-16T05:00:00.000Z",
-    "judgments": 1224
+    "judgments": 1221
   },
   {
     "day": "2024-12-09T05:00:00.000Z",
-    "judgments": 1081
+    "judgments": 1103
   },
   {
     "day": "2024-12-02T05:00:00.000Z",
-    "judgments": 1061
+    "judgments": 1067
   },
   {
     "day": "2024-11-25T05:00:00.000Z",
-    "judgments": 701
+    "judgments": 702
   },
   {
     "day": "2024-11-18T05:00:00.000Z",
-    "judgments": 1260
+    "judgments": 1248
   },
   {
     "day": "2024-11-11T05:00:00.000Z",
-    "judgments": 758
+    "judgments": 755
   },
   {
     "day": "2024-11-04T05:00:00.000Z",
-    "judgments": 723
+    "judgments": 703
   },
   {
     "day": "2024-10-28T04:00:00.000Z",
@@ -41,15 +45,15 @@
   },
   {
     "day": "2024-10-21T04:00:00.000Z",
-    "judgments": 1107
+    "judgments": 1097
   },
   {
     "day": "2024-10-14T04:00:00.000Z",
-    "judgments": 864
+    "judgments": 865
   },
   {
     "day": "2024-10-07T04:00:00.000Z",
-    "judgments": 1052
+    "judgments": 1042
   },
   {
     "day": "2024-09-30T04:00:00.000Z",
@@ -57,23 +61,23 @@
   },
   {
     "day": "2024-09-23T04:00:00.000Z",
-    "judgments": 1048
+    "judgments": 1057
   },
   {
     "day": "2024-09-16T04:00:00.000Z",
-    "judgments": 799
+    "judgments": 800
   },
   {
     "day": "2024-09-09T04:00:00.000Z",
-    "judgments": 997
+    "judgments": 989
   },
   {
     "day": "2024-09-02T04:00:00.000Z",
-    "judgments": 713
+    "judgments": 724
   },
   {
     "day": "2024-08-26T04:00:00.000Z",
-    "judgments": 826
+    "judgments": 814
   },
   {
     "day": "2024-08-19T04:00:00.000Z",
@@ -81,67 +85,67 @@
   },
   {
     "day": "2024-08-12T04:00:00.000Z",
-    "judgments": 787
+    "judgments": 793
   },
   {
     "day": "2024-08-05T04:00:00.000Z",
-    "judgments": 935
+    "judgments": 928
   },
   {
     "day": "2024-07-29T04:00:00.000Z",
-    "judgments": 957
+    "judgments": 943
   },
   {
     "day": "2024-07-22T04:00:00.000Z",
-    "judgments": 1018
+    "judgments": 997
   },
   {
     "day": "2024-07-15T04:00:00.000Z",
-    "judgments": 950
+    "judgments": 958
   },
   {
     "day": "2024-07-08T04:00:00.000Z",
-    "judgments": 885
+    "judgments": 877
   },
   {
     "day": "2024-07-01T04:00:00.000Z",
-    "judgments": 715
+    "judgments": 705
   },
   {
     "day": "2024-06-24T04:00:00.000Z",
-    "judgments": 789
+    "judgments": 774
   },
   {
     "day": "2024-06-17T04:00:00.000Z",
-    "judgments": 894
-  },
-  {
-    "day": "2024-06-10T04:00:00.000Z",
-    "judgments": 1125
-  },
-  {
-    "day": "2024-06-03T04:00:00.000Z",
-    "judgments": 1056
-  },
-  {
-    "day": "2024-05-27T04:00:00.000Z",
-    "judgments": 785
-  },
-  {
-    "day": "2024-05-20T04:00:00.000Z",
-    "judgments": 1073
-  },
-  {
-    "day": "2024-05-13T04:00:00.000Z",
     "judgments": 883
   },
   {
+    "day": "2024-06-10T04:00:00.000Z",
+    "judgments": 1112
+  },
+  {
+    "day": "2024-06-03T04:00:00.000Z",
+    "judgments": 1062
+  },
+  {
+    "day": "2024-05-27T04:00:00.000Z",
+    "judgments": 780
+  },
+  {
+    "day": "2024-05-20T04:00:00.000Z",
+    "judgments": 1066
+  },
+  {
+    "day": "2024-05-13T04:00:00.000Z",
+    "judgments": 876
+  },
+  {
     "day": "2024-05-06T04:00:00.000Z",
-    "judgments": 1085
+    "judgments": 1103
   },
   {
     "day": "2024-04-29T04:00:00.000Z",
-    "judgments": 824
+    "judgments": 810
   },
   {
     "day": "2024-04-22T04:00:00.000Z",
@@ -149,23 +153,23 @@
   },
   {
     "day": "2024-04-15T04:00:00.000Z",
-    "judgments": 1028
+    "judgments": 1003
   },
   {
     "day": "2024-04-08T04:00:00.000Z",
-    "judgments": 1108
+    "judgments": 1114
   },
   {
     "day": "2024-04-01T04:00:00.000Z",
-    "judgments": 1055
+    "judgments": 1053
   },
   {
     "day": "2024-03-25T04:00:00.000Z",
-    "judgments": 963
+    "judgments": 959
   },
   {
     "day": "2024-03-18T04:00:00.000Z",
-    "judgments": 978
+    "judgments": 964
   },
   {
     "day": "2024-03-11T04:00:00.000Z",
@@ -177,11 +181,11 @@
   },
   {
     "day": "2024-02-26T05:00:00.000Z",
-    "judgments": 957
+    "judgments": 951
   },
   {
     "day": "2024-02-19T05:00:00.000Z",
-    "judgments": 746
+    "judgments": 732
   },
   {
     "day": "2024-02-12T05:00:00.000Z",
@@ -189,155 +193,155 @@
   },
   {
     "day": "2024-02-05T05:00:00.000Z",
-    "judgments": 907
+    "judgments": 901
   },
   {
     "day": "2024-01-29T05:00:00.000Z",
-    "judgments": 948
-  },
-  {
-    "day": "2024-01-22T05:00:00.000Z",
-    "judgments": 959
-  },
-  {
-    "day": "2024-01-15T05:00:00.000Z",
-    "judgments": 802
-  },
-  {
-    "day": "2024-01-08T05:00:00.000Z",
-    "judgments": 893
-  },
-  {
-    "day": "2024-01-01T05:00:00.000Z",
-    "judgments": 632
-  },
-  {
-    "day": "2023-12-25T05:00:00.000Z",
-    "judgments": 227
-  },
-  {
-    "day": "2023-12-18T05:00:00.000Z",
-    "judgments": 721
-  },
-  {
-    "day": "2023-12-11T05:00:00.000Z",
-    "judgments": 870
-  },
-  {
-    "day": "2023-12-04T05:00:00.000Z",
-    "judgments": 958
-  },
-  {
-    "day": "2023-11-27T05:00:00.000Z",
     "judgments": 941
   },
   {
+    "day": "2024-01-22T05:00:00.000Z",
+    "judgments": 987
+  },
+  {
+    "day": "2024-01-15T05:00:00.000Z",
+    "judgments": 795
+  },
+  {
+    "day": "2024-01-08T05:00:00.000Z",
+    "judgments": 891
+  },
+  {
+    "day": "2024-01-01T05:00:00.000Z",
+    "judgments": 638
+  },
+  {
+    "day": "2023-12-25T05:00:00.000Z",
+    "judgments": 224
+  },
+  {
+    "day": "2023-12-18T05:00:00.000Z",
+    "judgments": 719
+  },
+  {
+    "day": "2023-12-11T05:00:00.000Z",
+    "judgments": 873
+  },
+  {
+    "day": "2023-12-04T05:00:00.000Z",
+    "judgments": 972
+  },
+  {
+    "day": "2023-11-27T05:00:00.000Z",
+    "judgments": 921
+  },
+  {
     "day": "2023-11-20T05:00:00.000Z",
-    "judgments": 554
+    "judgments": 564
   },
   {
     "day": "2023-11-13T05:00:00.000Z",
-    "judgments": 1030
+    "judgments": 1031
   },
   {
     "day": "2023-11-06T05:00:00.000Z",
-    "judgments": 589
+    "judgments": 596
   },
   {
     "day": "2023-10-30T04:00:00.000Z",
-    "judgments": 1059
+    "judgments": 1064
   },
   {
     "day": "2023-10-23T04:00:00.000Z",
-    "judgments": 1054
+    "judgments": 1046
   },
   {
     "day": "2023-10-16T04:00:00.000Z",
-    "judgments": 837
+    "judgments": 835
   },
   {
     "day": "2023-10-09T04:00:00.000Z",
-    "judgments": 646
+    "judgments": 640
   },
   {
     "day": "2023-10-02T04:00:00.000Z",
-    "judgments": 947
+    "judgments": 927
   },
   {
     "day": "2023-09-25T04:00:00.000Z",
-    "judgments": 725
+    "judgments": 726
   },
   {
     "day": "2023-09-18T04:00:00.000Z",
-    "judgments": 781
+    "judgments": 771
   },
   {
     "day": "2023-09-11T04:00:00.000Z",
-    "judgments": 820
+    "judgments": 822
   },
   {
     "day": "2023-09-04T04:00:00.000Z",
-    "judgments": 622
+    "judgments": 626
   },
   {
     "day": "2023-08-28T04:00:00.000Z",
-    "judgments": 833
+    "judgments": 835
   },
   {
     "day": "2023-08-21T04:00:00.000Z",
-    "judgments": 826
+    "judgments": 834
   },
   {
     "day": "2023-08-14T04:00:00.000Z",
-    "judgments": 663
+    "judgments": 653
   },
   {
     "day": "2023-08-07T04:00:00.000Z",
-    "judgments": 827
+    "judgments": 818
   },
   {
     "day": "2023-07-31T04:00:00.000Z",
-    "judgments": 825
+    "judgments": 820
   },
   {
     "day": "2023-07-24T04:00:00.000Z",
-    "judgments": 865
+    "judgments": 861
   },
   {
     "day": "2023-07-17T04:00:00.000Z",
-    "judgments": 866
+    "judgments": 857
   },
   {
     "day": "2023-07-10T04:00:00.000Z",
-    "judgments": 742
-  },
-  {
-    "day": "2023-07-03T04:00:00.000Z",
-    "judgments": 536
-  },
-  {
-    "day": "2023-06-26T04:00:00.000Z",
     "judgments": 752
   },
   {
+    "day": "2023-07-03T04:00:00.000Z",
+    "judgments": 526
+  },
+  {
+    "day": "2023-06-26T04:00:00.000Z",
+    "judgments": 740
+  },
+  {
     "day": "2023-06-19T04:00:00.000Z",
-    "judgments": 581
+    "judgments": 587
   },
   {
     "day": "2023-06-12T04:00:00.000Z",
-    "judgments": 704
+    "judgments": 701
   },
   {
     "day": "2023-06-05T04:00:00.000Z",
-    "judgments": 760
+    "judgments": 743
   },
   {
     "day": "2023-05-29T04:00:00.000Z",
-    "judgments": 798
+    "judgments": 799
   },
   {
     "day": "2023-05-22T04:00:00.000Z",
-    "judgments": 826
+    "judgments": 840
   },
   {
     "day": "2023-05-15T04:00:00.000Z",
@@ -345,71 +349,71 @@
   },
   {
     "day": "2023-05-08T04:00:00.000Z",
-    "judgments": 781
+    "judgments": 780
   },
   {
     "day": "2023-05-01T04:00:00.000Z",
-    "judgments": 874
+    "judgments": 875
   },
   {
     "day": "2023-04-24T04:00:00.000Z",
-    "judgments": 940
+    "judgments": 957
   },
   {
     "day": "2023-04-17T04:00:00.000Z",
-    "judgments": 820
+    "judgments": 828
   },
   {
     "day": "2023-04-10T04:00:00.000Z",
-    "judgments": 611
+    "judgments": 617
   },
   {
     "day": "2023-04-03T04:00:00.000Z",
-    "judgments": 537
+    "judgments": 538
   },
   {
     "day": "2023-03-27T04:00:00.000Z",
-    "judgments": 701
+    "judgments": 704
   },
   {
     "day": "2023-03-20T04:00:00.000Z",
-    "judgments": 721
+    "judgments": 716
   },
   {
     "day": "2023-03-13T04:00:00.000Z",
-    "judgments": 629
+    "judgments": 642
   },
   {
     "day": "2023-03-06T05:00:00.000Z",
-    "judgments": 771
+    "judgments": 778
   },
   {
     "day": "2023-02-27T05:00:00.000Z",
-    "judgments": 661
+    "judgments": 645
   },
   {
     "day": "2023-02-20T05:00:00.000Z",
-    "judgments": 455
+    "judgments": 452
   },
   {
     "day": "2023-02-13T05:00:00.000Z",
-    "judgments": 548
+    "judgments": 551
   },
   {
     "day": "2023-02-06T05:00:00.000Z",
-    "judgments": 733
+    "judgments": 742
   },
   {
     "day": "2023-01-30T05:00:00.000Z",
-    "judgments": 677
+    "judgments": 676
   },
   {
     "day": "2023-01-23T05:00:00.000Z",
-    "judgments": 693
+    "judgments": 684
   },
   {
     "day": "2023-01-16T05:00:00.000Z",
-    "judgments": 489
+    "judgments": 491
   },
   {
     "day": "2023-01-09T05:00:00.000Z",
@@ -417,27 +421,27 @@
   },
   {
     "day": "2023-01-02T05:00:00.000Z",
-    "judgments": 508
+    "judgments": 507
   },
   {
     "day": "2022-12-26T05:00:00.000Z",
-    "judgments": 177
+    "judgments": 176
   },
   {
     "day": "2022-12-19T05:00:00.000Z",
-    "judgments": 618
+    "judgments": 615
   },
   {
     "day": "2022-12-12T05:00:00.000Z",
-    "judgments": 655
+    "judgments": 650
   },
   {
     "day": "2022-12-05T05:00:00.000Z",
-    "judgments": 678
+    "judgments": 679
   },
   {
     "day": "2022-11-28T05:00:00.000Z",
-    "judgments": 593
+    "judgments": 580
   },
   {
     "day": "2022-11-21T05:00:00.000Z",
@@ -453,111 +457,111 @@
   },
   {
     "day": "2022-10-31T04:00:00.000Z",
-    "judgments": 603
+    "judgments": 601
   },
   {
     "day": "2022-10-24T04:00:00.000Z",
-    "judgments": 658
+    "judgments": 662
   },
   {
     "day": "2022-10-17T04:00:00.000Z",
-    "judgments": 580
+    "judgments": 578
   },
   {
     "day": "2022-10-10T04:00:00.000Z",
-    "judgments": 558
+    "judgments": 554
   },
   {
     "day": "2022-10-03T04:00:00.000Z",
-    "judgments": 480
+    "judgments": 474
   },
   {
     "day": "2022-09-26T04:00:00.000Z",
-    "judgments": 475
+    "judgments": 470
   },
   {
     "day": "2022-09-19T04:00:00.000Z",
-    "judgments": 302
+    "judgments": 297
   },
   {
     "day": "2022-09-12T04:00:00.000Z",
-    "judgments": 546
+    "judgments": 541
   },
   {
     "day": "2022-09-05T04:00:00.000Z",
-    "judgments": 362
+    "judgments": 364
   },
   {
     "day": "2022-08-29T04:00:00.000Z",
-    "judgments": 379
+    "judgments": 373
   },
   {
     "day": "2022-08-22T04:00:00.000Z",
-    "judgments": 365
+    "judgments": 364
   },
   {
     "day": "2022-08-15T04:00:00.000Z",
-    "judgments": 286
+    "judgments": 290
   },
   {
     "day": "2022-08-08T04:00:00.000Z",
-    "judgments": 280
+    "judgments": 275
   },
   {
     "day": "2022-08-01T04:00:00.000Z",
-    "judgments": 344
+    "judgments": 348
   },
   {
     "day": "2022-07-25T04:00:00.000Z",
-    "judgments": 260
+    "judgments": 265
   },
   {
     "day": "2022-07-18T04:00:00.000Z",
-    "judgments": 215
+    "judgments": 217
   },
   {
     "day": "2022-07-11T04:00:00.000Z",
-    "judgments": 249
+    "judgments": 248
   },
   {
     "day": "2022-07-04T04:00:00.000Z",
-    "judgments": 173
+    "judgments": 171
   },
   {
     "day": "2022-06-27T04:00:00.000Z",
-    "judgments": 174
+    "judgments": 169
   },
   {
     "day": "2022-06-20T04:00:00.000Z",
-    "judgments": 209
+    "judgments": 205
   },
   {
     "day": "2022-06-13T04:00:00.000Z",
-    "judgments": 259
+    "judgments": 262
   },
   {
     "day": "2022-06-06T04:00:00.000Z",
-    "judgments": 243
+    "judgments": 244
   },
   {
     "day": "2022-05-30T04:00:00.000Z",
-    "judgments": 200
+    "judgments": 199
   },
   {
     "day": "2022-05-23T04:00:00.000Z",
-    "judgments": 235
+    "judgments": 230
   },
   {
     "day": "2022-05-16T04:00:00.000Z",
-    "judgments": 228
+    "judgments": 222
   },
   {
     "day": "2022-05-09T04:00:00.000Z",
-    "judgments": 267
+    "judgments": 266
   },
   {
     "day": "2022-05-02T04:00:00.000Z",
-    "judgments": 233
+    "judgments": 232
   },
   {
     "day": "2022-04-25T04:00:00.000Z",
@@ -565,11 +569,11 @@
   },
   {
     "day": "2022-04-18T04:00:00.000Z",
-    "judgments": 141
+    "judgments": 143
   },
   {
     "day": "2022-04-11T04:00:00.000Z",
-    "judgments": 191
+    "judgments": 190
   },
   {
     "day": "2022-04-04T04:00:00.000Z",
@@ -577,15 +581,15 @@
   },
   {
     "day": "2022-03-28T04:00:00.000Z",
-    "judgments": 155
+    "judgments": 158
   },
   {
     "day": "2022-03-21T04:00:00.000Z",
-    "judgments": 176
+    "judgments": 177
   },
   {
     "day": "2022-03-14T04:00:00.000Z",
-    "judgments": 142
+    "judgments": 141
   },
   {
     "day": "2022-03-07T05:00:00.000Z",
@@ -593,23 +597,23 @@
   },
   {
     "day": "2022-02-28T05:00:00.000Z",
-    "judgments": 134
+    "judgments": 135
   },
   {
     "day": "2022-02-21T05:00:00.000Z",
-    "judgments": 80
+    "judgments": 82
   },
   {
     "day": "2022-02-14T05:00:00.000Z",
-    "judgments": 83
+    "judgments": 85
   },
   {
     "day": "2022-02-07T05:00:00.000Z",
-    "judgments": 63
+    "judgments": 65
   },
   {
     "day": "2022-01-31T05:00:00.000Z",
-    "judgments": 58
+    "judgments": 59
   },
   {
     "day": "2022-01-24T05:00:00.000Z",
@@ -617,15 +621,15 @@
   },
   {
     "day": "2022-01-17T05:00:00.000Z",
-    "judgments": 38
+    "judgments": 41
   },
   {
     "day": "2022-01-10T05:00:00.000Z",
-    "judgments": 48
+    "judgments": 47
   },
   {
     "day": "2022-01-03T05:00:00.000Z",
-    "judgments": 31
+    "judgments": 30
   },
   {
     "day": "2021-12-27T05:00:00.000Z",
@@ -645,7 +649,7 @@
   },
   {
     "day": "2021-11-29T05:00:00.000Z",
-    "judgments": 34
+    "judgments": 33
   },
   {
     "day": "2021-11-22T05:00:00.000Z",
@@ -657,7 +661,7 @@
   },
   {
     "day": "2021-11-08T05:00:00.000Z",
-    "judgments": 15
+    "judgments": 14
   },
   {
     "day": "2021-11-01T04:00:00.000Z",
@@ -677,7 +681,7 @@
   },
   {
     "day": "2021-10-04T04:00:00.000Z",
-    "judgments": 5
+    "judgments": 6
   },
   {
     "day": "2021-09-27T04:00:00.000Z",
@@ -701,11 +705,11 @@
   },
   {
     "day": "2021-08-23T04:00:00.000Z",
-    "judgments": 18
+    "judgments": 19
   },
   {
     "day": "2021-08-16T04:00:00.000Z",
-    "judgments": 8
+    "judgments": 7
   },
   {
     "day": "2021-08-09T04:00:00.000Z",
@@ -717,7 +721,7 @@
   },
   {
     "day": "2021-07-26T04:00:00.000Z",
-    "judgments": 7
+    "judgments": 6
   },
   {
     "day": "2021-07-19T04:00:00.000Z",
@@ -729,7 +733,7 @@
   },
   {
     "day": "2021-07-05T04:00:00.000Z",
-    "judgments": 4
+    "judgments": 5
   },
   {
     "day": "2021-06-28T04:00:00.000Z",
