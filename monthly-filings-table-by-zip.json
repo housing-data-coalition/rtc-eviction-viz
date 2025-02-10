@@ -18,21 +18,21 @@
     "percent_increase": "893"
   },
   {
-    "zipcode": "10044",
-    "region": "NYC",
-    "borough": "Manhattan",
-    "two_months_ago": "18",
-    "three_months_ago": "2",
-    "num_increase": "16",
-    "percent_increase": "800"
-  },
-  {
     "zipcode": "11021",
     "region": "Outside NYC",
     "borough": "Outside NYC",
     "two_months_ago": "9",
     "three_months_ago": "1",
     "num_increase": "8",
+    "percent_increase": "800"
+  },
+  {
+    "zipcode": "10044",
+    "region": "NYC",
+    "borough": "Manhattan",
+    "two_months_ago": "18",
+    "three_months_ago": "2",
+    "num_increase": "16",
     "percent_increase": "800"
   },
   {
