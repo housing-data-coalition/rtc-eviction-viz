@@ -12,10 +12,10 @@
     "zipcode": "11230",
     "region": "NYC",
     "borough": "Brooklyn",
-    "two_months_ago": "32",
+    "two_months_ago": "52",
     "three_months_ago": "1",
-    "num_increase": "31",
-    "percent_increase": "3100"
+    "num_increase": "51",
+    "percent_increase": "5100"
   },
   {
     "zipcode": "14616",
@@ -25,6 +25,15 @@
     "three_months_ago": "1",
     "num_increase": "19",
     "percent_increase": "1900"
+  },
+  {
+    "zipcode": "10013",
+    "region": "NYC",
+    "borough": "Manhattan",
+    "two_months_ago": "9",
+    "three_months_ago": "1",
+    "num_increase": "8",
+    "percent_increase": "800"
   },
   {
     "zipcode": "13202",
@@ -79,14 +88,5 @@
     "three_months_ago": "3",
     "num_increase": "10",
     "percent_increase": "333"
-  },
-  {
-    "zipcode": "10604",
-    "region": "Outside NYC",
-    "borough": "Outside NYC",
-    "two_months_ago": "4",
-    "three_months_ago": "1",
-    "num_increase": "3",
-    "percent_increase": "300"
   }
 ]
