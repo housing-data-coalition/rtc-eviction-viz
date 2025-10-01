@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Manhattan",
+    "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "2110",
-    "three_months_ago": "1814",
-    "num_increase": "296",
-    "percent_increase": "16"
-  },
-  {
-    "borough": "Brooklyn",
-    "region": "NYC",
-    "two_months_ago": "2832",
-    "three_months_ago": "2466",
-    "num_increase": "366",
-    "percent_increase": "15"
+    "two_months_ago": "232",
+    "three_months_ago": "233",
+    "num_increase": "-1",
+    "percent_increase": "0"
   },
   {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "4525",
-    "three_months_ago": "3931",
-    "num_increase": "594",
-    "percent_increase": "15"
-  },
-  {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "3815",
-    "three_months_ago": "3336",
-    "num_increase": "479",
-    "percent_increase": "14"
-  },
-  {
-    "borough": "Staten Island",
-    "region": "NYC",
-    "two_months_ago": "233",
-    "three_months_ago": "211",
-    "num_increase": "22",
-    "percent_increase": "10"
+    "two_months_ago": "4354",
+    "three_months_ago": "4525",
+    "num_increase": "-171",
+    "percent_increase": "-4"
   },
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "1677",
-    "three_months_ago": "1598",
-    "num_increase": "79",
-    "percent_increase": "5"
+    "two_months_ago": "1617",
+    "three_months_ago": "1677",
+    "num_increase": "-60",
+    "percent_increase": "-4"
+  },
+  {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "3595",
+    "three_months_ago": "3815",
+    "num_increase": "-220",
+    "percent_increase": "-6"
+  },
+  {
+    "borough": "Brooklyn",
+    "region": "NYC",
+    "two_months_ago": "2385",
+    "three_months_ago": "2832",
+    "num_increase": "-447",
+    "percent_increase": "-16"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "1754",
+    "three_months_ago": "2110",
+    "num_increase": "-356",
+    "percent_increase": "-17"
   }
 ]
