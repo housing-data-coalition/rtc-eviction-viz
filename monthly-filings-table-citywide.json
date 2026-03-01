@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Brooklyn",
-    "region": "NYC",
-    "two_months_ago": "3060",
-    "three_months_ago": "2495",
-    "num_increase": "565",
-    "percent_increase": "23"
-  },
-  {
-    "borough": "Queens",
-    "region": "NYC",
-    "two_months_ago": "1706",
-    "three_months_ago": "1387",
-    "num_increase": "319",
-    "percent_increase": "23"
-  },
-  {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "3659",
-    "three_months_ago": "3026",
-    "num_increase": "633",
-    "percent_increase": "21"
-  },
-  {
-    "borough": "Manhattan",
-    "region": "NYC",
-    "two_months_ago": "1994",
-    "three_months_ago": "1734",
-    "num_increase": "260",
-    "percent_increase": "15"
-  },
-  {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "3826",
-    "three_months_ago": "3891",
-    "num_increase": "-65",
-    "percent_increase": "-2"
+    "two_months_ago": "4215",
+    "three_months_ago": "3830",
+    "num_increase": "385",
+    "percent_increase": "10"
   },
   {
     "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "228",
-    "three_months_ago": "267",
-    "num_increase": "-39",
-    "percent_increase": "-15"
+    "two_months_ago": "215",
+    "three_months_ago": "228",
+    "num_increase": "-13",
+    "percent_increase": "-6"
+  },
+  {
+    "borough": "Manhattan",
+    "region": "NYC",
+    "two_months_ago": "1857",
+    "three_months_ago": "1997",
+    "num_increase": "-140",
+    "percent_increase": "-7"
+  },
+  {
+    "borough": "Bronx",
+    "region": "NYC",
+    "two_months_ago": "3276",
+    "three_months_ago": "3659",
+    "num_increase": "-383",
+    "percent_increase": "-10"
+  },
+  {
+    "borough": "Queens",
+    "region": "NYC",
+    "two_months_ago": "1490",
+    "three_months_ago": "1707",
+    "num_increase": "-217",
+    "percent_increase": "-13"
+  },
+  {
+    "borough": "Brooklyn",
+    "region": "NYC",
+    "two_months_ago": "2065",
+    "three_months_ago": "3060",
+    "num_increase": "-995",
+    "percent_increase": "-33"
   }
 ]
