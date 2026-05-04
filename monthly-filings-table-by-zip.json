@@ -27,6 +27,15 @@
     "percent_increase": "11000"
   },
   {
+    "zipcode": "10475",
+    "region": "NYC",
+    "borough": "Bronx",
+    "two_months_ago": "71",
+    "three_months_ago": "1",
+    "num_increase": "70",
+    "percent_increase": "7000"
+  },
+  {
     "zipcode": "10304",
     "region": "NYC",
     "borough": "Staten Island",
@@ -36,22 +45,13 @@
     "percent_increase": "5400"
   },
   {
-    "zipcode": "10475",
-    "region": "NYC",
-    "borough": "Bronx",
-    "two_months_ago": "43",
-    "three_months_ago": "1",
-    "num_increase": "42",
-    "percent_increase": "4200"
-  },
-  {
     "zipcode": "10465",
     "region": "NYC",
     "borough": "Bronx",
-    "two_months_ago": "36",
+    "two_months_ago": "37",
     "three_months_ago": "1",
-    "num_increase": "35",
-    "percent_increase": "3500"
+    "num_increase": "36",
+    "percent_increase": "3600"
   },
   {
     "zipcode": "11713",
