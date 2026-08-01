@@ -1,50 +1,50 @@
 [
   {
-    "borough": "Outside NYC",
-    "region": "Outside NYC",
-    "two_months_ago": "3974",
-    "three_months_ago": "3903",
-    "num_increase": "71",
-    "percent_increase": "2"
-  },
-  {
-    "borough": "Brooklyn",
+    "borough": "Staten Island",
     "region": "NYC",
-    "two_months_ago": "2550",
-    "three_months_ago": "2576",
-    "num_increase": "-26",
-    "percent_increase": "-1"
-  },
-  {
-    "borough": "Queens",
-    "region": "NYC",
-    "two_months_ago": "1443",
-    "three_months_ago": "1577",
-    "num_increase": "-134",
-    "percent_increase": "-8"
-  },
-  {
-    "borough": "Bronx",
-    "region": "NYC",
-    "two_months_ago": "3174",
-    "three_months_ago": "3583",
-    "num_increase": "-409",
-    "percent_increase": "-11"
+    "two_months_ago": "242",
+    "three_months_ago": "181",
+    "num_increase": "61",
+    "percent_increase": "34"
   },
   {
     "borough": "Manhattan",
     "region": "NYC",
-    "two_months_ago": "1834",
-    "three_months_ago": "2077",
-    "num_increase": "-243",
-    "percent_increase": "-12"
+    "two_months_ago": "2271",
+    "three_months_ago": "1834",
+    "num_increase": "437",
+    "percent_increase": "24"
   },
   {
-    "borough": "Staten Island",
+    "borough": "Bronx",
     "region": "NYC",
-    "two_months_ago": "181",
-    "three_months_ago": "289",
-    "num_increase": "-108",
-    "percent_increase": "-37"
+    "two_months_ago": "3862",
+    "three_months_ago": "3174",
+    "num_increase": "688",
+    "percent_increase": "22"
+  },
+  {
+    "borough": "Brooklyn",
+    "region": "NYC",
+    "two_months_ago": "2994",
+    "three_months_ago": "2550",
+    "num_increase": "444",
+    "percent_increase": "17"
+  },
+  {
+    "borough": "Outside NYC",
+    "region": "Outside NYC",
+    "two_months_ago": "4230",
+    "three_months_ago": "3974",
+    "num_increase": "256",
+    "percent_increase": "6"
+  },
+  {
+    "borough": "Queens",
+    "region": "NYC",
+    "two_months_ago": "1454",
+    "three_months_ago": "1443",
+    "num_increase": "11",
+    "percent_increase": "1"
   }
 ]
