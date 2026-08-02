@@ -1721,14 +1721,18 @@
   },
   {
     "week_eviction": "2026-07-06T04:00:00.000Z",
-    "marshalevictions": 318
+    "marshalevictions": 325
   },
   {
     "week_eviction": "2026-07-13T04:00:00.000Z",
-    "marshalevictions": 161
+    "marshalevictions": 162
   },
   {
     "week_eviction": "2026-07-20T04:00:00.000Z",
-    "marshalevictions": 70
+    "marshalevictions": 336
+  },
+  {
+    "week_eviction": "2026-07-27T04:00:00.000Z",
+    "marshalevictions": 194
   }
 ]
