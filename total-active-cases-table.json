@@ -8,7 +8,7 @@
     "category": "Outside NYC.Issued Prepandemic.All.Holdover"
   },
   {
-    "count": 963,
+    "count": 947,
     "category": "NYC.Issued Pandemic.Commercial.Holdover"
   },
   {
@@ -16,11 +16,11 @@
     "category": "NYC.Issued Prepandemic.Commercial.Holdover"
   },
   {
-    "count": 65,
+    "count": 60,
     "category": "Outside NYC.Issued Pandemic.Commercial.Holdover"
   },
   {
-    "count": 22924,
+    "count": 22810,
     "category": "NYC.Issued Pandemic.Residential.Holdover"
   },
   {
@@ -28,7 +28,7 @@
     "category": "NYC.Issued Prepandemic.Residential.Holdover"
   },
   {
-    "count": 1411,
+    "count": 1289,
     "category": "Outside NYC.Issued Pandemic.Residential.Holdover"
   },
   {
@@ -40,7 +40,7 @@
     "category": "Outside NYC.Issued Prepandemic.All.Non-Payment"
   },
   {
-    "count": 6372,
+    "count": 6331,
     "category": "NYC.Issued Pandemic.Commercial.Non-Payment"
   },
   {
@@ -48,19 +48,19 @@
     "category": "NYC.Issued Prepandemic.Commercial.Non-Payment"
   },
   {
-    "count": 155,
+    "count": 151,
     "category": "Outside NYC.Issued Pandemic.Commercial.Non-Payment"
   },
   {
-    "count": 141649,
+    "count": 141753,
     "category": "NYC.Issued Pandemic.Residential.Non-Payment"
   },
   {
-    "count": 13963,
+    "count": 13962,
     "category": "NYC.Issued Prepandemic.Residential.Non-Payment"
   },
   {
-    "count": 5184,
+    "count": 5162,
     "category": "Outside NYC.Issued Pandemic.Residential.Non-Payment"
   }
 ]

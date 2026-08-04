@@ -34,17 +34,17 @@
   {
     "borough": "Outside NYC",
     "region": "Outside NYC",
-    "two_months_ago": "4230",
+    "two_months_ago": "4231",
     "three_months_ago": "3974",
-    "num_increase": "256",
+    "num_increase": "257",
     "percent_increase": "6"
   },
   {
     "borough": "Queens",
     "region": "NYC",
-    "two_months_ago": "1454",
-    "three_months_ago": "1443",
-    "num_increase": "11",
-    "percent_increase": "1"
+    "two_months_ago": "1497",
+    "three_months_ago": "1444",
+    "num_increase": "53",
+    "percent_increase": "4"
   }
 ]
