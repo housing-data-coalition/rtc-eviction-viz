@@ -28098,5 +28098,15 @@
     "outside_nyc_holdover_filings": 13,
     "outside_nyc_nonpay_filings": 125,
     "total_filings": 196
+  },
+  {
+    "day": "2026-09-11T04:00:00.000Z",
+    "nyc_holdover_filings": 8,
+    "nyc_holdover_res_filings": 7,
+    "nyc_nonpay_filings": 40,
+    "nyc_nonpay_res_filings": 38,
+    "outside_nyc_holdover_filings": 4,
+    "outside_nyc_nonpay_filings": 80,
+    "total_filings": 132
   }
 ]
